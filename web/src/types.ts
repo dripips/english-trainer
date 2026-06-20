@@ -1,4 +1,9 @@
-export type User = { id: number; username: string; name: string };
+export type User = { id: number; username: string; name: string; role?: 'user' | 'admin' };
+
+export interface AdminUser {
+  id: number; username: string; display_name: string; role: 'user' | 'admin';
+  created_at: string; words: number; attempts: number;
+}
 
 export type ExerciseType =
   | 'fill' | 'choose' | 'translate' | 'fix' | 'order' | 'match' | 'listen' | 'freeform';

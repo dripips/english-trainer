@@ -41,7 +41,7 @@ export function Home() {
 
   return (
     <div className="space-y-4">
-      <header className="safe-top">
+      <header>
         <p className="text-sm text-[var(--color-muted)]">{greet},</p>
         <h1 className="display truncate text-2xl font-bold">{user?.name}</h1>
       </header>

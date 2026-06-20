@@ -17,6 +17,17 @@ CREATE TABLE IF NOT EXISTS users (
   username TEXT UNIQUE NOT NULL,
   display_name TEXT NOT NULL,
   password TEXT NOT NULL,
+  role TEXT NOT NULL DEFAULT 'user',
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- Web Push subscriptions (one per device per user)
+CREATE TABLE IF NOT EXISTS push_subscriptions (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  endpoint TEXT UNIQUE NOT NULL,
+  p256dh TEXT NOT NULL,
+  auth TEXT NOT NULL,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
@@ -110,6 +121,12 @@ CREATE TABLE IF NOT EXISTS settings (
 );
 `);
 
+// ---------- Migrations for pre-existing DBs ----------
+const userCols = db.prepare('PRAGMA table_info(users)').all().map((c) => c.name);
+if (!userCols.includes('role')) {
+  db.exec("ALTER TABLE users ADD COLUMN role TEXT NOT NULL DEFAULT 'user'");
+}
+
 // ---------- Seed users ----------
 export function seedUsers() {
   let seed = [];
@@ -132,13 +149,24 @@ export function seedUsers() {
   }
   const exists = db.prepare('SELECT id FROM users WHERE username = ?');
   const insert = db.prepare(
-    'INSERT INTO users (username, display_name, password) VALUES (?, ?, ?)'
+    'INSERT INTO users (username, display_name, password, role) VALUES (?, ?, ?, ?)'
   );
   for (const u of seed) {
     if (!u.username || !u.password) continue;
     if (exists.get(u.username)) continue;
-    insert.run(u.username, u.name || u.username, hashPassword(u.password));
+    insert.run(u.username, u.name || u.username, hashPassword(u.password), u.role === 'admin' ? 'admin' : 'user');
     console.log(`Seeded user: ${u.username}`);
+  }
+
+  // Promote admins from env (comma-separated usernames), e.g. ADMIN_USERNAMES=vadim
+  const adminEnv = (process.env.ADMIN_USERNAMES || '').split(',').map((s) => s.trim().toLowerCase()).filter(Boolean);
+  for (const name of adminEnv) {
+    db.prepare("UPDATE users SET role='admin' WHERE username=?").run(name);
+  }
+  // Guarantee at least one admin exists (promote the first account).
+  const hasAdmin = db.prepare("SELECT 1 FROM users WHERE role='admin' LIMIT 1").get();
+  if (!hasAdmin) {
+    db.prepare("UPDATE users SET role='admin' WHERE id=(SELECT MIN(id) FROM users)").run();
   }
 }
 

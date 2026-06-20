@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Search, Plus, SearchX } from 'lucide-react';
+import { Search, Plus, SearchX, Sparkles, ChevronRight } from 'lucide-react';
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
@@ -24,9 +24,10 @@ export function Vocab() {
     api.vocabWords(q).then((r) => setWords(r.words)).finally(() => setWLoading(false));
   }, [cat, search, searching]);
 
+  const essential = (cats || []).find((c) => c.category === 'essential-core');
   const grouped = useMemo(() => {
     const g: Record<string, typeof cats> = {};
-    (cats || []).forEach((c) => { (g[c.level] ||= [] as any).push(c); });
+    (cats || []).filter((c) => c.category !== 'essential-core').forEach((c) => { (g[c.level] ||= [] as any).push(c); });
     return g;
   }, [cats]);
 
@@ -64,6 +65,20 @@ export function Vocab() {
         <Search size={18} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--color-muted)]" />
         <input className="input pl-10" placeholder="Искать слово (EN или RU)…" value={search} onChange={(e) => setSearch(e.target.value)} autoCapitalize="none" />
       </div>
+
+      {essential && (
+        <button onClick={() => setCat('essential-core')} className="card mb-5 block w-full overflow-hidden bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary2)] !border-transparent text-left active:scale-[0.98]">
+          <div className="flex items-center gap-3 text-[#160f33]">
+            <div className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-white/25"><Sparkles size={24} /></div>
+            <div className="min-w-0 flex-1">
+              <div className="display font-bold leading-tight">Рекомендуем начать</div>
+              <div className="truncate text-sm opacity-80">Стартовый набор · {essential.count} самых нужных слов</div>
+            </div>
+            <ChevronRight className="shrink-0" />
+          </div>
+        </button>
+      )}
+
       {Object.keys(grouped).sort().map((level) => (
         <div key={level} className="mb-5">
           <div className="mb-2 flex items-center gap-2"><LevelBadge level={level} /><span className="text-sm text-[var(--color-muted)]">уровень</span></div>

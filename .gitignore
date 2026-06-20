@@ -9,3 +9,6 @@ data/
 *.log
 caddy_data/
 caddy_config/
+# Private / copyrighted material — never commit (user's own textbook copy, etc.)
+private/
+*.pdf

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Ruler, Library, Bug, TrendingUp, Settings as SettingsIcon, LogOut, ChevronRight, Heart, type LucideIcon } from 'lucide-react';
+import { Ruler, Library, Bug, TrendingUp, BookMarked, Shield, Settings as SettingsIcon, LogOut, ChevronRight, Heart, type LucideIcon } from 'lucide-react';
 import { api } from '../api';
 import { useAuth } from '../auth';
 import { useApi } from '../lib/useApi';
@@ -11,7 +11,8 @@ const LINKS: { to: string; icon: LucideIcon; label: string; hint: string; color:
   { to: '/vocab', icon: Library, label: 'Словарь', hint: 'наборы слов', color: 'var(--color-mint)' },
   { to: '/errors', icon: Bug, label: 'Журнал ошибок', hint: 'что дотренировать', color: 'var(--color-danger)' },
   { to: '/progress', icon: TrendingUp, label: 'Прогресс', hint: 'владение темами', color: 'var(--color-primary)' },
-  { to: '/settings', icon: SettingsIcon, label: 'Настройки', hint: 'новые слова в день', color: 'var(--color-amber)' },
+  { to: '/textbook', icon: BookMarked, label: 'Учебник Murphy', hint: 'читать книгу', color: 'var(--color-pink)' },
+  { to: '/settings', icon: SettingsIcon, label: 'Настройки', hint: 'напоминания, пароль', color: 'var(--color-amber)' },
 ];
 
 export function Me() {
@@ -51,6 +52,16 @@ export function Me() {
             <ChevronRight size={18} className="shrink-0 text-[var(--color-muted)]" />
           </Link>
         ))}
+        {user?.role === 'admin' && (
+          <Link to="/admin" className="card flex items-center gap-3 overflow-hidden !py-3 active:scale-[0.98]">
+            <IconBadge icon={Shield} color="var(--color-amber)" size="sm" />
+            <div className="min-w-0 flex-1">
+              <div className="truncate font-semibold">Админка</div>
+              <div className="truncate text-xs text-[var(--color-muted)]">пользователи и пароли</div>
+            </div>
+            <ChevronRight size={18} className="shrink-0 text-[var(--color-muted)]" />
+          </Link>
+        )}
       </div>
 
       <button onClick={logout} className="btn btn-ghost mt-5 w-full !text-[var(--color-danger)]"><LogOut size={18} /> Выйти</button>

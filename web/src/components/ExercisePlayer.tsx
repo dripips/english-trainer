@@ -142,7 +142,7 @@ function ExerciseCard({ ex, onResult, onNext }: { ex: Exercise; onResult: (c: bo
         </div>
       ) : ex.prompt ? (
         <div className="flex items-start gap-2">
-          <p className="display min-w-0 flex-1 break-words text-lg font-semibold leading-snug">{ex.prompt}</p>
+          <p data-lookup className="display min-w-0 flex-1 break-words text-lg font-semibold leading-snug">{ex.prompt}</p>
           {promptIsEnglish && <SpeakButton text={ex.prompt.replace(/_+/g, ' ').replace(/\([^)]*\)/g, '')} />}
         </div>
       ) : null}

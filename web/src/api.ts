@@ -100,4 +100,25 @@ export const api = {
   // settings
   settings: () => get<Record<string, any>>('/settings'),
   setSettings: (s: Record<string, any>) => put('/settings', s),
+
+  // account (self)
+  changePassword: (oldPassword: string, newPassword: string) =>
+    post('/account/password', { oldPassword, newPassword }),
+
+  // admin
+  adminUsers: () => get<import('./types').AdminUser[]>('/admin/users'),
+  adminAddUser: (u: { username: string; name?: string; password: string; role?: string }) =>
+    post<{ id: number }>('/admin/users', u),
+  adminSetPassword: (id: number, password: string) => post(`/admin/users/${id}/password`, { password }),
+  adminUpdateUser: (id: number, body: { name?: string; role?: string }) => req(`/admin/users/${id}`, { method: 'PATCH', body: JSON.stringify(body) }),
+  adminDeleteUser: (id: number) => del(`/admin/users/${id}`),
+
+  // push
+  pushPubKey: () => get<{ key: string; enabled: boolean }>('/push/pubkey'),
+  pushSubscribe: (subscription: unknown) => post('/push/subscribe', { subscription }),
+  pushUnsubscribe: (endpoint: string) => post('/push/unsubscribe', { endpoint }),
+  pushTest: () => post('/push/test'),
+
+  // textbook
+  textbookInfo: () => get<{ available: boolean; size?: number }>('/textbook/info'),
 };

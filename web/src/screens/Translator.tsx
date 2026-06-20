@@ -3,7 +3,7 @@ import { BookText, Plus, CheckCircle2, Volume2 } from 'lucide-react';
 import { Header } from '../components/Header';
 import { api } from '../api';
 import { SpeakButton } from '../components/ui';
-import { speak } from '../lib/speech';
+import { pronounce } from '../lib/speech';
 
 type Dir = 'auto' | 'en' | 'ru';
 
@@ -110,7 +110,7 @@ function AddForm({ en, ru, ipa, onSaved }: { en: string; ru: string; ipa: string
       <label className="text-xs text-[var(--color-muted)]">Слово (EN)</label>
       <div className="flex gap-2">
         <input className="input" value={word} onChange={(e) => setWord(e.target.value)} autoCapitalize="none" />
-        <button onClick={() => speak(word)} className="btn btn-soft !px-3" aria-label="Произнести"><Volume2 size={18} /></button>
+        <button onClick={() => pronounce(word)} className="btn btn-soft !px-3" aria-label="Произнести"><Volume2 size={18} /></button>
       </div>
       <label className="text-xs text-[var(--color-muted)]">Перевод (RU)</label>
       <input className="input" value={tr} onChange={(e) => setTr(e.target.value)} />

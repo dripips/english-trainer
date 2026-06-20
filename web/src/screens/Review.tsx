@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { PartyPopper, Trophy, Library, MousePointerClick } from 'lucide-react';
+import { PartyPopper, Trophy, MousePointerClick } from 'lucide-react';
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
 import { Spinner, EmptyState, SpeakButton } from '../components/ui';
-import { speak } from '../lib/speech';
+import { pronounce, prefetchWord } from '../lib/speech';
 import type { Rating, QueueItem } from '../types';
 
 const RATINGS: { key: Rating; label: string; color: string }[] = [
@@ -20,6 +20,10 @@ export function Review() {
   const [idx, setIdx] = useState(0);
   const [showBack, setShowBack] = useState(false);
   const [done, setDone] = useState(0);
+
+  // prefetch recorded audio for the current word so flip plays instantly
+  const curWord = data?.cards?.[idx]?.word?.word;
+  useEffect(() => { if (curWord) prefetchWord(curWord); }, [curWord]);
 
   if (loading || !data) return <Spinner />;
   const queue: QueueItem[] = data.cards;
@@ -59,7 +63,7 @@ export function Review() {
   }
 
   function flip() {
-    if (!showBack) { setShowBack(true); speak(w.word); }
+    if (!showBack) { setShowBack(true); pronounce(w.word); }
   }
 
   return (

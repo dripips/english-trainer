@@ -1,7 +1,11 @@
+import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useAuth } from './auth';
 import { Spinner } from './components/ui';
 import { Layout } from './components/Layout';
+import { Admin } from './screens/Admin';
+
+const Textbook = lazy(() => import('./screens/Textbook').then((m) => ({ default: m.Textbook })));
 import { Login } from './screens/Login';
 import { Home } from './screens/Home';
 import { Lessons } from './screens/Lessons';
@@ -38,6 +42,8 @@ export function App() {
         <Route path="/warmup" element={<Warmup />} />
         <Route path="/me" element={<Me />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/textbook" element={<Suspense fallback={<Spinner label="Открываю учебник…" />}><Textbook /></Suspense>} />
         <Route path="*" element={<Home />} />
       </Route>
     </Routes>

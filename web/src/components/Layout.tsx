@@ -1,5 +1,7 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
 import { Home, BookOpen, Layers, Languages, User, type LucideIcon } from 'lucide-react';
+import { LookupLayer } from './LookupLayer';
 
 const TABS: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = [
   { to: '/', label: 'Дом', icon: Home, end: true },
@@ -11,14 +13,22 @@ const TABS: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = [
 
 export function Layout() {
   const loc = useLocation();
+  const scrollRef = useRef<HTMLElement>(null);
+
+  // reset scroll to top on route change
+  useEffect(() => { scrollRef.current?.scrollTo({ top: 0 }); }, [loc.pathname]);
+
   return (
-    <div className="mx-auto flex min-h-full max-w-md flex-col overflow-x-hidden">
-      <main className="safe-top flex-1 px-4 pb-28 pt-4">
+    <div className="mx-auto flex h-[100dvh] max-w-md flex-col overflow-hidden">
+      <main ref={scrollRef} className="pt-safe no-scrollbar flex-1 overflow-y-auto overflow-x-hidden px-4 pb-6">
         <Outlet key={loc.pathname} />
       </main>
 
-      <nav className="safe-bottom fixed inset-x-0 bottom-0 z-40 mx-auto max-w-md">
-        <div className="mx-3 mb-3 flex items-center justify-around rounded-[1.6rem] border border-[var(--color-border)] bg-[var(--color-bg2)]/95 p-1.5 backdrop-blur"
+      <LookupLayer />
+
+
+      <nav className="shrink-0 px-3 pt-1" style={{ paddingBottom: 'max(env(safe-area-inset-bottom), 0.6rem)' }}>
+        <div className="flex items-center justify-around rounded-[1.6rem] border border-[var(--color-border)] bg-[var(--color-bg2)]/95 p-1.5 backdrop-blur"
              style={{ boxShadow: '0 -8px 30px -16px rgba(0,0,0,.8)' }}>
           {TABS.map((t) => {
             const Icon = t.icon;

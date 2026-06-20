@@ -1,18 +1,24 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import { db, bumpActivity } from './db.js';
 import { getStore, lessonMeta } from './content.js';
 import { schedule, topicNextReview } from './srs.js';
 import {
-  verifyPassword, signToken, verifyToken, answerMatches, slugify,
+  hashPassword, verifyPassword, signToken, verifyToken, answerMatches, slugify,
 } from './util.js';
+import { pushEnabled, publicKey, sendToUser } from './push.js';
 
 const SECRET = process.env.AUTH_SECRET || 'dev-insecure-secret-change-me';
 const COOKIE = 'et_token';
 const isProd = process.env.NODE_ENV === 'production';
+// Effectively forever: log in once and stay in. Survives deploys because
+// AUTH_SECRET lives in .env (not regenerated) and data lives in the SQLite volume.
+const SESSION_TTL = 60 * 60 * 24 * 3650; // 10 years
 
 function setAuthCookie(reply, token) {
   reply.setCookie(COOKIE, token, {
     httpOnly: true, sameSite: 'lax', secure: isProd, path: '/',
-    maxAge: 60 * 60 * 24 * 30,
+    maxAge: SESSION_TTL,
   });
 }
 
@@ -27,8 +33,13 @@ export async function registerRoutes(app) {
     const token = req.cookies?.[COOKIE];
     const payload = verifyToken(token, SECRET);
     if (!payload) return reply.code(401).send({ error: 'unauthorized' });
-    req.user = { uid: payload.uid, username: payload.username, name: payload.name };
+    req.user = { uid: payload.uid, username: payload.username, name: payload.name, role: payload.role || 'user' };
   });
+
+  function requireAdmin(req, reply) {
+    if (req.user?.role !== 'admin') { reply.code(403).send({ error: 'forbidden' }); return false; }
+    return true;
+  }
 
   // ---------------- Health ----------------
   app.get('/api/health', async () => ({ ok: true, time: new Date().toISOString() }));
@@ -41,9 +52,9 @@ export async function registerRoutes(app) {
     if (!u || !verifyPassword(password, u.password)) {
       return reply.code(401).send({ error: 'invalid credentials' });
     }
-    const token = signToken({ uid: u.id, username: u.username, name: u.display_name }, SECRET);
+    const token = signToken({ uid: u.id, username: u.username, name: u.display_name, role: u.role || 'user' }, SECRET, SESSION_TTL);
     setAuthCookie(reply, token);
-    return { user: { id: u.id, username: u.username, name: u.display_name } };
+    return { user: { id: u.id, username: u.username, name: u.display_name, role: u.role || 'user' } };
   });
 
   app.post('/api/auth/logout', async (req, reply) => {
@@ -401,6 +412,128 @@ export async function registerRoutes(app) {
       ).run(req.user.uid, k, String(v));
     }
     return { ok: true };
+  });
+
+  // ---------------- Account (self) ----------------
+  app.post('/api/account/password', async (req, reply) => {
+    const { oldPassword, newPassword } = req.body || {};
+    if (!newPassword || String(newPassword).length < 4) return reply.code(400).send({ error: 'newPassword too short' });
+    const u = db.prepare('SELECT * FROM users WHERE id = ?').get(req.user.uid);
+    if (!u || !verifyPassword(oldPassword || '', u.password)) return reply.code(403).send({ error: 'wrong current password' });
+    db.prepare('UPDATE users SET password = ? WHERE id = ?').run(hashPassword(newPassword), req.user.uid);
+    return { ok: true };
+  });
+
+  // ---------------- Admin ----------------
+  app.get('/api/admin/users', async (req, reply) => {
+    if (!requireAdmin(req, reply)) return;
+    return db.prepare(`
+      SELECT u.id, u.username, u.display_name, u.role, u.created_at,
+             (SELECT COUNT(*) FROM srs_cards s WHERE s.user_id=u.id) AS words,
+             (SELECT COUNT(*) FROM lesson_attempts l WHERE l.user_id=u.id) AS attempts
+      FROM users u ORDER BY u.id`).all();
+  });
+
+  app.post('/api/admin/users', async (req, reply) => {
+    if (!requireAdmin(req, reply)) return;
+    const { username, name, password, role } = req.body || {};
+    if (!username || !password) return reply.code(400).send({ error: 'username and password required' });
+    const uname = String(username).toLowerCase().trim();
+    if (db.prepare('SELECT 1 FROM users WHERE username = ?').get(uname)) return reply.code(409).send({ error: 'username already exists' });
+    const info = db.prepare('INSERT INTO users (username, display_name, password, role) VALUES (?, ?, ?, ?)')
+      .run(uname, name || uname, hashPassword(password), role === 'admin' ? 'admin' : 'user');
+    return { ok: true, id: info.lastInsertRowid };
+  });
+
+  app.post('/api/admin/users/:id/password', async (req, reply) => {
+    if (!requireAdmin(req, reply)) return;
+    const { password } = req.body || {};
+    if (!password || String(password).length < 4) return reply.code(400).send({ error: 'password too short' });
+    db.prepare('UPDATE users SET password = ? WHERE id = ?').run(hashPassword(password), req.params.id);
+    return { ok: true };
+  });
+
+  app.patch('/api/admin/users/:id', async (req, reply) => {
+    if (!requireAdmin(req, reply)) return;
+    const { name, role } = req.body || {};
+    const id = Number(req.params.id);
+    if (role && role !== 'admin') {
+      const target = db.prepare('SELECT role FROM users WHERE id=?').get(id);
+      if (target?.role === 'admin' && db.prepare("SELECT COUNT(*) c FROM users WHERE role='admin'").get().c <= 1) {
+        return reply.code(400).send({ error: 'cannot demote the last admin' });
+      }
+    }
+    db.prepare('UPDATE users SET display_name = COALESCE(?, display_name), role = COALESCE(?, role) WHERE id = ?')
+      .run(name ?? null, role ?? null, id);
+    return { ok: true };
+  });
+
+  app.delete('/api/admin/users/:id', async (req, reply) => {
+    if (!requireAdmin(req, reply)) return;
+    const id = Number(req.params.id);
+    if (id === req.user.uid) return reply.code(400).send({ error: 'cannot delete yourself' });
+    const target = db.prepare('SELECT role FROM users WHERE id=?').get(id);
+    if (target?.role === 'admin' && db.prepare("SELECT COUNT(*) c FROM users WHERE role='admin'").get().c <= 1) {
+      return reply.code(400).send({ error: 'cannot delete the last admin' });
+    }
+    db.prepare('DELETE FROM users WHERE id = ?').run(id);
+    return { ok: true };
+  });
+
+  // ---------------- Push notifications ----------------
+  app.get('/api/push/pubkey', async () => ({ key: publicKey(), enabled: pushEnabled() }));
+
+  app.post('/api/push/subscribe', async (req, reply) => {
+    const s = req.body?.subscription || req.body;
+    if (!s?.endpoint || !s?.keys?.p256dh || !s?.keys?.auth) return reply.code(400).send({ error: 'bad subscription' });
+    db.prepare(`INSERT INTO push_subscriptions (user_id, endpoint, p256dh, auth) VALUES (?, ?, ?, ?)
+      ON CONFLICT(endpoint) DO UPDATE SET user_id=excluded.user_id, p256dh=excluded.p256dh, auth=excluded.auth`)
+      .run(req.user.uid, s.endpoint, s.keys.p256dh, s.keys.auth);
+    return { ok: true };
+  });
+
+  app.post('/api/push/unsubscribe', async (req) => {
+    const ep = req.body?.endpoint;
+    if (ep) db.prepare('DELETE FROM push_subscriptions WHERE endpoint = ? AND user_id = ?').run(ep, req.user.uid);
+    return { ok: true };
+  });
+
+  app.post('/api/push/test', async (req) => {
+    await sendToUser(req.user.uid, { title: 'English Trainer', body: 'Уведомления работают! Жми, чтобы открыть.', url: '/' });
+    return { ok: true };
+  });
+
+  // ---------------- Textbook (private PDF, auth-gated, HTTP range support) ----------------
+  // The PDF is the user's own legal copy, kept private (never in the repo) and
+  // served only to logged-in users. Path via TEXTBOOK_PDF env.
+  const TEXTBOOK = process.env.TEXTBOOK_PDF || path.resolve(process.cwd(), '../private/textbook.pdf');
+
+  app.get('/api/textbook/info', async () => {
+    try { const st = fs.statSync(TEXTBOOK); return { available: true, size: st.size }; }
+    catch { return { available: false }; }
+  });
+
+  app.get('/api/textbook/file', async (req, reply) => {
+    let st;
+    try { st = fs.statSync(TEXTBOOK); } catch { return reply.code(404).send({ error: 'no textbook' }); }
+    reply.header('Accept-Ranges', 'bytes');
+    reply.header('Content-Type', 'application/pdf');
+    reply.header('Cache-Control', 'private, max-age=86400');
+    const range = req.headers.range;
+    if (range) {
+      const m = /bytes=(\d*)-(\d*)/.exec(range);
+      let start = m && m[1] ? parseInt(m[1], 10) : 0;
+      let end = m && m[2] ? parseInt(m[2], 10) : st.size - 1;
+      if (isNaN(start)) start = 0;
+      if (isNaN(end) || end >= st.size) end = st.size - 1;
+      if (start > end) { reply.header('Content-Range', `bytes */${st.size}`); return reply.code(416).send(); }
+      reply.code(206);
+      reply.header('Content-Range', `bytes ${start}-${end}/${st.size}`);
+      reply.header('Content-Length', end - start + 1);
+      return reply.send(fs.createReadStream(TEXTBOOK, { start, end }));
+    }
+    reply.header('Content-Length', st.size);
+    return reply.send(fs.createReadStream(TEXTBOOK));
   });
 }
 

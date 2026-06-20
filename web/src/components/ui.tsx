@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import type { LucideIcon } from 'lucide-react';
 import { Volume2 } from 'lucide-react';
-import { speak, ttsSupported } from '../lib/speech';
+import { pronounce, ttsSupported } from '../lib/speech';
 
 export function Spinner({ label }: { label?: string }) {
   return (
@@ -50,7 +50,7 @@ export function SpeakButton({ text, lang = 'en-US', className = '' }: { text: st
   if (!ttsSupported) return null;
   return (
     <button
-      onClick={(e) => { e.stopPropagation(); speak(text, lang); }}
+      onClick={(e) => { e.stopPropagation(); pronounce(text, lang); }}
       className={`grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--color-surface2)] text-[var(--color-sky)] active:scale-90 ${className}`}
       aria-label="Произнести"
     >

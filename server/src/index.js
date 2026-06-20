@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { seedUsers } from './db.js';
 import { loadContent, CONTENT_DIR } from './content.js';
 import { registerRoutes } from './routes.js';
+import { initPush, startReminderScheduler } from './push.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT || 3000);
@@ -26,6 +27,8 @@ app.addHook('onSend', async (req, reply, payload) => {
 
 seedUsers();
 loadContent();
+initPush();
+startReminderScheduler();
 
 // Hot reload content in dev
 if (process.env.NODE_ENV !== 'production') {
