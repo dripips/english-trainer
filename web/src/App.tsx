@@ -1,7 +1,8 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useAuth } from './auth';
 import { Spinner } from './components/ui';
+import { Splash } from './components/Splash';
 import { Layout } from './components/Layout';
 import { Admin } from './screens/Admin';
 
@@ -23,7 +24,9 @@ import { Settings } from './screens/Settings';
 
 export function App() {
   const { user, loading } = useAuth();
-  if (loading) return <div className="grid min-h-full place-items-center"><Spinner /></div>;
+  const [minElapsed, setMinElapsed] = useState(false);
+  useEffect(() => { const t = setTimeout(() => setMinElapsed(true), 750); return () => clearTimeout(t); }, []);
+  if (loading || !minElapsed) return <Splash />;
   if (!user) return <Login />;
 
   return (

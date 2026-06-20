@@ -12,6 +12,7 @@ export default defineConfig({
       srcDir: 'src',
       filename: 'sw.ts',
       registerType: 'autoUpdate',
+      injectRegister: false,
       injectManifest: {
         globPatterns: ['**/*.{js,css,html,woff2,png,svg,webmanifest}'],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,

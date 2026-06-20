@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Check, Bell, BellOff, KeyRound } from 'lucide-react';
+import { Check, Bell, BellOff, KeyRound, RefreshCw } from 'lucide-react';
 import { api } from '../api';
 import { Header } from '../components/Header';
 import { Spinner } from '../components/ui';
@@ -101,11 +101,32 @@ export function Settings() {
       {saved && <p className="flex items-center justify-center gap-1 text-sm text-[var(--color-success)]"><Check size={15} /> Сохранено</p>}
 
       <div className="card">
+        <div className="mb-1 flex items-center gap-2"><RefreshCw size={18} className="text-[var(--color-primary)]" /><div className="display font-bold">Обновить приложение</div></div>
+        <p className="mb-3 text-sm text-[var(--color-muted)]">Сбросить кэш и загрузить свежую версию (если что-то не подтянулось после обновления).</p>
+        <button onClick={hardRefresh} className="btn btn-soft w-full">Сбросить кэш и перезагрузить</button>
+      </div>
+
+      <div className="card">
         <div className="display mb-1 font-bold">О приложении</div>
         <p className="text-sm text-[var(--color-muted)]">English Trainer — личный тренажёр для двоих. Уроки, слова с интервальным повторением, грамматика, разминки и журнал ошибок. Без рекламы и подписок.</p>
       </div>
     </div>
   );
+}
+
+async function hardRefresh() {
+  try {
+    if ('serviceWorker' in navigator) {
+      const regs = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(regs.map((r) => r.unregister()));
+    }
+    if ('caches' in window) {
+      const keys = await caches.keys();
+      await Promise.all(keys.map((k) => caches.delete(k)));
+    }
+  } finally {
+    window.location.reload();
+  }
 }
 
 function ChangePassword() {

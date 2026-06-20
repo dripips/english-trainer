@@ -161,7 +161,7 @@ export function Textbook() {
 
   if (immersive) {
     return (
-      <div className="fixed inset-x-0 top-0 z-[80] flex flex-col bg-black" style={{ height: 'var(--app-h, 100dvh)' }}>
+      <div className="app-shell fixed inset-x-0 top-0 z-[80] mx-auto flex max-w-md flex-col bg-black">
         <div className="safe-top flex items-center gap-2 px-3 py-2">
           <span className="rounded-full bg-white/10 px-3 py-1 text-sm font-semibold text-white">{page} / {numPages || '…'}</span>
           <div className="flex-1" />

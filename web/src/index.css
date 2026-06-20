@@ -74,6 +74,14 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.01em
 /* respect notches */
 .safe-top { padding-top: env(safe-area-inset-top); }
 .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+/* App shell height:
+   - browser: fit the *visible* viewport (above the Safari toolbar)
+   - installed PWA: pin to the real screen edges so the tab bar sits at the very bottom */
+.app-shell { height: var(--app-h, 100dvh); }
+@media all and (display-mode: standalone) {
+  .app-shell { position: fixed; inset: 0; height: auto; }
+}
+
 /* comfortable top inset that also clears the status bar / notch on phones */
 .pt-safe { padding-top: calc(env(safe-area-inset-top, 0px) + 0.9rem); }
 /* installed PWA draws under the iOS status bar — guarantee clearance even if
