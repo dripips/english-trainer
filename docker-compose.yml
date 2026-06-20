@@ -1,0 +1,49 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+    volumes:
+      - app_data:/app/data
+      # Mount content read-only so adding a lesson = edit file + `docker compose restart app`
+      - ./content:/app/content:ro
+    expose:
+      - "3000"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    env_file: .env
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+
+  # Optional self-hosted, private translator. Enable with:
+  #   docker compose --profile selfhost-translate up -d
+  # Then set LIBRETRANSLATE_URL=http://libretranslate:5000 in .env and restart app.
+  libretranslate:
+    image: libretranslate/libretranslate:latest
+    profiles: ["selfhost-translate"]
+    restart: unless-stopped
+    environment:
+      LT_LOAD_ONLY: "en,ru"
+      LT_DISABLE_WEB_UI: "true"
+    volumes:
+      - lt_models:/home/libretranslate/.local
+    expose:
+      - "5000"
+
+volumes:
+  app_data:
+  caddy_data:
+  caddy_config:
+  lt_models:

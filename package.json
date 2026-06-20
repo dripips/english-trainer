@@ -1,0 +1,18 @@
+{
+  "name": "english-trainer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-hosted, mobile-first PWA for learning English: lessons, spaced-repetition vocabulary, grammar, warm-ups, error log and a built-in translator.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:server": "npm --prefix server run dev",
+    "dev:web": "npm --prefix web run dev",
+    "install:all": "npm --prefix server install && npm --prefix web install",
+    "build:web": "npm --prefix web run build",
+    "gen-icons": "npm --prefix web run gen-icons",
+    "start": "npm --prefix server start",
+    "validate": "node scripts/validate-content.mjs"
+  },
+  "license": "MIT"
+}

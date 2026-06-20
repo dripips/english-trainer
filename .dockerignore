@@ -1,0 +1,11 @@
+**/node_modules
+**/dist
+**/data
+*.db
+*.db-*
+.env
+.git
+*.log
+web/dev-dist
+caddy_data
+caddy_config

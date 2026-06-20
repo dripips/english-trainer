@@ -1,0 +1,110 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/fredoka';
+
+@theme {
+  --font-sans: 'Inter Variable', system-ui, sans-serif;
+  --font-display: 'Fredoka Variable', 'Inter Variable', sans-serif;
+
+  /* dark, cozy base */
+  --color-bg: #0d0f1e;
+  --color-bg2: #12152a;
+  --color-surface: #1a1e3a;
+  --color-surface2: #232850;
+  --color-border: #2e3566;
+  --color-text: #eef0ff;
+  --color-muted: #9aa0cc;
+
+  /* playful accents */
+  --color-primary: #8b7bff;
+  --color-primary2: #6d5cff;
+  --color-mint: #43e0b8;
+  --color-pink: #ff7eb6;
+  --color-amber: #ffc857;
+  --color-sky: #54c7ff;
+  --color-danger: #ff6b6b;
+  --color-success: #46d98a;
+
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(139, 123, 255, 0.18), transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, rgba(67, 224, 184, 0.12), transparent 55%),
+    var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+
+h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.01em; }
+
+/* respect notches */
+.safe-top { padding-top: env(safe-area-inset-top); }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+@layer components {
+  .card {
+    @apply rounded-[var(--radius-2xl)] border p-4;
+    background: linear-gradient(180deg, var(--color-surface), var(--color-bg2));
+    border-color: var(--color-border);
+    box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.7);
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 font-semibold transition active:scale-[0.97] disabled:opacity-50 disabled:active:scale-100;
+    font-family: var(--font-display);
+  }
+  .btn-primary {
+    color: #14102e;
+    background: linear-gradient(180deg, var(--color-primary), var(--color-primary2));
+    box-shadow: 0 8px 22px -8px var(--color-primary2);
+  }
+  .btn-ghost { @apply border; border-color: var(--color-border); background: var(--color-surface); color: var(--color-text); }
+  .btn-soft { background: var(--color-surface2); color: var(--color-text); }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold;
+    background: var(--color-surface2); color: var(--color-muted);
+  }
+  .input {
+    @apply w-full rounded-2xl border px-4 py-3 outline-none;
+    background: var(--color-bg2); border-color: var(--color-border); color: var(--color-text);
+  }
+  .input:focus { border-color: var(--color-primary); }
+}
+
+/* Markdown (lesson / grammar theory) */
+.prose-rich { @apply text-[0.97rem] leading-relaxed; color: var(--color-text); }
+.prose-rich h2 { @apply mt-6 mb-2 text-lg; color: var(--color-text); }
+.prose-rich h3 { @apply mt-4 mb-1 text-base; color: var(--color-primary); }
+.prose-rich p { @apply my-2; color: #d7daf2; }
+.prose-rich strong { color: #fff; font-weight: 700; }
+.prose-rich ul { @apply my-2 ml-5 list-disc; }
+.prose-rich ol { @apply my-2 ml-5 list-decimal; }
+.prose-rich li { @apply my-1; }
+.prose-rich code { @apply rounded px-1.5 py-0.5 text-sm; background: var(--color-surface2); color: var(--color-mint); }
+.prose-rich blockquote {
+  @apply my-3 rounded-xl border-l-4 px-3 py-2;
+  border-color: var(--color-amber); background: rgba(255, 200, 87, 0.08); color: #ffe6ad;
+}
+.prose-rich table { @apply my-3 w-full border-collapse overflow-hidden rounded-xl text-sm; }
+.prose-rich th, .prose-rich td { @apply border px-2.5 py-1.5 text-left; border-color: var(--color-border); }
+.prose-rich th { background: var(--color-surface2); color: #fff; }
+.prose-rich a { color: var(--color-sky); }
+.prose-rich hr { @apply my-4 border-0 border-t; border-color: var(--color-border); }
+
+/* utilities */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes pop { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+.animate-pop { animation: pop 0.18s ease-out; }
+@keyframes slideup { from { transform: translateY(12px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.animate-slideup { animation: slideup 0.22s ease-out; }

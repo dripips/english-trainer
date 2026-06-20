@@ -1,0 +1,13 @@
+# Auto-HTTPS reverse proxy. {$DOMAIN} and {$ACME_EMAIL} come from .env (env_file).
+{
+	email {$ACME_EMAIL}
+}
+
+{$DOMAIN} {
+	encode zstd gzip
+	reverse_proxy app:3000
+
+	# Belt-and-suspenders: keep this private from search engines.
+	header X-Robots-Tag "noindex, nofollow, noarchive"
+	header -Server
+}

@@ -1,0 +1,1254 @@
+{
+  "category": "a2-verbs",
+  "title": "Глаголы A2 (следующие 60 после A1)",
+  "level": "A2",
+  "pos": "verb",
+  "topic": "verbs",
+  "words": [
+    {
+      "id": "bring",
+      "word": "bring",
+      "pos": "verb",
+      "ru": "приносить",
+      "ipa": "/brɪŋ/",
+      "exampleEn": "Can you bring me some water?",
+      "exampleRu": "Можешь принести мне воды?",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "brings",
+        "past": "brought",
+        "pp": "brought",
+        "ing": "bringing"
+      }
+    },
+    {
+      "id": "buy",
+      "word": "buy",
+      "pos": "verb",
+      "ru": "покупать",
+      "ipa": "/baɪ/",
+      "exampleEn": "I want to buy a new phone.",
+      "exampleRu": "Я хочу купить новый телефон.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "buys",
+        "past": "bought",
+        "pp": "bought",
+        "ing": "buying"
+      }
+    },
+    {
+      "id": "sell",
+      "word": "sell",
+      "pos": "verb",
+      "ru": "продавать",
+      "ipa": "/sel/",
+      "exampleEn": "They sell fruit at the market.",
+      "exampleRu": "Они продают фрукты на рынке.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "sells",
+        "past": "sold",
+        "pp": "sold",
+        "ing": "selling"
+      }
+    },
+    {
+      "id": "pay",
+      "word": "pay",
+      "pos": "verb",
+      "ru": "платить",
+      "ipa": "/peɪ/",
+      "exampleEn": "I'll pay for the tickets.",
+      "exampleRu": "Я заплачу за билеты.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "pays",
+        "past": "paid",
+        "pp": "paid",
+        "ing": "paying"
+      }
+    },
+    {
+      "id": "find",
+      "word": "find",
+      "pos": "verb",
+      "ru": "находить",
+      "ipa": "/faɪnd/",
+      "exampleEn": "I can't find my keys.",
+      "exampleRu": "Я не могу найти свои ключи.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "finds",
+        "past": "found",
+        "pp": "found",
+        "ing": "finding"
+      }
+    },
+    {
+      "id": "lose",
+      "word": "lose",
+      "pos": "verb",
+      "ru": "терять",
+      "ipa": "/luːz/",
+      "exampleEn": "Don't lose your passport.",
+      "exampleRu": "Не потеряй свой паспорт.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "loses",
+        "past": "lost",
+        "pp": "lost",
+        "ing": "losing"
+      }
+    },
+    {
+      "id": "meet",
+      "word": "meet",
+      "pos": "verb",
+      "ru": "встречать",
+      "ipa": "/miːt/",
+      "exampleEn": "Let's meet at six o'clock.",
+      "exampleRu": "Давай встретимся в шесть часов.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "meets",
+        "past": "met",
+        "pp": "met",
+        "ing": "meeting"
+      }
+    },
+    {
+      "id": "leave",
+      "word": "leave",
+      "pos": "verb",
+      "ru": "уходить, оставлять",
+      "ipa": "/liːv/",
+      "exampleEn": "We leave home at eight.",
+      "exampleRu": "Мы уходим из дома в восемь.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "leaves",
+        "past": "left",
+        "pp": "left",
+        "ing": "leaving"
+      }
+    },
+    {
+      "id": "stay",
+      "word": "stay",
+      "pos": "verb",
+      "ru": "оставаться",
+      "ipa": "/steɪ/",
+      "exampleEn": "We stayed at a nice hotel.",
+      "exampleRu": "Мы остановились в хорошем отеле.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "stays",
+        "past": "stayed",
+        "pp": "stayed",
+        "ing": "staying"
+      }
+    },
+    {
+      "id": "wait",
+      "word": "wait",
+      "pos": "verb",
+      "ru": "ждать",
+      "ipa": "/weɪt/",
+      "exampleEn": "Please wait for me here.",
+      "exampleRu": "Пожалуйста, подожди меня здесь.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "waits",
+        "past": "waited",
+        "pp": "waited",
+        "ing": "waiting"
+      }
+    },
+    {
+      "id": "send",
+      "word": "send",
+      "pos": "verb",
+      "ru": "отправлять",
+      "ipa": "/send/",
+      "exampleEn": "I'll send you an email.",
+      "exampleRu": "Я отправлю тебе письмо.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "sends",
+        "past": "sent",
+        "pp": "sent",
+        "ing": "sending"
+      }
+    },
+    {
+      "id": "receive",
+      "word": "receive",
+      "pos": "verb",
+      "ru": "получать",
+      "ipa": "/rɪˈsiːv/",
+      "exampleEn": "I received your message yesterday.",
+      "exampleRu": "Я получил твоё сообщение вчера.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "receives",
+        "past": "received",
+        "pp": "received",
+        "ing": "receiving"
+      }
+    },
+    {
+      "id": "carry",
+      "word": "carry",
+      "pos": "verb",
+      "ru": "нести",
+      "ipa": "/ˈkæri/",
+      "exampleEn": "Can you carry this bag?",
+      "exampleRu": "Можешь понести эту сумку?",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "carries",
+        "past": "carried",
+        "pp": "carried",
+        "ing": "carrying"
+      }
+    },
+    {
+      "id": "build",
+      "word": "build",
+      "pos": "verb",
+      "ru": "строить",
+      "ipa": "/bɪld/",
+      "exampleEn": "They are building a new school.",
+      "exampleRu": "Они строят новую школу.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "builds",
+        "past": "built",
+        "pp": "built",
+        "ing": "building"
+      }
+    },
+    {
+      "id": "break",
+      "word": "break",
+      "pos": "verb",
+      "ru": "ломать, разбивать",
+      "ipa": "/breɪk/",
+      "exampleEn": "Be careful, don't break the glass.",
+      "exampleRu": "Осторожно, не разбей стакан.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "breaks",
+        "past": "broke",
+        "pp": "broken",
+        "ing": "breaking"
+      }
+    },
+    {
+      "id": "fix",
+      "word": "fix",
+      "pos": "verb",
+      "ru": "чинить",
+      "ipa": "/fɪks/",
+      "exampleEn": "He can fix the car himself.",
+      "exampleRu": "Он сам может починить машину.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "fixes",
+        "past": "fixed",
+        "pp": "fixed",
+        "ing": "fixing"
+      }
+    },
+    {
+      "id": "clean",
+      "word": "clean",
+      "pos": "verb",
+      "ru": "убирать, чистить",
+      "ipa": "/kliːn/",
+      "exampleEn": "I clean my room every weekend.",
+      "exampleRu": "Я убираю свою комнату каждые выходные.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "cleans",
+        "past": "cleaned",
+        "pp": "cleaned",
+        "ing": "cleaning"
+      }
+    },
+    {
+      "id": "wash",
+      "word": "wash",
+      "pos": "verb",
+      "ru": "мыть, стирать",
+      "ipa": "/wɒʃ/",
+      "exampleEn": "She washes the dishes after dinner.",
+      "exampleRu": "Она моет посуду после ужина.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "washes",
+        "past": "washed",
+        "pp": "washed",
+        "ing": "washing"
+      }
+    },
+    {
+      "id": "cook",
+      "word": "cook",
+      "pos": "verb",
+      "ru": "готовить",
+      "ipa": "/kʊk/",
+      "exampleEn": "My dad cooks dinner on Sundays.",
+      "exampleRu": "Мой папа готовит ужин по воскресеньям.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "cooks",
+        "past": "cooked",
+        "pp": "cooked",
+        "ing": "cooking"
+      }
+    },
+    {
+      "id": "wear",
+      "word": "wear",
+      "pos": "verb",
+      "ru": "носить (одежду)",
+      "ipa": "/weə/",
+      "exampleEn": "She wears glasses for reading.",
+      "exampleRu": "Она носит очки для чтения.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "wears",
+        "past": "wore",
+        "pp": "worn",
+        "ing": "wearing"
+      }
+    },
+    {
+      "id": "choose",
+      "word": "choose",
+      "pos": "verb",
+      "ru": "выбирать",
+      "ipa": "/tʃuːz/",
+      "exampleEn": "You can choose any colour you like.",
+      "exampleRu": "Ты можешь выбрать любой цвет.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "chooses",
+        "past": "chose",
+        "pp": "chosen",
+        "ing": "choosing"
+      }
+    },
+    {
+      "id": "decide",
+      "word": "decide",
+      "pos": "verb",
+      "ru": "решать",
+      "ipa": "/dɪˈsaɪd/",
+      "exampleEn": "We decided to go by train.",
+      "exampleRu": "Мы решили поехать на поезде.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "decides",
+        "past": "decided",
+        "pp": "decided",
+        "ing": "deciding"
+      }
+    },
+    {
+      "id": "remember",
+      "word": "remember",
+      "pos": "verb",
+      "ru": "помнить",
+      "ipa": "/rɪˈmembə/",
+      "exampleEn": "I can't remember her name.",
+      "exampleRu": "Я не могу вспомнить её имя.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "remembers",
+        "past": "remembered",
+        "pp": "remembered",
+        "ing": "remembering"
+      }
+    },
+    {
+      "id": "forget",
+      "word": "forget",
+      "pos": "verb",
+      "ru": "забывать",
+      "ipa": "/fəˈɡet/",
+      "exampleEn": "Don't forget to call me.",
+      "exampleRu": "Не забудь позвонить мне.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "forgets",
+        "past": "forgot",
+        "pp": "forgotten",
+        "ing": "forgetting"
+      }
+    },
+    {
+      "id": "understand",
+      "word": "understand",
+      "pos": "verb",
+      "ru": "понимать",
+      "ipa": "/ˌʌndəˈstænd/",
+      "exampleEn": "I don't understand this word.",
+      "exampleRu": "Я не понимаю это слово.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "understands",
+        "past": "understood",
+        "pp": "understood",
+        "ing": "understanding"
+      }
+    },
+    {
+      "id": "explain",
+      "word": "explain",
+      "pos": "verb",
+      "ru": "объяснять",
+      "ipa": "/ɪkˈspleɪn/",
+      "exampleEn": "Can you explain this rule again?",
+      "exampleRu": "Можешь объяснить это правило ещё раз?",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "explains",
+        "past": "explained",
+        "pp": "explained",
+        "ing": "explaining"
+      }
+    },
+    {
+      "id": "learn",
+      "word": "learn",
+      "pos": "verb",
+      "ru": "учить, учиться",
+      "ipa": "/lɜːn/",
+      "exampleEn": "I'm learning to drive.",
+      "exampleRu": "Я учусь водить машину.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "learns",
+        "past": "learned",
+        "pp": "learned",
+        "ing": "learning"
+      }
+    },
+    {
+      "id": "teach",
+      "word": "teach",
+      "pos": "verb",
+      "ru": "учить, преподавать",
+      "ipa": "/tiːtʃ/",
+      "exampleEn": "She teaches English at school.",
+      "exampleRu": "Она преподаёт английский в школе.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "teaches",
+        "past": "taught",
+        "pp": "taught",
+        "ing": "teaching"
+      }
+    },
+    {
+      "id": "study",
+      "word": "study",
+      "pos": "verb",
+      "ru": "учиться, изучать",
+      "ipa": "/ˈstʌdi/",
+      "exampleEn": "He studies medicine at university.",
+      "exampleRu": "Он изучает медицину в университете.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "studies",
+        "past": "studied",
+        "pp": "studied",
+        "ing": "studying"
+      }
+    },
+    {
+      "id": "answer",
+      "word": "answer",
+      "pos": "verb",
+      "ru": "отвечать",
+      "ipa": "/ˈɑːnsə/",
+      "exampleEn": "Please answer the question.",
+      "exampleRu": "Пожалуйста, ответь на вопрос.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "answers",
+        "past": "answered",
+        "pp": "answered",
+        "ing": "answering"
+      }
+    },
+    {
+      "id": "hope",
+      "word": "hope",
+      "pos": "verb",
+      "ru": "надеяться",
+      "ipa": "/həʊp/",
+      "exampleEn": "I hope you feel better soon.",
+      "exampleRu": "Надеюсь, ты скоро поправишься.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "hopes",
+        "past": "hoped",
+        "pp": "hoped",
+        "ing": "hoping"
+      }
+    },
+    {
+      "id": "listen",
+      "word": "listen",
+      "pos": "verb",
+      "ru": "слушать",
+      "ipa": "/ˈlɪsən/",
+      "exampleEn": "I like to listen to music.",
+      "exampleRu": "Я люблю слушать музыку.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "listens",
+        "past": "listened",
+        "pp": "listened",
+        "ing": "listening"
+      }
+    },
+    {
+      "id": "watch",
+      "word": "watch",
+      "pos": "verb",
+      "ru": "смотреть, наблюдать",
+      "ipa": "/wɒtʃ/",
+      "exampleEn": "We watch films on Friday nights.",
+      "exampleRu": "Мы смотрим фильмы по пятницам вечером.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "watches",
+        "past": "watched",
+        "pp": "watched",
+        "ing": "watching"
+      }
+    },
+    {
+      "id": "finish",
+      "word": "finish",
+      "pos": "verb",
+      "ru": "заканчивать",
+      "ipa": "/ˈfɪnɪʃ/",
+      "exampleEn": "I finish work at five.",
+      "exampleRu": "Я заканчиваю работу в пять.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "finishes",
+        "past": "finished",
+        "pp": "finished",
+        "ing": "finishing"
+      }
+    },
+    {
+      "id": "change",
+      "word": "change",
+      "pos": "verb",
+      "ru": "менять(ся)",
+      "ipa": "/tʃeɪndʒ/",
+      "exampleEn": "I want to change my plans.",
+      "exampleRu": "Я хочу изменить свои планы.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "changes",
+        "past": "changed",
+        "pp": "changed",
+        "ing": "changing"
+      }
+    },
+    {
+      "id": "try",
+      "word": "try",
+      "pos": "verb",
+      "ru": "пытаться, пробовать",
+      "ipa": "/traɪ/",
+      "exampleEn": "Try to be on time.",
+      "exampleRu": "Постарайся прийти вовремя.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "tries",
+        "past": "tried",
+        "pp": "tried",
+        "ing": "trying"
+      }
+    },
+    {
+      "id": "hate",
+      "word": "hate",
+      "pos": "verb",
+      "ru": "ненавидеть",
+      "ipa": "/heɪt/",
+      "exampleEn": "I hate getting up early.",
+      "exampleRu": "Я ненавижу рано вставать.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "hates",
+        "past": "hated",
+        "pp": "hated",
+        "ing": "hating"
+      }
+    },
+    {
+      "id": "enjoy",
+      "word": "enjoy",
+      "pos": "verb",
+      "ru": "получать удовольствие, наслаждаться",
+      "ipa": "/ɪnˈdʒɔɪ/",
+      "exampleEn": "I enjoy reading books.",
+      "exampleRu": "Я люблю читать книги.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "enjoys",
+        "past": "enjoyed",
+        "pp": "enjoyed",
+        "ing": "enjoying"
+      }
+    },
+    {
+      "id": "help",
+      "word": "help",
+      "pos": "verb",
+      "ru": "помогать",
+      "ipa": "/help/",
+      "exampleEn": "Can you help me with this?",
+      "exampleRu": "Можешь помочь мне с этим?",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "helps",
+        "past": "helped",
+        "pp": "helped",
+        "ing": "helping"
+      }
+    },
+    {
+      "id": "visit",
+      "word": "visit",
+      "pos": "verb",
+      "ru": "посещать, навещать",
+      "ipa": "/ˈvɪzɪt/",
+      "exampleEn": "We visit our grandparents every summer.",
+      "exampleRu": "Мы навещаем бабушку и дедушку каждое лето.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "visits",
+        "past": "visited",
+        "pp": "visited",
+        "ing": "visiting"
+      }
+    },
+    {
+      "id": "travel",
+      "word": "travel",
+      "pos": "verb",
+      "ru": "путешествовать",
+      "ipa": "/ˈtrævəl/",
+      "exampleEn": "They travel a lot for work.",
+      "exampleRu": "Они много путешествуют по работе.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "travels",
+        "past": "travelled",
+        "pp": "travelled",
+        "ing": "travelling"
+      }
+    },
+    {
+      "id": "arrive",
+      "word": "arrive",
+      "pos": "verb",
+      "ru": "прибывать, приезжать",
+      "ipa": "/əˈraɪv/",
+      "exampleEn": "The train arrives at noon.",
+      "exampleRu": "Поезд прибывает в полдень.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "arrives",
+        "past": "arrived",
+        "pp": "arrived",
+        "ing": "arriving"
+      }
+    },
+    {
+      "id": "drive",
+      "word": "drive",
+      "pos": "verb",
+      "ru": "водить, ехать (за рулём)",
+      "ipa": "/draɪv/",
+      "exampleEn": "She drives to work every day.",
+      "exampleRu": "Она ездит на работу на машине каждый день.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "drives",
+        "past": "drove",
+        "pp": "driven",
+        "ing": "driving"
+      }
+    },
+    {
+      "id": "ride",
+      "word": "ride",
+      "pos": "verb",
+      "ru": "ездить (верхом, на велосипеде)",
+      "ipa": "/raɪd/",
+      "exampleEn": "I ride my bike to school.",
+      "exampleRu": "Я езжу в школу на велосипеде.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "rides",
+        "past": "rode",
+        "pp": "ridden",
+        "ing": "riding"
+      }
+    },
+    {
+      "id": "fly",
+      "word": "fly",
+      "pos": "verb",
+      "ru": "летать",
+      "ipa": "/flaɪ/",
+      "exampleEn": "We fly to Spain next week.",
+      "exampleRu": "Мы летим в Испанию на следующей неделе.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "flies",
+        "past": "flew",
+        "pp": "flown",
+        "ing": "flying"
+      }
+    },
+    {
+      "id": "win",
+      "word": "win",
+      "pos": "verb",
+      "ru": "выигрывать, побеждать",
+      "ipa": "/wɪn/",
+      "exampleEn": "Our team won the game.",
+      "exampleRu": "Наша команда выиграла матч.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "wins",
+        "past": "won",
+        "pp": "won",
+        "ing": "winning"
+      }
+    },
+    {
+      "id": "fall",
+      "word": "fall",
+      "pos": "verb",
+      "ru": "падать",
+      "ipa": "/fɔːl/",
+      "exampleEn": "Be careful, you might fall.",
+      "exampleRu": "Осторожно, ты можешь упасть.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "falls",
+        "past": "fell",
+        "pp": "fallen",
+        "ing": "falling"
+      }
+    },
+    {
+      "id": "turn",
+      "word": "turn",
+      "pos": "verb",
+      "ru": "поворачивать",
+      "ipa": "/tɜːn/",
+      "exampleEn": "Turn left at the corner.",
+      "exampleRu": "Поверни налево на углу.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "turns",
+        "past": "turned",
+        "pp": "turned",
+        "ing": "turning"
+      }
+    },
+    {
+      "id": "move",
+      "word": "move",
+      "pos": "verb",
+      "ru": "двигать(ся), переезжать",
+      "ipa": "/muːv/",
+      "exampleEn": "We're moving to a new flat.",
+      "exampleRu": "Мы переезжаем в новую квартиру.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "moves",
+        "past": "moved",
+        "pp": "moved",
+        "ing": "moving"
+      }
+    },
+    {
+      "id": "follow",
+      "word": "follow",
+      "pos": "verb",
+      "ru": "следовать, следить",
+      "ipa": "/ˈfɒləʊ/",
+      "exampleEn": "Follow me, please.",
+      "exampleRu": "Следуйте за мной, пожалуйста.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "follows",
+        "past": "followed",
+        "pp": "followed",
+        "ing": "following"
+      }
+    },
+    {
+      "id": "happen",
+      "word": "happen",
+      "pos": "verb",
+      "ru": "случаться, происходить",
+      "ipa": "/ˈhæpən/",
+      "exampleEn": "What happened to your car?",
+      "exampleRu": "Что случилось с твоей машиной?",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "happens",
+        "past": "happened",
+        "pp": "happened",
+        "ing": "happening"
+      }
+    },
+    {
+      "id": "become",
+      "word": "become",
+      "pos": "verb",
+      "ru": "становиться",
+      "ipa": "/bɪˈkʌm/",
+      "exampleEn": "She wants to become a doctor.",
+      "exampleRu": "Она хочет стать врачом.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "becomes",
+        "past": "became",
+        "pp": "become",
+        "ing": "becoming"
+      }
+    },
+    {
+      "id": "keep",
+      "word": "keep",
+      "pos": "verb",
+      "ru": "держать, хранить",
+      "ipa": "/kiːp/",
+      "exampleEn": "Keep your ticket safe.",
+      "exampleRu": "Храни свой билет в надёжном месте.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "keeps",
+        "past": "kept",
+        "pp": "kept",
+        "ing": "keeping"
+      }
+    },
+    {
+      "id": "let",
+      "word": "let",
+      "pos": "verb",
+      "ru": "позволять, разрешать",
+      "ipa": "/let/",
+      "exampleEn": "Let me help you.",
+      "exampleRu": "Позволь мне помочь тебе.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "lets",
+        "past": "let",
+        "pp": "let",
+        "ing": "letting"
+      }
+    },
+    {
+      "id": "spend",
+      "word": "spend",
+      "pos": "verb",
+      "ru": "тратить, проводить (время)",
+      "ipa": "/spend/",
+      "exampleEn": "We spend a lot of time together.",
+      "exampleRu": "Мы проводим много времени вместе.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "spends",
+        "past": "spent",
+        "pp": "spent",
+        "ing": "spending"
+      }
+    },
+    {
+      "id": "agree",
+      "word": "agree",
+      "pos": "verb",
+      "ru": "соглашаться",
+      "ipa": "/əˈɡriː/",
+      "exampleEn": "I agree with you.",
+      "exampleRu": "Я согласен с тобой.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "agrees",
+        "past": "agreed",
+        "pp": "agreed",
+        "ing": "agreeing"
+      }
+    },
+    {
+      "id": "believe",
+      "word": "believe",
+      "pos": "verb",
+      "ru": "верить",
+      "ipa": "/bɪˈliːv/",
+      "exampleEn": "I believe you.",
+      "exampleRu": "Я тебе верю.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core"
+      ],
+      "forms": {
+        "third": "believes",
+        "past": "believed",
+        "pp": "believed",
+        "ing": "believing"
+      }
+    },
+    {
+      "id": "wake-up",
+      "word": "wake up",
+      "pos": "phrasal-verb",
+      "ru": "просыпаться",
+      "ipa": "/weɪk ʌp/",
+      "exampleEn": "I wake up at seven every day.",
+      "exampleRu": "Я просыпаюсь в семь каждый день.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core",
+        "phrasal-verb"
+      ],
+      "forms": {
+        "third": "wakes up",
+        "past": "woke up",
+        "pp": "woken up",
+        "ing": "waking up"
+      }
+    },
+    {
+      "id": "get-up",
+      "word": "get up",
+      "pos": "phrasal-verb",
+      "ru": "вставать",
+      "ipa": "/ɡet ʌp/",
+      "exampleEn": "She gets up early on weekdays.",
+      "exampleRu": "Она встаёт рано по будням.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core",
+        "phrasal-verb"
+      ],
+      "forms": {
+        "third": "gets up",
+        "past": "got up",
+        "pp": "got up",
+        "ing": "getting up"
+      }
+    },
+    {
+      "id": "look-for",
+      "word": "look for",
+      "pos": "phrasal-verb",
+      "ru": "искать",
+      "ipa": "/lʊk fɔː/",
+      "exampleEn": "I'm looking for my glasses.",
+      "exampleRu": "Я ищу свои очки.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core",
+        "phrasal-verb"
+      ],
+      "forms": {
+        "third": "looks for",
+        "past": "looked for",
+        "pp": "looked for",
+        "ing": "looking for"
+      }
+    },
+    {
+      "id": "turn-on",
+      "word": "turn on",
+      "pos": "phrasal-verb",
+      "ru": "включать",
+      "ipa": "/tɜːn ɒn/",
+      "exampleEn": "Can you turn on the light?",
+      "exampleRu": "Можешь включить свет?",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core",
+        "phrasal-verb"
+      ],
+      "forms": {
+        "third": "turns on",
+        "past": "turned on",
+        "pp": "turned on",
+        "ing": "turning on"
+      }
+    },
+    {
+      "id": "turn-off",
+      "word": "turn off",
+      "pos": "phrasal-verb",
+      "ru": "выключать",
+      "ipa": "/tɜːn ɒf/",
+      "exampleEn": "Please turn off the TV.",
+      "exampleRu": "Пожалуйста, выключи телевизор.",
+      "level": "A2",
+      "topic": "verbs",
+      "tags": [
+        "core",
+        "phrasal-verb"
+      ],
+      "forms": {
+        "third": "turns off",
+        "past": "turned off",
+        "pp": "turned off",
+        "ing": "turning off"
+      }
+    }
+  ]
+}
