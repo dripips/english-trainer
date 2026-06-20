@@ -40,15 +40,23 @@
   cursor: pointer;
 }
 
-html, body, #root { height: 100%; }
+html, #root { height: 100%; }
 
+/* Lock the document so iOS can't rubber-band / drag the app shell.
+   Only the inner scroll area (main) scrolls. */
+html { overflow: hidden; }
 body {
   margin: 0;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  overscroll-behavior-y: none;
 }
 
 /* Fixed background layer — stays put while content scrolls */
