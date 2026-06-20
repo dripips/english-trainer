@@ -19,7 +19,7 @@ export function Layout() {
   useEffect(() => { scrollRef.current?.scrollTo({ top: 0 }); }, [loc.pathname]);
 
   return (
-    <div className="mx-auto flex h-[100dvh] max-w-md flex-col overflow-hidden">
+    <div className="fixed inset-0 mx-auto flex max-w-md flex-col overflow-hidden">
       <main ref={scrollRef} className="pt-safe no-scrollbar flex-1 overflow-y-auto overflow-x-hidden px-4 pb-6">
         <Outlet key={loc.pathname} />
       </main>
