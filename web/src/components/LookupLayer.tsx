@@ -1,56 +1,53 @@
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Languages, Plus, X, Check } from 'lucide-react';
+import { Plus, X, Check } from 'lucide-react';
 import { api } from '../api';
 import { SpeakButton } from './ui';
 
-// Listens for text selection inside [data-lookup] regions (lesson theory,
-// exercises) and offers an instant translate + add-to-vocab action.
+// Tap a word inside a [data-lookup] region to translate it and add to vocab.
+// We detect the word under the finger (no native text selection → no iOS callout).
+function wordAtPoint(x: number, y: number): string | null {
+  let node: Node | null = null;
+  let offset = 0;
+  const doc: any = document;
+  if (doc.caretRangeFromPoint) {
+    const r = doc.caretRangeFromPoint(x, y);
+    if (r) { node = r.startContainer; offset = r.startOffset; }
+  } else if (doc.caretPositionFromPoint) {
+    const pos = doc.caretPositionFromPoint(x, y);
+    if (pos) { node = pos.offsetNode; offset = pos.offset; }
+  }
+  if (!node || node.nodeType !== 3) return null;
+  const text = node.textContent || '';
+  if (!text) return null;
+  const isWord = (c: string) => /[\p{L}'’-]/u.test(c);
+  let start = Math.min(offset, text.length);
+  let end = start;
+  while (start > 0 && isWord(text[start - 1])) start--;
+  while (end < text.length && isWord(text[end])) end++;
+  const word = text.slice(start, end).replace(/^['’-]+|['’-]+$/g, '').trim();
+  if (!word || !/[\p{L}]/u.test(word) || word.length > 40) return null;
+  return word;
+}
+
 export function LookupLayer() {
-  const [sel, setSel] = useState<{ text: string; x: number; y: number } | null>(null);
   const [open, setOpen] = useState<string | null>(null);
 
   useEffect(() => {
-    function onSel() {
+    function onClick(e: MouseEvent) {
       if (open) return;
-      const s = window.getSelection();
-      if (!s || s.isCollapsed) { setSel(null); return; }
-      const text = s.toString().trim();
-      if (!text || text.length > 60 || text.split(/\s+/).length > 6) { setSel(null); return; }
-      const node = s.anchorNode;
-      const el = node && node.nodeType === 3 ? node.parentElement : (node as Element | null);
-      if (!el || !el.closest('[data-lookup]')) { setSel(null); return; }
-      try {
-        const rect = s.getRangeAt(0).getBoundingClientRect();
-        setSel({ text, x: rect.left + rect.width / 2, y: rect.top });
-      } catch { setSel(null); }
+      const target = e.target as Element | null;
+      if (!target || !target.closest?.('[data-lookup]')) return;
+      if (target.closest('a, button, input, select, textarea')) return;
+      const word = wordAtPoint(e.clientX, e.clientY);
+      if (word) { e.preventDefault(); setOpen(word); }
     }
-    document.addEventListener('selectionchange', onSel);
-    return () => document.removeEventListener('selectionchange', onSel);
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
   }, [open]);
 
-  return (
-    <>
-      {sel && !open && createPortal(
-        <button
-          onMouseDown={(e) => e.preventDefault()}
-          onClick={() => { setOpen(sel.text); setSel(null); }}
-          style={{
-            position: 'fixed',
-            left: Math.min(Math.max(sel.x, 80), window.innerWidth - 80),
-            top: Math.max(sel.y - 48, 10),
-            transform: 'translateX(-50%)',
-            zIndex: 60,
-          }}
-          className="btn btn-primary !px-3 !py-2 text-sm shadow-xl"
-        >
-          <Languages size={16} /> Перевести
-        </button>,
-        document.body
-      )}
-      {open && createPortal(<LookupSheet text={open} onClose={() => setOpen(null)} />, document.body)}
-    </>
-  );
+  if (!open) return null;
+  return createPortal(<LookupSheet text={open} onClose={() => setOpen(null)} />, document.body);
 }
 
 function LookupSheet({ text, onClose }: { text: string; onClose: () => void }) {
@@ -71,7 +68,7 @@ function LookupSheet({ text, onClose }: { text: string; onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-[70] flex items-end">
       <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-      <div className="card animate-slideup relative w-full max-w-md mx-auto !rounded-b-none">
+      <div className="card animate-slideup relative mx-auto w-full max-w-md !rounded-b-none">
         <div className="mb-2 flex items-start justify-between gap-2">
           <div className="display min-w-0 break-words text-lg font-bold">{text}</div>
           <button onClick={onClose} aria-label="Закрыть" className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[var(--color-surface2)]"><X size={16} /></button>

@@ -31,6 +31,15 @@
 
 * { -webkit-tap-highlight-color: transparent; }
 
+/* Tap-to-translate regions: suppress the native iOS selection callout menu,
+   we handle word taps ourselves. */
+[data-lookup] {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
 html, body, #root { height: 100%; }
 
 body {
