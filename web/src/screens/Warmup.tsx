@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { RotateCcw, CloudSun, BookOpen, CheckCircle2 } from 'lucide-react';
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
@@ -24,23 +25,23 @@ export function Warmup() {
   if (!hasContent) {
     return (
       <div>
-        <Header back title="Разминка 🧠" />
-        <EmptyState emoji="🌤️" title="Пока нечего разминать" hint="Сделай пару уроков и добавь слова — и здесь появится персональная разминка из твоих слабых мест."
-          action={<Link to="/lessons" className="btn btn-primary">📘 К урокам</Link>} />
+        <Header back title="Разминка" />
+        <EmptyState icon={CloudSun} title="Пока нечего разминать" hint="Сделай пару уроков и добавь слова — и здесь появится персональная разминка из твоих слабых мест."
+          action={<Link to="/lessons" className="btn btn-primary">К урокам</Link>} />
       </div>
     );
   }
 
   return (
     <div>
-      <Header back title="Разминка 🧠" subtitle="2 минуты на слабые места перед уроком" />
+      <Header back title="Разминка" subtitle="2 минуты на слабые места перед уроком" />
 
       {data.topics.length > 0 && (
         <div className="card mb-4 !bg-[color-mix(in_srgb,var(--color-amber)_10%,var(--color-surface))]">
-          <div className="display mb-2 font-bold">🔁 Пора вернуться к темам</div>
+          <div className="display mb-2 flex items-center gap-1.5 font-bold"><RotateCcw size={18} className="text-[var(--color-amber)]" /> Пора вернуться к темам</div>
           <div className="flex flex-wrap gap-2">
             {data.topics.map((t) => (
-              <Link key={t.id} to={`/grammar/${t.id}`} className="chip !bg-[var(--color-surface2)] !text-[var(--color-amber)]">{t.title}</Link>
+              <Link key={t.id} to={`/grammar/${t.id}`} className="chip !bg-[var(--color-surface2)] !text-[var(--color-amber)]"><BookOpen size={13} /> {t.title}</Link>
             ))}
           </div>
         </div>
@@ -49,7 +50,7 @@ export function Warmup() {
       {exercises.length > 0 ? (
         <ExercisePlayer exercises={exercises} />
       ) : (
-        <EmptyState emoji="✅" title="Темы повторены" hint="Загляни в темы выше и переходи к новому уроку." />
+        <EmptyState icon={CheckCircle2} title="Темы повторены" hint="Загляни в темы выше и переходи к новому уроку." />
       )}
     </div>
   );

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BookText, Plus, CheckCircle2, Volume2 } from 'lucide-react';
 import { Header } from '../components/Header';
 import { api } from '../api';
 import { SpeakButton } from '../components/ui';
@@ -34,7 +35,7 @@ export function Translator() {
 
   return (
     <div>
-      <Header back title="Переводчик 🌐" subtitle="не знаешь слово? переведи и добавь в словарь" />
+      <Header back title="Переводчик" subtitle="не знаешь слово? переведи и добавь в словарь" />
 
       <div className="mb-3 flex rounded-2xl bg-[var(--color-bg2)] p-1">
         {([['auto', 'Авто'], ['en', 'EN → RU'], ['ru', 'RU → EN']] as [Dir, string][]).map(([d, l]) => (
@@ -48,10 +49,10 @@ export function Translator() {
 
       {res && (
         <div className="animate-slideup mt-4 space-y-3">
-          <div className="card">
+          <div className="card overflow-hidden">
             <div className="text-xs uppercase tracking-wide text-[var(--color-muted)]">{res.source} → {res.target}</div>
             <div className="mt-1 flex items-start gap-2">
-              <div className="display flex-1 text-xl font-bold">{res.translation || '—'}</div>
+              <div className="display min-w-0 flex-1 break-words text-xl font-bold">{res.translation || '—'}</div>
               {res.translation && <SpeakButton text={res.translation} lang={res.target === 'en' ? 'en-US' : 'ru-RU'} />}
             </div>
             {def?.phonetic && <div className="mt-1 text-sm text-[var(--color-muted)]">{def.phonetic}</div>}
@@ -63,24 +64,24 @@ export function Translator() {
           </div>
 
           {def?.found && def.meanings?.length ? (
-            <div className="card">
-              <div className="display mb-1 font-bold">📖 {def.word}</div>
+            <div className="card overflow-hidden">
+              <div className="display mb-1 flex items-center gap-1.5 font-bold"><BookText size={18} className="text-[var(--color-sky)]" /> {def.word}</div>
               {def.meanings.map((m, i) => (
                 <div key={i} className="mb-2">
                   <span className="chip">{m.pos}</span>
                   <ul className="ml-4 mt-1 list-disc text-sm text-[var(--color-text)]">
-                    {m.definitions.map((d, j) => <li key={j}>{d}</li>)}
+                    {m.definitions.map((d, j) => <li key={j} className="break-words">{d}</li>)}
                   </ul>
-                  {m.example && <p className="mt-1 text-sm text-[var(--color-muted)]">«{m.example}»</p>}
+                  {m.example && <p className="mt-1 break-words text-sm text-[var(--color-muted)]">«{m.example}»</p>}
                 </div>
               ))}
             </div>
           ) : null}
 
           {!saved && !showForm && (
-            <button onClick={() => setShowForm(true)} className="btn btn-soft w-full">＋ Добавить в мой словарь</button>
+            <button onClick={() => setShowForm(true)} className="btn btn-soft w-full"><Plus size={18} /> Добавить в мой словарь</button>
           )}
-          {saved && <div className="rounded-2xl bg-[color-mix(in_srgb,var(--color-success)_16%,transparent)] p-3 text-center font-semibold text-[var(--color-success)]">✅ Добавлено в словарь</div>}
+          {saved && <div className="flex items-center justify-center gap-2 rounded-2xl bg-[color-mix(in_srgb,var(--color-success)_16%,transparent)] p-3 font-semibold text-[var(--color-success)]"><CheckCircle2 size={18} /> Добавлено в словарь</div>}
           {showForm && <AddForm en={enSide} ru={ruSide} ipa={def?.phonetic || ''} onSaved={() => { setSaved(true); setShowForm(false); }} />}
         </div>
       )}
@@ -109,7 +110,7 @@ function AddForm({ en, ru, ipa, onSaved }: { en: string; ru: string; ipa: string
       <label className="text-xs text-[var(--color-muted)]">Слово (EN)</label>
       <div className="flex gap-2">
         <input className="input" value={word} onChange={(e) => setWord(e.target.value)} autoCapitalize="none" />
-        <button onClick={() => speak(word)} className="btn btn-soft !px-3">🔊</button>
+        <button onClick={() => speak(word)} className="btn btn-soft !px-3" aria-label="Произнести"><Volume2 size={18} /></button>
       </div>
       <label className="text-xs text-[var(--color-muted)]">Перевод (RU)</label>
       <input className="input" value={tr} onChange={(e) => setTr(e.target.value)} />

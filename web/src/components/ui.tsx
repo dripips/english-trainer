@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react';
+import type { LucideIcon } from 'lucide-react';
+import { Volume2 } from 'lucide-react';
 import { speak, ttsSupported } from '../lib/speech';
 
 export function Spinner({ label }: { label?: string }) {
@@ -10,13 +12,23 @@ export function Spinner({ label }: { label?: string }) {
   );
 }
 
-export function EmptyState({ emoji, title, hint, action }: { emoji: string; title: string; hint?: string; action?: ReactNode }) {
+export function IconBadge({ icon: Icon, color = 'var(--color-primary)', size = 'md' }: { icon: LucideIcon; color?: string; size?: 'sm' | 'md' | 'lg' }) {
+  const box = size === 'lg' ? 56 : size === 'sm' ? 36 : 46;
+  const ic = size === 'lg' ? 26 : size === 'sm' ? 18 : 22;
   return (
-    <div className="flex flex-col items-center gap-2 py-12 text-center">
-      <div className="text-5xl">{emoji}</div>
+    <div className="grid shrink-0 place-items-center rounded-2xl" style={{ width: box, height: box, background: `color-mix(in srgb, ${color} 16%, transparent)`, color }}>
+      <Icon size={ic} strokeWidth={2.2} />
+    </div>
+  );
+}
+
+export function EmptyState({ icon: Icon, title, hint, action }: { icon: LucideIcon; title: string; hint?: string; action?: ReactNode }) {
+  return (
+    <div className="flex flex-col items-center gap-3 px-4 py-12 text-center">
+      <IconBadge icon={Icon} color="var(--color-primary)" size="lg" />
       <div className="display text-lg font-semibold">{title}</div>
       {hint && <p className="max-w-xs text-sm text-[var(--color-muted)]">{hint}</p>}
-      {action && <div className="mt-3">{action}</div>}
+      {action && <div className="mt-2">{action}</div>}
     </div>
   );
 }
@@ -28,7 +40,7 @@ const LEVEL_COLORS: Record<string, string> = {
 export function LevelBadge({ level }: { level: string }) {
   const c = LEVEL_COLORS[level] || 'var(--color-muted)';
   return (
-    <span className="rounded-full px-2 py-0.5 text-[11px] font-bold" style={{ color: c, background: 'color-mix(in srgb, currentColor 16%, transparent)' }}>
+    <span className="shrink-0 rounded-full px-2 py-0.5 text-[11px] font-bold" style={{ color: c, background: 'color-mix(in srgb, currentColor 16%, transparent)' }}>
       {level}
     </span>
   );
@@ -39,10 +51,10 @@ export function SpeakButton({ text, lang = 'en-US', className = '' }: { text: st
   return (
     <button
       onClick={(e) => { e.stopPropagation(); speak(text, lang); }}
-      className={`grid h-9 w-9 place-items-center rounded-full bg-[var(--color-surface2)] text-[var(--color-sky)] active:scale-90 ${className}`}
+      className={`grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--color-surface2)] text-[var(--color-sky)] active:scale-90 ${className}`}
       aria-label="Произнести"
     >
-      🔊
+      <Volume2 size={18} />
     </button>
   );
 }

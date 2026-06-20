@@ -81,7 +81,8 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.01em
 }
 
 /* Markdown (lesson / grammar theory) */
-.prose-rich { @apply text-[0.97rem] leading-relaxed; color: var(--color-text); }
+.prose-rich { @apply text-[0.97rem] leading-relaxed; color: var(--color-text); overflow-wrap: break-word; }
+.prose-rich pre { @apply my-3 overflow-x-auto rounded-xl p-3; background: var(--color-bg2); }
 .prose-rich h2 { @apply mt-6 mb-2 text-lg; color: var(--color-text); }
 .prose-rich h3 { @apply mt-4 mb-1 text-base; color: var(--color-primary); }
 .prose-rich p { @apply my-2; color: #d7daf2; }
@@ -94,7 +95,7 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.01em
   @apply my-3 rounded-xl border-l-4 px-3 py-2;
   border-color: var(--color-amber); background: rgba(255, 200, 87, 0.08); color: #ffe6ad;
 }
-.prose-rich table { @apply my-3 w-full border-collapse overflow-hidden rounded-xl text-sm; }
+.prose-rich table { @apply my-3 block w-full max-w-full overflow-x-auto border-collapse rounded-xl text-sm; }
 .prose-rich th, .prose-rich td { @apply border px-2.5 py-1.5 text-left; border-color: var(--color-border); }
 .prose-rich th { background: var(--color-surface2); color: #fff; }
 .prose-rich a { color: var(--color-sky); }

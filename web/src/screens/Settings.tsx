@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Check } from 'lucide-react';
 import { api } from '../api';
 import { Header } from '../components/Header';
 import { Spinner } from '../components/ui';
@@ -23,20 +24,20 @@ export function Settings() {
 
   return (
     <div>
-      <Header back title="Настройки ⚙️" />
+      <Header back title="Настройки" />
       <div className="card">
         <div className="display mb-1 font-bold">Новых слов в день</div>
         <p className="mb-3 text-sm text-[var(--color-muted)]">Сколько новых карточек показывать ежедневно. Программа советует 10–15.</p>
         <div className="flex items-center gap-3">
           <input type="range" min={3} max={30} step={1} value={newPerDay} onChange={(e) => save(Number(e.target.value))} className="flex-1 accent-[var(--color-primary)]" />
-          <span className="display w-10 text-center text-xl font-bold">{newPerDay}</span>
+          <span className="display w-10 shrink-0 text-center text-xl font-bold">{newPerDay}</span>
         </div>
-        {saved && <p className="mt-2 text-sm text-[var(--color-success)]">Сохранено ✅</p>}
+        {saved && <p className="mt-2 flex items-center gap-1 text-sm text-[var(--color-success)]"><Check size={15} /> Сохранено</p>}
       </div>
 
       <div className="card mt-4">
         <div className="display mb-1 font-bold">О приложении</div>
-        <p className="text-sm text-[var(--color-muted)]">English Trainer — личный тренажёр для двоих. Уроки, слова с интервальным повторением, грамматика, разминки и журнал ошибок. Без рекламы и подписок 💛</p>
+        <p className="text-sm text-[var(--color-muted)]">English Trainer — личный тренажёр для двоих. Уроки, слова с интервальным повторением, грамматика, разминки и журнал ошибок. Без рекламы и подписок.</p>
       </div>
     </div>
   );

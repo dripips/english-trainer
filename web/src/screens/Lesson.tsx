@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { BookOpen, PencilLine, Flame, Ruler, ArrowRight } from 'lucide-react';
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
@@ -21,8 +22,8 @@ export function LessonScreen() {
       <div className="mb-4 flex rounded-2xl bg-[var(--color-bg2)] p-1">
         {(['theory', 'practice'] as const).map((t) => (
           <button key={t} onClick={() => setTab(t)}
-            className={`flex-1 rounded-xl py-2 text-sm font-semibold transition ${tab === t ? 'bg-[var(--color-surface2)] text-[var(--color-text)]' : 'text-[var(--color-muted)]'}`}>
-            {t === 'theory' ? '📖 Теория' : `✍️ Упражнения (${lesson.exercises.length})`}
+            className={`flex flex-1 items-center justify-center gap-1.5 rounded-xl py-2 text-sm font-semibold transition ${tab === t ? 'bg-[var(--color-surface2)] text-[var(--color-text)]' : 'text-[var(--color-muted)]'}`}>
+            {t === 'theory' ? <><BookOpen size={16} /> Теория</> : <><PencilLine size={16} /> Упражнения ({lesson.exercises.length})</>}
           </button>
         ))}
       </div>
@@ -31,22 +32,22 @@ export function LessonScreen() {
         <div className="space-y-4">
           {lesson.warmup?.length > 0 && (
             <div className="card !bg-[color-mix(in_srgb,var(--color-amber)_10%,var(--color-surface))]">
-              <div className="display mb-1 font-bold">🔥 Разминка</div>
+              <div className="display mb-1 flex items-center gap-1.5 font-bold"><Flame size={18} className="text-[var(--color-amber)]" /> Разминка</div>
               <ul className="ml-4 list-disc text-sm text-[var(--color-text)]">
                 {lesson.warmup.map((w, i) => <li key={i} className="my-0.5">{w}</li>)}
               </ul>
             </div>
           )}
-          <div className="card"><Markdown>{lesson.theory}</Markdown></div>
+          <div className="card overflow-hidden"><Markdown>{lesson.theory}</Markdown></div>
 
           {lesson.grammarRefs?.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {lesson.grammarRefs.map((g) => (
-                <Link key={g} to={`/grammar/${g}`} className="chip !bg-[var(--color-surface2)] !text-[var(--color-sky)]">📐 {g}</Link>
+                <Link key={g} to={`/grammar/${g}`} className="chip !bg-[var(--color-surface2)] !text-[var(--color-sky)]"><Ruler size={13} /> {g}</Link>
               ))}
             </div>
           )}
-          <button className="btn btn-primary w-full" onClick={() => setTab('practice')}>Перейти к упражнениям →</button>
+          <button className="btn btn-primary w-full" onClick={() => setTab('practice')}>К упражнениям <ArrowRight size={18} /></button>
         </div>
       ) : (
         <ExercisePlayer
