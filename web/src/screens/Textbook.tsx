@@ -136,7 +136,7 @@ export function Textbook() {
   const canvasEl = (
     <div ref={wrapRef} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}
       className="no-scrollbar flex-1 overflow-auto rounded-2xl bg-[var(--color-bg2)]">
-      <div className="flex min-h-full items-start justify-center p-1">
+      <div className="tb-stage">
         <canvas ref={canvasRef} className="rounded-lg bg-white" />
       </div>
     </div>
@@ -170,7 +170,7 @@ export function Textbook() {
           <button onClick={() => setImmersive(false)} aria-label="Закрыть" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white"><X size={20} /></button>
         </div>
         <div ref={wrapRef} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} className="no-scrollbar relative flex-1 overflow-auto">
-          <div className="flex min-h-full items-start justify-center p-1">
+          <div className="tb-stage">
             <canvas ref={canvasRef} className="bg-white" />
           </div>
           {/* tap zones / arrows */}

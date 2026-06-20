@@ -134,6 +134,10 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.01em
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+/* PDF page stage: centered when it fits, left-aligned & fully scrollable when
+   zoomed wider than the viewport (avoids the justify-center overflow bug). */
+.tb-stage { width: fit-content; margin: 0 auto; padding: 4px; }
+
 @keyframes pop { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
 .animate-pop { animation: pop 0.18s ease-out; }
 @keyframes slideup { from { transform: translateY(12px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
