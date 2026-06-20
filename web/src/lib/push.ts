@@ -17,8 +17,17 @@ export const pushSupported = () =>
 
 export async function getSubscription(): Promise<PushSubscription | null> {
   if (!pushSupported()) return null;
-  const reg = await navigator.serviceWorker.ready;
-  return reg.pushManager.getSubscription();
+  try {
+    // serviceWorker.ready can hang if no SW is active yet — race with a timeout.
+    const reg = await Promise.race<ServiceWorkerRegistration | null>([
+      navigator.serviceWorker.ready,
+      new Promise((r) => setTimeout(() => r(null), 3000)),
+    ]);
+    if (!reg) return null;
+    return await reg.pushManager.getSubscription();
+  } catch {
+    return null;
+  }
 }
 
 export async function enablePush(): Promise<void> {

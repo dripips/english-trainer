@@ -15,12 +15,15 @@ export function Settings() {
 
   useEffect(() => {
     (async () => {
-      const s = await api.settings();
-      setNewPerDay(Number(s.newPerDay ?? 12));
-      setReminderHour(Number(s.reminderHour ?? 19));
-      const sub = await getSubscription();
-      setRemOn(!!sub && String(s.remindersEnabled ?? '1') === '1');
-      setLoading(false);
+      try {
+        const s = await api.settings();
+        setNewPerDay(Number(s.newPerDay ?? 12));
+        setReminderHour(Number(s.reminderHour ?? 19));
+        setLoading(false);
+        // check subscription without blocking the screen
+        const sub = await getSubscription();
+        setRemOn(!!sub && String(s.remindersEnabled ?? '1') === '1');
+      } catch { setLoading(false); }
     })();
   }, []);
 

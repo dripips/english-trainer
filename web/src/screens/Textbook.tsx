@@ -44,7 +44,13 @@ export function Textbook() {
   useEffect(() => {
     if (!info?.available) return;
     let cancelled = false;
-    const task = pdfjsLib.getDocument({ url: '/api/textbook/file', withCredentials: true, disableAutoFetch: true });
+    const task = pdfjsLib.getDocument({
+      url: '/api/textbook/file',
+      withCredentials: true,
+      disableStream: true,      // use HTTP range requests, don't download the whole file
+      disableAutoFetch: true,   // fetch only the pages we view
+      rangeChunkSize: 262144,
+    });
     task.promise.then((pdf: any) => {
       if (cancelled) return;
       pdfRef.current = pdf;
