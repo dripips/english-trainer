@@ -1,0 +1,31 @@
+# systemd unit for running the app natively (no Docker), behind an existing
+# reverse proxy (nginx/Caddy/Traefik). Copy to /etc/systemd/system/english-trainer.service
+#
+#   sudo cp deploy/english-trainer.service.example /etc/systemd/system/english-trainer.service
+#   sudo systemctl daemon-reload && sudo systemctl enable --now english-trainer
+#
+# Requires Node >= 22 (for node:sqlite). Point ExecStart at it (system node or a
+# standalone build, e.g. /opt/node/bin/node).
+
+[Unit]
+Description=English Trainer PWA
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/english-trainer/server
+EnvironmentFile=/opt/english-trainer/.env
+Environment=NODE_ENV=production
+Environment=PORT=3100
+Environment=HOST=127.0.0.1
+Environment=CONTENT_DIR=/opt/english-trainer/content
+Environment=WEB_DIST=/opt/english-trainer/web/dist
+Environment=DATA_DIR=/opt/english-trainer/data
+ExecStart=/opt/node/bin/node --experimental-sqlite --disable-warning=ExperimentalWarning src/index.js
+Restart=always
+RestartSec=3
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target

@@ -78,6 +78,23 @@ docker compose --profile selfhost-translate up -d
 ```
 (Учти: LibreTranslate скачивает языковые модели и заметно ест RAM.)
 
+### Вариант без Docker — за существующим nginx
+
+Если на сервере уже стоит nginx с другими сайтами, не нужен ни Docker, ни Caddy: запусти приложение нативно на внутреннем порту и добавь **новый** vhost. Нужен Node ≥ 22 (для `node:sqlite`).
+
+```bash
+git clone https://github.com/dripips/english-trainer.git /opt/english-trainer
+cd /opt/english-trainer && npm run install:all && npm run build:web
+cp .env.example .env && nano .env          # секреты, SEED_USERS, PORT=3100, HOST=127.0.0.1
+sudo cp deploy/english-trainer.service.example /etc/systemd/system/english-trainer.service
+sudo systemctl daemon-reload && sudo systemctl enable --now english-trainer
+sudo cp deploy/nginx-lern.conf.example /etc/nginx/sites-available/lern.example.com
+# отредактируй server_name; затем:
+sudo ln -s /etc/nginx/sites-available/lern.example.com /etc/nginx/sites-enabled/
+sudo nginx -t && sudo systemctl reload nginx
+sudo certbot --nginx -d lern.example.com    # TLS
+```
+
 ## Как добавлять контент
 
 Подробный формат — в [`content/AUTHORING.md`](content/AUTHORING.md). Кратко:
