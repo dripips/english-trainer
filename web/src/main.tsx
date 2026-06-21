@@ -12,6 +12,11 @@ function isStandaloneApp() {
     || (window.navigator as Navigator & { standalone?: boolean }).standalone === true;
 }
 
+function isIosDevice() {
+  return /iPad|iPhone|iPod/.test(window.navigator.userAgent)
+    || (window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1);
+}
+
 function syncStandaloneMode() {
   document.documentElement.classList.toggle('is-standalone', isStandaloneApp());
 }
@@ -28,7 +33,10 @@ function listenToMediaQuery(query: string, onChange: () => void) {
 // Track the *visible* viewport height (excludes the Safari toolbar / keyboard)
 // so the app shell + tab bar always fit the truly visible area on iOS.
 function setAppHeight() {
-  const h = isStandaloneApp() ? window.innerHeight : (window.visualViewport?.height ?? window.innerHeight);
+  const visibleH = window.visualViewport?.height ?? window.innerHeight;
+  const h = isStandaloneApp() && isIosDevice()
+    ? Math.max(window.innerHeight, document.documentElement.clientHeight, window.screen.height || 0)
+    : visibleH;
   document.documentElement.style.setProperty('--app-h', `${Math.round(h)}px`);
 }
 syncStandaloneMode();

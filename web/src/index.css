@@ -52,12 +52,12 @@ html, body, #root {
   }
 }
 
-@supports (height: 100svh) {
+@supports (height: 100lvh) {
   html.is-standalone,
   html.is-standalone body,
   html.is-standalone #root {
-    height: 100svh;
-    min-height: 100svh;
+    height: 100lvh;
+    min-height: 100lvh;
   }
 }
 
@@ -100,10 +100,18 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.01em
 html.is-standalone .app-shell {
   position: fixed;
   inset: 0;
-  height: auto;
+  height: var(--app-h, 100lvh);
+  min-height: var(--app-h, 100lvh);
+  overflow: visible;
 }
 @media all and (display-mode: standalone) {
-  .app-shell { position: fixed; inset: 0; height: auto; }
+  .app-shell {
+    position: fixed;
+    inset: 0;
+    height: var(--app-h, 100lvh);
+    min-height: var(--app-h, 100lvh);
+    overflow: visible;
+  }
 }
 
 /* comfortable top inset that also clears the status bar / notch on phones */
@@ -120,7 +128,7 @@ html.is-standalone .pt-safe { padding-top: calc(max(env(safe-area-inset-top, 0px
   position: fixed;
   left: 50%;
   right: auto;
-  bottom: 0;
+  bottom: calc(-1 * env(safe-area-inset-bottom, 0px));
   z-index: 100;
   width: 100%;
   max-width: 28rem;
