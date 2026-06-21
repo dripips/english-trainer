@@ -27,8 +27,9 @@ export function Layout() {
       <LookupLayer />
 
 
-      <nav className="shrink-0 px-3 pt-1" style={{ paddingBottom: 'max(calc(env(safe-area-inset-bottom) - 30px), 0.25rem)' }}>
-        <div className="flex items-center justify-around rounded-[1.6rem] border border-[var(--color-border)] bg-[var(--color-bg2)]/95 p-1.5 backdrop-blur"
+      <nav className="shrink-0 bg-[var(--color-bg2)] px-3 pt-2 backdrop-blur-sm"
+           style={{ paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 0.5rem)' }}>
+        <div className="flex items-center justify-around rounded-[1.6rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-1.5"
              style={{ boxShadow: '0 -8px 30px -16px rgba(0,0,0,.8)' }}>
           {TABS.map((t) => {
             const Icon = t.icon;
