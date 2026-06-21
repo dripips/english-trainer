@@ -78,6 +78,11 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.01em
    - browser: fit the *visible* viewport (above the Safari toolbar)
    - installed PWA: pin to the real screen edges so the tab bar sits at the very bottom */
 .app-shell { height: var(--app-h, 100dvh); }
+html.is-standalone .app-shell {
+  position: fixed;
+  inset: 0;
+  height: auto;
+}
 @media all and (display-mode: standalone) {
   .app-shell { position: fixed; inset: 0; height: auto; }
 }
@@ -88,6 +93,16 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.01em
    env(safe-area-inset-top) misreports as 0 */
 @media (display-mode: standalone) {
   .pt-safe { padding-top: calc(max(env(safe-area-inset-top, 0px), 50px) + 0.5rem); }
+}
+html.is-standalone .pt-safe { padding-top: calc(max(env(safe-area-inset-top, 0px), 50px) + 0.5rem); }
+
+.bottom-nav { padding-bottom: max(env(safe-area-inset-bottom, 0px), 0.5rem); }
+.bottom-nav-panel { padding-bottom: 0.375rem; }
+html.is-standalone .bottom-nav { padding-bottom: 0.5rem; }
+html.is-standalone .bottom-nav-panel { padding-bottom: max(env(safe-area-inset-bottom, 0px), 0.375rem); }
+@media (display-mode: standalone) {
+  .bottom-nav { padding-bottom: 0.5rem; }
+  .bottom-nav-panel { padding-bottom: max(env(safe-area-inset-bottom, 0px), 0.375rem); }
 }
 
 @layer components {

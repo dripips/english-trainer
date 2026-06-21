@@ -6,16 +6,43 @@ import { registerSW } from 'virtual:pwa-register';
 import { AuthProvider } from './auth';
 import { App } from './App';
 
+function isStandaloneApp() {
+  return window.matchMedia('(display-mode: standalone)').matches
+    || window.matchMedia('(display-mode: fullscreen)').matches
+    || (window.navigator as Navigator & { standalone?: boolean }).standalone === true;
+}
+
+function syncStandaloneMode() {
+  document.documentElement.classList.toggle('is-standalone', isStandaloneApp());
+}
+
+function listenToMediaQuery(query: string, onChange: () => void) {
+  const media = window.matchMedia(query);
+  if (media.addEventListener) {
+    media.addEventListener('change', onChange);
+  } else {
+    media.addListener(onChange);
+  }
+}
+
 // Track the *visible* viewport height (excludes the Safari toolbar / keyboard)
 // so the app shell + tab bar always fit the truly visible area on iOS.
 function setAppHeight() {
-  const h = window.visualViewport?.height ?? window.innerHeight;
+  const h = isStandaloneApp() ? window.innerHeight : (window.visualViewport?.height ?? window.innerHeight);
   document.documentElement.style.setProperty('--app-h', `${Math.round(h)}px`);
 }
+syncStandaloneMode();
 setAppHeight();
+listenToMediaQuery('(display-mode: standalone)', () => {
+  syncStandaloneMode();
+  setAppHeight();
+});
 window.visualViewport?.addEventListener('resize', setAppHeight);
 window.addEventListener('resize', setAppHeight);
-window.addEventListener('orientationchange', () => setTimeout(setAppHeight, 250));
+window.addEventListener('orientationchange', () => {
+  syncStandaloneMode();
+  setTimeout(setAppHeight, 250);
+});
 
 // Service worker: register + check for updates on focus; reload when a new
 // version takes control so design/code changes show up without manual cache clears.
