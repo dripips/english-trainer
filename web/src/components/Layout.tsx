@@ -27,7 +27,7 @@ export function Layout() {
       <LookupLayer />
 
 
-      <nav className="shrink-0 px-3 pt-1" style={{ paddingBottom: 'max(env(safe-area-inset-bottom), 0.6rem)' }}>
+      <nav className="shrink-0 px-3 pt-1" style={{ paddingBottom: 'max(calc(env(safe-area-inset-bottom) / 2), 0.4rem)' }}>
         <div className="flex items-center justify-around rounded-[1.6rem] border border-[var(--color-border)] bg-[var(--color-bg2)]/95 p-1.5 backdrop-blur"
              style={{ boxShadow: '0 -8px 30px -16px rgba(0,0,0,.8)' }}>
           {TABS.map((t) => {
