@@ -266,7 +266,7 @@ export async function registerRoutes(app) {
   });
 
   app.post('/api/translate', async (req, reply) => {
-    const { text } = req.body || {};
+    const { text, context } = req.body || {};
     if (!text) return reply.code(400).send({ error: 'no text' });
     let { source, target } = req.body || {};
     if (!source || source === 'auto') {
@@ -274,7 +274,7 @@ export async function registerRoutes(app) {
       source = hasCyr ? 'ru' : 'en';
     }
     if (!target) target = source === 'ru' ? 'en' : 'ru';
-    const result = await translate(text, source, target);
+    const result = await translate(text, source, target, context);
     return { ...result, source, target };
   });
 
@@ -557,7 +557,62 @@ function computeStreak(daysDesc) {
   return streak;
 }
 
-async function translate(text, source, target) {
+// Context-aware translation via any OpenAI-compatible chat API (opt-in).
+// Returns null when not configured or on any error, so callers fall back to MT.
+async function llmTranslate(text, source, target, context) {
+  const url = process.env.LLM_TRANSLATE_URL;
+  if (!url) return null;
+  const key = process.env.LLM_TRANSLATE_KEY;
+  const model = process.env.LLM_TRANSLATE_MODEL || 'gpt-4o-mini';
+  const langName = (l) => (l === 'ru' ? 'Russian' : 'English');
+  const sys =
+    'You are a precise EN<->RU dictionary/translator for a language learner. '
+    + 'Translate the given text to the target language, choosing the meaning that fits the context sentence if one is provided. '
+    + 'Reply ONLY with compact JSON: {"translation": string, "note": string}. '
+    + 'If the word is ambiguous, put the best-fitting translation in "translation" and briefly list the other common meanings in Russian (with a tiny cue) in "note"; otherwise "note" is "".';
+  const user =
+    `Translate from ${langName(source)} to ${langName(target)}.\n`
+    + `Text: ${JSON.stringify(text)}\n`
+    + `Context sentence (may be empty): ${JSON.stringify(context || '')}`;
+  // gpt-5 / o-series are reasoning models: they reject custom temperature and
+  // support reasoning_effort. Plain models (gpt-4o-mini, etc.) take temperature.
+  const isReasoning = /^(gpt-5|o[1-9])/i.test(model);
+  const body = {
+    model,
+    response_format: { type: 'json_object' },
+    messages: [{ role: 'system', content: sys }, { role: 'user', content: user }],
+  };
+  if (isReasoning) body.reasoning_effort = 'low';
+  else body.temperature = 0;
+  try {
+    const res = await fetch(`${url.replace(/\/$/, '')}/chat/completions`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...(key ? { Authorization: `Bearer ${key}` } : {}) },
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(15000),
+    });
+    if (!res.ok) return null;
+    const j = await res.json();
+    const content = j?.choices?.[0]?.message?.content;
+    if (!content) return null;
+    const parsed = JSON.parse(content);
+    if (!parsed.translation) return null;
+    return {
+      translation: String(parsed.translation),
+      alternatives: [],
+      note: parsed.note ? String(parsed.note) : '',
+      provider: 'llm',
+    };
+  } catch {
+    return null;
+  }
+}
+
+async function translate(text, source, target, context) {
+  // Best quality (opt-in): context-aware LLM translation. Falls through on any error.
+  const viaLlm = await llmTranslate(text, source, target, context);
+  if (viaLlm) return viaLlm;
+
   const lt = process.env.LIBRETRANSLATE_URL;
   if (lt) {
     try {

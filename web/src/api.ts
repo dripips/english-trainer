@@ -71,9 +71,9 @@ export const api = {
   srsStats: () => get<{ total: number; new: number; learning: number; review: number; due: number }>('/srs/stats'),
 
   // translator / dictionary / custom
-  translate: (text: string, source?: string, target?: string) =>
-    post<{ translation: string; alternatives: string[]; provider: string; source: string; target: string }>(
-      '/translate', { text, source, target }),
+  translate: (text: string, source?: string, target?: string, context?: string) =>
+    post<{ translation: string; alternatives: string[]; note?: string; provider: string; source: string; target: string }>(
+      '/translate', { text, source, target, context }),
   define: (word: string) => get<{
     word: string; found: boolean; phonetic?: string; audio?: string;
     meanings?: { pos: string; definitions: string[]; example: string }[];

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { BookOpen, PencilLine, Flame, Ruler, ArrowRight } from 'lucide-react';
+import { BookOpen, PencilLine, Flame, Ruler, ArrowRight, Youtube, Play, BookText, Languages } from 'lucide-react';
+import type { Lesson } from '../types';
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
@@ -38,7 +39,20 @@ export function LessonScreen() {
               </ul>
             </div>
           )}
+          {lesson.videos && lesson.videos.length > 0 && (
+            <div className="card">
+              <div className="display mb-2 flex items-center gap-1.5 font-bold"><Youtube size={18} className="text-[var(--color-primary)]" /> Смотри</div>
+              <div className="space-y-2">
+                {lesson.videos.map((v, i) => (
+                  <a key={i} href={v.url} target="_blank" rel="noreferrer" className="btn btn-soft w-full !justify-start gap-2">
+                    <Play size={16} className="shrink-0" /> <span className="truncate">{v.title}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
           <div className="card overflow-hidden"><Markdown>{lesson.theory}</Markdown></div>
+          {lesson.reading && <ReadingCard reading={lesson.reading} />}
 
           {lesson.grammarRefs?.length > 0 && (
             <div className="flex flex-wrap gap-2">
@@ -54,6 +68,28 @@ export function LessonScreen() {
           exercises={lesson.exercises}
           onAttempt={(exId, correct, answer) => { api.attempt(lesson.id, exId, correct, answer).catch(() => {}); }}
         />
+      )}
+    </div>
+  );
+}
+
+function ReadingCard({ reading }: { reading: NonNullable<Lesson['reading']> }) {
+  const [showRu, setShowRu] = useState(false);
+  return (
+    <div className="card">
+      <div className="display mb-2 flex items-center gap-1.5 font-bold"><BookText size={18} className="text-[var(--color-sky)]" /> Читай</div>
+      <p className="whitespace-pre-line leading-relaxed">{reading.textEn}</p>
+      <button onClick={() => setShowRu((v) => !v)} className="btn btn-soft mt-3 gap-2"><Languages size={16} /> {showRu ? 'Скрыть перевод' : 'Показать перевод'}</button>
+      {showRu && <p className="mt-2 whitespace-pre-line leading-relaxed text-[var(--color-muted)]">{reading.textRu}</p>}
+      {reading.gloss && reading.gloss.length > 0 && (
+        <div className="mt-3 border-t border-[var(--color-bg2)] pt-3">
+          <div className="mb-1 text-xs uppercase tracking-wide text-[var(--color-muted)]">Слова в контексте</div>
+          <ul className="space-y-1 text-sm">
+            {reading.gloss.map((g, i) => (
+              <li key={i}><span className="font-semibold">{g.en}</span> — {g.ru}{g.note ? <span className="text-[var(--color-muted)]"> ({g.note})</span> : null}</li>
+            ))}
+          </ul>
+        </div>
       )}
     </div>
   );

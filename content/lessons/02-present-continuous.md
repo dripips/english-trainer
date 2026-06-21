@@ -13,6 +13,21 @@ warmup:
   - "Переведи: Он работает в банке."
   - "Исправь: He don't like coffee."
   - "Выбери: She (works / work) every day."
+videos:
+  - { title: "Gogo Loves English — серии 22–39 (продолжай по порядку)", url: "https://www.youtube.com/watch?v=65PydAbE4eo" }
+reading:
+  textEn: |
+    It is 8 o'clock in the evening. I am sitting at my desk and studying English. My wife is reading a book in the bedroom. The TV is not working — we are not watching TV tonight. Our cat is sleeping on the sofa. Outside, it is raining.
+    I usually study for two hours every evening. But right now I am feeling a little tired. I am drinking tea and listening to music.
+  textRu: |
+    Сейчас восемь вечера. Я сижу за столом и учу английский. Моя жена читает книгу в спальне. Телевизор не работает — мы не смотрим телевизор сегодня вечером. Наш кот спит на диване. На улице идёт дождь.
+    Обычно каждый вечер я занимаюсь два часа. Но прямо сейчас я немного устал. Я пью чай и слушаю музыку.
+  gloss:
+    - { en: "am sitting at my desk", ru: "сижу за столом" }
+    - { en: "is reading", ru: "читает (прямо сейчас)", note: "is + -ing = действие в эту минуту" }
+    - { en: "is not working", ru: "не работает", note: "isn't + -ing = отрицание Continuous" }
+    - { en: "it is raining", ru: "идёт дождь", note: "it is + -ing — так говорят о погоде" }
+    - { en: "am listening to music", ru: "слушаю музыку", note: "listen to — всегда с предлогом to" }
 exercises:
   - id: a1
     type: fill
@@ -169,6 +184,16 @@ am/is/are **вперёд**: **Are** you working? · **Is** she working? · **Wha
 Глаголы **состояния и чувств** обычно НЕ ставят в -ing: like, love, want, know, understand, have (=иметь).
 - ✅ I **want** coffee. ❌ I am wanting coffee.
 - ✅ I **know** the answer. ❌ I am knowing.
+
+---
+
+## Кино и мультики для слуха (смотри дома)
+
+- **Peppa Pig / Bluey** — продолжай смотреть: персонажи постоянно что-то *делают прямо сейчас* — Continuous на слух в каждой серии.
+- **Finding Nemo** — «What are you doing?», «He is swimming away!» — Continuous в каждой сцене.
+- **The Lion King (Лев Король)** — классические диалоги, понятный темп, A1–A2.
+
+> Трюк: поставь мультик на паузу, спроси себя вслух «What is [character] doing right now?» и ответь по-английски.
 
 ---
 

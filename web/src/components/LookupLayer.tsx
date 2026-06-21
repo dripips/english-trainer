@@ -63,16 +63,14 @@ export function LookupLayer() {
 
 function LookupSheet({ word, sentence, onClose }: { word: string; sentence: string; onClose: () => void }) {
   const [wordRes, setWordRes] = useState<Awaited<ReturnType<typeof api.translate>> | null>(null);
-  const [ctx, setCtx] = useState<{ en: string; ru: string } | null>(null);
   const [saved, setSaved] = useState(false);
 
   const hasContext = sentence && sentence.toLowerCase().replace(/[^a-zа-яё]/gi, '') !== word.toLowerCase().replace(/[^a-zа-яё]/gi, '');
 
   useEffect(() => {
-    api.translate(word).then(setWordRes).catch(() => setWordRes(null));
-    if (hasContext) {
-      api.translate(sentence, 'en', 'ru').then((r) => setCtx({ en: sentence, ru: r.translation })).catch(() => {});
-    }
+    // pass the sentence as context so the (LLM) translator picks the right meaning
+    api.translate(word, undefined, undefined, hasContext ? sentence : undefined)
+      .then(setWordRes).catch(() => setWordRes(null));
   }, [word, sentence]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const enSide = wordRes ? (wordRes.source === 'en' ? word : wordRes.translation) : word;
@@ -99,15 +97,15 @@ function LookupSheet({ word, sentence, onClose }: { word: string; sentence: stri
         ) : (
           <>
             <div className="display break-words text-xl font-bold text-[var(--color-mint)]">{wordRes.translation || '—'}</div>
+            {wordRes.note && <p className="mt-1 break-words text-sm text-[var(--color-muted)]">{wordRes.note}</p>}
             {wordRes.alternatives?.length > 0 && (
               <div className="mt-2 flex flex-wrap gap-2">{wordRes.alternatives.slice(0, 5).map((a, i) => <span key={i} className="chip">{a}</span>)}</div>
             )}
 
             {hasContext && (
               <div className="mt-3 rounded-2xl bg-[var(--color-bg2)] p-3">
-                <div className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-[var(--color-muted)]">в контексте</div>
+                <div className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-[var(--color-muted)]">пример</div>
                 <div className="text-sm text-[var(--color-text)]">{sentence}</div>
-                <div className="mt-1 text-sm text-[var(--color-mint)]">{ctx?.ru || '…'}</div>
               </div>
             )}
 

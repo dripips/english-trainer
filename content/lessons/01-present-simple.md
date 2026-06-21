@@ -12,6 +12,22 @@ vocabTopics: [daily-routine, work]
 warmup:
   - "Переведи: Я инженер."
   - "Исправь: He work in a bank."
+videos:
+  - { title: "Gogo Loves English — серии 1–21 (смотри по порядку)", url: "https://www.youtube.com/watch?v=Z45RyKzb66g" }
+reading:
+  textEn: |
+    Every morning I get up at seven. I brush my teeth and wash my face. Then I have breakfast — I drink coffee and eat toast. I go to work at nine. The bus leaves at 8:50. I work in an office. I like my job.
+    In the evening I come home at six. I cook dinner and watch TV. I go to bed at eleven.
+  textRu: |
+    Каждое утро я встаю в семь. Я чищу зубы и умываюсь. Потом я завтракаю — пью кофе и ем тост. Я еду на работу в девять. Автобус отправляется в 8:50. Я работаю в офисе. Мне нравится моя работа.
+    Вечером я прихожу домой в шесть. Я готовлю ужин и смотрю телевизор. Я ложусь спать в одиннадцать.
+  gloss:
+    - { en: "get up", ru: "встаю", note: "вставать с кровати — фраза целиком" }
+    - { en: "have breakfast", ru: "завтракаю", note: "have = принимать пищу, не «иметь»" }
+    - { en: "the bus leaves", ru: "автобус отправляется", note: "leave = уходить/отправляться (не «листья»)" }
+    - { en: "like my job", ru: "нравится моя работа", note: "глагол состояния — без -ing" }
+    - { en: "come home", ru: "прихожу домой" }
+    - { en: "go to bed", ru: "ложусь спать", note: "go to bed = ложиться спать" }
 exercises:
   - id: a1
     type: fill
@@ -187,6 +203,19 @@ Present Simple = настоящее **простое**. Три случая:
 Картинка: **at** = иголка (точка) → **on** = страница календаря (день) → **in** = коробка (большой период).
 
 ⚠️ Исключения: **at** night, но **in** the morning / afternoon / evening.
+
+---
+
+## Кино и мультики для слуха (смотри дома)
+
+Персонажи говорят то, что ты уже учишь — через 2–3 просмотра ухо само запоминает формы.
+
+- **Peppa Pig** — семья, быт, Present Simple в каждой серии. Самый простой уровень, YouTube.
+- **Bluey** — австралийская семья, медленная чёткая речь, темы из жизни.
+- **Finding Nemo (В поисках Немо)** — Pixar, A1–A2, «I need to find my son», «He lives in the ocean». Disney+.
+- **Toy Story (Игрушечная история)** — классика Pixar, простые диалоги о том, кто что делает вообще по жизни.
+
+> Как смотреть: первый раз — с английскими субтитрами, второй — без. Не переводи каждое слово, лови смысл картинкой.
 
 ---
 

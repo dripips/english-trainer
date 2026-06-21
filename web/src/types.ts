@@ -28,8 +28,15 @@ export interface LessonMeta {
   exerciseCount: number; attempted?: number; correct?: number;
 }
 
+export interface LessonVideo { title: string; url: string }
+export interface LessonReading {
+  textEn: string; textRu: string;
+  gloss?: { en: string; ru: string; note?: string }[];
+}
+
 export interface Lesson extends LessonMeta {
   grammarRefs: string[]; vocabTopics: string[]; warmup: string[];
+  videos?: LessonVideo[]; reading?: LessonReading | null;
   exercises: Exercise[]; theory: string;
   attempts?: { exercise_id: string; correct: number; answer: string }[];
 }

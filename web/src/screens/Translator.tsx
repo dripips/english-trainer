@@ -10,7 +10,7 @@ type Dir = 'auto' | 'en' | 'ru';
 export function Translator() {
   const [text, setText] = useState('');
   const [dir, setDir] = useState<Dir>('auto');
-  const [res, setRes] = useState<{ translation: string; alternatives: string[]; source: string; target: string } | null>(null);
+  const [res, setRes] = useState<{ translation: string; alternatives: string[]; note?: string; source: string; target: string } | null>(null);
   const [def, setDef] = useState<Awaited<ReturnType<typeof api.define>> | null>(null);
   const [busy, setBusy] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -62,6 +62,12 @@ export function Translator() {
               </div>
             )}
           </div>
+
+          {res.note && (
+            <div className="rounded-2xl bg-[color-mix(in_srgb,var(--color-amber)_14%,transparent)] p-3 text-sm">
+              <span className="font-semibold">В контексте:</span> {res.note}
+            </div>
+          )}
 
           {def?.found && def.meanings?.length ? (
             <div className="card overflow-hidden">

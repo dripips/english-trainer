@@ -71,6 +71,8 @@ function loadLessons(warnings) {
         grammarRefs: data.grammarRefs || [],
         vocabTopics: data.vocabTopics || [],
         warmup: data.warmup || [],
+        videos: Array.isArray(data.videos) ? data.videos : [],
+        reading: data.reading || null,
         exercises,
         theory: content.trim(),
       });
