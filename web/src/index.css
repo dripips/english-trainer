@@ -40,7 +40,26 @@
   cursor: pointer;
 }
 
-html, body, #root { height: 100%; }
+html, body, #root {
+  height: 100%;
+  min-height: 100%;
+}
+
+@supports (height: 100dvh) {
+  html, body, #root {
+    height: 100dvh;
+    min-height: 100dvh;
+  }
+}
+
+@supports (height: 100svh) {
+  html.is-standalone,
+  html.is-standalone body,
+  html.is-standalone #root {
+    height: 100svh;
+    min-height: 100svh;
+  }
+}
 
 /* Lock the document so iOS can't rubber-band / drag the app shell.
    Only the inner scroll area (main) scrolls. */
@@ -101,8 +120,8 @@ html.is-standalone .pt-safe { padding-top: calc(max(env(safe-area-inset-top, 0px
   position: fixed;
   left: 50%;
   right: auto;
-  bottom: calc(-1 * env(safe-area-inset-bottom, 0px));
-  z-index: 60;
+  bottom: 0;
+  z-index: 100;
   width: 100%;
   max-width: 28rem;
   padding-bottom: 0;
