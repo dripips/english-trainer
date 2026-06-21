@@ -132,7 +132,7 @@ html.is-standalone .pt-safe { padding-top: calc(max(env(safe-area-inset-top, 0px
   z-index: 100;
   width: 100%;
   max-width: 28rem;
-  padding-bottom: 0;
+  padding-bottom: 40px;
   pointer-events: none;
   transform: translateX(-50%);
 }
