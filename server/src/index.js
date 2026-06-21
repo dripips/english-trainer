@@ -45,7 +45,19 @@ await registerRoutes(app);
 
 // Serve built frontend (production) with SPA fallback
 if (fs.existsSync(WEB_DIST)) {
-  await app.register(fstatic, { root: WEB_DIST, wildcard: false });
+  await app.register(fstatic, {
+    root: WEB_DIST,
+    wildcard: false,
+    setHeaders(res, filePath) {
+      // Hashed assets are immutable; the SW, manifest and HTML must always be
+      // revalidated so updates reach installed PWAs reliably.
+      if (/\/assets\//.test(filePath)) {
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+      } else if (/(sw\.js|index\.html|\.webmanifest|registerSW\.js)$/.test(filePath)) {
+        res.setHeader('Cache-Control', 'no-cache');
+      }
+    },
+  });
   app.setNotFoundHandler((req, reply) => {
     if (req.raw.url?.startsWith('/api/')) return reply.code(404).send({ error: 'not found' });
     return reply.sendFile('index.html');

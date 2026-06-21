@@ -4,9 +4,8 @@ import { Plus, X, Check } from 'lucide-react';
 import { api } from '../api';
 import { SpeakButton } from './ui';
 
-// Tap a word inside a [data-lookup] region to translate it and add to vocab.
-// We detect the word under the finger (no native text selection → no iOS callout).
-function wordAtPoint(x: number, y: number): string | null {
+// Tap a word inside a [data-lookup] region to translate it (in context) and add to vocab.
+function lookupAtPoint(x: number, y: number): { word: string; sentence: string } | null {
   let node: Node | null = null;
   let offset = 0;
   const doc: any = document;
@@ -20,18 +19,30 @@ function wordAtPoint(x: number, y: number): string | null {
   if (!node || node.nodeType !== 3) return null;
   const text = node.textContent || '';
   if (!text) return null;
+
+  // word under finger
   const isWord = (c: string) => /[\p{L}'’-]/u.test(c);
-  let start = Math.min(offset, text.length);
-  let end = start;
-  while (start > 0 && isWord(text[start - 1])) start--;
-  while (end < text.length && isWord(text[end])) end++;
-  const word = text.slice(start, end).replace(/^['’-]+|['’-]+$/g, '').trim();
+  let ws = Math.min(offset, text.length);
+  let we = ws;
+  while (ws > 0 && isWord(text[ws - 1])) ws--;
+  while (we < text.length && isWord(text[we])) we++;
+  const word = text.slice(ws, we).replace(/^['’-]+|['’-]+$/g, '').trim();
   if (!word || !/[\p{L}]/u.test(word) || word.length > 40) return null;
-  return word;
+
+  // surrounding sentence (for context)
+  const isEnd = (c: string) => /[.!?…]/.test(c);
+  let ss = ws, se = we;
+  while (ss > 0 && !isEnd(text[ss - 1])) ss--;
+  while (se < text.length && !isEnd(text[se])) se++;
+  if (se < text.length) se++;
+  let sentence = text.slice(ss, se).replace(/\s+/g, ' ').trim();
+  if (sentence.length < word.length + 2) sentence = text.replace(/\s+/g, ' ').trim();
+
+  return { word, sentence };
 }
 
 export function LookupLayer() {
-  const [open, setOpen] = useState<string | null>(null);
+  const [open, setOpen] = useState<{ word: string; sentence: string } | null>(null);
 
   useEffect(() => {
     function onClick(e: MouseEvent) {
@@ -39,30 +50,36 @@ export function LookupLayer() {
       const target = e.target as Element | null;
       if (!target || !target.closest?.('[data-lookup]')) return;
       if (target.closest('a, button, input, select, textarea')) return;
-      const word = wordAtPoint(e.clientX, e.clientY);
-      if (word) { e.preventDefault(); setOpen(word); }
+      const hit = lookupAtPoint(e.clientX, e.clientY);
+      if (hit) { e.preventDefault(); setOpen(hit); }
     }
     document.addEventListener('click', onClick);
     return () => document.removeEventListener('click', onClick);
   }, [open]);
 
   if (!open) return null;
-  return createPortal(<LookupSheet text={open} onClose={() => setOpen(null)} />, document.body);
+  return createPortal(<LookupSheet word={open.word} sentence={open.sentence} onClose={() => setOpen(null)} />, document.body);
 }
 
-function LookupSheet({ text, onClose }: { text: string; onClose: () => void }) {
-  const [res, setRes] = useState<Awaited<ReturnType<typeof api.translate>> | null>(null);
+function LookupSheet({ word, sentence, onClose }: { word: string; sentence: string; onClose: () => void }) {
+  const [wordRes, setWordRes] = useState<Awaited<ReturnType<typeof api.translate>> | null>(null);
+  const [ctx, setCtx] = useState<{ en: string; ru: string } | null>(null);
   const [saved, setSaved] = useState(false);
 
-  useEffect(() => {
-    api.translate(text).then(setRes).catch(() => setRes({ translation: '—', alternatives: [], provider: 'none', source: '', target: '' } as any));
-  }, [text]);
+  const hasContext = sentence && sentence.toLowerCase().replace(/[^a-zа-яё]/gi, '') !== word.toLowerCase().replace(/[^a-zа-яё]/gi, '');
 
-  const enSide = res ? (res.source === 'en' ? text : res.translation) : text;
-  const ruSide = res ? (res.source === 'en' ? res.translation : text) : '';
+  useEffect(() => {
+    api.translate(word).then(setWordRes).catch(() => setWordRes(null));
+    if (hasContext) {
+      api.translate(sentence, 'en', 'ru').then((r) => setCtx({ en: sentence, ru: r.translation })).catch(() => {});
+    }
+  }, [word, sentence]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const enSide = wordRes ? (wordRes.source === 'en' ? word : wordRes.translation) : word;
+  const ruSide = wordRes ? (wordRes.source === 'en' ? wordRes.translation : word) : '';
 
   async function add() {
-    try { await api.addCustomWord({ word: enSide, ru: ruSide, addToSrs: true }); setSaved(true); } catch { /* ignore */ }
+    try { await api.addCustomWord({ word: enSide, ru: ruSide, exampleEn: hasContext ? sentence : undefined, addToSrs: true }); setSaved(true); } catch { /* ignore */ }
   }
 
   return (
@@ -70,20 +87,30 @@ function LookupSheet({ text, onClose }: { text: string; onClose: () => void }) {
       <div className="absolute inset-0 bg-black/50" onClick={onClose} />
       <div className="card animate-slideup relative mx-auto w-full max-w-md !rounded-b-none">
         <div className="mb-2 flex items-start justify-between gap-2">
-          <div className="display min-w-0 break-words text-lg font-bold">{text}</div>
+          <div className="flex items-center gap-2">
+            <div className="display break-words text-lg font-bold">{word}</div>
+            <SpeakButton text={enSide} />
+          </div>
           <button onClick={onClose} aria-label="Закрыть" className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[var(--color-surface2)]"><X size={16} /></button>
         </div>
-        {!res ? (
+
+        {!wordRes ? (
           <p className="py-3 text-sm text-[var(--color-muted)]">Перевожу…</p>
         ) : (
           <>
-            <div className="flex items-center gap-2">
-              <div className="display min-w-0 flex-1 break-words text-xl font-bold text-[var(--color-mint)]">{res.translation || '—'}</div>
-              <SpeakButton text={enSide} />
-            </div>
-            {res.alternatives?.length > 0 && (
-              <div className="mt-2 flex flex-wrap gap-2">{res.alternatives.map((a, i) => <span key={i} className="chip">{a}</span>)}</div>
+            <div className="display break-words text-xl font-bold text-[var(--color-mint)]">{wordRes.translation || '—'}</div>
+            {wordRes.alternatives?.length > 0 && (
+              <div className="mt-2 flex flex-wrap gap-2">{wordRes.alternatives.slice(0, 5).map((a, i) => <span key={i} className="chip">{a}</span>)}</div>
             )}
+
+            {hasContext && (
+              <div className="mt-3 rounded-2xl bg-[var(--color-bg2)] p-3">
+                <div className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-[var(--color-muted)]">в контексте</div>
+                <div className="text-sm text-[var(--color-text)]">{sentence}</div>
+                <div className="mt-1 text-sm text-[var(--color-mint)]">{ctx?.ru || '…'}</div>
+              </div>
+            )}
+
             {saved ? (
               <div className="mt-3 flex items-center justify-center gap-2 rounded-2xl bg-[color-mix(in_srgb,var(--color-success)_16%,transparent)] p-3 font-semibold text-[var(--color-success)]"><Check size={18} /> В словаре</div>
             ) : (
