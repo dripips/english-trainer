@@ -48,12 +48,13 @@ if (fs.existsSync(WEB_DIST)) {
   await app.register(fstatic, {
     root: WEB_DIST,
     wildcard: false,
+    cacheControl: false, // we set Cache-Control ourselves below
     setHeaders(res, filePath) {
       // Hashed assets are immutable; the SW, manifest and HTML must always be
       // revalidated so updates reach installed PWAs reliably.
       if (/\/assets\//.test(filePath)) {
         res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
-      } else if (/(sw\.js|index\.html|\.webmanifest|registerSW\.js)$/.test(filePath)) {
+      } else {
         res.setHeader('Cache-Control', 'no-cache');
       }
     },
