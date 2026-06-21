@@ -96,10 +96,8 @@ html.is-standalone .app-shell {
 }
 html.is-standalone .pt-safe { padding-top: calc(max(env(safe-area-inset-top, 0px), 50px) + 0.5rem); }
 
-.bottom-nav { padding-bottom: max(env(safe-area-inset-bottom, 0px), 0.5rem); }
-.bottom-nav-panel { padding-bottom: 0.375rem; }
-html.is-standalone .app-main { padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px)); }
-html.is-standalone .bottom-nav {
+.app-main { padding-bottom: 6rem; }
+.bottom-nav {
   position: fixed;
   left: 50%;
   right: auto;
@@ -107,21 +105,10 @@ html.is-standalone .bottom-nav {
   z-index: 60;
   width: 100%;
   max-width: 28rem;
+  padding-bottom: 0;
   transform: translateX(-50%);
 }
-@media (display-mode: standalone) {
-  .app-main { padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px)); }
-  .bottom-nav {
-    position: fixed;
-    left: 50%;
-    right: auto;
-    bottom: 0;
-    z-index: 60;
-    width: 100%;
-    max-width: 28rem;
-    transform: translateX(-50%);
-  }
-}
+.bottom-nav-panel { padding-bottom: 0.375rem; }
 
 @layer components {
   .card {
