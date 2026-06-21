@@ -98,11 +98,29 @@ html.is-standalone .pt-safe { padding-top: calc(max(env(safe-area-inset-top, 0px
 
 .bottom-nav { padding-bottom: max(env(safe-area-inset-bottom, 0px), 0.5rem); }
 .bottom-nav-panel { padding-bottom: 0.375rem; }
-html.is-standalone .bottom-nav { padding-bottom: 0.5rem; }
-html.is-standalone .bottom-nav-panel { padding-bottom: max(env(safe-area-inset-bottom, 0px), 0.375rem); }
+html.is-standalone .app-main { padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px)); }
+html.is-standalone .bottom-nav {
+  position: fixed;
+  left: 50%;
+  right: auto;
+  bottom: 0;
+  z-index: 60;
+  width: 100%;
+  max-width: 28rem;
+  transform: translateX(-50%);
+}
 @media (display-mode: standalone) {
-  .bottom-nav { padding-bottom: 0.5rem; }
-  .bottom-nav-panel { padding-bottom: max(env(safe-area-inset-bottom, 0px), 0.375rem); }
+  .app-main { padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px)); }
+  .bottom-nav {
+    position: fixed;
+    left: 50%;
+    right: auto;
+    bottom: 0;
+    z-index: 60;
+    width: 100%;
+    max-width: 28rem;
+    transform: translateX(-50%);
+  }
 }
 
 @layer components {

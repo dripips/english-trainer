@@ -20,7 +20,7 @@ export function Layout() {
 
   return (
     <div className="app-shell mx-auto flex max-w-md flex-col overflow-hidden">
-      <main ref={scrollRef} className="pt-safe no-scrollbar flex-1 overflow-y-auto overflow-x-hidden overscroll-contain px-4 pb-6">
+      <main ref={scrollRef} className="app-main pt-safe no-scrollbar flex-1 overflow-y-auto overflow-x-hidden overscroll-contain px-4 pb-6">
         <Outlet key={loc.pathname} />
       </main>
 
