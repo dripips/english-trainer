@@ -27,7 +27,7 @@ export function Layout() {
       <LookupLayer />
 
 
-      <nav className="bottom-nav shrink-0 bg-[var(--color-bg2)] px-3 pt-2 backdrop-blur-sm">
+      <nav className="bottom-nav shrink-0 px-3 pt-2">
         <div className="bottom-nav-panel flex items-center justify-around rounded-[1.6rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-1.5"
              style={{ boxShadow: '0 -8px 30px -16px rgba(0,0,0,.8)' }}>
           {TABS.map((t) => {
