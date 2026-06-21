@@ -274,7 +274,18 @@ export async function registerRoutes(app) {
       source = hasCyr ? 'ru' : 'en';
     }
     if (!target) target = source === 'ru' ? 'en' : 'ru';
+    const cacheKey = `${source}|${target}|${String(text).trim().toLowerCase()}|${String(context || '').trim().toLowerCase()}`;
+    const cached = db.prepare('SELECT translation, note, provider FROM translations_cache WHERE key = ?').get(cacheKey);
+    if (cached) {
+      return { translation: cached.translation, alternatives: [], note: cached.note || '', provider: cached.provider, source, target, cached: true };
+    }
     const result = await translate(text, source, target, context);
+    if (result?.translation && result.provider && result.provider !== 'none') {
+      try {
+        db.prepare('INSERT INTO translations_cache (key, translation, note, provider) VALUES (?, ?, ?, ?) ON CONFLICT(key) DO NOTHING')
+          .run(cacheKey, result.translation, result.note || '', result.provider);
+      } catch { /* ignore cache write errors */ }
+    }
     return { ...result, source, target };
   });
 
@@ -600,7 +611,7 @@ async function llmTranslate(text, source, target, context) {
     return {
       translation: String(parsed.translation),
       alternatives: [],
-      note: parsed.note ? String(parsed.note) : '',
+      note: parsed.note ? String(parsed.note).replace(/^\s*(ambig(uous)?|note|примечание|hint)\s*[:：\-—]\s*/i, '').trim() : '',
       provider: 'llm',
     };
   } catch {

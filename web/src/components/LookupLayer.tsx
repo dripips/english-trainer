@@ -29,15 +29,15 @@ function lookupAtPoint(x: number, y: number): { word: string; sentence: string }
   const word = text.slice(ws, we).replace(/^['’-]+|['’-]+$/g, '').trim();
   if (!word || !/[\p{L}]/u.test(word) || word.length > 40) return null;
 
-  // surrounding sentence (for context)
-  const isEnd = (c: string) => /[.!?…]/.test(c);
-  let ss = ws, se = we;
-  while (ss > 0 && !isEnd(text[ss - 1])) ss--;
-  while (se < text.length && !isEnd(text[se])) se++;
-  if (se < text.length) se++;
-  let sentence = text.slice(ss, se).replace(/\s+/g, ' ').trim();
-  if (sentence.length < word.length + 2) sentence = text.replace(/\s+/g, ' ').trim();
-
+  // context = text of the nearest block element — handles bold/italic words that
+  // sit in their own text node (e.g. **leaves**), so we still get the full sentence.
+  const startEl: Element | null = node.nodeType === 3 ? node.parentElement : (node as Element);
+  const block = startEl?.closest('li, p, td, th, blockquote, h1, h2, h3, h4');
+  let sentence = ((block?.textContent) || text).replace(/\s+/g, ' ').trim();
+  if (sentence.length > 240) {
+    const idx = sentence.toLowerCase().indexOf(word.toLowerCase());
+    if (idx >= 0) sentence = sentence.slice(Math.max(0, idx - 110), idx + 110).trim();
+  }
   return { word, sentence };
 }
 
@@ -81,9 +81,10 @@ function LookupSheet({ word, sentence, onClose }: { word: string; sentence: stri
   }
 
   return (
-    <div className="fixed inset-0 z-[70] flex items-end">
+    <div className="fixed inset-0 z-[70]">
       <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-      <div className="card animate-slideup relative mx-auto w-full max-w-md !rounded-b-none">
+      <div className="absolute inset-x-0 top-0 mx-auto flex max-w-md flex-col justify-end" style={{ height: 'var(--app-h, 100dvh)' }}>
+      <div className="card animate-slideup relative !rounded-b-none" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 1rem)' }}>
         <div className="mb-2 flex items-start justify-between gap-2">
           <div className="flex items-center gap-2">
             <div className="display break-words text-lg font-bold">{word}</div>
@@ -116,6 +117,7 @@ function LookupSheet({ word, sentence, onClose }: { word: string; sentence: stri
             )}
           </>
         )}
+      </div>
       </div>
     </div>
   );

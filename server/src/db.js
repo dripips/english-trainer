@@ -119,6 +119,16 @@ CREATE TABLE IF NOT EXISTS settings (
   value TEXT,
   PRIMARY KEY (user_id, key)
 );
+
+-- Cache of translations (keyed by source|target|text|context) to avoid re-calling
+-- the LLM/MT for the same phrase.
+CREATE TABLE IF NOT EXISTS translations_cache (
+  key TEXT PRIMARY KEY,
+  translation TEXT NOT NULL,
+  note TEXT,
+  provider TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
 `);
 
 // ---------- Migrations for pre-existing DBs ----------
