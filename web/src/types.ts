@@ -131,3 +131,21 @@ export interface LibraryLevel {
   count: number;
   books: LibraryBook[];
 }
+
+export interface WritingError {
+  original: string;
+  fixed: string;
+  explanation: string;
+  type: string;
+}
+
+export interface WritingFeedback {
+  corrected: string;
+  level: string;
+  band: string;
+  summary: string;
+  errors: WritingError[];
+  strengths: string[];
+  tip: string;
+  provider: string;
+}

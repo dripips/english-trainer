@@ -376,6 +376,25 @@ export async function registerRoutes(app) {
     return await define(word);
   });
 
+  // AI writing feedback — automates the "handwrite → screenshot → tutor grades" loop.
+  app.post('/api/check-writing', async (req, reply) => {
+    const { text, task, mode } = req.body || {};
+    const clean = String(text || '').trim();
+    if (clean.length < 10) return reply.code(400).send({ error: 'too short' });
+    if (clean.length > 6000) return reply.code(400).send({ error: 'too long' });
+    if (!process.env.LLM_TRANSLATE_URL) return reply.code(503).send({ error: 'AI feedback is not configured' });
+    const result = await checkWriting({
+      text: clean,
+      task: String(task || '').slice(0, 1000),
+      mode: ['free', 'task1', 'task2', 'speaking'].includes(mode) ? mode : 'free',
+      level: 'A1-A2',
+    });
+    if (!result) return reply.code(502).send({ error: 'AI feedback temporarily unavailable' });
+    // Reward the effort of producing language — the hardest, most valuable practice.
+    try { awardXP(req.user.uid, 15); bumpActivity(req.user.uid); } catch { /* non-fatal */ }
+    return result;
+  });
+
   // ---------------- Progress (mastery tracker) ----------------
   app.get('/api/progress', async (req) =>
     db.prepare('SELECT * FROM progress WHERE user_id = ? ORDER BY updated_at DESC').all(req.user.uid));
@@ -951,5 +970,75 @@ async function define(word) {
     return { word, found: true, phonetic, audio, meanings };
   } catch {
     return { word, found: false };
+  }
+}
+
+// AI writing feedback — the killer feature for productive skills.
+// Calibrated for A1–A2 learners: prioritise the few most impactful errors,
+// explain in Russian, stay encouraging. Reuses the same OpenAI-compatible
+// endpoint as translation. Returns null when not configured / on any error.
+async function checkWriting({ text, task = '', mode = 'free', level = 'A2' }) {
+  const url = process.env.LLM_TRANSLATE_URL;
+  if (!url) return null;
+  const key = process.env.LLM_TRANSLATE_KEY;
+  // A stronger model helps for nuanced feedback; allow override, default to translate model.
+  const model = process.env.LLM_CHECK_MODEL || process.env.LLM_TRANSLATE_MODEL || 'gpt-4o-mini';
+  const taskLabel = mode === 'task1' ? 'IELTS Writing Task 1 (chart description)'
+    : mode === 'task2' ? 'IELTS Writing Task 2 (opinion essay)'
+    : mode === 'speaking' ? 'IELTS Speaking (spoken-style answer, written down)'
+    : 'free writing';
+  const sys =
+    'You are a warm, encouraging English tutor giving feedback to a Russian-speaking learner whose level is around ' + level + ' (beginner–elementary). '
+    + 'Your job mirrors a human tutor correcting handwritten work. Be supportive and concrete. '
+    + 'CRITICAL CALIBRATION: do NOT overwhelm. Pick only the 3–6 MOST IMPORTANT errors (the ones that most hurt clarity or are most worth learning at this level). Ignore minor style nitpicks. '
+    + 'Explain every error in SIMPLE RUSSIAN. Always provide a fully corrected version that stays close to what the learner tried to say (do not rewrite at a much higher level — keep it natural but level-appropriate). '
+    + 'Reply ONLY with compact JSON matching this exact shape: '
+    + '{"corrected": string, "level": string, "band": string, "summary": string, "errors": [{"original": string, "fixed": string, "explanation": string, "type": string}], "strengths": [string], "tip": string}. '
+    + '"summary" = one warm sentence in Russian. "errors[].explanation" in Russian. "errors[].type" one of: grammar|vocab|spelling|word order|article|preposition|tense|punctuation. '
+    + '"strengths" = 1–3 short Russian phrases on what was done well. "tip" = one actionable next-step tip in Russian. '
+    + '"level" = estimated CEFR of THIS text (A1/A2/B1/...). "band" = approximate IELTS band as a string like "4.5" ONLY if this is an IELTS task, else "". '
+    + 'Keep the JSON small; do not include markdown.';
+  const user =
+    `Task type: ${taskLabel}.\n`
+    + (task ? `Prompt the learner was answering: ${JSON.stringify(task)}\n` : '')
+    + `Learner's text:\n${JSON.stringify(text)}`;
+  const isReasoning = /^(gpt-5|o[1-9])/i.test(model);
+  const body = {
+    model,
+    response_format: { type: 'json_object' },
+    messages: [{ role: 'system', content: sys }, { role: 'user', content: user }],
+  };
+  if (isReasoning) body.reasoning_effort = 'medium';
+  else body.temperature = 0.2;
+  try {
+    const res = await fetch(`${url.replace(/\/$/, '')}/chat/completions`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', ...(key ? { Authorization: `Bearer ${key}` } : {}) },
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(45000),
+    });
+    if (!res.ok) return null;
+    const j = await res.json();
+    const content = j?.choices?.[0]?.message?.content;
+    if (!content) return null;
+    const p = JSON.parse(content);
+    if (!p.corrected) return null;
+    return {
+      corrected: String(p.corrected),
+      level: String(p.level || ''),
+      band: String(p.band || ''),
+      summary: String(p.summary || ''),
+      errors: Array.isArray(p.errors) ? p.errors.slice(0, 8).map((e) => ({
+        original: String(e.original || ''),
+        fixed: String(e.fixed || ''),
+        explanation: String(e.explanation || ''),
+        type: String(e.type || 'grammar'),
+      })) : [],
+      strengths: Array.isArray(p.strengths) ? p.strengths.slice(0, 3).map(String) : [],
+      tip: String(p.tip || ''),
+      provider: 'llm',
+    };
+  } catch {
+    return null;
   }
 }

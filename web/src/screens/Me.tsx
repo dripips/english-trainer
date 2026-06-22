@@ -9,7 +9,7 @@ import { IconBadge, ProgressBar } from '../components/ui';
 const LINKS: { to: string; icon: LucideIcon; label: string; hint: string; color: string }[] = [
   { to: '/practice', icon: Zap, label: 'Практика', hint: 'адаптивные упражнения', color: 'var(--color-primary)' },
   { to: '/library', icon: BookOpen, label: 'Библиотека', hint: 'читать книги на английском', color: 'var(--color-mint)' },
-  { to: '/writing', icon: PenLine, label: 'IELTS Writing', hint: 'шаблоны и задания для эссе', color: 'var(--color-sky)' },
+  { to: '/writing', icon: PenLine, label: 'Письмо + AI-проверка', hint: 'напиши текст — AI исправит ошибки', color: 'var(--color-sky)' },
   { to: '/speaking', icon: Mic, label: 'IELTS Speaking', hint: 'карточки Part 1 / 2 / 3 с таймером', color: 'var(--color-mint)' },
   { to: '/grammar', icon: Ruler, label: 'Грамматика', hint: 'справочник правил', color: 'var(--color-sky)' },
   { to: '/vocab', icon: Library, label: 'Словарь', hint: 'наборы слов', color: 'var(--color-amber)' },

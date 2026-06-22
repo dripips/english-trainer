@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PenLine, ChevronDown, ChevronUp, BookOpen, ArrowRight } from 'lucide-react';
 import { Header } from '../components/Header';
+import { WritingChecker } from '../components/WritingChecker';
 
-type Tab = 'task1' | 'task2';
+type Tab = 'check' | 'task2' | 'task1';
 
 const TASK1_PHRASES = [
   { cat: 'Рост', items: ['rose / increased / grew sharply', 'climbed / surged dramatically', 'doubled / tripled', 'peaked at … in …', 'there was a significant rise in'] },
@@ -108,6 +109,10 @@ function PromptCard({ p }: { p: typeof PROMPTS[0] }) {
               ))}
             </ul>
           </div>
+          <div>
+            <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-[var(--color-muted)]">Напиши ответ и проверь</p>
+            <WritingChecker mode={p.task} task={p.q} placeholder="Write your answer here…" />
+          </div>
         </div>
       )}
     </div>
@@ -115,21 +120,31 @@ function PromptCard({ p }: { p: typeof PROMPTS[0] }) {
 }
 
 export function Writing() {
-  const [tab, setTab] = useState<Tab>('task2');
+  const [tab, setTab] = useState<Tab>('check');
 
   return (
     <div>
-      <Header title="IELTS Writing" />
+      <Header title="Письмо" />
 
       <div className="mb-4 flex rounded-2xl bg-[var(--color-bg2)] p-1">
-        {(['task1', 'task2'] as Tab[]).map((t) => (
+        {([['check', 'Проверка'], ['task2', 'Эссе'], ['task1', 'Графики']] as [Tab, string][]).map(([t, label]) => (
           <button key={t} onClick={() => setTab(t)}
             className={`flex flex-1 items-center justify-center gap-1.5 rounded-xl py-2 text-sm font-semibold transition
               ${tab === t ? 'bg-[var(--color-surface2)] text-[var(--color-text)]' : 'text-[var(--color-muted)]'}`}>
-            {t === 'task1' ? 'Task 1 — Графики' : 'Task 2 — Эссе'}
+            {label}
           </button>
         ))}
       </div>
+
+      {tab === 'check' && (
+        <div className="space-y-4">
+          <div className="card !bg-[color-mix(in_srgb,var(--color-primary)_10%,var(--color-surface))]">
+            <p className="flex items-center gap-1.5 text-sm font-semibold"><PenLine size={16} className="text-[var(--color-primary)]" /> Проверка письма с AI</p>
+            <p className="mt-1 text-sm text-[var(--color-muted)]">Напиши что угодно по-английски — пару предложений, дневник, письмо другу. AI проверит как преподаватель: исправит ошибки и объяснит их по-русски.</p>
+          </div>
+          <WritingChecker mode="free" placeholder="Например: Yesterday I go to the shop and buy a milk. My friend was tell me about new film…" />
+        </div>
+      )}
 
       {tab === 'task1' && (
         <div className="space-y-4">
