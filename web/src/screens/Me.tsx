@@ -11,7 +11,7 @@ const LINKS: { to: string; icon: LucideIcon; label: string; hint: string; color:
   { to: '/practice', icon: Zap, label: 'Практика', hint: 'адаптивные упражнения', color: 'var(--color-primary)' },
   { to: '/library', icon: BookOpen, label: 'Библиотека', hint: 'читать книги на английском', color: 'var(--color-mint)' },
   { to: '/writing', icon: PenLine, label: 'Письмо + AI-проверка', hint: 'напиши текст — AI исправит ошибки', color: 'var(--color-sky)' },
-  { to: '/speaking', icon: Mic, label: 'IELTS Speaking', hint: 'карточки Part 1 / 2 / 3 с таймером', color: 'var(--color-mint)' },
+  { to: '/speaking', icon: Mic, label: 'IELTS Speaking', hint: 'ответь голосом — AI разберёт', color: 'var(--color-mint)' },
   { to: '/grammar', icon: Ruler, label: 'Правила', hint: 'все времена и грамматика', color: 'var(--color-sky)' },
   { to: '/exceptions', icon: AlertTriangle, label: 'Исключения', hint: 'неправильные глаголы, множ. число', color: 'var(--color-amber)' },
   { to: '/everyday', icon: CalendarDays, label: 'Каждый день', hint: 'дни, месяцы, числа, цвета', color: 'var(--color-mint)' },

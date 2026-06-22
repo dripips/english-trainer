@@ -2,8 +2,27 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Mic, ChevronDown, ChevronUp, Timer, ArrowRight, BookOpen, RotateCcw, Play, Square } from 'lucide-react';
 import { Header } from '../components/Header';
+import { WritingChecker } from '../components/WritingChecker';
 
 type Part = 'p1' | 'p2' | 'p3';
+
+// A question you can expand to answer (by voice or text) and get AI feedback.
+function AnswerableQuestion({ q }: { q: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <li className="overflow-hidden rounded-xl bg-[var(--color-bg2)]">
+      <button onClick={() => setOpen((o) => !o)} className="flex w-full items-start gap-2 px-3 py-2.5 text-left text-sm leading-snug">
+        <span className="flex-1">{q}</span>
+        <span className="mt-0.5 shrink-0 text-[10px] font-semibold text-[var(--color-primary)]">{open ? 'скрыть' : 'ответить'}</span>
+      </button>
+      {open && (
+        <div className="border-t border-[var(--color-surface2)] p-3">
+          <WritingChecker mode="speaking" task={q} voice placeholder="Скажи (🎙 Голос) или напиши свой ответ на английском…" />
+        </div>
+      )}
+    </li>
+  );
+}
 
 const P1_QUESTIONS: { topic: string; qs: string[] }[] = [
   { topic: 'Работа / Учёба', qs: [
@@ -158,12 +177,11 @@ function TimerBadge({ seconds, label }: { seconds: number; label: string }) {
 
 function P1Tab() {
   const [openTopic, setOpenTopic] = useState<string | null>(P1_QUESTIONS[0].topic);
-  const [revealed, setRevealed] = useState<Set<string>>(new Set());
   return (
     <div className="space-y-3">
       <div className="card text-sm">
         <p className="font-semibold">Как отвечать на Part 1</p>
-        <p className="mt-1 text-[var(--color-muted)]">2–3 предложения: Answer → Reason → Example. <span className="text-[var(--color-danger)]">Не односложно!</span></p>
+        <p className="mt-1 text-[var(--color-muted)]">2–3 предложения: Answer → Reason → Example. <span className="text-[var(--color-danger)]">Не односложно!</span> Раскрой вопрос → ответь голосом или текстом → AI разберёт.</p>
         <TimerBadge seconds={30} label="≈ 30 сек на ответ" />
       </div>
       {P1_QUESTIONS.map((t) => (
@@ -175,11 +193,7 @@ function P1Tab() {
           </button>
           {openTopic === t.topic && (
             <ul className="border-t border-[var(--color-bg2)] px-4 pb-3 pt-2 space-y-2">
-              {t.qs.map((q) => (
-                <li key={q} className="rounded-xl bg-[var(--color-bg2)] px-3 py-2.5 text-sm leading-snug">
-                  {q}
-                </li>
-              ))}
+              {t.qs.map((q) => <AnswerableQuestion key={q} q={q} />)}
             </ul>
           )}
         </div>
@@ -225,6 +239,11 @@ function P2Tab() {
         </div>
       </div>
 
+      <div>
+        <p className="mb-1.5 px-0.5 text-xs font-semibold uppercase tracking-wide text-[var(--color-muted)]">Твой монолог — скажи или напиши, и проверь</p>
+        <WritingChecker key={idx} mode="speaking" task={cue.cue} voice placeholder="Запиши свой 2-минутный ответ (🎙 Голос или текстом)…" />
+      </div>
+
       {phase !== 'follow' && (
         <button onClick={() => setPhase('follow')}
           className="btn btn-ghost w-full text-sm">
@@ -243,7 +262,6 @@ function P2Tab() {
 
 function P3Tab() {
   const [openTopic, setOpenTopic] = useState<string | null>(P3_QUESTIONS[0].topic);
-  const [revealed, setRevealed] = useState<Set<string>>(new Set());
   return (
     <div className="space-y-3">
       <div className="card text-sm">
@@ -262,13 +280,7 @@ function P3Tab() {
           </button>
           {openTopic === t.topic && (
             <ul className="border-t border-[var(--color-bg2)] px-4 pb-3 pt-2 space-y-2">
-              {t.qs.map((q, i) => {
-                const key = `${t.topic}-${i}`;
-                const open = revealed.has(key);
-                return (
-                  <li key={q} className="rounded-xl bg-[var(--color-bg2)] px-3 py-2.5 text-sm leading-snug">{q}</li>
-                );
-              })}
+              {t.qs.map((q) => <AnswerableQuestion key={q} q={q} />)}
             </ul>
           )}
         </div>

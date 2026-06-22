@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Sparkles, CheckCircle2, AlertCircle, Lightbulb, Loader2, RotateCcw } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { Sparkles, CheckCircle2, AlertCircle, Lightbulb, Loader2, RotateCcw, Mic, Square } from 'lucide-react';
 import { api } from '../api';
 import type { WritingFeedback } from '../types';
 
@@ -7,7 +7,13 @@ interface Props {
   mode?: 'free' | 'task1' | 'task2' | 'speaking';
   task?: string;
   placeholder?: string;
+  voice?: boolean;
 }
+
+// Browser speech-to-text (Chrome/Edge/Android; limited on iOS Safari).
+const SRClass: any = typeof window !== 'undefined'
+  ? ((window as any).SpeechRecognition || (window as any).webkitSpeechRecognition)
+  : undefined;
 
 const TYPE_LABELS: Record<string, string> = {
   grammar: 'грамматика',
@@ -20,16 +26,48 @@ const TYPE_LABELS: Record<string, string> = {
   punctuation: 'пунктуация',
 };
 
-export function WritingChecker({ mode = 'free', task, placeholder }: Props) {
+export function WritingChecker({ mode = 'free', task, placeholder, voice }: Props) {
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [fb, setFb] = useState<WritingFeedback | null>(null);
+  const [listening, setListening] = useState(false);
+  const recRef = useRef<any>(null);
 
   const words = text.trim() ? text.trim().split(/\s+/).length : 0;
   const canCheck = text.trim().length >= 10 && !loading;
+  const voiceOn = !!voice && !!SRClass;
+
+  useEffect(() => () => { try { recRef.current?.stop(); } catch { /* ignore */ } }, []);
+
+  function stopMic() {
+    try { recRef.current?.stop(); } catch { /* ignore */ }
+    setListening(false);
+  }
+
+  function toggleMic() {
+    if (!SRClass) return;
+    if (listening) { stopMic(); return; }
+    const rec = new SRClass();
+    rec.lang = 'en-US';
+    rec.interimResults = false;
+    rec.continuous = true;
+    rec.onresult = (e: any) => {
+      let finalText = '';
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        if (e.results[i].isFinal) finalText += e.results[i][0].transcript;
+      }
+      finalText = finalText.trim();
+      if (finalText) setText((t) => (t ? t.trimEnd() + ' ' : '') + finalText);
+    };
+    rec.onend = () => setListening(false);
+    rec.onerror = () => setListening(false);
+    recRef.current = rec;
+    try { rec.start(); setListening(true); } catch { /* already started */ }
+  }
 
   async function check() {
+    stopMic();
     setLoading(true);
     setError('');
     setFb(null);
@@ -63,16 +101,28 @@ export function WritingChecker({ mode = 'free', task, placeholder }: Props) {
           rows={6}
           className="w-full resize-y bg-transparent px-4 py-3 text-sm leading-relaxed outline-none placeholder:text-[var(--color-muted)]"
         />
-        <div className="flex items-center justify-between border-t border-[var(--color-bg2)] px-4 py-2">
-          <span className="text-xs text-[var(--color-muted)]">{words} слов</span>
-          <button
-            onClick={check}
-            disabled={!canCheck}
-            className="btn btn-primary !py-2 !px-4 text-sm disabled:opacity-40"
-          >
-            {loading ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
-            {loading ? 'Проверяю…' : 'Проверить'}
-          </button>
+        <div className="flex items-center gap-2 border-t border-[var(--color-bg2)] px-4 py-2">
+          <span className="text-xs text-[var(--color-muted)]">{listening ? 'Слушаю…' : `${words} слов`}</span>
+          <div className="ml-auto flex items-center gap-2">
+            {voiceOn && (
+              <button
+                onClick={toggleMic}
+                className={`btn !py-2 !px-3 text-sm ${listening ? '!bg-[var(--color-danger)] !text-white' : 'btn-ghost'}`}
+                aria-label={listening ? 'Остановить запись' : 'Говорить'}
+              >
+                {listening ? <Square size={16} className="animate-pulse" /> : <Mic size={16} />}
+                {listening ? 'Стоп' : 'Голос'}
+              </button>
+            )}
+            <button
+              onClick={check}
+              disabled={!canCheck}
+              className="btn btn-primary !py-2 !px-4 text-sm disabled:opacity-40"
+            >
+              {loading ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
+              {loading ? 'Проверяю…' : 'Проверить'}
+            </button>
+          </div>
         </div>
       </div>
 
