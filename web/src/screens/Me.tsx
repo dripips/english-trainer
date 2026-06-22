@@ -70,16 +70,23 @@ export function Me() {
 
       {gamif && (
         <div className="mb-4">
-          <h2 className="mb-2 px-0.5 text-sm font-semibold text-[var(--color-muted)]">Достижения</h2>
-          <div className="grid grid-cols-5 gap-2">
+          <h2 className="mb-2.5 px-0.5 text-sm font-semibold text-[var(--color-muted)]">Достижения</h2>
+          <div className="grid grid-cols-5 gap-x-2 gap-y-3">
             {gamif.badges.map((b) => (
-              <div
-                key={b.id}
-                title={`${b.name}: ${b.desc}`}
-                className={`card !p-2 text-center transition-opacity ${b.earned ? '' : 'opacity-25'}`}
-              >
-                <div className="text-2xl leading-none">{b.emoji}</div>
-                <div className="mt-1 text-[9px] leading-tight text-[var(--color-muted)]">{b.name}</div>
+              <div key={b.id} title={`${b.name} — ${b.desc}`} className="flex flex-col items-center gap-1.5">
+                <div className={`grid h-13 w-13 place-items-center rounded-2xl text-2xl transition-all
+                  ${b.earned
+                    ? 'bg-[var(--color-surface2)]'
+                    : 'bg-[var(--color-surface2)] opacity-25 grayscale'
+                  }`}
+                  style={{ width: 52, height: 52 }}
+                >
+                  {b.emoji}
+                </div>
+                <span className={`w-full text-center text-[9px] leading-tight
+                  ${b.earned ? 'text-[var(--color-text)]' : 'text-[var(--color-muted)]'}`}>
+                  {b.name}
+                </span>
               </div>
             ))}
           </div>
