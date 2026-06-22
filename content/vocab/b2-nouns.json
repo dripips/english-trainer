@@ -1,0 +1,1587 @@
+{
+  "category": "b2-nouns",
+  "title": "B2 — существительные",
+  "level": "B2",
+  "pos": "noun",
+  "topic": "core",
+  "words": [
+    {
+      "id": "assumption",
+      "word": "assumption",
+      "pos": "noun",
+      "ru": "предположение, допущение",
+      "ipa": "/əˈsʌmpʃən/",
+      "exampleEn": "His argument is based on the assumption that prices will keep rising.",
+      "exampleRu": "Его аргумент основан на предположении, что цены продолжат расти.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "assumptions"
+      }
+    },
+    {
+      "id": "consequence",
+      "word": "consequence",
+      "pos": "noun",
+      "ru": "последствие",
+      "ipa": "/ˈkɒnsɪkwəns/",
+      "exampleEn": "Few people consider the long-term consequences of their decisions.",
+      "exampleRu": "Мало кто задумывается о долгосрочных последствиях своих решений.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "consequences"
+      }
+    },
+    {
+      "id": "controversy",
+      "word": "controversy",
+      "pos": "noun",
+      "ru": "спор, полемика, разногласие",
+      "ipa": "/ˈkɒntrəvɜːsi/",
+      "exampleEn": "The new policy sparked considerable controversy among teachers.",
+      "exampleRu": "Новая политика вызвала значительную полемику среди учителей.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "controversies"
+      }
+    },
+    {
+      "id": "criterion",
+      "word": "criterion",
+      "pos": "noun",
+      "ru": "критерий",
+      "ipa": "/kraɪˈtɪəriən/",
+      "exampleEn": "Academic achievement is not the only criterion for admission.",
+      "exampleRu": "Академические достижения — не единственный критерий для поступления.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "criteria"
+      }
+    },
+    {
+      "id": "dimension",
+      "word": "dimension",
+      "pos": "noun",
+      "ru": "измерение, аспект, масштаб",
+      "ipa": "/daɪˈmenʃən/",
+      "exampleEn": "The crisis added a new dimension to the ongoing debate.",
+      "exampleRu": "Кризис добавил новое измерение в продолжающиеся дебаты.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "dimensions"
+      }
+    },
+    {
+      "id": "framework",
+      "word": "framework",
+      "pos": "noun",
+      "ru": "структура, рамки, основа",
+      "ipa": "/ˈfreɪmwɜːk/",
+      "exampleEn": "The report provides a useful framework for analysing the data.",
+      "exampleRu": "Отчёт предоставляет полезную основу для анализа данных.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "frameworks"
+      }
+    },
+    {
+      "id": "hypothesis",
+      "word": "hypothesis",
+      "pos": "noun",
+      "ru": "гипотеза",
+      "ipa": "/haɪˈpɒθəsɪs/",
+      "exampleEn": "The experiment was designed to test the original hypothesis.",
+      "exampleRu": "Эксперимент был разработан, чтобы проверить исходную гипотезу.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "hypotheses"
+      }
+    },
+    {
+      "id": "implication",
+      "word": "implication",
+      "pos": "noun",
+      "ru": "следствие, подтекст, скрытый смысл",
+      "ipa": "/ˌɪmplɪˈkeɪʃən/",
+      "exampleEn": "The researchers discussed the practical implications of their findings.",
+      "exampleRu": "Исследователи обсудили практические следствия своих выводов.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "implications"
+      }
+    },
+    {
+      "id": "incentive",
+      "word": "incentive",
+      "pos": "noun",
+      "ru": "стимул, побуждение",
+      "ipa": "/ɪnˈsentɪv/",
+      "exampleEn": "Tax breaks provide a strong incentive for companies to invest.",
+      "exampleRu": "Налоговые льготы создают сильный стимул для компаний инвестировать.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "incentives"
+      }
+    },
+    {
+      "id": "infrastructure",
+      "word": "infrastructure",
+      "pos": "noun",
+      "ru": "инфраструктура",
+      "ipa": "/ˈɪnfrəstrʌktʃə/",
+      "exampleEn": "The region badly needs investment in its transport infrastructure.",
+      "exampleRu": "Региону остро нужны инвестиции в транспортную инфраструктуру.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "perception",
+      "word": "perception",
+      "pos": "noun",
+      "ru": "восприятие, представление",
+      "ipa": "/pəˈsepʃən/",
+      "exampleEn": "The media strongly influences public perception of crime.",
+      "exampleRu": "СМИ сильно влияют на общественное восприятие преступности.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "perceptions"
+      }
+    },
+    {
+      "id": "phenomenon",
+      "word": "phenomenon",
+      "pos": "noun",
+      "ru": "явление, феномен",
+      "ipa": "/fɪˈnɒmɪnən/",
+      "exampleEn": "Global warming is a phenomenon that affects the entire planet.",
+      "exampleRu": "Глобальное потепление — это явление, которое затрагивает всю планету.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "phenomena"
+      }
+    },
+    {
+      "id": "prejudice",
+      "word": "prejudice",
+      "pos": "noun",
+      "ru": "предубеждение, предрассудок",
+      "ipa": "/ˈpredʒədɪs/",
+      "exampleEn": "Education can help to reduce racial prejudice in society.",
+      "exampleRu": "Образование может помочь снизить расовые предрассудки в обществе.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "prejudices"
+      }
+    },
+    {
+      "id": "scope",
+      "word": "scope",
+      "pos": "noun",
+      "ru": "охват, масштаб, рамки",
+      "ipa": "/skəʊp/",
+      "exampleEn": "The scope of the project was far broader than we expected.",
+      "exampleRu": "Охват проекта оказался гораздо шире, чем мы ожидали.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "tendency",
+      "word": "tendency",
+      "pos": "noun",
+      "ru": "тенденция, склонность",
+      "ipa": "/ˈtendənsi/",
+      "exampleEn": "There is a growing tendency to work from home.",
+      "exampleRu": "Наблюдается растущая тенденция работать из дома.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "tendencies"
+      }
+    },
+    {
+      "id": "threshold",
+      "word": "threshold",
+      "pos": "noun",
+      "ru": "порог, предел",
+      "ipa": "/ˈθreʃhəʊld/",
+      "exampleEn": "Income above a certain threshold is taxed at a higher rate.",
+      "exampleRu": "Доход выше определённого порога облагается налогом по более высокой ставке.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "thresholds"
+      }
+    },
+    {
+      "id": "outcome",
+      "word": "outcome",
+      "pos": "noun",
+      "ru": "результат, исход",
+      "ipa": "/ˈaʊtkʌm/",
+      "exampleEn": "Nobody could predict the outcome of the negotiations.",
+      "exampleRu": "Никто не мог предсказать исход переговоров.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "outcomes"
+      }
+    },
+    {
+      "id": "approach",
+      "word": "approach",
+      "pos": "noun",
+      "ru": "подход, метод",
+      "ipa": "/əˈprəʊtʃ/",
+      "exampleEn": "We need a fresh approach to tackling youth unemployment.",
+      "exampleRu": "Нам нужен новый подход к решению проблемы безработицы среди молодёжи.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "approaches"
+      }
+    },
+    {
+      "id": "aspect",
+      "word": "aspect",
+      "pos": "noun",
+      "ru": "аспект, сторона",
+      "ipa": "/ˈæspekt/",
+      "exampleEn": "She enjoys every aspect of her new job.",
+      "exampleRu": "Ей нравится каждый аспект её новой работы.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "aspects"
+      }
+    },
+    {
+      "id": "factor",
+      "word": "factor",
+      "pos": "noun",
+      "ru": "фактор",
+      "ipa": "/ˈfæktə/",
+      "exampleEn": "Cost was a decisive factor in our final choice.",
+      "exampleRu": "Стоимость была решающим фактором в нашем окончательном выборе.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "factors"
+      }
+    },
+    {
+      "id": "tension",
+      "word": "tension",
+      "pos": "noun",
+      "ru": "напряжённость, напряжение",
+      "ipa": "/ˈtenʃən/",
+      "exampleEn": "There was growing tension between the two governments.",
+      "exampleRu": "Между двумя правительствами нарастала напряжённость.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "tensions"
+      }
+    },
+    {
+      "id": "constraint",
+      "word": "constraint",
+      "pos": "noun",
+      "ru": "ограничение, сдерживающий фактор",
+      "ipa": "/kənˈstreɪnt/",
+      "exampleEn": "Financial constraints forced the company to cut costs.",
+      "exampleRu": "Финансовые ограничения вынудили компанию сократить расходы.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "constraints"
+      }
+    },
+    {
+      "id": "bias",
+      "word": "bias",
+      "pos": "noun",
+      "ru": "предвзятость, уклон",
+      "ipa": "/ˈbaɪəs/",
+      "exampleEn": "The study was criticised for its obvious bias.",
+      "exampleRu": "Исследование критиковали за его очевидную предвзятость.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "biases"
+      }
+    },
+    {
+      "id": "norm",
+      "word": "norm",
+      "pos": "noun",
+      "ru": "норма",
+      "ipa": "/nɔːm/",
+      "exampleEn": "Flexible working hours have become the norm in many firms.",
+      "exampleRu": "Гибкий график стал нормой во многих фирмах.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "norms"
+      }
+    },
+    {
+      "id": "premise",
+      "word": "premise",
+      "pos": "noun",
+      "ru": "предпосылка, исходное положение",
+      "ipa": "/ˈpremɪs/",
+      "exampleEn": "The whole theory rests on a false premise.",
+      "exampleRu": "Вся теория держится на ложной предпосылке.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "premises"
+      }
+    },
+    {
+      "id": "paradox",
+      "word": "paradox",
+      "pos": "noun",
+      "ru": "парадокс",
+      "ipa": "/ˈpærədɒks/",
+      "exampleEn": "It is a paradox that such a wealthy country has so much poverty.",
+      "exampleRu": "Это парадокс, что в такой богатой стране столько бедности.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "paradoxes"
+      }
+    },
+    {
+      "id": "spectrum",
+      "word": "spectrum",
+      "pos": "noun",
+      "ru": "спектр, диапазон",
+      "ipa": "/ˈspektrəm/",
+      "exampleEn": "The festival attracts people from across the political spectrum.",
+      "exampleRu": "Фестиваль привлекает людей со всего политического спектра.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "spectra"
+      }
+    },
+    {
+      "id": "analogy",
+      "word": "analogy",
+      "pos": "noun",
+      "ru": "аналогия",
+      "ipa": "/əˈnælədʒi/",
+      "exampleEn": "He drew an analogy between the brain and a computer.",
+      "exampleRu": "Он провёл аналогию между мозгом и компьютером.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "analogies"
+      }
+    },
+    {
+      "id": "correlation",
+      "word": "correlation",
+      "pos": "noun",
+      "ru": "корреляция, взаимосвязь",
+      "ipa": "/ˌkɒrəˈleɪʃən/",
+      "exampleEn": "There is a clear correlation between smoking and lung disease.",
+      "exampleRu": "Существует чёткая корреляция между курением и заболеваниями лёгких.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "correlations"
+      }
+    },
+    {
+      "id": "discrepancy",
+      "word": "discrepancy",
+      "pos": "noun",
+      "ru": "расхождение, несоответствие",
+      "ipa": "/dɪsˈkrepənsi/",
+      "exampleEn": "There was a discrepancy between the two sets of figures.",
+      "exampleRu": "Между двумя наборами цифр было расхождение.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "discrepancies"
+      }
+    },
+    {
+      "id": "consensus",
+      "word": "consensus",
+      "pos": "noun",
+      "ru": "консенсус, общее согласие",
+      "ipa": "/kənˈsensəs/",
+      "exampleEn": "The committee finally reached a consensus on the issue.",
+      "exampleRu": "Комитет наконец достиг консенсуса по этому вопросу.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "rationale",
+      "word": "rationale",
+      "pos": "noun",
+      "ru": "обоснование, логическое основание",
+      "ipa": "/ˌræʃəˈnɑːl/",
+      "exampleEn": "The rationale behind the decision was never fully explained.",
+      "exampleRu": "Обоснование этого решения так и не было полностью объяснено.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "rationales"
+      }
+    },
+    {
+      "id": "deterrent",
+      "word": "deterrent",
+      "pos": "noun",
+      "ru": "сдерживающий фактор, средство устрашения",
+      "ipa": "/dɪˈterənt/",
+      "exampleEn": "Long prison sentences act as a deterrent to crime.",
+      "exampleRu": "Длительные тюремные сроки действуют как сдерживающий фактор для преступности.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "deterrents"
+      }
+    },
+    {
+      "id": "drawback",
+      "word": "drawback",
+      "pos": "noun",
+      "ru": "недостаток, минус",
+      "ipa": "/ˈdrɔːbæk/",
+      "exampleEn": "The main drawback of the plan is its high cost.",
+      "exampleRu": "Главный недостаток этого плана — его высокая стоимость.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "drawbacks"
+      }
+    },
+    {
+      "id": "breakthrough",
+      "word": "breakthrough",
+      "pos": "noun",
+      "ru": "прорыв, важное открытие",
+      "ipa": "/ˈbreɪkθruː/",
+      "exampleEn": "Scientists have made a major breakthrough in cancer research.",
+      "exampleRu": "Учёные совершили крупный прорыв в исследовании рака.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "breakthroughs"
+      }
+    },
+    {
+      "id": "transition",
+      "word": "transition",
+      "pos": "noun",
+      "ru": "переход, переходный период",
+      "ipa": "/trænˈzɪʃən/",
+      "exampleEn": "The transition to a digital economy has been rapid.",
+      "exampleRu": "Переход к цифровой экономике был стремительным.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "transitions"
+      }
+    },
+    {
+      "id": "initiative",
+      "word": "initiative",
+      "pos": "noun",
+      "ru": "инициатива",
+      "ipa": "/ɪˈnɪʃətɪv/",
+      "exampleEn": "The government launched a new initiative to reduce waste.",
+      "exampleRu": "Правительство запустило новую инициативу по сокращению отходов.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "initiatives"
+      }
+    },
+    {
+      "id": "obstacle",
+      "word": "obstacle",
+      "pos": "noun",
+      "ru": "препятствие",
+      "ipa": "/ˈɒbstəkəl/",
+      "exampleEn": "Language can be a major obstacle to integration.",
+      "exampleRu": "Язык может быть серьёзным препятствием для интеграции.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "obstacles"
+      }
+    },
+    {
+      "id": "shortage",
+      "word": "shortage",
+      "pos": "noun",
+      "ru": "нехватка, дефицит",
+      "ipa": "/ˈʃɔːtɪdʒ/",
+      "exampleEn": "The country is facing a serious shortage of skilled workers.",
+      "exampleRu": "Страна сталкивается с серьёзной нехваткой квалифицированных работников.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "shortages"
+      }
+    },
+    {
+      "id": "surplus",
+      "word": "surplus",
+      "pos": "noun",
+      "ru": "излишек, профицит",
+      "ipa": "/ˈsɜːpləs/",
+      "exampleEn": "The farm produced a surplus of grain this year.",
+      "exampleRu": "В этом году ферма произвела излишек зерна.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "surpluses"
+      }
+    },
+    {
+      "id": "revenue",
+      "word": "revenue",
+      "pos": "noun",
+      "ru": "доход, выручка",
+      "ipa": "/ˈrevənjuː/",
+      "exampleEn": "Advertising generates most of the company's revenue.",
+      "exampleRu": "Реклама приносит большую часть дохода компании.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "revenues"
+      }
+    },
+    {
+      "id": "expenditure",
+      "word": "expenditure",
+      "pos": "noun",
+      "ru": "расходы, затраты",
+      "ipa": "/ɪkˈspendɪtʃə/",
+      "exampleEn": "Public expenditure on health has risen sharply.",
+      "exampleRu": "Государственные расходы на здравоохранение резко выросли.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "expenditures"
+      }
+    },
+    {
+      "id": "asset",
+      "word": "asset",
+      "pos": "noun",
+      "ru": "актив, ценное качество",
+      "ipa": "/ˈæset/",
+      "exampleEn": "Her experience is a valuable asset to the team.",
+      "exampleRu": "Её опыт — ценный актив для команды.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "assets"
+      }
+    },
+    {
+      "id": "liability",
+      "word": "liability",
+      "pos": "noun",
+      "ru": "обязательство, помеха, ответственность",
+      "ipa": "/ˌlaɪəˈbɪləti/",
+      "exampleEn": "The old equipment has become a liability rather than an asset.",
+      "exampleRu": "Старое оборудование стало скорее помехой, чем активом.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "liabilities"
+      }
+    },
+    {
+      "id": "recession",
+      "word": "recession",
+      "pos": "noun",
+      "ru": "рецессия, экономический спад",
+      "ipa": "/rɪˈseʃən/",
+      "exampleEn": "Many businesses closed during the deep recession.",
+      "exampleRu": "Многие предприятия закрылись во время глубокой рецессии.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "recessions"
+      }
+    },
+    {
+      "id": "inflation",
+      "word": "inflation",
+      "pos": "noun",
+      "ru": "инфляция",
+      "ipa": "/ɪnˈfleɪʃən/",
+      "exampleEn": "Rising inflation has reduced people's purchasing power.",
+      "exampleRu": "Растущая инфляция снизила покупательную способность людей.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "monopoly",
+      "word": "monopoly",
+      "pos": "noun",
+      "ru": "монополия",
+      "ipa": "/məˈnɒpəli/",
+      "exampleEn": "The firm once held a monopoly on telephone services.",
+      "exampleRu": "Когда-то фирма имела монополию на телефонные услуги.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "monopolies"
+      }
+    },
+    {
+      "id": "hierarchy",
+      "word": "hierarchy",
+      "pos": "noun",
+      "ru": "иерархия",
+      "ipa": "/ˈhaɪərɑːki/",
+      "exampleEn": "She rose quickly through the corporate hierarchy.",
+      "exampleRu": "Она быстро поднялась по корпоративной иерархии.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "hierarchies"
+      }
+    },
+    {
+      "id": "bureaucracy",
+      "word": "bureaucracy",
+      "pos": "noun",
+      "ru": "бюрократия",
+      "ipa": "/bjʊəˈrɒkrəsi/",
+      "exampleEn": "Excessive bureaucracy slows down the approval process.",
+      "exampleRu": "Чрезмерная бюрократия замедляет процесс одобрения.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "bureaucracies"
+      }
+    },
+    {
+      "id": "legislation",
+      "word": "legislation",
+      "pos": "noun",
+      "ru": "законодательство",
+      "ipa": "/ˌledʒɪsˈleɪʃən/",
+      "exampleEn": "New legislation was introduced to protect consumers.",
+      "exampleRu": "Было введено новое законодательство для защиты потребителей.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "regulation",
+      "word": "regulation",
+      "pos": "noun",
+      "ru": "норма, правило, регулирование",
+      "ipa": "/ˌregjuˈleɪʃən/",
+      "exampleEn": "The industry is subject to strict safety regulations.",
+      "exampleRu": "Отрасль подчиняется строгим правилам безопасности.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "regulations"
+      }
+    },
+    {
+      "id": "sanction",
+      "word": "sanction",
+      "pos": "noun",
+      "ru": "санкция",
+      "ipa": "/ˈsæŋkʃən/",
+      "exampleEn": "The country faced economic sanctions from its neighbours.",
+      "exampleRu": "Страна столкнулась с экономическими санкциями со стороны соседей.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "sanctions"
+      }
+    },
+    {
+      "id": "advocate",
+      "word": "advocate",
+      "pos": "noun",
+      "ru": "сторонник, защитник",
+      "ipa": "/ˈædvəkət/",
+      "exampleEn": "She is a passionate advocate of renewable energy.",
+      "exampleRu": "Она страстный сторонник возобновляемой энергии.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "advocates"
+      }
+    },
+    {
+      "id": "opponent",
+      "word": "opponent",
+      "pos": "noun",
+      "ru": "противник, оппонент",
+      "ipa": "/əˈpəʊnənt/",
+      "exampleEn": "Political opponents accused him of corruption.",
+      "exampleRu": "Политические оппоненты обвинили его в коррупции.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "opponents"
+      }
+    },
+    {
+      "id": "stance",
+      "word": "stance",
+      "pos": "noun",
+      "ru": "позиция, точка зрения",
+      "ipa": "/stæns/",
+      "exampleEn": "The party softened its stance on immigration.",
+      "exampleRu": "Партия смягчила свою позицию по иммиграции.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "stances"
+      }
+    },
+    {
+      "id": "notion",
+      "word": "notion",
+      "pos": "noun",
+      "ru": "понятие, представление",
+      "ipa": "/ˈnəʊʃən/",
+      "exampleEn": "He rejected the notion that success depends on luck.",
+      "exampleRu": "Он отверг представление о том, что успех зависит от удачи.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "notions"
+      }
+    },
+    {
+      "id": "insight",
+      "word": "insight",
+      "pos": "noun",
+      "ru": "понимание, проницательность",
+      "ipa": "/ˈɪnsaɪt/",
+      "exampleEn": "The book offers valuable insights into human behaviour.",
+      "exampleRu": "Книга предлагает ценное понимание человеческого поведения.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "insights"
+      }
+    },
+    {
+      "id": "intuition",
+      "word": "intuition",
+      "pos": "noun",
+      "ru": "интуиция",
+      "ipa": "/ˌɪntjuˈɪʃən/",
+      "exampleEn": "Good doctors often rely on intuition as well as evidence.",
+      "exampleRu": "Хорошие врачи часто полагаются на интуицию, а также на факты.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "intuitions"
+      }
+    },
+    {
+      "id": "motive",
+      "word": "motive",
+      "pos": "noun",
+      "ru": "мотив, побуждение",
+      "ipa": "/ˈməʊtɪv/",
+      "exampleEn": "The police are still trying to establish a motive for the crime.",
+      "exampleRu": "Полиция всё ещё пытается установить мотив преступления.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "motives"
+      }
+    },
+    {
+      "id": "trait",
+      "word": "trait",
+      "pos": "noun",
+      "ru": "черта, особенность",
+      "ipa": "/treɪt/",
+      "exampleEn": "Patience is a useful trait in a teacher.",
+      "exampleRu": "Терпение — полезная черта для учителя.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "traits"
+      }
+    },
+    {
+      "id": "attribute",
+      "word": "attribute",
+      "pos": "noun",
+      "ru": "свойство, качество, признак",
+      "ipa": "/ˈætrɪbjuːt/",
+      "exampleEn": "Honesty is the attribute she values most in a friend.",
+      "exampleRu": "Честность — это качество, которое она больше всего ценит в друге.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "attributes"
+      }
+    },
+    {
+      "id": "virtue",
+      "word": "virtue",
+      "pos": "noun",
+      "ru": "добродетель, достоинство",
+      "ipa": "/ˈvɜːtʃuː/",
+      "exampleEn": "Patience is a virtue that few people truly possess.",
+      "exampleRu": "Терпение — добродетель, которой по-настоящему обладают немногие.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "virtues"
+      }
+    },
+    {
+      "id": "flaw",
+      "word": "flaw",
+      "pos": "noun",
+      "ru": "изъян, недостаток",
+      "ipa": "/flɔː/",
+      "exampleEn": "There is a fundamental flaw in his reasoning.",
+      "exampleRu": "В его рассуждении есть фундаментальный изъян.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "flaws"
+      }
+    },
+    {
+      "id": "dilemma",
+      "word": "dilemma",
+      "pos": "noun",
+      "ru": "дилемма",
+      "ipa": "/dɪˈlemə/",
+      "exampleEn": "She faced a difficult moral dilemma.",
+      "exampleRu": "Она столкнулась с трудной моральной дилеммой.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "dilemmas"
+      }
+    },
+    {
+      "id": "predicament",
+      "word": "predicament",
+      "pos": "noun",
+      "ru": "затруднительное положение",
+      "ipa": "/prɪˈdɪkəmənt/",
+      "exampleEn": "He explained how he had got into such a predicament.",
+      "exampleRu": "Он объяснил, как попал в такое затруднительное положение.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "predicaments"
+      }
+    },
+    {
+      "id": "turmoil",
+      "word": "turmoil",
+      "pos": "noun",
+      "ru": "смятение, беспорядок, потрясение",
+      "ipa": "/ˈtɜːmɔɪl/",
+      "exampleEn": "The country was in political turmoil for months.",
+      "exampleRu": "Страна была в политическом смятении несколько месяцев.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "uncertainty",
+      "word": "uncertainty",
+      "pos": "noun",
+      "ru": "неопределённость, неуверенность",
+      "ipa": "/ʌnˈsɜːtnti/",
+      "exampleEn": "Economic uncertainty has made investors cautious.",
+      "exampleRu": "Экономическая неопределённость сделала инвесторов осторожными.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "uncertainties"
+      }
+    },
+    {
+      "id": "ambiguity",
+      "word": "ambiguity",
+      "pos": "noun",
+      "ru": "двусмысленность, неоднозначность",
+      "ipa": "/ˌæmbɪˈɡjuːəti/",
+      "exampleEn": "The contract was full of ambiguity and unclear terms.",
+      "exampleRu": "Договор был полон двусмысленности и неясных условий.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "ambiguities"
+      }
+    },
+    {
+      "id": "scarcity",
+      "word": "scarcity",
+      "pos": "noun",
+      "ru": "нехватка, дефицит, скудость",
+      "ipa": "/ˈskeəsəti/",
+      "exampleEn": "Water scarcity is a growing problem in many regions.",
+      "exampleRu": "Нехватка воды — растущая проблема во многих регионах.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "scarcities"
+      }
+    },
+    {
+      "id": "abundance",
+      "word": "abundance",
+      "pos": "noun",
+      "ru": "изобилие, обилие",
+      "ipa": "/əˈbʌndəns/",
+      "exampleEn": "The region has an abundance of natural resources.",
+      "exampleRu": "В регионе изобилие природных ресурсов.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "diversity",
+      "word": "diversity",
+      "pos": "noun",
+      "ru": "разнообразие, многообразие",
+      "ipa": "/daɪˈvɜːsəti/",
+      "exampleEn": "The city is known for its cultural diversity.",
+      "exampleRu": "Город известен своим культурным разнообразием.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "diversities"
+      }
+    },
+    {
+      "id": "equilibrium",
+      "word": "equilibrium",
+      "pos": "noun",
+      "ru": "равновесие",
+      "ipa": "/ˌiːkwɪˈlɪbriəm/",
+      "exampleEn": "The market eventually returned to a state of equilibrium.",
+      "exampleRu": "Рынок в конце концов вернулся в состояние равновесия.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "magnitude",
+      "word": "magnitude",
+      "pos": "noun",
+      "ru": "величина, масштаб",
+      "ipa": "/ˈmæɡnɪtjuːd/",
+      "exampleEn": "No one fully grasped the magnitude of the disaster.",
+      "exampleRu": "Никто полностью не осознавал масштаб катастрофы.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "magnitudes"
+      }
+    },
+    {
+      "id": "proportion",
+      "word": "proportion",
+      "pos": "noun",
+      "ru": "доля, пропорция, соотношение",
+      "ipa": "/prəˈpɔːʃən/",
+      "exampleEn": "A large proportion of the budget goes to education.",
+      "exampleRu": "Большая доля бюджета идёт на образование.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "proportions"
+      }
+    },
+    {
+      "id": "ratio",
+      "word": "ratio",
+      "pos": "noun",
+      "ru": "соотношение, коэффициент",
+      "ipa": "/ˈreɪʃiəʊ/",
+      "exampleEn": "The school has a low ratio of students to teachers.",
+      "exampleRu": "В школе низкое соотношение учеников и учителей.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "ratios"
+      }
+    },
+    {
+      "id": "estimate",
+      "word": "estimate",
+      "pos": "noun",
+      "ru": "оценка, расчёт",
+      "ipa": "/ˈestɪmət/",
+      "exampleEn": "According to a rough estimate, repairs will cost thousands.",
+      "exampleRu": "По грубой оценке, ремонт обойдётся в тысячи.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "estimates"
+      }
+    },
+    {
+      "id": "trend",
+      "word": "trend",
+      "pos": "noun",
+      "ru": "тенденция, тренд",
+      "ipa": "/trend/",
+      "exampleEn": "Recent data confirm a downward trend in unemployment.",
+      "exampleRu": "Последние данные подтверждают тенденцию к снижению безработицы.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "trends"
+      }
+    },
+    {
+      "id": "fluctuation",
+      "word": "fluctuation",
+      "pos": "noun",
+      "ru": "колебание, изменение",
+      "ipa": "/ˌflʌktʃuˈeɪʃən/",
+      "exampleEn": "Sudden fluctuations in price can harm small businesses.",
+      "exampleRu": "Внезапные колебания цен могут навредить малому бизнесу.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "fluctuations"
+      }
+    },
+    {
+      "id": "exposure",
+      "word": "exposure",
+      "pos": "noun",
+      "ru": "воздействие, подверженность, известность",
+      "ipa": "/ɪkˈspəʊʒə/",
+      "exampleEn": "Prolonged exposure to the sun can damage the skin.",
+      "exampleRu": "Длительное воздействие солнца может повредить кожу.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "hazard",
+      "word": "hazard",
+      "pos": "noun",
+      "ru": "опасность, риск",
+      "ipa": "/ˈhæzəd/",
+      "exampleEn": "Loose wires are a serious fire hazard.",
+      "exampleRu": "Незакреплённые провода — серьёзная пожарная опасность.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "hazards"
+      }
+    },
+    {
+      "id": "epidemic",
+      "word": "epidemic",
+      "pos": "noun",
+      "ru": "эпидемия",
+      "ipa": "/ˌepɪˈdemɪk/",
+      "exampleEn": "Health officials struggled to contain the epidemic.",
+      "exampleRu": "Чиновники здравоохранения изо всех сил пытались сдержать эпидемию.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "epidemics"
+      }
+    },
+    {
+      "id": "remedy",
+      "word": "remedy",
+      "pos": "noun",
+      "ru": "средство, лекарство, способ устранения",
+      "ipa": "/ˈremədi/",
+      "exampleEn": "There is no simple remedy for these economic problems.",
+      "exampleRu": "Простого средства для этих экономических проблем нет.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "remedies"
+      }
+    },
+    {
+      "id": "welfare",
+      "word": "welfare",
+      "pos": "noun",
+      "ru": "благополучие, социальное обеспечение",
+      "ipa": "/ˈwelfeə/",
+      "exampleEn": "The charity works to improve the welfare of children.",
+      "exampleRu": "Благотворительная организация работает над улучшением благополучия детей.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "poverty",
+      "word": "poverty",
+      "pos": "noun",
+      "ru": "бедность, нищета",
+      "ipa": "/ˈpɒvəti/",
+      "exampleEn": "Millions of people still live in extreme poverty.",
+      "exampleRu": "Миллионы людей всё ещё живут в крайней нищете.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "inequality",
+      "word": "inequality",
+      "pos": "noun",
+      "ru": "неравенство",
+      "ipa": "/ˌɪnɪˈkwɒləti/",
+      "exampleEn": "The gap reflects deep social inequality.",
+      "exampleRu": "Этот разрыв отражает глубокое социальное неравенство.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "inequalities"
+      }
+    },
+    {
+      "id": "discrimination",
+      "word": "discrimination",
+      "pos": "noun",
+      "ru": "дискриминация",
+      "ipa": "/dɪˌskrɪmɪˈneɪʃən/",
+      "exampleEn": "The law forbids discrimination on the grounds of age.",
+      "exampleRu": "Закон запрещает дискриминацию по возрасту.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "compensation",
+      "word": "compensation",
+      "pos": "noun",
+      "ru": "компенсация, возмещение",
+      "ipa": "/ˌkɒmpenˈseɪʃən/",
+      "exampleEn": "The workers received compensation for the injuries.",
+      "exampleRu": "Рабочие получили компенсацию за полученные травмы.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "negligence",
+      "word": "negligence",
+      "pos": "noun",
+      "ru": "халатность, небрежность",
+      "ipa": "/ˈneɡlɪdʒəns/",
+      "exampleEn": "The accident was caused by the company's negligence.",
+      "exampleRu": "Несчастный случай произошёл из-за халатности компании.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ]
+    },
+    {
+      "id": "verdict",
+      "word": "verdict",
+      "pos": "noun",
+      "ru": "вердикт, приговор, заключение",
+      "ipa": "/ˈvɜːdɪkt/",
+      "exampleEn": "The jury took three days to reach a verdict.",
+      "exampleRu": "Присяжным потребовалось три дня, чтобы вынести вердикт.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "verdicts"
+      }
+    },
+    {
+      "id": "testimony",
+      "word": "testimony",
+      "pos": "noun",
+      "ru": "показания, свидетельство",
+      "ipa": "/ˈtestɪməni/",
+      "exampleEn": "Her testimony was crucial to the prosecution's case.",
+      "exampleRu": "Её показания были решающими для обвинения.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "noun"
+      ],
+      "forms": {
+        "plural": "testimonies"
+      }
+    }
+  ]
+}

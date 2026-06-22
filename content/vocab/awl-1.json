@@ -1,0 +1,1359 @@
+{
+  "category": "awl-1",
+  "title": "Academic Word List — часть 1",
+  "level": "B2",
+  "pos": "mixed",
+  "topic": "academic",
+  "words": [
+    {
+      "id": "analyse",
+      "word": "analyse",
+      "pos": "verb",
+      "ru": "анализировать",
+      "ipa": "/ˈænəlaɪz/",
+      "exampleEn": "Researchers analyse the data carefully before drawing any conclusions.",
+      "exampleRu": "Исследователи тщательно анализируют данные, прежде чем делать какие-либо выводы.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "approach",
+      "word": "approach",
+      "pos": "noun",
+      "ru": "подход",
+      "ipa": "/əˈprəʊtʃ/",
+      "exampleEn": "The study adopts a quantitative approach to investigate the phenomenon.",
+      "exampleRu": "В исследовании используется количественный подход для изучения этого явления.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "area",
+      "word": "area",
+      "pos": "noun",
+      "ru": "область, сфера",
+      "ipa": "/ˈeəriə/",
+      "exampleEn": "This is a key area of research that requires further attention.",
+      "exampleRu": "Это ключевая область исследований, требующая дальнейшего внимания.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "assess",
+      "word": "assess",
+      "pos": "verb",
+      "ru": "оценивать",
+      "ipa": "/əˈses/",
+      "exampleEn": "The committee will assess the impact of the proposed policy.",
+      "exampleRu": "Комитет оценит влияние предложенной политики.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "assume",
+      "word": "assume",
+      "pos": "verb",
+      "ru": "предполагать",
+      "ipa": "/əˈsjuːm/",
+      "exampleEn": "We cannot assume that these results apply to all populations.",
+      "exampleRu": "Мы не можем предполагать, что эти результаты применимы ко всем группам населения.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "authority",
+      "word": "authority",
+      "pos": "noun",
+      "ru": "власть, орган власти",
+      "ipa": "/ɔːˈθɒrəti/",
+      "exampleEn": "The local authority is responsible for regulating water quality.",
+      "exampleRu": "Местный орган власти отвечает за регулирование качества воды.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "available",
+      "word": "available",
+      "pos": "adjective",
+      "ru": "доступный, имеющийся",
+      "ipa": "/əˈveɪləbl/",
+      "exampleEn": "The full dataset is available to researchers upon request.",
+      "exampleRu": "Полный набор данных доступен исследователям по запросу.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "benefit",
+      "word": "benefit",
+      "pos": "noun",
+      "ru": "польза, выгода",
+      "ipa": "/ˈbenɪfɪt/",
+      "exampleEn": "The economic benefit of the reform outweighs its costs.",
+      "exampleRu": "Экономическая выгода от реформы перевешивает её издержки.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "concept",
+      "word": "concept",
+      "pos": "noun",
+      "ru": "концепция, понятие",
+      "ipa": "/ˈkɒnsept/",
+      "exampleEn": "The concept of sustainability is central to modern policy.",
+      "exampleRu": "Концепция устойчивого развития является центральной для современной политики.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "consist",
+      "word": "consist",
+      "pos": "verb",
+      "ru": "состоять (из)",
+      "ipa": "/kənˈsɪst/",
+      "exampleEn": "The sample consists of two hundred participants from diverse backgrounds.",
+      "exampleRu": "Выборка состоит из двухсот участников из различных слоёв общества.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "constitute",
+      "word": "constitute",
+      "pos": "verb",
+      "ru": "составлять, представлять собой",
+      "ipa": "/ˈkɒnstɪtjuːt/",
+      "exampleEn": "These findings constitute strong evidence for the hypothesis.",
+      "exampleRu": "Эти результаты представляют собой убедительное доказательство гипотезы.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "context",
+      "word": "context",
+      "pos": "noun",
+      "ru": "контекст",
+      "ipa": "/ˈkɒntekst/",
+      "exampleEn": "The results must be interpreted within their historical context.",
+      "exampleRu": "Результаты следует интерпретировать в их историческом контексте.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "contract",
+      "word": "contract",
+      "pos": "noun",
+      "ru": "контракт, договор",
+      "ipa": "/ˈkɒntrækt/",
+      "exampleEn": "The terms of the contract were negotiated over several months.",
+      "exampleRu": "Условия контракта обсуждались в течение нескольких месяцев.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "create",
+      "word": "create",
+      "pos": "verb",
+      "ru": "создавать",
+      "ipa": "/kriˈeɪt/",
+      "exampleEn": "The policy aims to create new opportunities for employment.",
+      "exampleRu": "Политика направлена на создание новых возможностей трудоустройства.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "data",
+      "word": "data",
+      "pos": "noun",
+      "ru": "данные",
+      "ipa": "/ˈdeɪtə/",
+      "exampleEn": "The data were collected through a series of online surveys.",
+      "exampleRu": "Данные были собраны посредством серии онлайн-опросов.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "define",
+      "word": "define",
+      "pos": "verb",
+      "ru": "определять, давать определение",
+      "ipa": "/dɪˈfaɪn/",
+      "exampleEn": "It is essential to define the key terms before the analysis.",
+      "exampleRu": "Прежде чем приступить к анализу, необходимо определить ключевые термины.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "derive",
+      "word": "derive",
+      "pos": "verb",
+      "ru": "получать, выводить",
+      "ipa": "/dɪˈraɪv/",
+      "exampleEn": "These principles are derived from extensive empirical observation.",
+      "exampleRu": "Эти принципы выведены из обширных эмпирических наблюдений.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "distribute",
+      "word": "distribute",
+      "pos": "verb",
+      "ru": "распределять, распространять",
+      "ipa": "/dɪˈstrɪbjuːt/",
+      "exampleEn": "Resources were distributed unevenly across the regions.",
+      "exampleRu": "Ресурсы были распределены неравномерно между регионами.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "economy",
+      "word": "economy",
+      "pos": "noun",
+      "ru": "экономика",
+      "ipa": "/ɪˈkɒnəmi/",
+      "exampleEn": "The global economy has become increasingly interconnected.",
+      "exampleRu": "Мировая экономика становится всё более взаимосвязанной.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "environment",
+      "word": "environment",
+      "pos": "noun",
+      "ru": "окружающая среда",
+      "ipa": "/ɪnˈvaɪrənmənt/",
+      "exampleEn": "Industrial activity has had a profound effect on the environment.",
+      "exampleRu": "Промышленная деятельность оказала глубокое влияние на окружающую среду.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "establish",
+      "word": "establish",
+      "pos": "verb",
+      "ru": "устанавливать, учреждать",
+      "ipa": "/ɪˈstæblɪʃ/",
+      "exampleEn": "The study sought to establish a link between diet and health.",
+      "exampleRu": "Исследование стремилось установить связь между питанием и здоровьем.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "estimate",
+      "word": "estimate",
+      "pos": "verb",
+      "ru": "оценивать, прикидывать",
+      "ipa": "/ˈestɪmeɪt/",
+      "exampleEn": "Experts estimate that demand will double within a decade.",
+      "exampleRu": "Эксперты оценивают, что спрос удвоится в течение десятилетия.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "evident",
+      "word": "evident",
+      "pos": "adjective",
+      "ru": "очевидный",
+      "ipa": "/ˈevɪdənt/",
+      "exampleEn": "It is evident from the figures that the trend is accelerating.",
+      "exampleRu": "Из приведённых данных очевидно, что тенденция ускоряется.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "export",
+      "word": "export",
+      "pos": "noun",
+      "ru": "экспорт",
+      "ipa": "/ˈekspɔːt/",
+      "exampleEn": "Oil remains the country's most valuable export.",
+      "exampleRu": "Нефть остаётся самым ценным экспортным товаром страны.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "factor",
+      "word": "factor",
+      "pos": "noun",
+      "ru": "фактор",
+      "ipa": "/ˈfæktə/",
+      "exampleEn": "Economic factors play a significant role in migration patterns.",
+      "exampleRu": "Экономические факторы играют значительную роль в миграционных процессах.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "finance",
+      "word": "finance",
+      "pos": "noun",
+      "ru": "финансы",
+      "ipa": "/ˈfaɪnæns/",
+      "exampleEn": "Public finance is a major topic in economic policy debates.",
+      "exampleRu": "Государственные финансы — важная тема в дебатах об экономической политике.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "formula",
+      "word": "formula",
+      "pos": "noun",
+      "ru": "формула",
+      "ipa": "/ˈfɔːmjələ/",
+      "exampleEn": "The researchers applied a standard formula to calculate the rate.",
+      "exampleRu": "Исследователи применили стандартную формулу для расчёта показателя.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "function",
+      "word": "function",
+      "pos": "noun",
+      "ru": "функция",
+      "ipa": "/ˈfʌŋkʃn/",
+      "exampleEn": "The primary function of the system is to regulate temperature.",
+      "exampleRu": "Основная функция системы — регулировать температуру.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "identify",
+      "word": "identify",
+      "pos": "verb",
+      "ru": "определять, выявлять",
+      "ipa": "/aɪˈdentɪfaɪ/",
+      "exampleEn": "The study aims to identify the main causes of the problem.",
+      "exampleRu": "Исследование направлено на выявление основных причин проблемы.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "income",
+      "word": "income",
+      "pos": "noun",
+      "ru": "доход",
+      "ipa": "/ˈɪnkʌm/",
+      "exampleEn": "Household income has risen steadily over the past decade.",
+      "exampleRu": "Доход домохозяйств неуклонно рос в течение последнего десятилетия.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "indicate",
+      "word": "indicate",
+      "pos": "verb",
+      "ru": "указывать, свидетельствовать",
+      "ipa": "/ˈɪndɪkeɪt/",
+      "exampleEn": "The results indicate a strong correlation between the variables.",
+      "exampleRu": "Результаты указывают на сильную корреляцию между переменными.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "individual",
+      "word": "individual",
+      "pos": "noun",
+      "ru": "индивид, отдельный человек",
+      "ipa": "/ˌɪndɪˈvɪdʒuəl/",
+      "exampleEn": "Each individual in the study completed a detailed questionnaire.",
+      "exampleRu": "Каждый участник исследования заполнил подробную анкету.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "interpret",
+      "word": "interpret",
+      "pos": "verb",
+      "ru": "интерпретировать, толковать",
+      "ipa": "/ɪnˈtɜːprɪt/",
+      "exampleEn": "Scholars interpret the evidence in markedly different ways.",
+      "exampleRu": "Учёные интерпретируют эти данные совершенно по-разному.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "involve",
+      "word": "involve",
+      "pos": "verb",
+      "ru": "включать, вовлекать",
+      "ipa": "/ɪnˈvɒlv/",
+      "exampleEn": "The procedure involves several carefully controlled stages.",
+      "exampleRu": "Процедура включает несколько тщательно контролируемых этапов.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "issue",
+      "word": "issue",
+      "pos": "noun",
+      "ru": "вопрос, проблема",
+      "ipa": "/ˈɪʃuː/",
+      "exampleEn": "Climate change is one of the most pressing issues of our time.",
+      "exampleRu": "Изменение климата — одна из самых острых проблем нашего времени.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "labour",
+      "word": "labour",
+      "pos": "noun",
+      "ru": "труд, рабочая сила",
+      "ipa": "/ˈleɪbə/",
+      "exampleEn": "The cost of labour has increased significantly in recent years.",
+      "exampleRu": "Стоимость рабочей силы значительно возросла за последние годы.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "legal",
+      "word": "legal",
+      "pos": "adjective",
+      "ru": "правовой, юридический",
+      "ipa": "/ˈliːɡl/",
+      "exampleEn": "The case raised complex legal questions about ownership.",
+      "exampleRu": "Дело подняло сложные правовые вопросы о праве собственности.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "legislate",
+      "word": "legislate",
+      "pos": "verb",
+      "ru": "издавать законы, законодательно регулировать",
+      "ipa": "/ˈledʒɪsleɪt/",
+      "exampleEn": "Governments have begun to legislate against harmful emissions.",
+      "exampleRu": "Правительства начали законодательно ограничивать вредные выбросы.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "major",
+      "word": "major",
+      "pos": "adjective",
+      "ru": "основной, значительный",
+      "ipa": "/ˈmeɪdʒə/",
+      "exampleEn": "The report identifies several major obstacles to reform.",
+      "exampleRu": "В докладе выделяется несколько основных препятствий для реформы.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "method",
+      "word": "method",
+      "pos": "noun",
+      "ru": "метод",
+      "ipa": "/ˈmeθəd/",
+      "exampleEn": "The researchers compared two methods of data collection.",
+      "exampleRu": "Исследователи сравнили два метода сбора данных.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "occur",
+      "word": "occur",
+      "pos": "verb",
+      "ru": "происходить, случаться",
+      "ipa": "/əˈkɜː/",
+      "exampleEn": "These reactions occur only under specific conditions.",
+      "exampleRu": "Эти реакции происходят только при определённых условиях.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "percent",
+      "word": "percent",
+      "pos": "noun",
+      "ru": "процент",
+      "ipa": "/pəˈsent/",
+      "exampleEn": "Nearly forty percent of respondents agreed with the statement.",
+      "exampleRu": "Почти сорок процентов респондентов согласились с этим утверждением.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "period",
+      "word": "period",
+      "pos": "noun",
+      "ru": "период",
+      "ipa": "/ˈpɪəriəd/",
+      "exampleEn": "The data were gathered over a five-year period.",
+      "exampleRu": "Данные собирались в течение пятилетнего периода.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "policy",
+      "word": "policy",
+      "pos": "noun",
+      "ru": "политика, стратегия",
+      "ipa": "/ˈpɒləsi/",
+      "exampleEn": "The new policy was designed to reduce unemployment.",
+      "exampleRu": "Новая политика была разработана для снижения безработицы.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "principle",
+      "word": "principle",
+      "pos": "noun",
+      "ru": "принцип",
+      "ipa": "/ˈprɪnsəpl/",
+      "exampleEn": "The argument rests on a fundamental principle of fairness.",
+      "exampleRu": "Аргумент основан на фундаментальном принципе справедливости.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "proceed",
+      "word": "proceed",
+      "pos": "verb",
+      "ru": "продолжать, приступать",
+      "ipa": "/prəˈsiːd/",
+      "exampleEn": "The authors proceed to examine each case in detail.",
+      "exampleRu": "Авторы переходят к детальному рассмотрению каждого случая.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "process",
+      "word": "process",
+      "pos": "noun",
+      "ru": "процесс",
+      "ipa": "/ˈprəʊses/",
+      "exampleEn": "Learning is a gradual process that requires consistent effort.",
+      "exampleRu": "Обучение — это постепенный процесс, требующий постоянных усилий.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "require",
+      "word": "require",
+      "pos": "verb",
+      "ru": "требовать",
+      "ipa": "/rɪˈkwaɪə/",
+      "exampleEn": "This task requires a thorough understanding of the theory.",
+      "exampleRu": "Эта задача требует глубокого понимания теории.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "research",
+      "word": "research",
+      "pos": "noun",
+      "ru": "исследование",
+      "ipa": "/rɪˈsɜːtʃ/",
+      "exampleEn": "Further research is needed to confirm these preliminary findings.",
+      "exampleRu": "Необходимы дальнейшие исследования для подтверждения этих предварительных выводов.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "respond",
+      "word": "respond",
+      "pos": "verb",
+      "ru": "отвечать, реагировать",
+      "ipa": "/rɪˈspɒnd/",
+      "exampleEn": "Participants were asked to respond to a series of statements.",
+      "exampleRu": "Участников попросили отреагировать на ряд утверждений.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "role",
+      "word": "role",
+      "pos": "noun",
+      "ru": "роль",
+      "ipa": "/rəʊl/",
+      "exampleEn": "Technology plays an increasingly important role in education.",
+      "exampleRu": "Технологии играют всё более важную роль в образовании.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "section",
+      "word": "section",
+      "pos": "noun",
+      "ru": "раздел, секция",
+      "ipa": "/ˈsekʃn/",
+      "exampleEn": "The next section discusses the methodology in detail.",
+      "exampleRu": "В следующем разделе подробно обсуждается методология.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "sector",
+      "word": "sector",
+      "pos": "noun",
+      "ru": "сектор, отрасль",
+      "ipa": "/ˈsektə/",
+      "exampleEn": "The public sector employs a large share of the workforce.",
+      "exampleRu": "Государственный сектор обеспечивает занятость значительной части рабочей силы.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "significant",
+      "word": "significant",
+      "pos": "adjective",
+      "ru": "значительный, существенный",
+      "ipa": "/sɪɡˈnɪfɪkənt/",
+      "exampleEn": "There was a significant difference between the two groups.",
+      "exampleRu": "Между двумя группами наблюдалось существенное различие.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "similar",
+      "word": "similar",
+      "pos": "adjective",
+      "ru": "похожий, сходный",
+      "ipa": "/ˈsɪmələ/",
+      "exampleEn": "The two studies produced remarkably similar results.",
+      "exampleRu": "Два исследования дали удивительно сходные результаты.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "source",
+      "word": "source",
+      "pos": "noun",
+      "ru": "источник",
+      "ipa": "/sɔːs/",
+      "exampleEn": "The author cites a wide range of primary sources.",
+      "exampleRu": "Автор ссылается на широкий круг первичных источников.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "specific",
+      "word": "specific",
+      "pos": "adjective",
+      "ru": "конкретный, специфический",
+      "ipa": "/spəˈsɪfɪk/",
+      "exampleEn": "The study focuses on a specific group of patients.",
+      "exampleRu": "Исследование сосредоточено на конкретной группе пациентов.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "structure",
+      "word": "structure",
+      "pos": "noun",
+      "ru": "структура",
+      "ipa": "/ˈstrʌktʃə/",
+      "exampleEn": "The essay has a clear structure with distinct sections.",
+      "exampleRu": "Эссе имеет чёткую структуру с отдельными разделами.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "theory",
+      "word": "theory",
+      "pos": "noun",
+      "ru": "теория",
+      "ipa": "/ˈθɪəri/",
+      "exampleEn": "The theory has been widely tested in subsequent studies.",
+      "exampleRu": "Теория была широко проверена в последующих исследованиях.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "vary",
+      "word": "vary",
+      "pos": "verb",
+      "ru": "варьироваться, различаться",
+      "ipa": "/ˈveəri/",
+      "exampleEn": "The results vary considerably depending on the conditions.",
+      "exampleRu": "Результаты значительно различаются в зависимости от условий.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "consequence",
+      "word": "consequence",
+      "pos": "noun",
+      "ru": "последствие",
+      "ipa": "/ˈkɒnsɪkwəns/",
+      "exampleEn": "The economic consequences of the decision were severe.",
+      "exampleRu": "Экономические последствия этого решения были серьёзными.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "consistent",
+      "word": "consistent",
+      "pos": "adjective",
+      "ru": "последовательный, согласующийся",
+      "ipa": "/kənˈsɪstənt/",
+      "exampleEn": "The findings are consistent with previous research in the field.",
+      "exampleRu": "Эти выводы согласуются с предыдущими исследованиями в данной области.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "constrain",
+      "word": "constrain",
+      "pos": "verb",
+      "ru": "ограничивать, сдерживать",
+      "ipa": "/kənˈstreɪn/",
+      "exampleEn": "Limited resources constrain the scope of the investigation.",
+      "exampleRu": "Ограниченные ресурсы сдерживают масштаб исследования.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "contribute",
+      "word": "contribute",
+      "pos": "verb",
+      "ru": "способствовать, вносить вклад",
+      "ipa": "/kənˈtrɪbjuːt/",
+      "exampleEn": "Several factors contribute to the observed differences.",
+      "exampleRu": "Несколько факторов способствуют наблюдаемым различиям.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "demonstrate",
+      "word": "demonstrate",
+      "pos": "verb",
+      "ru": "демонстрировать, показывать",
+      "ipa": "/ˈdemənstreɪt/",
+      "exampleEn": "The experiment clearly demonstrates the underlying mechanism.",
+      "exampleRu": "Эксперимент наглядно демонстрирует лежащий в основе механизм.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "document",
+      "word": "document",
+      "pos": "noun",
+      "ru": "документ",
+      "ipa": "/ˈdɒkjumənt/",
+      "exampleEn": "The historian examined a number of official documents.",
+      "exampleRu": "Историк изучил ряд официальных документов.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "dominant",
+      "word": "dominant",
+      "pos": "adjective",
+      "ru": "доминирующий, преобладающий",
+      "ipa": "/ˈdɒmɪnənt/",
+      "exampleEn": "This view became the dominant paradigm in the field.",
+      "exampleRu": "Эта точка зрения стала доминирующей парадигмой в данной области.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "element",
+      "word": "element",
+      "pos": "noun",
+      "ru": "элемент, компонент",
+      "ipa": "/ˈelɪmənt/",
+      "exampleEn": "Trust is a key element of any successful collaboration.",
+      "exampleRu": "Доверие — ключевой элемент любого успешного сотрудничества.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "ensure",
+      "word": "ensure",
+      "pos": "verb",
+      "ru": "обеспечивать, гарантировать",
+      "ipa": "/ɪnˈʃʊə/",
+      "exampleEn": "Strict controls were applied to ensure the validity of the results.",
+      "exampleRu": "Были применены строгие меры контроля, чтобы обеспечить достоверность результатов.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "evaluate",
+      "word": "evaluate",
+      "pos": "verb",
+      "ru": "оценивать",
+      "ipa": "/ɪˈvæljueɪt/",
+      "exampleEn": "The aim is to evaluate the effectiveness of the treatment.",
+      "exampleRu": "Цель состоит в том, чтобы оценить эффективность лечения.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "feature",
+      "word": "feature",
+      "pos": "noun",
+      "ru": "особенность, характеристика",
+      "ipa": "/ˈfiːtʃə/",
+      "exampleEn": "A distinctive feature of the model is its simplicity.",
+      "exampleRu": "Отличительной особенностью модели является её простота.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "focus",
+      "word": "focus",
+      "pos": "verb",
+      "ru": "сосредотачивать(ся)",
+      "ipa": "/ˈfəʊkəs/",
+      "exampleEn": "This chapter focuses on the social impact of the reforms.",
+      "exampleRu": "Эта глава сосредоточена на социальном воздействии реформ.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "impact",
+      "word": "impact",
+      "pos": "noun",
+      "ru": "воздействие, влияние",
+      "ipa": "/ˈɪmpækt/",
+      "exampleEn": "The study assesses the impact of tourism on local communities.",
+      "exampleRu": "Исследование оценивает воздействие туризма на местные сообщества.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "institute",
+      "word": "institute",
+      "pos": "noun",
+      "ru": "институт",
+      "ipa": "/ˈɪnstɪtjuːt/",
+      "exampleEn": "The research was conducted at a leading scientific institute.",
+      "exampleRu": "Исследование проводилось в ведущем научном институте.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "maintain",
+      "word": "maintain",
+      "pos": "verb",
+      "ru": "поддерживать, утверждать",
+      "ipa": "/meɪnˈteɪn/",
+      "exampleEn": "The authors maintain that the evidence supports their claim.",
+      "exampleRu": "Авторы утверждают, что данные подтверждают их заявление.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "obtain",
+      "word": "obtain",
+      "pos": "verb",
+      "ru": "получать, приобретать",
+      "ipa": "/əbˈteɪn/",
+      "exampleEn": "Permission was obtained before the data were collected.",
+      "exampleRu": "Перед сбором данных было получено разрешение.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "participate",
+      "word": "participate",
+      "pos": "verb",
+      "ru": "участвовать",
+      "ipa": "/pɑːˈtɪsɪpeɪt/",
+      "exampleEn": "Over three hundred students agreed to participate in the trial.",
+      "exampleRu": "Более трёхсот студентов согласились участвовать в испытании.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "perceive",
+      "word": "perceive",
+      "pos": "verb",
+      "ru": "воспринимать",
+      "ipa": "/pəˈsiːv/",
+      "exampleEn": "Consumers perceive the brand as reliable and trustworthy.",
+      "exampleRu": "Потребители воспринимают этот бренд как надёжный и заслуживающий доверия.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "potential",
+      "word": "potential",
+      "pos": "adjective",
+      "ru": "потенциальный, возможный",
+      "ipa": "/pəˈtenʃl/",
+      "exampleEn": "The report highlights the potential risks of the new technology.",
+      "exampleRu": "В отчёте подчёркиваются потенциальные риски новой технологии.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "previous",
+      "word": "previous",
+      "pos": "adjective",
+      "ru": "предыдущий",
+      "ipa": "/ˈpriːviəs/",
+      "exampleEn": "These results build upon previous work in the discipline.",
+      "exampleRu": "Эти результаты основываются на предыдущих работах в данной дисциплине.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "primary",
+      "word": "primary",
+      "pos": "adjective",
+      "ru": "первичный, основной",
+      "ipa": "/ˈpraɪməri/",
+      "exampleEn": "The primary objective of the study was clearly stated.",
+      "exampleRu": "Основная цель исследования была чётко сформулирована.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "purchase",
+      "word": "purchase",
+      "pos": "verb",
+      "ru": "приобретать, покупать",
+      "ipa": "/ˈpɜːtʃəs/",
+      "exampleEn": "Consumers tend to purchase more goods during economic booms.",
+      "exampleRu": "Потребители склонны приобретать больше товаров в периоды экономического подъёма.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "range",
+      "word": "range",
+      "pos": "noun",
+      "ru": "диапазон, ряд",
+      "ipa": "/reɪndʒ/",
+      "exampleEn": "The survey covered a wide range of social issues.",
+      "exampleRu": "Опрос охватывал широкий ряд социальных вопросов.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "region",
+      "word": "region",
+      "pos": "noun",
+      "ru": "регион, область",
+      "ipa": "/ˈriːdʒən/",
+      "exampleEn": "Rainfall varies considerably from one region to another.",
+      "exampleRu": "Количество осадков значительно варьируется от региона к региону.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "regulate",
+      "word": "regulate",
+      "pos": "verb",
+      "ru": "регулировать",
+      "ipa": "/ˈreɡjuleɪt/",
+      "exampleEn": "The government attempts to regulate the financial markets.",
+      "exampleRu": "Правительство пытается регулировать финансовые рынки.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "relevant",
+      "word": "relevant",
+      "pos": "adjective",
+      "ru": "уместный, относящийся к делу",
+      "ipa": "/ˈreləvənt/",
+      "exampleEn": "Only the most relevant data were included in the analysis.",
+      "exampleRu": "В анализ были включены только наиболее значимые данные.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "resource",
+      "word": "resource",
+      "pos": "noun",
+      "ru": "ресурс",
+      "ipa": "/rɪˈzɔːs/",
+      "exampleEn": "Natural resources are distributed unequally across the planet.",
+      "exampleRu": "Природные ресурсы распределены по планете неравномерно.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "restrict",
+      "word": "restrict",
+      "pos": "verb",
+      "ru": "ограничивать",
+      "ipa": "/rɪˈstrɪkt/",
+      "exampleEn": "The new rules restrict access to certain online materials.",
+      "exampleRu": "Новые правила ограничивают доступ к определённым онлайн-материалам.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "secure",
+      "word": "secure",
+      "pos": "verb",
+      "ru": "обеспечивать, добиваться",
+      "ipa": "/sɪˈkjʊə/",
+      "exampleEn": "The team worked hard to secure funding for the project.",
+      "exampleRu": "Команда упорно работала, чтобы обеспечить финансирование проекта.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    },
+    {
+      "id": "seek",
+      "word": "seek",
+      "pos": "verb",
+      "ru": "искать, стремиться",
+      "ipa": "/siːk/",
+      "exampleEn": "This paper seeks to explain the decline in birth rates.",
+      "exampleRu": "Эта статья стремится объяснить снижение рождаемости.",
+      "level": "B2",
+      "topic": "academic",
+      "tags": [
+        "awl",
+        "academic"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1794 @@
+{
+  "category": "b1-verbs-2",
+  "title": "B1 — глаголы (часть 2)",
+  "level": "B1",
+  "pos": "verb",
+  "topic": "core",
+  "words": [
+    {
+      "id": "achieve",
+      "word": "achieve",
+      "pos": "verb",
+      "ru": "достигать",
+      "ipa": "/əˈtʃiːv/",
+      "exampleEn": "She worked hard to achieve her goal.",
+      "exampleRu": "Она усердно работала, чтобы достичь своей цели.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "achieved",
+        "pp": "achieved",
+        "ing": "achieving",
+        "third": "achieves"
+      }
+    },
+    {
+      "id": "admit",
+      "word": "admit",
+      "pos": "verb",
+      "ru": "признавать",
+      "ipa": "/ədˈmɪt/",
+      "exampleEn": "He admitted that he was wrong.",
+      "exampleRu": "Он признал, что был неправ.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "admitted",
+        "pp": "admitted",
+        "ing": "admitting",
+        "third": "admits"
+      }
+    },
+    {
+      "id": "affect",
+      "word": "affect",
+      "pos": "verb",
+      "ru": "влиять",
+      "ipa": "/əˈfekt/",
+      "exampleEn": "The weather can affect your mood.",
+      "exampleRu": "Погода может влиять на ваше настроение.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "affected",
+        "pp": "affected",
+        "ing": "affecting",
+        "third": "affects"
+      }
+    },
+    {
+      "id": "allow",
+      "word": "allow",
+      "pos": "verb",
+      "ru": "позволять",
+      "ipa": "/əˈlaʊ/",
+      "exampleEn": "My parents allow me to stay up late.",
+      "exampleRu": "Родители позволяют мне ложиться поздно.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "allowed",
+        "pp": "allowed",
+        "ing": "allowing",
+        "third": "allows"
+      }
+    },
+    {
+      "id": "apply",
+      "word": "apply",
+      "pos": "verb",
+      "ru": "подавать заявление",
+      "ipa": "/əˈplaɪ/",
+      "exampleEn": "I want to apply for this job.",
+      "exampleRu": "Я хочу подать заявление на эту работу.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "applied",
+        "pp": "applied",
+        "ing": "applying",
+        "third": "applies"
+      }
+    },
+    {
+      "id": "avoid",
+      "word": "avoid",
+      "pos": "verb",
+      "ru": "избегать",
+      "ipa": "/əˈvɔɪd/",
+      "exampleEn": "Try to avoid eating too much sugar.",
+      "exampleRu": "Старайтесь избегать слишком много сахара.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "avoided",
+        "pp": "avoided",
+        "ing": "avoiding",
+        "third": "avoids"
+      }
+    },
+    {
+      "id": "complain",
+      "word": "complain",
+      "pos": "verb",
+      "ru": "жаловаться",
+      "ipa": "/kəmˈpleɪn/",
+      "exampleEn": "She complained about the noise.",
+      "exampleRu": "Она пожаловалась на шум.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "complained",
+        "pp": "complained",
+        "ing": "complaining",
+        "third": "complains"
+      }
+    },
+    {
+      "id": "consider",
+      "word": "consider",
+      "pos": "verb",
+      "ru": "рассматривать",
+      "ipa": "/kənˈsɪdə/",
+      "exampleEn": "We should consider all the options.",
+      "exampleRu": "Нам следует рассмотреть все варианты.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "considered",
+        "pp": "considered",
+        "ing": "considering",
+        "third": "considers"
+      }
+    },
+    {
+      "id": "encourage",
+      "word": "encourage",
+      "pos": "verb",
+      "ru": "поощрять",
+      "ipa": "/ɪnˈkʌrɪdʒ/",
+      "exampleEn": "Teachers encourage students to read more.",
+      "exampleRu": "Учителя поощряют учеников читать больше.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "encouraged",
+        "pp": "encouraged",
+        "ing": "encouraging",
+        "third": "encourages"
+      }
+    },
+    {
+      "id": "improve",
+      "word": "improve",
+      "pos": "verb",
+      "ru": "улучшать",
+      "ipa": "/ɪmˈpruːv/",
+      "exampleEn": "I want to improve my English.",
+      "exampleRu": "Я хочу улучшить свой английский.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "improved",
+        "pp": "improved",
+        "ing": "improving",
+        "third": "improves"
+      }
+    },
+    {
+      "id": "manage",
+      "word": "manage",
+      "pos": "verb",
+      "ru": "справляться",
+      "ipa": "/ˈmænɪdʒ/",
+      "exampleEn": "She manages a small team at work.",
+      "exampleRu": "Она руководит небольшой командой на работе.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "managed",
+        "pp": "managed",
+        "ing": "managing",
+        "third": "manages"
+      }
+    },
+    {
+      "id": "prevent",
+      "word": "prevent",
+      "pos": "verb",
+      "ru": "предотвращать",
+      "ipa": "/prɪˈvent/",
+      "exampleEn": "Washing your hands can prevent illness.",
+      "exampleRu": "Мытьё рук может предотвратить болезнь.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "prevented",
+        "pp": "prevented",
+        "ing": "preventing",
+        "third": "prevents"
+      }
+    },
+    {
+      "id": "provide",
+      "word": "provide",
+      "pos": "verb",
+      "ru": "обеспечивать",
+      "ipa": "/prəˈvaɪd/",
+      "exampleEn": "The hotel provides free breakfast.",
+      "exampleRu": "Отель предоставляет бесплатный завтрак.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "provided",
+        "pp": "provided",
+        "ing": "providing",
+        "third": "provides"
+      }
+    },
+    {
+      "id": "realise",
+      "word": "realise",
+      "pos": "verb",
+      "ru": "осознавать",
+      "ipa": "/ˈrɪəlaɪz/",
+      "exampleEn": "I didn't realise how late it was.",
+      "exampleRu": "Я не осознавал, как уже поздно.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "realised",
+        "pp": "realised",
+        "ing": "realising",
+        "third": "realises"
+      }
+    },
+    {
+      "id": "reduce",
+      "word": "reduce",
+      "pos": "verb",
+      "ru": "сокращать",
+      "ipa": "/rɪˈdjuːs/",
+      "exampleEn": "We need to reduce our spending.",
+      "exampleRu": "Нам нужно сократить наши расходы.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "reduced",
+        "pp": "reduced",
+        "ing": "reducing",
+        "third": "reduces"
+      }
+    },
+    {
+      "id": "refuse",
+      "word": "refuse",
+      "pos": "verb",
+      "ru": "отказываться",
+      "ipa": "/rɪˈfjuːz/",
+      "exampleEn": "He refused to answer the question.",
+      "exampleRu": "Он отказался отвечать на вопрос.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "refused",
+        "pp": "refused",
+        "ing": "refusing",
+        "third": "refuses"
+      }
+    },
+    {
+      "id": "suggest",
+      "word": "suggest",
+      "pos": "verb",
+      "ru": "предлагать",
+      "ipa": "/səˈdʒest/",
+      "exampleEn": "Can you suggest a good restaurant?",
+      "exampleRu": "Можешь предложить хороший ресторан?",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "suggested",
+        "pp": "suggested",
+        "ing": "suggesting",
+        "third": "suggests"
+      }
+    },
+    {
+      "id": "support",
+      "word": "support",
+      "pos": "verb",
+      "ru": "поддерживать",
+      "ipa": "/səˈpɔːt/",
+      "exampleEn": "My family supports my decision.",
+      "exampleRu": "Моя семья поддерживает моё решение.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "supported",
+        "pp": "supported",
+        "ing": "supporting",
+        "third": "supports"
+      }
+    },
+    {
+      "id": "accept",
+      "word": "accept",
+      "pos": "verb",
+      "ru": "принимать",
+      "ipa": "/əkˈsept/",
+      "exampleEn": "She accepted the job offer.",
+      "exampleRu": "Она приняла предложение о работе.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "accepted",
+        "pp": "accepted",
+        "ing": "accepting",
+        "third": "accepts"
+      }
+    },
+    {
+      "id": "increase",
+      "word": "increase",
+      "pos": "verb",
+      "ru": "увеличивать",
+      "ipa": "/ɪnˈkriːs/",
+      "exampleEn": "Prices increase every year.",
+      "exampleRu": "Цены растут каждый год.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "increased",
+        "pp": "increased",
+        "ing": "increasing",
+        "third": "increases"
+      }
+    },
+    {
+      "id": "describe",
+      "word": "describe",
+      "pos": "verb",
+      "ru": "описывать",
+      "ipa": "/dɪˈskraɪb/",
+      "exampleEn": "Can you describe the man you saw?",
+      "exampleRu": "Можешь описать человека, которого видел?",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "described",
+        "pp": "described",
+        "ing": "describing",
+        "third": "describes"
+      }
+    },
+    {
+      "id": "explain",
+      "word": "explain",
+      "pos": "verb",
+      "ru": "объяснять",
+      "ipa": "/ɪkˈspleɪn/",
+      "exampleEn": "The teacher explained the rules clearly.",
+      "exampleRu": "Учитель ясно объяснил правила.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "explained",
+        "pp": "explained",
+        "ing": "explaining",
+        "third": "explains"
+      }
+    },
+    {
+      "id": "discover",
+      "word": "discover",
+      "pos": "verb",
+      "ru": "обнаруживать",
+      "ipa": "/dɪˈskʌvə/",
+      "exampleEn": "Scientists discovered a new planet.",
+      "exampleRu": "Учёные обнаружили новую планету.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "discovered",
+        "pp": "discovered",
+        "ing": "discovering",
+        "third": "discovers"
+      }
+    },
+    {
+      "id": "develop",
+      "word": "develop",
+      "pos": "verb",
+      "ru": "развивать",
+      "ipa": "/dɪˈveləp/",
+      "exampleEn": "The company is developing a new app.",
+      "exampleRu": "Компания разрабатывает новое приложение.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "developed",
+        "pp": "developed",
+        "ing": "developing",
+        "third": "develops"
+      }
+    },
+    {
+      "id": "compare",
+      "word": "compare",
+      "pos": "verb",
+      "ru": "сравнивать",
+      "ipa": "/kəmˈpeə/",
+      "exampleEn": "Let's compare the two phones.",
+      "exampleRu": "Давай сравним два телефона.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "compared",
+        "pp": "compared",
+        "ing": "comparing",
+        "third": "compares"
+      }
+    },
+    {
+      "id": "contain",
+      "word": "contain",
+      "pos": "verb",
+      "ru": "содержать",
+      "ipa": "/kənˈteɪn/",
+      "exampleEn": "This drink contains a lot of sugar.",
+      "exampleRu": "В этом напитке много сахара.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "contained",
+        "pp": "contained",
+        "ing": "containing",
+        "third": "contains"
+      }
+    },
+    {
+      "id": "continue",
+      "word": "continue",
+      "pos": "verb",
+      "ru": "продолжать",
+      "ipa": "/kənˈtɪnjuː/",
+      "exampleEn": "Please continue with your work.",
+      "exampleRu": "Пожалуйста, продолжайте свою работу.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "continued",
+        "pp": "continued",
+        "ing": "continuing",
+        "third": "continues"
+      }
+    },
+    {
+      "id": "create",
+      "word": "create",
+      "pos": "verb",
+      "ru": "создавать",
+      "ipa": "/kriˈeɪt/",
+      "exampleEn": "She created a beautiful painting.",
+      "exampleRu": "Она создала красивую картину.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "created",
+        "pp": "created",
+        "ing": "creating",
+        "third": "creates"
+      }
+    },
+    {
+      "id": "decide",
+      "word": "decide",
+      "pos": "verb",
+      "ru": "решать",
+      "ipa": "/dɪˈsaɪd/",
+      "exampleEn": "We decided to stay at home.",
+      "exampleRu": "Мы решили остаться дома.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "decided",
+        "pp": "decided",
+        "ing": "deciding",
+        "third": "decides"
+      }
+    },
+    {
+      "id": "deliver",
+      "word": "deliver",
+      "pos": "verb",
+      "ru": "доставлять",
+      "ipa": "/dɪˈlɪvə/",
+      "exampleEn": "They deliver pizza in thirty minutes.",
+      "exampleRu": "Они доставляют пиццу за тридцать минут.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "delivered",
+        "pp": "delivered",
+        "ing": "delivering",
+        "third": "delivers"
+      }
+    },
+    {
+      "id": "depend",
+      "word": "depend",
+      "pos": "verb",
+      "ru": "зависеть",
+      "ipa": "/dɪˈpend/",
+      "exampleEn": "It depends on the weather.",
+      "exampleRu": "Это зависит от погоды.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "depended",
+        "pp": "depended",
+        "ing": "depending",
+        "third": "depends"
+      }
+    },
+    {
+      "id": "destroy",
+      "word": "destroy",
+      "pos": "verb",
+      "ru": "разрушать",
+      "ipa": "/dɪˈstrɔɪ/",
+      "exampleEn": "The fire destroyed the building.",
+      "exampleRu": "Пожар разрушил здание.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "destroyed",
+        "pp": "destroyed",
+        "ing": "destroying",
+        "third": "destroys"
+      }
+    },
+    {
+      "id": "disappear",
+      "word": "disappear",
+      "pos": "verb",
+      "ru": "исчезать",
+      "ipa": "/ˌdɪsəˈpɪə/",
+      "exampleEn": "The sun disappeared behind the clouds.",
+      "exampleRu": "Солнце исчезло за облаками.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "disappeared",
+        "pp": "disappeared",
+        "ing": "disappearing",
+        "third": "disappears"
+      }
+    },
+    {
+      "id": "discuss",
+      "word": "discuss",
+      "pos": "verb",
+      "ru": "обсуждать",
+      "ipa": "/dɪˈskʌs/",
+      "exampleEn": "We need to discuss the plan.",
+      "exampleRu": "Нам нужно обсудить план.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "discussed",
+        "pp": "discussed",
+        "ing": "discussing",
+        "third": "discusses"
+      }
+    },
+    {
+      "id": "expect",
+      "word": "expect",
+      "pos": "verb",
+      "ru": "ожидать",
+      "ipa": "/ɪkˈspekt/",
+      "exampleEn": "I expect to finish by Friday.",
+      "exampleRu": "Я ожидаю закончить к пятнице.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "expected",
+        "pp": "expected",
+        "ing": "expecting",
+        "third": "expects"
+      }
+    },
+    {
+      "id": "express",
+      "word": "express",
+      "pos": "verb",
+      "ru": "выражать",
+      "ipa": "/ɪkˈspres/",
+      "exampleEn": "She found it hard to express her feelings.",
+      "exampleRu": "Ей было трудно выразить свои чувства.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "expressed",
+        "pp": "expressed",
+        "ing": "expressing",
+        "third": "expresses"
+      }
+    },
+    {
+      "id": "fail",
+      "word": "fail",
+      "pos": "verb",
+      "ru": "терпеть неудачу",
+      "ipa": "/feɪl/",
+      "exampleEn": "He failed his driving test.",
+      "exampleRu": "Он провалил экзамен по вождению.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "failed",
+        "pp": "failed",
+        "ing": "failing",
+        "third": "fails"
+      }
+    },
+    {
+      "id": "fix",
+      "word": "fix",
+      "pos": "verb",
+      "ru": "чинить",
+      "ipa": "/fɪks/",
+      "exampleEn": "Can you fix my computer?",
+      "exampleRu": "Можешь починить мой компьютер?",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "fixed",
+        "pp": "fixed",
+        "ing": "fixing",
+        "third": "fixes"
+      }
+    },
+    {
+      "id": "follow",
+      "word": "follow",
+      "pos": "verb",
+      "ru": "следовать",
+      "ipa": "/ˈfɒləʊ/",
+      "exampleEn": "Please follow the instructions.",
+      "exampleRu": "Пожалуйста, следуйте инструкциям.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "followed",
+        "pp": "followed",
+        "ing": "following",
+        "third": "follows"
+      }
+    },
+    {
+      "id": "gain",
+      "word": "gain",
+      "pos": "verb",
+      "ru": "получать",
+      "ipa": "/ɡeɪn/",
+      "exampleEn": "She gained a lot of experience.",
+      "exampleRu": "Она получила много опыта.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "gained",
+        "pp": "gained",
+        "ing": "gaining",
+        "third": "gains"
+      }
+    },
+    {
+      "id": "hide",
+      "word": "hide",
+      "pos": "verb",
+      "ru": "прятать",
+      "ipa": "/haɪd/",
+      "exampleEn": "The cat likes to hide under the bed.",
+      "exampleRu": "Кошка любит прятаться под кроватью.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "hid",
+        "pp": "hidden",
+        "ing": "hiding",
+        "third": "hides"
+      }
+    },
+    {
+      "id": "hurt",
+      "word": "hurt",
+      "pos": "verb",
+      "ru": "причинять боль",
+      "ipa": "/hɜːt/",
+      "exampleEn": "My back hurts today.",
+      "exampleRu": "Сегодня у меня болит спина.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "hurt",
+        "pp": "hurt",
+        "ing": "hurting",
+        "third": "hurts"
+      }
+    },
+    {
+      "id": "imagine",
+      "word": "imagine",
+      "pos": "verb",
+      "ru": "воображать",
+      "ipa": "/ɪˈmædʒɪn/",
+      "exampleEn": "Imagine living on the moon.",
+      "exampleRu": "Представь, что живёшь на луне.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "imagined",
+        "pp": "imagined",
+        "ing": "imagining",
+        "third": "imagines"
+      }
+    },
+    {
+      "id": "include",
+      "word": "include",
+      "pos": "verb",
+      "ru": "включать",
+      "ipa": "/ɪnˈkluːd/",
+      "exampleEn": "The price includes breakfast.",
+      "exampleRu": "В цену включён завтрак.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "included",
+        "pp": "included",
+        "ing": "including",
+        "third": "includes"
+      }
+    },
+    {
+      "id": "introduce",
+      "word": "introduce",
+      "pos": "verb",
+      "ru": "представлять",
+      "ipa": "/ˌɪntrəˈdjuːs/",
+      "exampleEn": "Let me introduce my friend.",
+      "exampleRu": "Позволь представить моего друга.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "introduced",
+        "pp": "introduced",
+        "ing": "introducing",
+        "third": "introduces"
+      }
+    },
+    {
+      "id": "invite",
+      "word": "invite",
+      "pos": "verb",
+      "ru": "приглашать",
+      "ipa": "/ɪnˈvaɪt/",
+      "exampleEn": "They invited us to the party.",
+      "exampleRu": "Они пригласили нас на вечеринку.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "invited",
+        "pp": "invited",
+        "ing": "inviting",
+        "third": "invites"
+      }
+    },
+    {
+      "id": "join",
+      "word": "join",
+      "pos": "verb",
+      "ru": "присоединяться",
+      "ipa": "/dʒɔɪn/",
+      "exampleEn": "Would you like to join us?",
+      "exampleRu": "Хочешь присоединиться к нам?",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "joined",
+        "pp": "joined",
+        "ing": "joining",
+        "third": "joins"
+      }
+    },
+    {
+      "id": "lend",
+      "word": "lend",
+      "pos": "verb",
+      "ru": "одалживать",
+      "ipa": "/lend/",
+      "exampleEn": "Can you lend me some money?",
+      "exampleRu": "Можешь одолжить мне немного денег?",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "lent",
+        "pp": "lent",
+        "ing": "lending",
+        "third": "lends"
+      }
+    },
+    {
+      "id": "mention",
+      "word": "mention",
+      "pos": "verb",
+      "ru": "упоминать",
+      "ipa": "/ˈmenʃən/",
+      "exampleEn": "She mentioned your name.",
+      "exampleRu": "Она упомянула твоё имя.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "mentioned",
+        "pp": "mentioned",
+        "ing": "mentioning",
+        "third": "mentions"
+      }
+    },
+    {
+      "id": "notice",
+      "word": "notice",
+      "pos": "verb",
+      "ru": "замечать",
+      "ipa": "/ˈnəʊtɪs/",
+      "exampleEn": "I noticed a mistake in the report.",
+      "exampleRu": "Я заметил ошибку в отчёте.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "noticed",
+        "pp": "noticed",
+        "ing": "noticing",
+        "third": "notices"
+      }
+    },
+    {
+      "id": "offer",
+      "word": "offer",
+      "pos": "verb",
+      "ru": "предлагать",
+      "ipa": "/ˈɒfə/",
+      "exampleEn": "They offered me a better salary.",
+      "exampleRu": "Мне предложили зарплату повыше.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "offered",
+        "pp": "offered",
+        "ing": "offering",
+        "third": "offers"
+      }
+    },
+    {
+      "id": "organise",
+      "word": "organise",
+      "pos": "verb",
+      "ru": "организовывать",
+      "ipa": "/ˈɔːɡənaɪz/",
+      "exampleEn": "She organised the whole event.",
+      "exampleRu": "Она организовала всё мероприятие.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "organised",
+        "pp": "organised",
+        "ing": "organising",
+        "third": "organises"
+      }
+    },
+    {
+      "id": "prefer",
+      "word": "prefer",
+      "pos": "verb",
+      "ru": "предпочитать",
+      "ipa": "/prɪˈfɜː/",
+      "exampleEn": "I prefer tea to coffee.",
+      "exampleRu": "Я предпочитаю чай кофе.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "preferred",
+        "pp": "preferred",
+        "ing": "preferring",
+        "third": "prefers"
+      }
+    },
+    {
+      "id": "prepare",
+      "word": "prepare",
+      "pos": "verb",
+      "ru": "готовить",
+      "ipa": "/prɪˈpeə/",
+      "exampleEn": "I need to prepare for the exam.",
+      "exampleRu": "Мне нужно подготовиться к экзамену.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "prepared",
+        "pp": "prepared",
+        "ing": "preparing",
+        "third": "prepares"
+      }
+    },
+    {
+      "id": "produce",
+      "word": "produce",
+      "pos": "verb",
+      "ru": "производить",
+      "ipa": "/prəˈdjuːs/",
+      "exampleEn": "This factory produces cars.",
+      "exampleRu": "Этот завод производит автомобили.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "produced",
+        "pp": "produced",
+        "ing": "producing",
+        "third": "produces"
+      }
+    },
+    {
+      "id": "protect",
+      "word": "protect",
+      "pos": "verb",
+      "ru": "защищать",
+      "ipa": "/prəˈtekt/",
+      "exampleEn": "Sunglasses protect your eyes.",
+      "exampleRu": "Солнечные очки защищают глаза.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "protected",
+        "pp": "protected",
+        "ing": "protecting",
+        "third": "protects"
+      }
+    },
+    {
+      "id": "prove",
+      "word": "prove",
+      "pos": "verb",
+      "ru": "доказывать",
+      "ipa": "/pruːv/",
+      "exampleEn": "He proved that he was honest.",
+      "exampleRu": "Он доказал, что был честен.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "proved",
+        "pp": "proved",
+        "ing": "proving",
+        "third": "proves"
+      }
+    },
+    {
+      "id": "recognise",
+      "word": "recognise",
+      "pos": "verb",
+      "ru": "узнавать",
+      "ipa": "/ˈrekəɡnaɪz/",
+      "exampleEn": "I didn't recognise you at first.",
+      "exampleRu": "Я сначала тебя не узнал.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "recognised",
+        "pp": "recognised",
+        "ing": "recognising",
+        "third": "recognises"
+      }
+    },
+    {
+      "id": "recommend",
+      "word": "recommend",
+      "pos": "verb",
+      "ru": "рекомендовать",
+      "ipa": "/ˌrekəˈmend/",
+      "exampleEn": "I recommend this book.",
+      "exampleRu": "Я рекомендую эту книгу.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "recommended",
+        "pp": "recommended",
+        "ing": "recommending",
+        "third": "recommends"
+      }
+    },
+    {
+      "id": "regret",
+      "word": "regret",
+      "pos": "verb",
+      "ru": "сожалеть",
+      "ipa": "/rɪˈɡret/",
+      "exampleEn": "I regret saying that.",
+      "exampleRu": "Я сожалею, что сказал это.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "regretted",
+        "pp": "regretted",
+        "ing": "regretting",
+        "third": "regrets"
+      }
+    },
+    {
+      "id": "remind",
+      "word": "remind",
+      "pos": "verb",
+      "ru": "напоминать",
+      "ipa": "/rɪˈmaɪnd/",
+      "exampleEn": "Please remind me to call her.",
+      "exampleRu": "Пожалуйста, напомни мне позвонить ей.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "reminded",
+        "pp": "reminded",
+        "ing": "reminding",
+        "third": "reminds"
+      }
+    },
+    {
+      "id": "remove",
+      "word": "remove",
+      "pos": "verb",
+      "ru": "удалять",
+      "ipa": "/rɪˈmuːv/",
+      "exampleEn": "Please remove your shoes.",
+      "exampleRu": "Пожалуйста, снимите обувь.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "removed",
+        "pp": "removed",
+        "ing": "removing",
+        "third": "removes"
+      }
+    },
+    {
+      "id": "repair",
+      "word": "repair",
+      "pos": "verb",
+      "ru": "ремонтировать",
+      "ipa": "/rɪˈpeə/",
+      "exampleEn": "They repaired the road last week.",
+      "exampleRu": "Они отремонтировали дорогу на прошлой неделе.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "repaired",
+        "pp": "repaired",
+        "ing": "repairing",
+        "third": "repairs"
+      }
+    },
+    {
+      "id": "replace",
+      "word": "replace",
+      "pos": "verb",
+      "ru": "заменять",
+      "ipa": "/rɪˈpleɪs/",
+      "exampleEn": "I need to replace my old phone.",
+      "exampleRu": "Мне нужно заменить старый телефон.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "replaced",
+        "pp": "replaced",
+        "ing": "replacing",
+        "third": "replaces"
+      }
+    },
+    {
+      "id": "report",
+      "word": "report",
+      "pos": "verb",
+      "ru": "сообщать",
+      "ipa": "/rɪˈpɔːt/",
+      "exampleEn": "She reported the accident to the police.",
+      "exampleRu": "Она сообщила о происшествии в полицию.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "reported",
+        "pp": "reported",
+        "ing": "reporting",
+        "third": "reports"
+      }
+    },
+    {
+      "id": "require",
+      "word": "require",
+      "pos": "verb",
+      "ru": "требовать",
+      "ipa": "/rɪˈkwaɪə/",
+      "exampleEn": "This job requires a lot of patience.",
+      "exampleRu": "Эта работа требует много терпения.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "required",
+        "pp": "required",
+        "ing": "requiring",
+        "third": "requires"
+      }
+    },
+    {
+      "id": "save",
+      "word": "save",
+      "pos": "verb",
+      "ru": "экономить",
+      "ipa": "/seɪv/",
+      "exampleEn": "We need to save money for the trip.",
+      "exampleRu": "Нам нужно копить деньги на поездку.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "saved",
+        "pp": "saved",
+        "ing": "saving",
+        "third": "saves"
+      }
+    },
+    {
+      "id": "search",
+      "word": "search",
+      "pos": "verb",
+      "ru": "искать",
+      "ipa": "/sɜːtʃ/",
+      "exampleEn": "She searched everywhere for her keys.",
+      "exampleRu": "Она искала свои ключи повсюду.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "searched",
+        "pp": "searched",
+        "ing": "searching",
+        "third": "searches"
+      }
+    },
+    {
+      "id": "separate",
+      "word": "separate",
+      "pos": "verb",
+      "ru": "разделять",
+      "ipa": "/ˈsepəreɪt/",
+      "exampleEn": "Please separate the rubbish.",
+      "exampleRu": "Пожалуйста, разделите мусор.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "separated",
+        "pp": "separated",
+        "ing": "separating",
+        "third": "separates"
+      }
+    },
+    {
+      "id": "solve",
+      "word": "solve",
+      "pos": "verb",
+      "ru": "решать",
+      "ipa": "/sɒlv/",
+      "exampleEn": "We must solve this problem together.",
+      "exampleRu": "Мы должны решить эту проблему вместе.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "solved",
+        "pp": "solved",
+        "ing": "solving",
+        "third": "solves"
+      }
+    },
+    {
+      "id": "succeed",
+      "word": "succeed",
+      "pos": "verb",
+      "ru": "преуспевать",
+      "ipa": "/səkˈsiːd/",
+      "exampleEn": "She succeeded in passing the exam.",
+      "exampleRu": "Ей удалось сдать экзамен.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "succeeded",
+        "pp": "succeeded",
+        "ing": "succeeding",
+        "third": "succeeds"
+      }
+    },
+    {
+      "id": "survive",
+      "word": "survive",
+      "pos": "verb",
+      "ru": "выживать",
+      "ipa": "/səˈvaɪv/",
+      "exampleEn": "They survived the storm.",
+      "exampleRu": "Они пережили шторм.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "survived",
+        "pp": "survived",
+        "ing": "surviving",
+        "third": "survives"
+      }
+    },
+    {
+      "id": "suppose",
+      "word": "suppose",
+      "pos": "verb",
+      "ru": "полагать",
+      "ipa": "/səˈpəʊz/",
+      "exampleEn": "I suppose you are right.",
+      "exampleRu": "Полагаю, ты прав.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "supposed",
+        "pp": "supposed",
+        "ing": "supposing",
+        "third": "supposes"
+      }
+    },
+    {
+      "id": "treat",
+      "word": "treat",
+      "pos": "verb",
+      "ru": "относиться",
+      "ipa": "/triːt/",
+      "exampleEn": "She treats everyone with kindness.",
+      "exampleRu": "Она относится ко всем с добротой.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "treated",
+        "pp": "treated",
+        "ing": "treating",
+        "third": "treats"
+      }
+    },
+    {
+      "id": "warn",
+      "word": "warn",
+      "pos": "verb",
+      "ru": "предупреждать",
+      "ipa": "/wɔːn/",
+      "exampleEn": "I warned him about the danger.",
+      "exampleRu": "Я предупредил его об опасности.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "warned",
+        "pp": "warned",
+        "ing": "warning",
+        "third": "warns"
+      }
+    },
+    {
+      "id": "recover",
+      "word": "recover",
+      "pos": "verb",
+      "ru": "восстанавливаться",
+      "ipa": "/rɪˈkʌvə/",
+      "exampleEn": "He is recovering from his illness.",
+      "exampleRu": "Он восстанавливается после болезни.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "recovered",
+        "pp": "recovered",
+        "ing": "recovering",
+        "third": "recovers"
+      }
+    },
+    {
+      "id": "argue",
+      "word": "argue",
+      "pos": "verb",
+      "ru": "спорить",
+      "ipa": "/ˈɑːɡjuː/",
+      "exampleEn": "They always argue about money.",
+      "exampleRu": "Они всегда спорят из-за денег.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "argued",
+        "pp": "argued",
+        "ing": "arguing",
+        "third": "argues"
+      }
+    },
+    {
+      "id": "arrange",
+      "word": "arrange",
+      "pos": "verb",
+      "ru": "организовывать",
+      "ipa": "/əˈreɪndʒ/",
+      "exampleEn": "Let's arrange a meeting for Monday.",
+      "exampleRu": "Давай назначим встречу на понедельник.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "arranged",
+        "pp": "arranged",
+        "ing": "arranging",
+        "third": "arranges"
+      }
+    },
+    {
+      "id": "behave",
+      "word": "behave",
+      "pos": "verb",
+      "ru": "вести себя",
+      "ipa": "/bɪˈheɪv/",
+      "exampleEn": "The children behaved very well.",
+      "exampleRu": "Дети вели себя очень хорошо.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "behaved",
+        "pp": "behaved",
+        "ing": "behaving",
+        "third": "behaves"
+      }
+    },
+    {
+      "id": "belong",
+      "word": "belong",
+      "pos": "verb",
+      "ru": "принадлежать",
+      "ipa": "/bɪˈlɒŋ/",
+      "exampleEn": "This book belongs to me.",
+      "exampleRu": "Эта книга принадлежит мне.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "belonged",
+        "pp": "belonged",
+        "ing": "belonging",
+        "third": "belongs"
+      }
+    },
+    {
+      "id": "borrow",
+      "word": "borrow",
+      "pos": "verb",
+      "ru": "брать взаймы",
+      "ipa": "/ˈbɒrəʊ/",
+      "exampleEn": "Can I borrow your pen?",
+      "exampleRu": "Можно одолжить твою ручку?",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "borrowed",
+        "pp": "borrowed",
+        "ing": "borrowing",
+        "third": "borrows"
+      }
+    },
+    {
+      "id": "complete",
+      "word": "complete",
+      "pos": "verb",
+      "ru": "завершать",
+      "ipa": "/kəmˈpliːt/",
+      "exampleEn": "She completed the project on time.",
+      "exampleRu": "Она завершила проект вовремя.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "completed",
+        "pp": "completed",
+        "ing": "completing",
+        "third": "completes"
+      }
+    },
+    {
+      "id": "earn",
+      "word": "earn",
+      "pos": "verb",
+      "ru": "зарабатывать",
+      "ipa": "/ɜːn/",
+      "exampleEn": "He earns a good salary.",
+      "exampleRu": "Он зарабатывает хорошую зарплату.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "earned",
+        "pp": "earned",
+        "ing": "earning",
+        "third": "earns"
+      }
+    },
+    {
+      "id": "measure",
+      "word": "measure",
+      "pos": "verb",
+      "ru": "измерять",
+      "ipa": "/ˈmeʒə/",
+      "exampleEn": "Let me measure the table.",
+      "exampleRu": "Дай я измерю стол.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "measured",
+        "pp": "measured",
+        "ing": "measuring",
+        "third": "measures"
+      }
+    },
+    {
+      "id": "return",
+      "word": "return",
+      "pos": "verb",
+      "ru": "возвращать",
+      "ipa": "/rɪˈtɜːn/",
+      "exampleEn": "I need to return these books.",
+      "exampleRu": "Мне нужно вернуть эти книги.",
+      "level": "B1",
+      "topic": "core",
+      "tags": [
+        "b1",
+        "verb"
+      ],
+      "forms": {
+        "past": "returned",
+        "pp": "returned",
+        "ing": "returning",
+        "third": "returns"
+      }
+    }
+  ]
+}

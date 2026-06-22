@@ -1,0 +1,1794 @@
+{
+  "category": "b2-verbs",
+  "title": "B2 — глаголы",
+  "level": "B2",
+  "pos": "verb",
+  "topic": "core",
+  "words": [
+    {
+      "id": "acknowledge",
+      "word": "acknowledge",
+      "pos": "verb",
+      "ru": "признавать",
+      "ipa": "/əkˈnɒlɪdʒ/",
+      "exampleEn": "The author acknowledges that her theory has several limitations.",
+      "exampleRu": "Автор признаёт, что у её теории есть ряд ограничений.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "acknowledged",
+        "pp": "acknowledged",
+        "ing": "acknowledging",
+        "third": "acknowledges"
+      }
+    },
+    {
+      "id": "alleviate",
+      "word": "alleviate",
+      "pos": "verb",
+      "ru": "облегчать",
+      "ipa": "/əˈliːvieɪt/",
+      "exampleEn": "Several measures were introduced to alleviate the housing crisis.",
+      "exampleRu": "Был принят ряд мер, чтобы облегчить жилищный кризис.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "alleviated",
+        "pp": "alleviated",
+        "ing": "alleviating",
+        "third": "alleviates"
+      }
+    },
+    {
+      "id": "anticipate",
+      "word": "anticipate",
+      "pos": "verb",
+      "ru": "предвидеть, ожидать",
+      "ipa": "/ænˈtɪsɪpeɪt/",
+      "exampleEn": "Economists anticipate a sharp rise in unemployment next year.",
+      "exampleRu": "Экономисты ожидают резкого роста безработицы в следующем году.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "anticipated",
+        "pp": "anticipated",
+        "ing": "anticipating",
+        "third": "anticipates"
+      }
+    },
+    {
+      "id": "assess",
+      "word": "assess",
+      "pos": "verb",
+      "ru": "оценивать",
+      "ipa": "/əˈses/",
+      "exampleEn": "Teachers regularly assess their students' progress throughout the term.",
+      "exampleRu": "Преподаватели регулярно оценивают успехи студентов в течение семестра.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "assessed",
+        "pp": "assessed",
+        "ing": "assessing",
+        "third": "assesses"
+      }
+    },
+    {
+      "id": "attribute",
+      "word": "attribute",
+      "pos": "verb",
+      "ru": "приписывать",
+      "ipa": "/əˈtrɪbjuːt/",
+      "exampleEn": "Scientists attribute the temperature rise to human activity.",
+      "exampleRu": "Учёные приписывают повышение температуры человеческой деятельности.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "attributed",
+        "pp": "attributed",
+        "ing": "attributing",
+        "third": "attributes"
+      }
+    },
+    {
+      "id": "comprise",
+      "word": "comprise",
+      "pos": "verb",
+      "ru": "включать, состоять из",
+      "ipa": "/kəmˈpraɪz/",
+      "exampleEn": "The committee comprises experts from a wide range of fields.",
+      "exampleRu": "Комитет состоит из экспертов из самых разных областей.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "comprised",
+        "pp": "comprised",
+        "ing": "comprising",
+        "third": "comprises"
+      }
+    },
+    {
+      "id": "constitute",
+      "word": "constitute",
+      "pos": "verb",
+      "ru": "составлять, являться",
+      "ipa": "/ˈkɒnstɪtjuːt/",
+      "exampleEn": "These actions constitute a serious breach of the agreement.",
+      "exampleRu": "Эти действия являются серьёзным нарушением соглашения.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "constituted",
+        "pp": "constituted",
+        "ing": "constituting",
+        "third": "constitutes"
+      }
+    },
+    {
+      "id": "demonstrate",
+      "word": "demonstrate",
+      "pos": "verb",
+      "ru": "демонстрировать, доказывать",
+      "ipa": "/ˈdemənstreɪt/",
+      "exampleEn": "The results clearly demonstrate the effectiveness of the new method.",
+      "exampleRu": "Результаты ясно демонстрируют эффективность нового метода.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "demonstrated",
+        "pp": "demonstrated",
+        "ing": "demonstrating",
+        "third": "demonstrates"
+      }
+    },
+    {
+      "id": "derive",
+      "word": "derive",
+      "pos": "verb",
+      "ru": "выводить, получать",
+      "ipa": "/dɪˈraɪv/",
+      "exampleEn": "Many English words derive from Latin and Greek roots.",
+      "exampleRu": "Многие английские слова происходят от латинских и греческих корней.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "derived",
+        "pp": "derived",
+        "ing": "deriving",
+        "third": "derives"
+      }
+    },
+    {
+      "id": "distinguish",
+      "word": "distinguish",
+      "pos": "verb",
+      "ru": "различать, отличать",
+      "ipa": "/dɪˈstɪŋɡwɪʃ/",
+      "exampleEn": "It can be hard to distinguish fact from opinion in the media.",
+      "exampleRu": "В СМИ бывает трудно отличить факты от мнений.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "distinguished",
+        "pp": "distinguished",
+        "ing": "distinguishing",
+        "third": "distinguishes"
+      }
+    },
+    {
+      "id": "emphasise",
+      "word": "emphasise",
+      "pos": "verb",
+      "ru": "подчёркивать",
+      "ipa": "/ˈemfəsaɪz/",
+      "exampleEn": "The report emphasises the need for urgent action on emissions.",
+      "exampleRu": "В докладе подчёркивается необходимость срочных мер по выбросам.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "emphasised",
+        "pp": "emphasised",
+        "ing": "emphasising",
+        "third": "emphasises"
+      }
+    },
+    {
+      "id": "enhance",
+      "word": "enhance",
+      "pos": "verb",
+      "ru": "улучшать, усиливать",
+      "ipa": "/ɪnˈhɑːns/",
+      "exampleEn": "Regular exercise can significantly enhance your concentration.",
+      "exampleRu": "Регулярные упражнения могут значительно улучшить вашу концентрацию.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "enhanced",
+        "pp": "enhanced",
+        "ing": "enhancing",
+        "third": "enhances"
+      }
+    },
+    {
+      "id": "exaggerate",
+      "word": "exaggerate",
+      "pos": "verb",
+      "ru": "преувеличивать",
+      "ipa": "/ɪɡˈzædʒəreɪt/",
+      "exampleEn": "The media often exaggerate the dangers of new technology.",
+      "exampleRu": "СМИ часто преувеличивают опасности новых технологий.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "exaggerated",
+        "pp": "exaggerated",
+        "ing": "exaggerating",
+        "third": "exaggerates"
+      }
+    },
+    {
+      "id": "facilitate",
+      "word": "facilitate",
+      "pos": "verb",
+      "ru": "облегчать, способствовать",
+      "ipa": "/fəˈsɪlɪteɪt/",
+      "exampleEn": "The new software facilitates communication between departments.",
+      "exampleRu": "Новое программное обеспечение облегчает общение между отделами.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "facilitated",
+        "pp": "facilitated",
+        "ing": "facilitating",
+        "third": "facilitates"
+      }
+    },
+    {
+      "id": "illustrate",
+      "word": "illustrate",
+      "pos": "verb",
+      "ru": "иллюстрировать, пояснять",
+      "ipa": "/ˈɪləstreɪt/",
+      "exampleEn": "This example illustrates how the system works in practice.",
+      "exampleRu": "Этот пример иллюстрирует, как система работает на практике.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "illustrated",
+        "pp": "illustrated",
+        "ing": "illustrating",
+        "third": "illustrates"
+      }
+    },
+    {
+      "id": "imply",
+      "word": "imply",
+      "pos": "verb",
+      "ru": "подразумевать",
+      "ipa": "/ɪmˈplaɪ/",
+      "exampleEn": "Her tone seemed to imply that she disagreed with the plan.",
+      "exampleRu": "Её тон, казалось, подразумевал, что она не согласна с планом.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "implied",
+        "pp": "implied",
+        "ing": "implying",
+        "third": "implies"
+      }
+    },
+    {
+      "id": "indicate",
+      "word": "indicate",
+      "pos": "verb",
+      "ru": "указывать, показывать",
+      "ipa": "/ˈɪndɪkeɪt/",
+      "exampleEn": "The survey indicates a growing interest in renewable energy.",
+      "exampleRu": "Опрос указывает на растущий интерес к возобновляемой энергии.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "indicated",
+        "pp": "indicated",
+        "ing": "indicating",
+        "third": "indicates"
+      }
+    },
+    {
+      "id": "justify",
+      "word": "justify",
+      "pos": "verb",
+      "ru": "оправдывать, обосновывать",
+      "ipa": "/ˈdʒʌstɪfaɪ/",
+      "exampleEn": "The government struggled to justify the rise in taxes.",
+      "exampleRu": "Правительству было трудно обосновать повышение налогов.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "justified",
+        "pp": "justified",
+        "ing": "justifying",
+        "third": "justifies"
+      }
+    },
+    {
+      "id": "maintain",
+      "word": "maintain",
+      "pos": "verb",
+      "ru": "поддерживать, утверждать",
+      "ipa": "/meɪnˈteɪn/",
+      "exampleEn": "The witness maintained that he had seen nothing unusual.",
+      "exampleRu": "Свидетель утверждал, что не видел ничего необычного.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "maintained",
+        "pp": "maintained",
+        "ing": "maintaining",
+        "third": "maintains"
+      }
+    },
+    {
+      "id": "undermine",
+      "word": "undermine",
+      "pos": "verb",
+      "ru": "подрывать",
+      "ipa": "/ˌʌndəˈmaɪn/",
+      "exampleEn": "Constant criticism can undermine a child's confidence.",
+      "exampleRu": "Постоянная критика может подорвать уверенность ребёнка.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "undermined",
+        "pp": "undermined",
+        "ing": "undermining",
+        "third": "undermines"
+      }
+    },
+    {
+      "id": "accumulate",
+      "word": "accumulate",
+      "pos": "verb",
+      "ru": "накапливать",
+      "ipa": "/əˈkjuːmjəleɪt/",
+      "exampleEn": "Over the years she had accumulated a vast collection of books.",
+      "exampleRu": "За годы она накопила огромную коллекцию книг.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "accumulated",
+        "pp": "accumulated",
+        "ing": "accumulating",
+        "third": "accumulates"
+      }
+    },
+    {
+      "id": "advocate",
+      "word": "advocate",
+      "pos": "verb",
+      "ru": "выступать за, отстаивать",
+      "ipa": "/ˈædvəkeɪt/",
+      "exampleEn": "Many scientists advocate stricter limits on carbon emissions.",
+      "exampleRu": "Многие учёные выступают за более строгие ограничения выбросов углерода.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "advocated",
+        "pp": "advocated",
+        "ing": "advocating",
+        "third": "advocates"
+      }
+    },
+    {
+      "id": "allocate",
+      "word": "allocate",
+      "pos": "verb",
+      "ru": "распределять, выделять",
+      "ipa": "/ˈæləkeɪt/",
+      "exampleEn": "The council allocated extra funds to improve local schools.",
+      "exampleRu": "Совет выделил дополнительные средства на улучшение местных школ.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "allocated",
+        "pp": "allocated",
+        "ing": "allocating",
+        "third": "allocates"
+      }
+    },
+    {
+      "id": "amend",
+      "word": "amend",
+      "pos": "verb",
+      "ru": "вносить поправки, исправлять",
+      "ipa": "/əˈmend/",
+      "exampleEn": "Parliament voted to amend the controversial law.",
+      "exampleRu": "Парламент проголосовал за внесение поправок в спорный закон.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "amended",
+        "pp": "amended",
+        "ing": "amending",
+        "third": "amends"
+      }
+    },
+    {
+      "id": "ascertain",
+      "word": "ascertain",
+      "pos": "verb",
+      "ru": "выяснять, устанавливать",
+      "ipa": "/ˌæsəˈteɪn/",
+      "exampleEn": "Investigators tried to ascertain the cause of the accident.",
+      "exampleRu": "Следователи пытались установить причину аварии.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "ascertained",
+        "pp": "ascertained",
+        "ing": "ascertaining",
+        "third": "ascertains"
+      }
+    },
+    {
+      "id": "augment",
+      "word": "augment",
+      "pos": "verb",
+      "ru": "увеличивать, дополнять",
+      "ipa": "/ɔːɡˈment/",
+      "exampleEn": "She took a second job to augment her income.",
+      "exampleRu": "Она устроилась на вторую работу, чтобы увеличить свой доход.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "augmented",
+        "pp": "augmented",
+        "ing": "augmenting",
+        "third": "augments"
+      }
+    },
+    {
+      "id": "circumvent",
+      "word": "circumvent",
+      "pos": "verb",
+      "ru": "обходить, обойти",
+      "ipa": "/ˌsɜːkəmˈvent/",
+      "exampleEn": "The company found ways to circumvent the new regulations.",
+      "exampleRu": "Компания нашла способы обойти новые правила.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "circumvented",
+        "pp": "circumvented",
+        "ing": "circumventing",
+        "third": "circumvents"
+      }
+    },
+    {
+      "id": "clarify",
+      "word": "clarify",
+      "pos": "verb",
+      "ru": "прояснять",
+      "ipa": "/ˈklærɪfaɪ/",
+      "exampleEn": "Could you clarify what you mean by 'sustainable development'?",
+      "exampleRu": "Не могли бы вы пояснить, что вы имеете в виду под «устойчивым развитием»?",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "clarified",
+        "pp": "clarified",
+        "ing": "clarifying",
+        "third": "clarifies"
+      }
+    },
+    {
+      "id": "coincide",
+      "word": "coincide",
+      "pos": "verb",
+      "ru": "совпадать",
+      "ipa": "/ˌkəʊɪnˈsaɪd/",
+      "exampleEn": "Her visit happened to coincide with the national holiday.",
+      "exampleRu": "Её визит совпал с национальным праздником.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "coincided",
+        "pp": "coincided",
+        "ing": "coinciding",
+        "third": "coincides"
+      }
+    },
+    {
+      "id": "compile",
+      "word": "compile",
+      "pos": "verb",
+      "ru": "составлять, собирать",
+      "ipa": "/kəmˈpaɪl/",
+      "exampleEn": "The team compiled a detailed report on climate change.",
+      "exampleRu": "Команда составила подробный доклад об изменении климата.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "compiled",
+        "pp": "compiled",
+        "ing": "compiling",
+        "third": "compiles"
+      }
+    },
+    {
+      "id": "comply",
+      "word": "comply",
+      "pos": "verb",
+      "ru": "соблюдать, подчиняться",
+      "ipa": "/kəmˈplaɪ/",
+      "exampleEn": "All factories must comply with strict safety standards.",
+      "exampleRu": "Все заводы обязаны соблюдать строгие стандарты безопасности.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "complied",
+        "pp": "complied",
+        "ing": "complying",
+        "third": "complies"
+      }
+    },
+    {
+      "id": "conceive",
+      "word": "conceive",
+      "pos": "verb",
+      "ru": "задумывать, представлять",
+      "ipa": "/kənˈsiːv/",
+      "exampleEn": "It is hard to conceive of a world without the internet.",
+      "exampleRu": "Трудно представить себе мир без интернета.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "conceived",
+        "pp": "conceived",
+        "ing": "conceiving",
+        "third": "conceives"
+      }
+    },
+    {
+      "id": "condemn",
+      "word": "condemn",
+      "pos": "verb",
+      "ru": "осуждать",
+      "ipa": "/kənˈdem/",
+      "exampleEn": "World leaders condemned the attack in the strongest terms.",
+      "exampleRu": "Мировые лидеры решительно осудили это нападение.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "condemned",
+        "pp": "condemned",
+        "ing": "condemning",
+        "third": "condemns"
+      }
+    },
+    {
+      "id": "consolidate",
+      "word": "consolidate",
+      "pos": "verb",
+      "ru": "укреплять, объединять",
+      "ipa": "/kənˈsɒlɪdeɪt/",
+      "exampleEn": "The company consolidated its position in the European market.",
+      "exampleRu": "Компания укрепила свои позиции на европейском рынке.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "consolidated",
+        "pp": "consolidated",
+        "ing": "consolidating",
+        "third": "consolidates"
+      }
+    },
+    {
+      "id": "contradict",
+      "word": "contradict",
+      "pos": "verb",
+      "ru": "противоречить",
+      "ipa": "/ˌkɒntrəˈdɪkt/",
+      "exampleEn": "His later statements seemed to contradict his earlier claims.",
+      "exampleRu": "Его последующие заявления, казалось, противоречили прежним утверждениям.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "contradicted",
+        "pp": "contradicted",
+        "ing": "contradicting",
+        "third": "contradicts"
+      }
+    },
+    {
+      "id": "convey",
+      "word": "convey",
+      "pos": "verb",
+      "ru": "передавать",
+      "ipa": "/kənˈveɪ/",
+      "exampleEn": "A good photograph can convey emotion more powerfully than words.",
+      "exampleRu": "Хорошая фотография может передавать эмоции сильнее, чем слова.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "conveyed",
+        "pp": "conveyed",
+        "ing": "conveying",
+        "third": "conveys"
+      }
+    },
+    {
+      "id": "correlate",
+      "word": "correlate",
+      "pos": "verb",
+      "ru": "соотносить, коррелировать",
+      "ipa": "/ˈkɒrəleɪt/",
+      "exampleEn": "Higher income tends to correlate with longer life expectancy.",
+      "exampleRu": "Более высокий доход обычно коррелирует с большей продолжительностью жизни.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "correlated",
+        "pp": "correlated",
+        "ing": "correlating",
+        "third": "correlates"
+      }
+    },
+    {
+      "id": "cultivate",
+      "word": "cultivate",
+      "pos": "verb",
+      "ru": "развивать, культивировать",
+      "ipa": "/ˈkʌltɪveɪt/",
+      "exampleEn": "She worked hard to cultivate good relationships with clients.",
+      "exampleRu": "Она усердно работала, чтобы выстроить хорошие отношения с клиентами.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "cultivated",
+        "pp": "cultivated",
+        "ing": "cultivating",
+        "third": "cultivates"
+      }
+    },
+    {
+      "id": "deduce",
+      "word": "deduce",
+      "pos": "verb",
+      "ru": "выводить, делать вывод",
+      "ipa": "/dɪˈdjuːs/",
+      "exampleEn": "From the evidence, the detective deduced who the culprit was.",
+      "exampleRu": "Из улик детектив сделал вывод, кто виновник.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "deduced",
+        "pp": "deduced",
+        "ing": "deducing",
+        "third": "deduces"
+      }
+    },
+    {
+      "id": "deteriorate",
+      "word": "deteriorate",
+      "pos": "verb",
+      "ru": "ухудшаться",
+      "ipa": "/dɪˈtɪəriəreɪt/",
+      "exampleEn": "His health began to deteriorate rapidly last winter.",
+      "exampleRu": "Его здоровье начало быстро ухудшаться прошлой зимой.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "deteriorated",
+        "pp": "deteriorated",
+        "ing": "deteriorating",
+        "third": "deteriorates"
+      }
+    },
+    {
+      "id": "devise",
+      "word": "devise",
+      "pos": "verb",
+      "ru": "разрабатывать, придумывать",
+      "ipa": "/dɪˈvaɪz/",
+      "exampleEn": "Engineers devised a clever solution to the problem.",
+      "exampleRu": "Инженеры разработали остроумное решение проблемы.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "devised",
+        "pp": "devised",
+        "ing": "devising",
+        "third": "devises"
+      }
+    },
+    {
+      "id": "differentiate",
+      "word": "differentiate",
+      "pos": "verb",
+      "ru": "различать, отличать",
+      "ipa": "/ˌdɪfəˈrenʃieɪt/",
+      "exampleEn": "The brand struggles to differentiate itself from competitors.",
+      "exampleRu": "Бренду трудно отличить себя от конкурентов.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "differentiated",
+        "pp": "differentiated",
+        "ing": "differentiating",
+        "third": "differentiates"
+      }
+    },
+    {
+      "id": "diminish",
+      "word": "diminish",
+      "pos": "verb",
+      "ru": "уменьшать, ослаблять",
+      "ipa": "/dɪˈmɪnɪʃ/",
+      "exampleEn": "Nothing could diminish her enthusiasm for the project.",
+      "exampleRu": "Ничто не могло уменьшить её энтузиазм по поводу проекта.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "diminished",
+        "pp": "diminished",
+        "ing": "diminishing",
+        "third": "diminishes"
+      }
+    },
+    {
+      "id": "disrupt",
+      "word": "disrupt",
+      "pos": "verb",
+      "ru": "нарушать, срывать",
+      "ipa": "/dɪsˈrʌpt/",
+      "exampleEn": "The strike severely disrupted transport across the city.",
+      "exampleRu": "Забастовка серьёзно нарушила работу транспорта по всему городу.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "disrupted",
+        "pp": "disrupted",
+        "ing": "disrupting",
+        "third": "disrupts"
+      }
+    },
+    {
+      "id": "elaborate",
+      "word": "elaborate",
+      "pos": "verb",
+      "ru": "разрабатывать, подробно излагать",
+      "ipa": "/ɪˈlæbəreɪt/",
+      "exampleEn": "Could you elaborate on your proposal in more detail?",
+      "exampleRu": "Не могли бы вы подробнее изложить своё предложение?",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "elaborated",
+        "pp": "elaborated",
+        "ing": "elaborating",
+        "third": "elaborates"
+      }
+    },
+    {
+      "id": "encompass",
+      "word": "encompass",
+      "pos": "verb",
+      "ru": "охватывать, включать",
+      "ipa": "/ɪnˈkʌmpəs/",
+      "exampleEn": "The course encompasses both theory and practical skills.",
+      "exampleRu": "Курс охватывает как теорию, так и практические навыки.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "encompassed",
+        "pp": "encompassed",
+        "ing": "encompassing",
+        "third": "encompasses"
+      }
+    },
+    {
+      "id": "endure",
+      "word": "endure",
+      "pos": "verb",
+      "ru": "выдерживать, терпеть",
+      "ipa": "/ɪnˈdjʊə/",
+      "exampleEn": "The refugees had endured years of hardship.",
+      "exampleRu": "Беженцы выдержали годы лишений.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "endured",
+        "pp": "endured",
+        "ing": "enduring",
+        "third": "endures"
+      }
+    },
+    {
+      "id": "enforce",
+      "word": "enforce",
+      "pos": "verb",
+      "ru": "обеспечивать соблюдение, принуждать",
+      "ipa": "/ɪnˈfɔːs/",
+      "exampleEn": "The police are responsible for enforcing the new rules.",
+      "exampleRu": "Полиция отвечает за обеспечение соблюдения новых правил.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "enforced",
+        "pp": "enforced",
+        "ing": "enforcing",
+        "third": "enforces"
+      }
+    },
+    {
+      "id": "entail",
+      "word": "entail",
+      "pos": "verb",
+      "ru": "влечь за собой, подразумевать",
+      "ipa": "/ɪnˈteɪl/",
+      "exampleEn": "Running a business entails considerable financial risk.",
+      "exampleRu": "Ведение бизнеса влечёт за собой значительный финансовый риск.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "entailed",
+        "pp": "entailed",
+        "ing": "entailing",
+        "third": "entails"
+      }
+    },
+    {
+      "id": "exceed",
+      "word": "exceed",
+      "pos": "verb",
+      "ru": "превышать",
+      "ipa": "/ɪkˈsiːd/",
+      "exampleEn": "The cost of the project exceeded all initial estimates.",
+      "exampleRu": "Стоимость проекта превысила все первоначальные оценки.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "exceeded",
+        "pp": "exceeded",
+        "ing": "exceeding",
+        "third": "exceeds"
+      }
+    },
+    {
+      "id": "exert",
+      "word": "exert",
+      "pos": "verb",
+      "ru": "оказывать, прилагать",
+      "ipa": "/ɪɡˈzɜːt/",
+      "exampleEn": "Advertising exerts a powerful influence on young people.",
+      "exampleRu": "Реклама оказывает мощное влияние на молодёжь.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "exerted",
+        "pp": "exerted",
+        "ing": "exerting",
+        "third": "exerts"
+      }
+    },
+    {
+      "id": "exploit",
+      "word": "exploit",
+      "pos": "verb",
+      "ru": "использовать, эксплуатировать",
+      "ipa": "/ɪkˈsplɔɪt/",
+      "exampleEn": "Companies should not exploit cheap labour in poor countries.",
+      "exampleRu": "Компании не должны эксплуатировать дешёвую рабочую силу в бедных странах.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "exploited",
+        "pp": "exploited",
+        "ing": "exploiting",
+        "third": "exploits"
+      }
+    },
+    {
+      "id": "fluctuate",
+      "word": "fluctuate",
+      "pos": "verb",
+      "ru": "колебаться",
+      "ipa": "/ˈflʌktʃueɪt/",
+      "exampleEn": "Oil prices have fluctuated wildly over the past year.",
+      "exampleRu": "Цены на нефть резко колебались в течение прошлого года.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "fluctuated",
+        "pp": "fluctuated",
+        "ing": "fluctuating",
+        "third": "fluctuates"
+      }
+    },
+    {
+      "id": "formulate",
+      "word": "formulate",
+      "pos": "verb",
+      "ru": "формулировать",
+      "ipa": "/ˈfɔːmjəleɪt/",
+      "exampleEn": "The researchers carefully formulated their hypothesis.",
+      "exampleRu": "Исследователи тщательно сформулировали свою гипотезу.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "formulated",
+        "pp": "formulated",
+        "ing": "formulating",
+        "third": "formulates"
+      }
+    },
+    {
+      "id": "foster",
+      "word": "foster",
+      "pos": "verb",
+      "ru": "способствовать, воспитывать",
+      "ipa": "/ˈfɒstə/",
+      "exampleEn": "Schools should foster creativity as well as discipline.",
+      "exampleRu": "Школы должны способствовать развитию творчества, а не только дисциплины.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "fostered",
+        "pp": "fostered",
+        "ing": "fostering",
+        "third": "fosters"
+      }
+    },
+    {
+      "id": "generate",
+      "word": "generate",
+      "pos": "verb",
+      "ru": "создавать, генерировать",
+      "ipa": "/ˈdʒenəreɪt/",
+      "exampleEn": "Wind farms generate clean electricity for thousands of homes.",
+      "exampleRu": "Ветровые электростанции вырабатывают чистую электроэнергию для тысяч домов.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "generated",
+        "pp": "generated",
+        "ing": "generating",
+        "third": "generates"
+      }
+    },
+    {
+      "id": "hinder",
+      "word": "hinder",
+      "pos": "verb",
+      "ru": "мешать, препятствовать",
+      "ipa": "/ˈhɪndə/",
+      "exampleEn": "Bad weather hindered the rescue operation for several days.",
+      "exampleRu": "Плохая погода несколько дней мешала спасательной операции.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "hindered",
+        "pp": "hindered",
+        "ing": "hindering",
+        "third": "hinders"
+      }
+    },
+    {
+      "id": "highlight",
+      "word": "highlight",
+      "pos": "verb",
+      "ru": "выделять, подчёркивать",
+      "ipa": "/ˈhaɪlaɪt/",
+      "exampleEn": "The report highlights the risks of ignoring climate change.",
+      "exampleRu": "В докладе подчёркиваются риски игнорирования изменения климата.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "highlighted",
+        "pp": "highlighted",
+        "ing": "highlighting",
+        "third": "highlights"
+      }
+    },
+    {
+      "id": "implement",
+      "word": "implement",
+      "pos": "verb",
+      "ru": "внедрять, осуществлять",
+      "ipa": "/ˈɪmplɪment/",
+      "exampleEn": "The government plans to implement the reforms next year.",
+      "exampleRu": "Правительство планирует осуществить реформы в следующем году.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "implemented",
+        "pp": "implemented",
+        "ing": "implementing",
+        "third": "implements"
+      }
+    },
+    {
+      "id": "impose",
+      "word": "impose",
+      "pos": "verb",
+      "ru": "навязывать, вводить",
+      "ipa": "/ɪmˈpəʊz/",
+      "exampleEn": "The court imposed a heavy fine on the company.",
+      "exampleRu": "Суд наложил на компанию крупный штраф.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "imposed",
+        "pp": "imposed",
+        "ing": "imposing",
+        "third": "imposes"
+      }
+    },
+    {
+      "id": "incorporate",
+      "word": "incorporate",
+      "pos": "verb",
+      "ru": "включать, объединять",
+      "ipa": "/ɪnˈkɔːpəreɪt/",
+      "exampleEn": "The new design incorporates feedback from customers.",
+      "exampleRu": "Новый дизайн учитывает отзывы клиентов.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "incorporated",
+        "pp": "incorporated",
+        "ing": "incorporating",
+        "third": "incorporates"
+      }
+    },
+    {
+      "id": "induce",
+      "word": "induce",
+      "pos": "verb",
+      "ru": "побуждать, вызывать",
+      "ipa": "/ɪnˈdjuːs/",
+      "exampleEn": "Lower interest rates may induce people to spend more.",
+      "exampleRu": "Более низкие процентные ставки могут побудить людей тратить больше.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "induced",
+        "pp": "induced",
+        "ing": "inducing",
+        "third": "induces"
+      }
+    },
+    {
+      "id": "infer",
+      "word": "infer",
+      "pos": "verb",
+      "ru": "делать вывод, заключать",
+      "ipa": "/ɪnˈfɜː/",
+      "exampleEn": "From his silence, she inferred that he was upset.",
+      "exampleRu": "Из его молчания она заключила, что он расстроен.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "inferred",
+        "pp": "inferred",
+        "ing": "inferring",
+        "third": "infers"
+      }
+    },
+    {
+      "id": "inhibit",
+      "word": "inhibit",
+      "pos": "verb",
+      "ru": "сдерживать, препятствовать",
+      "ipa": "/ɪnˈhɪbɪt/",
+      "exampleEn": "Fear of failure can inhibit creative thinking.",
+      "exampleRu": "Страх неудачи может сдерживать творческое мышление.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "inhibited",
+        "pp": "inhibited",
+        "ing": "inhibiting",
+        "third": "inhibits"
+      }
+    },
+    {
+      "id": "initiate",
+      "word": "initiate",
+      "pos": "verb",
+      "ru": "инициировать, начинать",
+      "ipa": "/ɪˈnɪʃieɪt/",
+      "exampleEn": "The company initiated a new training programme this year.",
+      "exampleRu": "В этом году компания начала новую программу обучения.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "initiated",
+        "pp": "initiated",
+        "ing": "initiating",
+        "third": "initiates"
+      }
+    },
+    {
+      "id": "integrate",
+      "word": "integrate",
+      "pos": "verb",
+      "ru": "интегрировать, объединять",
+      "ipa": "/ˈɪntɪɡreɪt/",
+      "exampleEn": "The school helps refugees integrate into the community.",
+      "exampleRu": "Школа помогает беженцам интегрироваться в общество.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "integrated",
+        "pp": "integrated",
+        "ing": "integrating",
+        "third": "integrates"
+      }
+    },
+    {
+      "id": "interpret",
+      "word": "interpret",
+      "pos": "verb",
+      "ru": "толковать, интерпретировать",
+      "ipa": "/ɪnˈtɜːprɪt/",
+      "exampleEn": "Historians often interpret the same events differently.",
+      "exampleRu": "Историки часто по-разному толкуют одни и те же события.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "interpreted",
+        "pp": "interpreted",
+        "ing": "interpreting",
+        "third": "interprets"
+      }
+    },
+    {
+      "id": "intervene",
+      "word": "intervene",
+      "pos": "verb",
+      "ru": "вмешиваться",
+      "ipa": "/ˌɪntəˈviːn/",
+      "exampleEn": "The teacher had to intervene to stop the argument.",
+      "exampleRu": "Учителю пришлось вмешаться, чтобы остановить спор.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "intervened",
+        "pp": "intervened",
+        "ing": "intervening",
+        "third": "intervenes"
+      }
+    },
+    {
+      "id": "jeopardise",
+      "word": "jeopardise",
+      "pos": "verb",
+      "ru": "ставить под угрозу",
+      "ipa": "/ˈdʒepədaɪz/",
+      "exampleEn": "One careless mistake could jeopardise the whole project.",
+      "exampleRu": "Одна неосторожная ошибка может поставить под угрозу весь проект.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "jeopardised",
+        "pp": "jeopardised",
+        "ing": "jeopardising",
+        "third": "jeopardises"
+      }
+    },
+    {
+      "id": "minimise",
+      "word": "minimise",
+      "pos": "verb",
+      "ru": "сводить к минимуму",
+      "ipa": "/ˈmɪnɪmaɪz/",
+      "exampleEn": "We must take steps to minimise the impact on the environment.",
+      "exampleRu": "Мы должны принять меры, чтобы свести к минимуму воздействие на окружающую среду.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "minimised",
+        "pp": "minimised",
+        "ing": "minimising",
+        "third": "minimises"
+      }
+    },
+    {
+      "id": "mitigate",
+      "word": "mitigate",
+      "pos": "verb",
+      "ru": "смягчать",
+      "ipa": "/ˈmɪtɪɡeɪt/",
+      "exampleEn": "Planting trees can help mitigate the effects of pollution.",
+      "exampleRu": "Посадка деревьев может помочь смягчить последствия загрязнения.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "mitigated",
+        "pp": "mitigated",
+        "ing": "mitigating",
+        "third": "mitigates"
+      }
+    },
+    {
+      "id": "modify",
+      "word": "modify",
+      "pos": "verb",
+      "ru": "изменять, модифицировать",
+      "ipa": "/ˈmɒdɪfaɪ/",
+      "exampleEn": "Engineers modified the design to reduce the cost.",
+      "exampleRu": "Инженеры изменили конструкцию, чтобы снизить стоимость.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "modified",
+        "pp": "modified",
+        "ing": "modifying",
+        "third": "modifies"
+      }
+    },
+    {
+      "id": "negotiate",
+      "word": "negotiate",
+      "pos": "verb",
+      "ru": "вести переговоры",
+      "ipa": "/nɪˈɡəʊʃieɪt/",
+      "exampleEn": "The two sides spent months negotiating a peace deal.",
+      "exampleRu": "Обе стороны месяцами вели переговоры о мирном соглашении.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "negotiated",
+        "pp": "negotiated",
+        "ing": "negotiating",
+        "third": "negotiates"
+      }
+    },
+    {
+      "id": "overcome",
+      "word": "overcome",
+      "pos": "verb",
+      "ru": "преодолевать",
+      "ipa": "/ˌəʊvəˈkʌm/",
+      "exampleEn": "She managed to overcome her fear of public speaking.",
+      "exampleRu": "Ей удалось преодолеть страх перед публичными выступлениями.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "overcame",
+        "pp": "overcome",
+        "ing": "overcoming",
+        "third": "overcomes"
+      }
+    },
+    {
+      "id": "perceive",
+      "word": "perceive",
+      "pos": "verb",
+      "ru": "воспринимать",
+      "ipa": "/pəˈsiːv/",
+      "exampleEn": "Different cultures perceive time in very different ways.",
+      "exampleRu": "Разные культуры воспринимают время совершенно по-разному.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "perceived",
+        "pp": "perceived",
+        "ing": "perceiving",
+        "third": "perceives"
+      }
+    },
+    {
+      "id": "pose",
+      "word": "pose",
+      "pos": "verb",
+      "ru": "представлять (угрозу), ставить",
+      "ipa": "/pəʊz/",
+      "exampleEn": "Climate change poses a serious threat to coastal cities.",
+      "exampleRu": "Изменение климата представляет серьёзную угрозу для прибрежных городов.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "posed",
+        "pp": "posed",
+        "ing": "posing",
+        "third": "poses"
+      }
+    },
+    {
+      "id": "prohibit",
+      "word": "prohibit",
+      "pos": "verb",
+      "ru": "запрещать",
+      "ipa": "/prəˈhɪbɪt/",
+      "exampleEn": "The law prohibits smoking in all public buildings.",
+      "exampleRu": "Закон запрещает курение во всех общественных зданиях.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "prohibited",
+        "pp": "prohibited",
+        "ing": "prohibiting",
+        "third": "prohibits"
+      }
+    },
+    {
+      "id": "pursue",
+      "word": "pursue",
+      "pos": "verb",
+      "ru": "преследовать, добиваться",
+      "ipa": "/pəˈsjuː/",
+      "exampleEn": "She decided to pursue a career in medicine.",
+      "exampleRu": "Она решила сделать карьеру в медицине.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "pursued",
+        "pp": "pursued",
+        "ing": "pursuing",
+        "third": "pursues"
+      }
+    },
+    {
+      "id": "reconcile",
+      "word": "reconcile",
+      "pos": "verb",
+      "ru": "примирять, согласовывать",
+      "ipa": "/ˈrekənsaɪl/",
+      "exampleEn": "It is hard to reconcile economic growth with protecting nature.",
+      "exampleRu": "Трудно совместить экономический рост с защитой природы.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "reconciled",
+        "pp": "reconciled",
+        "ing": "reconciling",
+        "third": "reconciles"
+      }
+    },
+    {
+      "id": "reinforce",
+      "word": "reinforce",
+      "pos": "verb",
+      "ru": "укреплять, усиливать",
+      "ipa": "/ˌriːɪnˈfɔːs/",
+      "exampleEn": "These results reinforce the findings of earlier studies.",
+      "exampleRu": "Эти результаты подкрепляют выводы более ранних исследований.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "reinforced",
+        "pp": "reinforced",
+        "ing": "reinforcing",
+        "third": "reinforces"
+      }
+    },
+    {
+      "id": "resemble",
+      "word": "resemble",
+      "pos": "verb",
+      "ru": "напоминать, походить",
+      "ipa": "/rɪˈzembl/",
+      "exampleEn": "The new model closely resembles its predecessor.",
+      "exampleRu": "Новая модель очень напоминает свою предшественницу.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "resembled",
+        "pp": "resembled",
+        "ing": "resembling",
+        "third": "resembles"
+      }
+    },
+    {
+      "id": "restrain",
+      "word": "restrain",
+      "pos": "verb",
+      "ru": "сдерживать, удерживать",
+      "ipa": "/rɪˈstreɪn/",
+      "exampleEn": "She could barely restrain her anger during the meeting.",
+      "exampleRu": "Она едва могла сдержать гнев во время встречи.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "restrained",
+        "pp": "restrained",
+        "ing": "restraining",
+        "third": "restrains"
+      }
+    },
+    {
+      "id": "retain",
+      "word": "retain",
+      "pos": "verb",
+      "ru": "сохранять, удерживать",
+      "ipa": "/rɪˈteɪn/",
+      "exampleEn": "The company struggled to retain its most talented staff.",
+      "exampleRu": "Компании было трудно удерживать самых талантливых сотрудников.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "retained",
+        "pp": "retained",
+        "ing": "retaining",
+        "third": "retains"
+      }
+    },
+    {
+      "id": "speculate",
+      "word": "speculate",
+      "pos": "verb",
+      "ru": "размышлять, строить догадки",
+      "ipa": "/ˈspekjəleɪt/",
+      "exampleEn": "Analysts speculated about the reasons for the sudden change.",
+      "exampleRu": "Аналитики строили догадки о причинах внезапной перемены.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "speculated",
+        "pp": "speculated",
+        "ing": "speculating",
+        "third": "speculates"
+      }
+    },
+    {
+      "id": "stimulate",
+      "word": "stimulate",
+      "pos": "verb",
+      "ru": "стимулировать",
+      "ipa": "/ˈstɪmjəleɪt/",
+      "exampleEn": "Tax cuts are intended to stimulate economic growth.",
+      "exampleRu": "Снижение налогов призвано стимулировать экономический рост.",
+      "level": "B2",
+      "topic": "core",
+      "tags": [
+        "b2",
+        "verb"
+      ],
+      "forms": {
+        "past": "stimulated",
+        "pp": "stimulated",
+        "ing": "stimulating",
+        "third": "stimulates"
+      }
+    }
+  ]
+}
