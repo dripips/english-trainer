@@ -33,7 +33,11 @@ export async function registerRoutes(app) {
     const token = req.cookies?.[COOKIE];
     const payload = verifyToken(token, SECRET);
     if (!payload) return reply.code(401).send({ error: 'unauthorized' });
-    req.user = { uid: payload.uid, username: payload.username, name: payload.name, role: payload.role || 'user' };
+    // Re-read live role/name from DB so role changes (e.g. promotion to admin) apply
+    // immediately — tokens last 10 years, so we must not trust the role baked into them.
+    const fresh = db.prepare('SELECT username, display_name, role FROM users WHERE id = ?').get(payload.uid);
+    if (!fresh) return reply.code(401).send({ error: 'unauthorized' });
+    req.user = { uid: payload.uid, username: fresh.username, name: fresh.display_name, role: fresh.role || 'user' };
   });
 
   function requireAdmin(req, reply) {
@@ -602,11 +606,27 @@ export async function registerRoutes(app) {
   // ---------------- Admin ----------------
   app.get('/api/admin/users', async (req, reply) => {
     if (!requireAdmin(req, reply)) return;
-    return db.prepare(`
-      SELECT u.id, u.username, u.display_name, u.role, u.created_at,
+    const rows = db.prepare(`
+      SELECT u.id, u.username, u.display_name, u.role, u.created_at, COALESCE(u.xp,0) AS xp,
              (SELECT COUNT(*) FROM srs_cards s WHERE s.user_id=u.id) AS words,
-             (SELECT COUNT(*) FROM lesson_attempts l WHERE l.user_id=u.id) AS attempts
+             (SELECT COUNT(*) FROM lesson_attempts l WHERE l.user_id=u.id) AS attempts,
+             (SELECT COUNT(*) FROM lesson_attempts l WHERE l.user_id=u.id AND l.correct=1) AS correct,
+             (SELECT COUNT(DISTINCT l.lesson_id) FROM lesson_attempts l WHERE l.user_id=u.id) AS lessonsTouched,
+             (SELECT COUNT(*) FROM error_log e WHERE e.user_id=u.id AND e.status='open') AS openErrors,
+             (SELECT MAX(day) FROM activity a WHERE a.user_id=u.id) AS lastActive,
+             (SELECT COUNT(*) FROM activity a WHERE a.user_id=u.id) AS activeDays
       FROM users u ORDER BY u.id`).all();
+    // Fully-completed lessons require comparing attempted-distinct to each lesson's exercise count.
+    const store = getStore();
+    const exCount = new Map(store.lessons.map((l) => [l.id, l.exercises.length]));
+    return rows.map((u) => {
+      const done = db.prepare(
+        'SELECT lesson_id, COUNT(DISTINCT exercise_id) a FROM lesson_attempts WHERE user_id=? GROUP BY lesson_id'
+      ).all(u.id).filter((r) => exCount.get(r.lesson_id) && r.a >= exCount.get(r.lesson_id)).length;
+      const { level } = xpLevel(u.xp);
+      const days = db.prepare('SELECT day FROM activity WHERE user_id=? ORDER BY day DESC').all(u.id).map((r) => r.day);
+      return { ...u, lessonsDone: done, lessonsTotal: store.lessons.length, level, streak: computeStreak(days) };
+    });
   });
 
   app.post('/api/admin/users', async (req, reply) => {

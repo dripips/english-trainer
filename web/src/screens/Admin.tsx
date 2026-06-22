@@ -47,9 +47,30 @@ export function Admin() {
                   <span className="display truncate font-bold">{u.display_name}</span>
                   {u.role === 'admin' && <span className="chip !text-[10px] !text-[var(--color-amber)]">admin</span>}
                 </div>
-                <div className="truncate text-xs text-[var(--color-muted)]">@{u.username} · {u.words} слов · {u.attempts} упр.</div>
+                <div className="truncate text-xs text-[var(--color-muted)]">@{u.username} · ур. {u.level} · {u.xp} XP</div>
               </div>
             </div>
+
+            <div className="mt-3 grid grid-cols-4 gap-2 text-center">
+              {([
+                [`${u.lessonsDone}/${u.lessonsTotal}`, 'уроков'],
+                [u.words, 'слов'],
+                [`${u.streak}🔥`, 'дней'],
+                [u.attempts ? `${Math.round((u.correct / u.attempts) * 100)}%` : '—', 'верно'],
+              ] as [string | number, string][]).map(([v, l], i) => (
+                <div key={i} className="rounded-xl bg-[var(--color-bg2)] p-2">
+                  <div className="display text-sm font-bold leading-none">{v}</div>
+                  <div className="mt-1 text-[10px] text-[var(--color-muted)]">{l}</div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-2 flex flex-wrap gap-x-3 gap-y-0.5 text-[11px] text-[var(--color-muted)]">
+              <span>{u.attempts} упражнений</span>
+              <span>{u.openErrors} ошибок в журнале</span>
+              <span>{u.activeDays} дней активности</span>
+              <span>был(а): {u.lastActive || '—'}</span>
+            </div>
+
             <div className="mt-3 flex flex-wrap gap-2">
               <button onClick={() => resetPw(u)} className="chip"><KeyRound size={13} /> Пароль</button>
               <button onClick={() => toggleRole(u)} className="chip">{u.role === 'admin' ? <><ShieldOff size={13} /> Снять админа</> : <><Shield size={13} /> Сделать админом</>}</button>

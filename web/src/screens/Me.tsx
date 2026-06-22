@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Ruler, Library, Bug, TrendingUp, BookMarked, BookOpen, Zap, PenLine, Mic, AlertTriangle, CalendarDays, Map as MapIcon, Shield, Settings as SettingsIcon, LogOut, ChevronRight, Heart, type LucideIcon } from 'lucide-react';
+import { Ruler, Library, Bug, TrendingUp, BookMarked, BookOpen, Zap, PenLine, Mic, AlertTriangle, CalendarDays, PersonStanding, Map as MapIcon, Shield, Settings as SettingsIcon, LogOut, ChevronRight, Heart, type LucideIcon } from 'lucide-react';
 import { api } from '../api';
 import { useAuth } from '../auth';
 import { useApi } from '../lib/useApi';
@@ -15,6 +15,7 @@ const LINKS: { to: string; icon: LucideIcon; label: string; hint: string; color:
   { to: '/grammar', icon: Ruler, label: 'Правила', hint: 'все времена и грамматика', color: 'var(--color-sky)' },
   { to: '/exceptions', icon: AlertTriangle, label: 'Исключения', hint: 'неправильные глаголы, множ. число', color: 'var(--color-amber)' },
   { to: '/everyday', icon: CalendarDays, label: 'Каждый день', hint: 'дни, месяцы, числа, цвета', color: 'var(--color-mint)' },
+  { to: '/body', icon: PersonStanding, label: 'Тело человека', hint: 'части тела на схеме', color: 'var(--color-pink)' },
   { to: '/vocab', icon: Library, label: 'Словарь', hint: 'наборы слов', color: 'var(--color-amber)' },
   { to: '/errors', icon: Bug, label: 'Журнал ошибок', hint: 'что дотренировать', color: 'var(--color-danger)' },
   { to: '/progress', icon: TrendingUp, label: 'Прогресс', hint: 'владение темами', color: 'var(--color-sky)' },

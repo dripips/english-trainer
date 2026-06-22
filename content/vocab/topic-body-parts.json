@@ -1,0 +1,759 @@
+{
+  "category": "topic-body-parts",
+  "title": "Тело человека — части тела",
+  "level": "A1",
+  "pos": "noun",
+  "topic": "body",
+  "words": [
+    {
+      "id": "body-hair",
+      "word": "hair",
+      "pos": "noun",
+      "ru": "волосы",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/heə/"
+    },
+    {
+      "id": "body-head",
+      "word": "head",
+      "pos": "noun",
+      "ru": "голова",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/hed/"
+    },
+    {
+      "id": "body-face",
+      "word": "face",
+      "pos": "noun",
+      "ru": "лицо",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/feɪs/"
+    },
+    {
+      "id": "body-forehead",
+      "word": "forehead",
+      "pos": "noun",
+      "ru": "лоб",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/ˈfɔːhed/"
+    },
+    {
+      "id": "body-eye",
+      "word": "eye",
+      "pos": "noun",
+      "ru": "глаз",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/aɪ/",
+      "forms": {
+        "plural": "eyes"
+      }
+    },
+    {
+      "id": "body-eyebrow",
+      "word": "eyebrow",
+      "pos": "noun",
+      "ru": "бровь",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/ˈaɪbraʊ/",
+      "forms": {
+        "plural": "eyebrows"
+      }
+    },
+    {
+      "id": "body-eyelash",
+      "word": "eyelash",
+      "pos": "noun",
+      "ru": "ресница",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/ˈaɪlæʃ/",
+      "forms": {
+        "plural": "eyelashes"
+      }
+    },
+    {
+      "id": "body-nose",
+      "word": "nose",
+      "pos": "noun",
+      "ru": "нос",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/nəʊz/"
+    },
+    {
+      "id": "body-ear",
+      "word": "ear",
+      "pos": "noun",
+      "ru": "ухо",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/ɪə/",
+      "forms": {
+        "plural": "ears"
+      }
+    },
+    {
+      "id": "body-mouth",
+      "word": "mouth",
+      "pos": "noun",
+      "ru": "рот",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/maʊθ/"
+    },
+    {
+      "id": "body-lip",
+      "word": "lip",
+      "pos": "noun",
+      "ru": "губа",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/lɪp/",
+      "forms": {
+        "plural": "lips"
+      }
+    },
+    {
+      "id": "body-tooth",
+      "word": "tooth",
+      "pos": "noun",
+      "ru": "зуб",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/tuːθ/",
+      "forms": {
+        "plural": "teeth"
+      }
+    },
+    {
+      "id": "body-tongue",
+      "word": "tongue",
+      "pos": "noun",
+      "ru": "язык",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/tʌŋ/"
+    },
+    {
+      "id": "body-cheek",
+      "word": "cheek",
+      "pos": "noun",
+      "ru": "щека",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/tʃiːk/",
+      "forms": {
+        "plural": "cheeks"
+      }
+    },
+    {
+      "id": "body-chin",
+      "word": "chin",
+      "pos": "noun",
+      "ru": "подбородок",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/tʃɪn/"
+    },
+    {
+      "id": "body-jaw",
+      "word": "jaw",
+      "pos": "noun",
+      "ru": "челюсть",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "face"
+      ],
+      "ipa": "/dʒɔː/"
+    },
+    {
+      "id": "body-neck",
+      "word": "neck",
+      "pos": "noun",
+      "ru": "шея",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/nek/"
+    },
+    {
+      "id": "body-throat",
+      "word": "throat",
+      "pos": "noun",
+      "ru": "горло",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/θrəʊt/"
+    },
+    {
+      "id": "body-shoulder",
+      "word": "shoulder",
+      "pos": "noun",
+      "ru": "плечо",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/ˈʃəʊldə/",
+      "forms": {
+        "plural": "shoulders"
+      }
+    },
+    {
+      "id": "body-chest",
+      "word": "chest",
+      "pos": "noun",
+      "ru": "грудь",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/tʃest/"
+    },
+    {
+      "id": "body-back",
+      "word": "back",
+      "pos": "noun",
+      "ru": "спина",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/bæk/"
+    },
+    {
+      "id": "body-arm",
+      "word": "arm",
+      "pos": "noun",
+      "ru": "рука (от плеча до кисти)",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/ɑːm/",
+      "forms": {
+        "plural": "arms"
+      }
+    },
+    {
+      "id": "body-elbow",
+      "word": "elbow",
+      "pos": "noun",
+      "ru": "локоть",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/ˈelbəʊ/",
+      "forms": {
+        "plural": "elbows"
+      }
+    },
+    {
+      "id": "body-wrist",
+      "word": "wrist",
+      "pos": "noun",
+      "ru": "запястье",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/rɪst/",
+      "forms": {
+        "plural": "wrists"
+      }
+    },
+    {
+      "id": "body-hand",
+      "word": "hand",
+      "pos": "noun",
+      "ru": "кисть руки",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/hænd/",
+      "forms": {
+        "plural": "hands"
+      }
+    },
+    {
+      "id": "body-finger",
+      "word": "finger",
+      "pos": "noun",
+      "ru": "палец (на руке)",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/ˈfɪŋɡə/",
+      "forms": {
+        "plural": "fingers"
+      }
+    },
+    {
+      "id": "body-thumb",
+      "word": "thumb",
+      "pos": "noun",
+      "ru": "большой палец",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/θʌm/",
+      "forms": {
+        "plural": "thumbs"
+      }
+    },
+    {
+      "id": "body-palm",
+      "word": "palm",
+      "pos": "noun",
+      "ru": "ладонь",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/pɑːm/",
+      "forms": {
+        "plural": "palms"
+      }
+    },
+    {
+      "id": "body-nail",
+      "word": "nail",
+      "pos": "noun",
+      "ru": "ноготь",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "upper"
+      ],
+      "ipa": "/neɪl/",
+      "forms": {
+        "plural": "nails"
+      }
+    },
+    {
+      "id": "body-stomach",
+      "word": "stomach",
+      "pos": "noun",
+      "ru": "живот",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "lower"
+      ],
+      "ipa": "/ˈstʌmək/"
+    },
+    {
+      "id": "body-belly",
+      "word": "belly",
+      "pos": "noun",
+      "ru": "живот (разг.)",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "lower"
+      ],
+      "ipa": "/ˈbeli/"
+    },
+    {
+      "id": "body-waist",
+      "word": "waist",
+      "pos": "noun",
+      "ru": "талия",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "lower"
+      ],
+      "ipa": "/weɪst/"
+    },
+    {
+      "id": "body-hip",
+      "word": "hip",
+      "pos": "noun",
+      "ru": "бедро (таз)",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "lower"
+      ],
+      "ipa": "/hɪp/",
+      "forms": {
+        "plural": "hips"
+      }
+    },
+    {
+      "id": "body-leg",
+      "word": "leg",
+      "pos": "noun",
+      "ru": "нога",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "lower"
+      ],
+      "ipa": "/leɡ/",
+      "forms": {
+        "plural": "legs"
+      }
+    },
+    {
+      "id": "body-thigh",
+      "word": "thigh",
+      "pos": "noun",
+      "ru": "бедро (верх ноги)",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "lower"
+      ],
+      "ipa": "/θaɪ/",
+      "forms": {
+        "plural": "thighs"
+      }
+    },
+    {
+      "id": "body-knee",
+      "word": "knee",
+      "pos": "noun",
+      "ru": "колено",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "lower"
+      ],
+      "ipa": "/niː/",
+      "forms": {
+        "plural": "knees"
+      }
+    },
+    {
+      "id": "body-ankle",
+      "word": "ankle",
+      "pos": "noun",
+      "ru": "лодыжка",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "lower"
+      ],
+      "ipa": "/ˈæŋkl/",
+      "forms": {
+        "plural": "ankles"
+      }
+    },
+    {
+      "id": "body-foot",
+      "word": "foot",
+      "pos": "noun",
+      "ru": "ступня",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "lower"
+      ],
+      "ipa": "/fʊt/",
+      "forms": {
+        "plural": "feet"
+      }
+    },
+    {
+      "id": "body-toe",
+      "word": "toe",
+      "pos": "noun",
+      "ru": "палец на ноге",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "lower"
+      ],
+      "ipa": "/təʊ/",
+      "forms": {
+        "plural": "toes"
+      }
+    },
+    {
+      "id": "body-heel",
+      "word": "heel",
+      "pos": "noun",
+      "ru": "пятка",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "lower"
+      ],
+      "ipa": "/hiːl/",
+      "forms": {
+        "plural": "heels"
+      }
+    },
+    {
+      "id": "body-skin",
+      "word": "skin",
+      "pos": "noun",
+      "ru": "кожа",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "inside"
+      ],
+      "ipa": "/skɪn/"
+    },
+    {
+      "id": "body-bone",
+      "word": "bone",
+      "pos": "noun",
+      "ru": "кость",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "inside"
+      ],
+      "ipa": "/bəʊn/",
+      "forms": {
+        "plural": "bones"
+      }
+    },
+    {
+      "id": "body-skull",
+      "word": "skull",
+      "pos": "noun",
+      "ru": "череп",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "inside"
+      ],
+      "ipa": "/skʌl/"
+    },
+    {
+      "id": "body-rib",
+      "word": "rib",
+      "pos": "noun",
+      "ru": "ребро",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "inside"
+      ],
+      "ipa": "/rɪb/",
+      "forms": {
+        "plural": "ribs"
+      }
+    },
+    {
+      "id": "body-spine",
+      "word": "spine",
+      "pos": "noun",
+      "ru": "позвоночник",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "inside"
+      ],
+      "ipa": "/spaɪn/"
+    },
+    {
+      "id": "body-muscle",
+      "word": "muscle",
+      "pos": "noun",
+      "ru": "мышца",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "inside"
+      ],
+      "ipa": "/ˈmʌsl/",
+      "forms": {
+        "plural": "muscles"
+      }
+    },
+    {
+      "id": "body-joint",
+      "word": "joint",
+      "pos": "noun",
+      "ru": "сустав",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "inside"
+      ],
+      "ipa": "/dʒɔɪnt/",
+      "forms": {
+        "plural": "joints"
+      }
+    },
+    {
+      "id": "body-brain",
+      "word": "brain",
+      "pos": "noun",
+      "ru": "мозг",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "inside"
+      ],
+      "ipa": "/breɪn/"
+    },
+    {
+      "id": "body-heart",
+      "word": "heart",
+      "pos": "noun",
+      "ru": "сердце",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "inside"
+      ],
+      "ipa": "/hɑːt/"
+    },
+    {
+      "id": "body-lung",
+      "word": "lung",
+      "pos": "noun",
+      "ru": "лёгкое",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "inside"
+      ],
+      "ipa": "/lʌŋ/",
+      "forms": {
+        "plural": "lungs"
+      }
+    },
+    {
+      "id": "body-blood",
+      "word": "blood",
+      "pos": "noun",
+      "ru": "кровь",
+      "level": "A1",
+      "topic": "body",
+      "tags": [
+        "body",
+        "inside"
+      ],
+      "ipa": "/blʌd/"
+    }
+  ]
+}

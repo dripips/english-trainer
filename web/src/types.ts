@@ -3,6 +3,9 @@ export type User = { id: number; username: string; name: string; role?: 'user' |
 export interface AdminUser {
   id: number; username: string; display_name: string; role: 'user' | 'admin';
   created_at: string; words: number; attempts: number;
+  xp: number; level: number; streak: number; correct: number;
+  lessonsTouched: number; lessonsDone: number; lessonsTotal: number;
+  openErrors: number; lastActive: string | null; activeDays: number;
 }
 
 export type ExerciseType =
