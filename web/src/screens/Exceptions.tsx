@@ -36,8 +36,8 @@ const IRREGULAR_COMPARE: [string, string, string, string][] = [
 
 function Table({ head, rows }: { head: string[]; rows: (string | React.ReactNode)[][] }) {
   return (
-    <div className="card !p-0 overflow-hidden">
-      <table className="w-full text-sm">
+    <div className="card !p-0 overflow-x-auto">
+      <table className="min-w-full whitespace-nowrap text-sm">
         <thead>
           <tr className="border-b border-[var(--color-bg2)] text-left text-xs text-[var(--color-muted)]">
             {head.map((h) => <th key={h} className="px-3 py-2 font-semibold">{h}</th>)}
@@ -86,8 +86,8 @@ export function Exceptions() {
             <span>Неправильные глаголы не подчиняются правилу <b>+ed</b>. Учи тройками: <b>infinitive → past → past participle</b>.</span>
           </div>
           {!verbs ? <Spinner /> : (
-            <div className="card !p-0 overflow-hidden">
-              <table className="w-full text-sm">
+            <div className="card !p-0 overflow-x-auto">
+              <table className="min-w-full whitespace-nowrap text-sm">
                 <thead>
                   <tr className="border-b border-[var(--color-bg2)] text-left text-xs text-[var(--color-muted)]">
                     <th className="px-3 py-2 font-semibold">Глагол</th>
