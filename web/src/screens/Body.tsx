@@ -5,24 +5,29 @@ import { Header } from '../components/Header';
 import { Spinner, SpeakButton } from '../components/ui';
 import type { Word } from '../types';
 
-// Labelled points on the figure. x/y are percentages of the figure box; side = which edge the pill hugs.
-const LABELS: { word: string; x: number; y: number; side: 'l' | 'r' }[] = [
-  { word: 'hair', x: 50, y: 3, side: 'r' },
-  { word: 'eye', x: 46, y: 11, side: 'l' },
-  { word: 'ear', x: 56, y: 12, side: 'r' },
-  { word: 'neck', x: 50, y: 20, side: 'l' },
-  { word: 'shoulder', x: 62, y: 25, side: 'r' },
-  { word: 'chest', x: 50, y: 30, side: 'l' },
-  { word: 'arm', x: 67, y: 38, side: 'r' },
-  { word: 'stomach', x: 50, y: 42, side: 'l' },
-  { word: 'elbow', x: 69, y: 46, side: 'r' },
-  { word: 'hip', x: 42, y: 49, side: 'l' },
-  { word: 'hand', x: 73, y: 58, side: 'r' },
-  { word: 'thigh', x: 44, y: 60, side: 'l' },
-  { word: 'knee', x: 56, y: 72, side: 'r' },
-  { word: 'ankle', x: 45, y: 88, side: 'l' },
-  { word: 'foot', x: 56, y: 93, side: 'r' },
+// All coordinates are in the SVG viewBox (0 0 340 540) so labels, leader lines and
+// the figure always stay perfectly aligned regardless of screen size.
+type Lbl = { word: string; bx: number; by: number; ly: number; side: 'l' | 'r' };
+const LABELS: Lbl[] = [
+  // left column
+  { word: 'eye', bx: 160, by: 46, ly: 52, side: 'l' },
+  { word: 'neck', bx: 170, by: 84, ly: 104, side: 'l' },
+  { word: 'chest', bx: 170, by: 135, ly: 158, side: 'l' },
+  { word: 'stomach', bx: 168, by: 190, ly: 214, side: 'l' },
+  { word: 'hip', bx: 150, by: 242, ly: 270, side: 'l' },
+  { word: 'thigh', bx: 158, by: 320, ly: 340, side: 'l' },
+  { word: 'ankle', bx: 152, by: 470, ly: 474, side: 'l' },
+  // right column
+  { word: 'hair', bx: 170, by: 24, ly: 30, side: 'r' },
+  { word: 'ear', bx: 197, by: 50, ly: 84, side: 'r' },
+  { word: 'shoulder', bx: 203, by: 92, ly: 138, side: 'r' },
+  { word: 'arm', bx: 224, by: 150, ly: 192, side: 'r' },
+  { word: 'elbow', bx: 232, by: 202, ly: 246, side: 'r' },
+  { word: 'hand', bx: 236, by: 252, ly: 300, side: 'r' },
+  { word: 'knee', bx: 188, by: 384, ly: 388, side: 'r' },
+  { word: 'foot', bx: 188, by: 508, ly: 504, side: 'r' },
 ];
+const L_TEXT = 8, L_INNER = 70, R_TEXT = 332, R_INNER = 270;
 
 const GROUPS: { tag: string; title: string }[] = [
   { tag: 'face', title: 'Голова и лицо' },
@@ -82,43 +87,51 @@ export function Body() {
         } />
       <p className="mb-3 px-0.5 text-sm text-[var(--color-muted)]">Нажми на подпись, чтобы услышать слово.</p>
 
-      {/* Labelled figure */}
-      <div className="card mb-5 !p-2">
-        <div className="relative mx-auto w-full" style={{ aspectRatio: '1 / 2', maxWidth: 360 }}>
-          <svg viewBox="0 0 100 200" className="absolute inset-0 h-full w-full" preserveAspectRatio="xMidYMid meet">
-            <g fill="var(--color-surface2)" stroke="var(--color-border)" strokeWidth="0.8">
-              <circle cx="50" cy="20" r="11" />
-              <rect x="46" y="30" width="8" height="8" />
-              <path d="M36 38 Q50 34 64 38 L70 92 Q70 96 66 96 L58 96 L55 100 L45 100 L42 96 L34 96 Q30 96 30 92 Z" />
-              <path d="M37 40 L24 46 L20 64 L17 84 Q16 88 20 89 Q24 90 25 86 L29 66 L39 52 Z" />
-              <path d="M63 40 L76 46 L80 64 L83 84 Q84 88 80 89 Q76 90 75 86 L71 66 L61 52 Z" />
-              <path d="M45 99 L43 140 L41 182 Q41 187 46 187 L49 187 Q50 150 50 120 Z" />
-              <path d="M55 99 L57 140 L59 182 Q59 187 54 187 L51 187 Q50 150 50 120 Z" />
-            </g>
-          </svg>
+      {/* Labelled anatomical figure — everything drawn in one SVG for perfect alignment */}
+      <div className="card mb-5 !px-1 !py-3">
+        <svg viewBox="0 0 340 540" className="w-full" style={{ maxHeight: '70vh' }}>
+          <defs>
+            <linearGradient id="bodyfill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="var(--color-surface2)" />
+              <stop offset="100%" stopColor="var(--color-bg2)" />
+            </linearGradient>
+          </defs>
+
+          {/* figure */}
+          <g fill="url(#bodyfill)" stroke="var(--color-border)" strokeWidth="1.5" strokeLinejoin="round">
+            <circle cx="170" cy="50" r="30" />
+            <path d="M160 76 h20 v12 h-20 Z" />
+            <path d="M138 86 Q170 78 202 86 L210 140 Q214 166 205 196 L196 250 Q170 260 144 250 L135 196 Q126 166 130 140 Z" />
+            <path d="M140 90 Q121 96 115 117 L99 206 Q97 221 108 221 Q119 221 121 208 L134 129 Q139 109 150 103 Z" />
+            <path d="M200 90 Q219 96 225 117 L241 206 Q243 221 232 221 Q221 221 219 208 L206 129 Q201 109 190 103 Z" />
+            <path d="M150 250 Q150 332 145 416 L141 506 Q141 518 154 518 Q166 518 166 506 L169 382 Q170 332 170 296 Z" />
+            <path d="M190 250 Q190 332 195 416 L199 506 Q199 518 186 518 Q174 518 174 506 L171 382 Q170 332 170 296 Z" />
+          </g>
+
+          {/* labels with leader lines */}
           {LABELS.map((lb) => {
             const w = byWord.get(lb.word);
             if (!w) return null;
-            const isActive = active === lb.word;
+            const isA = active === lb.word;
+            const left = lb.side === 'l';
+            const innerX = left ? L_INNER : R_INNER;
+            const textX = left ? L_TEXT : R_TEXT;
+            const accent = isA ? 'var(--color-primary)' : 'var(--color-muted)';
             return (
-              <button
-                key={lb.word}
-                onClick={() => { setActive(lb.word); speak(lb.word); }}
-                className="absolute -translate-y-1/2 rounded-lg px-1.5 py-0.5 text-left leading-tight shadow-sm transition"
-                style={{
-                  top: `${lb.y}%`,
-                  ...(lb.side === 'l' ? { left: 0 } : { right: 0 }),
-                  background: isActive ? 'var(--color-primary)' : 'var(--color-surface)',
-                  border: '1px solid var(--color-border)',
-                  color: isActive ? '#160f33' : 'var(--color-text)',
-                }}
-              >
-                <span className="block text-[11px] font-bold">{w.word}</span>
-                <span className="block text-[9px] opacity-70">{w.ru}</span>
-              </button>
+              <g key={lb.word} onClick={() => { setActive(lb.word); speak(lb.word); }} style={{ cursor: 'pointer' }}>
+                <rect x={left ? 0 : 244} y={lb.ly - 15} width={96} height={28} fill="transparent" />
+                <polyline
+                  points={`${lb.bx},${lb.by} ${innerX},${lb.ly - 5}`}
+                  fill="none" stroke={isA ? 'var(--color-primary)' : 'var(--color-border)'} strokeWidth={isA ? 1.8 : 1}
+                />
+                <circle cx={lb.bx} cy={lb.by} r={isA ? 4 : 3} fill={isA ? 'var(--color-primary)' : 'var(--color-muted)'} />
+                <text x={textX} y={lb.ly} textAnchor={left ? 'start' : 'end'} fontSize="14" fontWeight="700"
+                  fill={isA ? 'var(--color-primary)' : 'var(--color-text)'}>{w.word}</text>
+                <text x={textX} y={lb.ly + 13} textAnchor={left ? 'start' : 'end'} fontSize="10.5" fill={accent}>{w.ru}</text>
+              </g>
             );
           })}
-        </div>
+        </svg>
       </div>
 
       {/* Full grouped list */}
