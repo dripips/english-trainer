@@ -190,10 +190,12 @@ export function awardXP(userId, amount) {
   db.prepare('UPDATE users SET xp = xp + ? WHERE id = ?').run(amount, userId);
 }
 
-export function bumpActivity(userId, field) {
+export function bumpActivity(userId, field = 'exercises') {
+  // Whitelist the column — it's interpolated into SQL and some callers omit it.
+  const col = field === 'reviews' ? 'reviews' : 'exercises';
   const day = new Date().toISOString().slice(0, 10);
   db.prepare(
-    `INSERT INTO activity (user_id, day, ${field}) VALUES (?, ?, 1)
-     ON CONFLICT(user_id, day) DO UPDATE SET ${field} = ${field} + 1`
+    `INSERT INTO activity (user_id, day, ${col}) VALUES (?, ?, 1)
+     ON CONFLICT(user_id, day) DO UPDATE SET ${col} = ${col} + 1`
   ).run(userId, day);
 }

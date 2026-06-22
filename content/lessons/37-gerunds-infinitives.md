@@ -1,7 +1,7 @@
 ---
-id: gerunds-infinitives
+id: gerunds-infinitives-2
 order: 37
-title: "Gerunds vs Infinitives — герундий против инфинитива"
+title: "Gerunds vs Infinitives — практика (B1)"
 level: B1
 phase: 2
 murphy: "52–63"

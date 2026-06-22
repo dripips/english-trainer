@@ -1,7 +1,7 @@
 ---
-id: articles
+id: articles-2
 order: 36
-title: "Артикли: a / the / ∅"
+title: "Артикли a / the / ∅ — практика (A2)"
 level: A2
 phase: 1
 murphy: "68–77"

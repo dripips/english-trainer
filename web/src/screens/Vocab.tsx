@@ -20,7 +20,7 @@ export function Vocab() {
   useEffect(() => {
     if (!cat && !searching) { setWords([]); return; }
     setWLoading(true);
-    const q = searching ? { search: search.trim(), limit: 100 } : { category: cat!, limit: 500 };
+    const q: Record<string, string | number> = searching ? { search: search.trim(), limit: 100 } : { category: cat!, limit: 500 };
     api.vocabWords(q).then((r) => setWords(r.words)).finally(() => setWLoading(false));
   }, [cat, search, searching]);
 

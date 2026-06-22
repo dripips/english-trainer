@@ -473,7 +473,7 @@ export async function registerRoutes(app) {
     ).all(uid);
     const dueTopics = db.prepare(
       'SELECT topic_id, status FROM progress WHERE user_id = ? AND review_due IS NOT NULL AND review_due <= ? LIMIT 5'
-    ).all(now, uid);
+    ).all(uid, now);
     const dueWords = db.prepare(
       "SELECT word_id, source FROM srs_cards WHERE user_id = ? AND state != 'new' AND due <= ? ORDER BY due ASC LIMIT 5"
     ).all(uid, now);
