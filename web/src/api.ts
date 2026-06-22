@@ -1,6 +1,6 @@
 import type {
   User, Lesson, LessonMeta, GrammarMeta, GrammarCard, Word, VocabCategory,
-  QueueItem, Rating, ErrorEntry, ProgressEntry, Dashboard,
+  QueueItem, Rating, ErrorEntry, ProgressEntry, Dashboard, LibraryLevel,
 } from './types';
 
 async function req<T>(path: string, opts: RequestInit = {}): Promise<T> {
@@ -121,4 +121,7 @@ export const api = {
 
   // textbook
   textbookInfo: () => get<{ available: boolean; size?: number }>('/textbook/info'),
+
+  // library
+  libraryBooks: () => get<{ levels: LibraryLevel[] }>('/library/books'),
 };

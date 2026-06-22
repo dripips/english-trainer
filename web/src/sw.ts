@@ -16,7 +16,8 @@ registerRoute(
   ({ url, request }) =>
     request.method === 'GET' &&
     url.pathname.startsWith('/api/') &&
-    !url.pathname.startsWith('/api/textbook'),
+    !url.pathname.startsWith('/api/textbook') &&
+    !url.pathname.startsWith('/api/library'),
   new NetworkFirst({ cacheName: 'api', networkTimeoutSeconds: 5 })
 );
 

@@ -525,30 +525,149 @@ export async function registerRoutes(app) {
   });
 
   app.get('/api/textbook/file', async (req, reply) => {
-    let st;
-    try { st = fs.statSync(TEXTBOOK); } catch { return reply.code(404).send({ error: 'no textbook' }); }
-    reply.header('Accept-Ranges', 'bytes');
-    reply.header('Content-Type', 'application/pdf');
-    reply.header('Cache-Control', 'private, max-age=86400');
-    const range = req.headers.range;
-    if (range) {
-      const m = /bytes=(\d*)-(\d*)/.exec(range);
-      let start = m && m[1] ? parseInt(m[1], 10) : 0;
-      let end = m && m[2] ? parseInt(m[2], 10) : st.size - 1;
-      if (isNaN(start)) start = 0;
-      if (isNaN(end) || end >= st.size) end = st.size - 1;
-      if (start > end) { reply.header('Content-Range', `bytes */${st.size}`); return reply.code(416).send(); }
-      reply.code(206);
-      reply.header('Content-Range', `bytes ${start}-${end}/${st.size}`);
-      reply.header('Content-Length', end - start + 1);
-      return reply.send(fs.createReadStream(TEXTBOOK, { start, end }));
+    return sendPdfFile(req, reply, TEXTBOOK, 'no textbook');
+  });
+
+  // ---------------- Library (private PDFs by CEFR level) ----------------
+  // Put your own legal PDF copies into:
+  //   private/library/A1/*.pdf, private/library/A2/*.pdf, private/library/B1/*.pdf, private/library/B2/*.pdf
+  // Optional sidecar metadata: same basename as the PDF, with .json extension.
+  const LIBRARY = process.env.LIBRARY_DIR || path.resolve(process.cwd(), '../private/library');
+
+  app.get('/api/library/books', async () => ({
+    levels: LIBRARY_LEVELS.map((level) => listLibraryLevel(LIBRARY, level)),
+  }));
+
+  app.get('/api/library/books/:level/:file/file', async (req, reply) => {
+    const book = resolveLibraryBook(LIBRARY, req.params.level, req.params.file);
+    if (!book) return reply.code(404).send({ error: 'book not found' });
+    return sendPdfFile(req, reply, book.path, 'book not found');
+  });
+
+  // Serve cover image (stored next to PDF as <basename>.jpg/.png/.webp)
+  app.get('/api/library/books/:level/:file/cover', async (req, reply) => {
+    const level = String(req.params.level || '').toUpperCase();
+    if (!LIBRARY_LEVELS.includes(level)) return reply.code(404).send({});
+    const file = path.basename(String(req.params.file || ''));
+    const dir = path.resolve(LIBRARY, level);
+    const base = file.replace(/\.pdf$/i, '');
+    for (const ext of ['.jpg', '.jpeg', '.webp', '.png']) {
+      const imgPath = path.resolve(dir, base + ext);
+      if (!imgPath.startsWith(dir + path.sep)) continue;
+      try {
+        const st = fs.statSync(imgPath);
+        if (!st.isFile()) continue;
+        const mime = ext === '.png' ? 'image/png' : ext === '.webp' ? 'image/webp' : 'image/jpeg';
+        reply.header('Content-Type', mime);
+        reply.header('Cache-Control', 'private, max-age=86400');
+        return reply.send(fs.createReadStream(imgPath));
+      } catch { /* try next ext */ }
     }
-    reply.header('Content-Length', st.size);
-    return reply.send(fs.createReadStream(TEXTBOOK));
+    return reply.code(404).send({});
   });
 }
 
 // ---------------- helpers ----------------
+const LIBRARY_LEVELS = ['A1', 'A2', 'B1', 'B2'];
+
+function listLibraryLevel(root, level) {
+  const dir = path.resolve(root, level);
+  let entries = [];
+  try { entries = fs.readdirSync(dir, { withFileTypes: true }); } catch { /* no books yet */ }
+  const books = entries
+    .filter((e) => e.isFile() && e.name.toLowerCase().endsWith('.pdf'))
+    .map((e) => {
+      const file = e.name;
+      const filePath = path.join(dir, file);
+      const st = fs.statSync(filePath);
+      const meta = readBookMeta(dir, file);
+      return {
+        level,
+        file,
+        title: meta.title || titleFromFile(file),
+        author: meta.author || '',
+        description: meta.description || '',
+        size: st.size,
+        updatedAt: st.mtime.toISOString(),
+        url: `/api/library/books/${encodeURIComponent(level)}/${encodeURIComponent(file)}/file`,
+        coverUrl: meta.cover ? `/api/library/books/${encodeURIComponent(level)}/${encodeURIComponent(file)}/cover` : null,
+        recommended: !!meta.recommended,
+        tags: Array.isArray(meta.tags) ? meta.tags : [],
+        pages: meta.pages || null,
+      };
+    })
+    .sort((a, b) => a.title.localeCompare(b.title, 'ru'));
+  return { level, title: level, count: books.length, books };
+}
+
+function resolveLibraryBook(root, rawLevel, rawFile) {
+  const level = String(rawLevel || '').toUpperCase();
+  if (!LIBRARY_LEVELS.includes(level)) return null;
+  const file = path.basename(String(rawFile || ''));
+  if (!file.toLowerCase().endsWith('.pdf')) return null;
+  const dir = path.resolve(root, level);
+  const filePath = path.resolve(dir, file);
+  if (!filePath.startsWith(dir + path.sep)) return null;
+  try {
+    const st = fs.statSync(filePath);
+    if (!st.isFile()) return null;
+    return { level, file, path: filePath };
+  } catch {
+    return null;
+  }
+}
+
+function readBookMeta(dir, file) {
+  const base = file.replace(/\.pdf$/i, '');
+  const metaPath = path.join(dir, `${base}.json`);
+  try {
+    const raw = fs.readFileSync(metaPath, 'utf8');
+    const meta = JSON.parse(raw);
+    return {
+      title: typeof meta.title === 'string' ? meta.title.trim() : '',
+      author: typeof meta.author === 'string' ? meta.author.trim() : '',
+      description: typeof meta.description === 'string' ? meta.description.trim() : '',
+      cover: typeof meta.cover === 'string' ? meta.cover.trim() : '',
+      recommended: !!meta.recommended,
+      tags: Array.isArray(meta.tags) ? meta.tags.map(String) : [],
+      pages: Number(meta.pages) || null,
+    };
+  } catch {
+    return {};
+  }
+}
+
+function titleFromFile(file) {
+  return file
+    .replace(/\.pdf$/i, '')
+    .replace(/[_-]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function sendPdfFile(req, reply, filePath, missingError) {
+  let st;
+  try { st = fs.statSync(filePath); } catch { return reply.code(404).send({ error: missingError }); }
+  reply.header('Accept-Ranges', 'bytes');
+  reply.header('Content-Type', 'application/pdf');
+  reply.header('Cache-Control', 'private, max-age=86400');
+  const range = req.headers.range;
+  if (range) {
+    const m = /bytes=(\d*)-(\d*)/.exec(range);
+    let start = m && m[1] ? parseInt(m[1], 10) : 0;
+    let end = m && m[2] ? parseInt(m[2], 10) : st.size - 1;
+    if (isNaN(start)) start = 0;
+    if (isNaN(end) || end >= st.size) end = st.size - 1;
+    if (start > end) { reply.header('Content-Range', `bytes */${st.size}`); return reply.code(416).send(); }
+    reply.code(206);
+    reply.header('Content-Range', `bytes ${start}-${end}/${st.size}`);
+    reply.header('Content-Length', end - start + 1);
+    return reply.send(fs.createReadStream(filePath, { start, end }));
+  }
+  reply.header('Content-Length', st.size);
+  return reply.send(fs.createReadStream(filePath));
+}
+
 function getSetting(uid, key, def) {
   const r = db.prepare('SELECT value FROM settings WHERE user_id = ? AND key = ?').get(uid, key);
   return r ? r.value : def;

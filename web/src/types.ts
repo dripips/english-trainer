@@ -84,3 +84,25 @@ export interface Dashboard {
   openErrors: number; lessonsDone: number; lessonsTotal: number;
   activeDays: string[];
 }
+
+export interface LibraryBook {
+  level: 'A1' | 'A2' | 'B1' | 'B2';
+  file: string;
+  title: string;
+  author: string;
+  description: string;
+  size: number;
+  updatedAt: string;
+  url: string;
+  coverUrl: string | null;
+  recommended: boolean;
+  tags: string[];
+  pages: number | null;
+}
+
+export interface LibraryLevel {
+  level: 'A1' | 'A2' | 'B1' | 'B2';
+  title: string;
+  count: number;
+  books: LibraryBook[];
+}
