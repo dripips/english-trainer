@@ -135,6 +135,7 @@ export async function registerRoutes(app) {
     const lessons = getStore().lessons;
     const allItems = [];
     for (const lesson of lessons) {
+      if (lesson.kind === 'reading') continue; // comprehension Qs need the text context
       if (level && lesson.level !== level) continue;
       for (const ex of lesson.exercises || []) {
         allItems.push({ lessonId: lesson.id, lessonTitle: lesson.title, level: lesson.level, exercise: ex });
