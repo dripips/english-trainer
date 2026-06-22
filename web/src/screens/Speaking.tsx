@@ -294,7 +294,7 @@ export function Speaking() {
 
   return (
     <div>
-      <Header title="IELTS Speaking" />
+      <Header back title="IELTS Speaking" />
 
       <div className="mb-3 flex rounded-2xl bg-[var(--color-bg2)] p-1">
         {([['p1', 'Part 1'], ['p2', 'Part 2'], ['p3', 'Part 3']] as [Part, string][]).map(([p, label]) => (

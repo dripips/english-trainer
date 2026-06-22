@@ -18,7 +18,7 @@ export function Library() {
 
   return (
     <div className="space-y-5">
-      <Header title="Библиотека" subtitle={total ? `${total} PDF по уровням A1–B2` : 'книги по уровням'} />
+      <Header back title="Библиотека" subtitle={total ? `${total} PDF по уровням A1–B2` : 'книги по уровням'} />
 
       {recommended.length > 0 && (
         <section>

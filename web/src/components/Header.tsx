@@ -2,12 +2,12 @@ import type { ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
-export function Header({ title, subtitle, back, right }: { title: string; subtitle?: string; back?: boolean; right?: ReactNode }) {
+export function Header({ title, subtitle, back, right, onBack }: { title: string; subtitle?: string; back?: boolean; right?: ReactNode; onBack?: () => void }) {
   const nav = useNavigate();
   return (
     <header className="mb-4 flex items-center gap-3">
-      {back && (
-        <button onClick={() => nav(-1)} aria-label="Назад" className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-[var(--color-surface)] text-[var(--color-text)] active:scale-90">
+      {(back || onBack) && (
+        <button onClick={() => (onBack ? onBack() : nav(-1))} aria-label="Назад" className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-[var(--color-surface)] text-[var(--color-text)] active:scale-90">
           <ArrowLeft size={20} />
         </button>
       )}

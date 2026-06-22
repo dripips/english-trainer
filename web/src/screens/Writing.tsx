@@ -124,7 +124,7 @@ export function Writing() {
 
   return (
     <div>
-      <Header title="Письмо" />
+      <Header back title="Письмо" />
 
       <div className="mb-4 flex rounded-2xl bg-[var(--color-bg2)] p-1">
         {([['check', 'Проверка'], ['task2', 'Эссе'], ['task1', 'Графики']] as [Tab, string][]).map(([t, label]) => (
