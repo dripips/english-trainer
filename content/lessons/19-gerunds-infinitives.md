@@ -13,7 +13,8 @@ warmup:
   - "Исправь: I enjoy to read books."
   - "Переведи: Он предложил встретиться позже."
 videos:
-  - { title: "Gerunds and Infinitives — полное объяснение (EnglishClass101)", url: "https://www.youtube.com/watch?v=6gS3MBUP9GI" }
+  - { title: "Gerunds and Infinitives — Grammar Lesson", url: "https://www.youtube.com/watch?v=KQWvKIBiuS0" }
+  - { title: "BBC — Gerund or infinitive?", url: "https://www.youtube.com/watch?v=LfDWCcbIjDg" }
 reading:
   textEn: |
     I enjoy learning English, but I sometimes find it hard to stay motivated. I keep trying to improve and I avoid making the same mistakes twice.

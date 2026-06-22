@@ -13,7 +13,8 @@ warmup:
   - "Замени 'but' на более академическое слово: 'I like coffee but it makes me nervous.'"
   - "Переведи: Несмотря на высокую цену, качество того стоит."
 videos:
-  - { title: "Linking Words for IELTS Writing (IELTS Liz)", url: "https://www.youtube.com/watch?v=YhIXpMSrGdc" }
+  - { title: "Speak Confident English — Linking Words (However, Therefore)", url: "https://www.youtube.com/watch?v=KSkjwtxtoPU" }
+  - { title: "Fastrack IELTS — Band 9 Writing Task 2 Linking Words", url: "https://www.youtube.com/watch?v=nv2IqOMJPRg" }
 reading:
   textEn: |
     Learning a new language is challenging; however, it is also extremely rewarding. Although it requires a lot of time and effort, the benefits are significant. For instance, it opens up new career opportunities and allows you to communicate with people from different cultures.

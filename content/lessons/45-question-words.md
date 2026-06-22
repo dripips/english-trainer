@@ -13,7 +13,8 @@ warmup:
   - "Переведи: Где ты живёшь?"
   - "Переведи: Сколько тебе лет?"
 videos:
-  - { title: "WH Questions (What, Where, When, Who, Why, How) — English Grammar for Beginners | Learn English with EnglishClass101", url: "https://www.youtube.com/watch?v=2pP_yZ8r4mg" }
+  - { title: "Question Words Song | Who, What, Where, When", url: "https://www.youtube.com/watch?v=mRLo96ix9pA" }
+  - { title: "Mark Kulek — Question Words: what, when, where", url: "https://www.youtube.com/watch?v=Xx3QfdZfvSk" }
 reading:
   textEn: |
     — Hello! What is your name?

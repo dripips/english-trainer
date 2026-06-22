@@ -13,7 +13,7 @@ warmup:
   - "Переведи в косвенную речь: He said: 'I am tired.'"
   - "Исправь: She told that she likes coffee."
 videos:
-  - { title: "Reported Speech — объяснение и примеры (English with Lucy)", url: "https://www.youtube.com/watch?v=YOY1ykgkWkQ" }
+  - { title: "BBC — How to use reported speech (6 Min Grammar)", url: "https://www.youtube.com/watch?v=L-wTVCByxzk" }
 reading:
   textEn: |
     My teacher told me that learning English required patience and consistency. She said that I was making good progress and that my pronunciation had improved.

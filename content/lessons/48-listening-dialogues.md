@@ -13,7 +13,8 @@ warmup:
   - "Послушай реплику и запиши ответ."
   - "Повтори диалог вслух за диктором."
 videos:
-  - { title: "A2 English listening practice — short conversations", url: "https://www.youtube.com/watch?v=0Noq3IGm5kA" }
+  - { title: "English Singsing — How are you? (Easy Dialogue Role Play)", url: "https://www.youtube.com/watch?v=xb3za6PAXQE" }
+  - { title: "English Singsing — What's this? (Easy Dialogue Role Play)", url: "https://www.youtube.com/watch?v=j-XXk3dVeag" }
 exercises:
   - id: a1
     type: listen

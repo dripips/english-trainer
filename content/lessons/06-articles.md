@@ -13,7 +13,7 @@ warmup:
   - "Исправь: She is teacher."
   - "Переведи: Закрой окно. (мы оба знаем, какое именно)"
 videos:
-  - { title: "English Articles — A, An, The | Mister Midnight (легко и понятно)", url: "https://www.youtube.com/watch?v=EEW_sNORhEY" }
+  - { title: "Articles A, An, The — English Grammar Lesson", url: "https://www.youtube.com/watch?v=3bCL4cLnhVs" }
 reading:
   textEn: |
     My friend is a doctor. She works in a hospital in the centre of the city. In the morning she drinks a cup of coffee before work. The coffee in her office is terrible, so she brings her own.

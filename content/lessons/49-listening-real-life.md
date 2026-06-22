@@ -10,7 +10,9 @@ tags: [listening, real-life, a2]
 grammarRefs: []
 vocabTopics: [money-shopping, travel, food-drink]
 warmup: ["Запиши на слух фразу из кафе.", "Послушай объявление и запиши."]
-videos: [{ title: "English listening — everyday situations (A2)", url: "https://www.youtube.com/watch?v=9_gjDvc6Jg0" }]
+videos:
+  - { title: "English Singsing — May I take your order? (At the Restaurant)", url: "https://www.youtube.com/watch?v=IWMMkp35d6Y" }
+  - { title: "English Singsing — Where's the museum? (Asking the way)", url: "https://www.youtube.com/watch?v=IfT4XhfUFkk" }
 exercises:
   - id: a1
     type: listen

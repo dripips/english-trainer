@@ -13,7 +13,8 @@ warmup:
   - "Переведи: Я бросил курить три года назад."
   - "Что значит: 'Can you look after my cat this weekend?'"
 videos:
-  - { title: "50 Common Phrasal Verbs (English with Lucy)", url: "https://www.youtube.com/watch?v=hBBMoONZTVU" }
+  - { title: "mmmEnglish — 50+ Common Phrasal Verbs", url: "https://www.youtube.com/watch?v=r7VKVXbaj_Y" }
+  - { title: "Papa Teach Me — Phrasal Verbs with GET", url: "https://www.youtube.com/watch?v=X_xuWiOTFcc" }
 reading:
   textEn: |
     I wake up at 7 every morning and get up straight away — I never put off getting out of bed. I turn on the coffee machine and look forward to that first cup.

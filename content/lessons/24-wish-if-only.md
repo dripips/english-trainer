@@ -13,7 +13,7 @@ warmup:
   - "Переведи: Жаль, что я не говорю по-французски."
   - "Исправь: I wish I will have more time."
 videos:
-  - { title: "Wish and If Only — объяснение (BBC Learning English)", url: "https://www.youtube.com/watch?v=mfQxpHh1soY" }
+  - { title: "Wish, If only & Hope — Wishes & Regrets", url: "https://www.youtube.com/watch?v=QyO6Tr5301Y" }
 reading:
   textEn: |
     I wish I had started learning English earlier. If only I had known how important it would be! I wish I had paid more attention in school.

@@ -13,7 +13,8 @@ warmup:
   - "Make или do? ___ a mistake / ___ homework / ___ a decision / ___ exercise"
   - "Have или take? ___ a shower / ___ breakfast / ___ a break / ___ a look"
 videos:
-  - { title: "Make or Do? (English with Lucy)", url: "https://www.youtube.com/watch?v=5i3BZ4aGEGA" }
+  - { title: "mmmEnglish — Common English Collocations (TAKE)", url: "https://www.youtube.com/watch?v=QvFIoMBAETI" }
+  - { title: "Espresso English — 60 Collocations with DO and MAKE", url: "https://www.youtube.com/watch?v=CEVo5lSDsqw" }
 reading:
   textEn: |
     I usually make a list of things to do every morning — it helps me make the most of my time. I try to do my best at work, even if I make mistakes sometimes.

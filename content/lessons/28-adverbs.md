@@ -13,7 +13,7 @@ warmup:
   - "Поставь наречие на правильное место: 'She goes to the gym (always).'"
   - "Образуй наречие: quick → ?"
 videos:
-  - { title: "Adverbs of Frequency (EnglishClass101)", url: "https://www.youtube.com/watch?v=5RZZbFvNKaI" }
+  - { title: "Oxford Online English — Adverbs in English", url: "https://www.youtube.com/watch?v=jXtHCBgbks0" }
 reading:
   textEn: |
     I always wake up early and I'm usually in a good mood in the morning. I sometimes have coffee before breakfast, but I rarely eat a big meal first thing.

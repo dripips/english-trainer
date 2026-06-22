@@ -13,7 +13,8 @@ warmup:
   - "Исправь: I need an information."
   - "Выбери: How much / many money do you have?"
 videos:
-  - { title: "Countable & Uncountable Nouns — English with Alex", url: "https://www.youtube.com/watch?v=0bmYWdCFzO0" }
+  - { title: "BBC — Countable & uncountable nouns (Grammar Gameshow)", url: "https://www.youtube.com/watch?v=yay1OUgMSlo" }
+  - { title: "BBC — Mini lesson: Countable and uncountable nouns", url: "https://www.youtube.com/watch?v=BTX8T2KP6uU" }
 reading:
   textEn: |
     In the morning I drink some coffee and eat some toast. I don't have much time before work, so I don't cook a big breakfast. I buy a few apples and some water at the shop.

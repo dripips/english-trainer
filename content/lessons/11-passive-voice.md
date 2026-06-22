@@ -13,7 +13,8 @@ warmup:
   - "Переведи: Эта книга была написана в 1869 году."
   - "Исправь: The letter written by him yesterday."
 videos:
-  - { title: "Passive Voice — все времена (English with Lucy)", url: "https://www.youtube.com/watch?v=vZz2V4pqwnk" }
+  - { title: "BBC — Present and past passives (6 Min Grammar)", url: "https://www.youtube.com/watch?v=nI5zaB6QL-o" }
+  - { title: "BBC — What's the passive voice?", url: "https://www.youtube.com/watch?v=7GSrQ4DX8gY" }
 reading:
   textEn: |
     The English language is spoken by more than 1.5 billion people around the world. It is taught in schools in almost every country. Many great novels have been written in English — Shakespeare's plays were performed for the first time in the 16th century.

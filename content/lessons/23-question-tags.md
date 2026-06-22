@@ -13,7 +13,8 @@ warmup:
   - "Добавь tag: 'You speak English, ___?'"
   - "Добавь tag: 'She doesn't like coffee, ___?'"
 videos:
-  - { title: "Question Tags — полное объяснение (BBC Learning English)", url: "https://www.youtube.com/watch?v=gVa9pRKEMkE" }
+  - { title: "BBC — Question tags (Masterclass)", url: "https://www.youtube.com/watch?v=plvBNpPKkTc" }
+  - { title: "BBC — Question tags (6 Min Grammar)", url: "https://www.youtube.com/watch?v=foyWhOHhTT0" }
 reading:
   textEn: |
     You're studying English, aren't you? It's not easy, is it? But it gets better with practice, doesn't it?

@@ -13,7 +13,7 @@ warmup:
   - "Переведи академически: 'Говорят, что изменение климата ускоряется.'"
   - "Чем отличается: 'Scientists say' vs 'It is said by scientists'?"
 videos:
-  - { title: "It is said that / Passive Reporting Verbs (English with Lucy)", url: "https://www.youtube.com/watch?v=KDO7XbsNsuc" }
+  - { title: "Impersonal Passive with Reporting Verbs (It is said that…)", url: "https://www.youtube.com/watch?v=u3S_TjsAhbo" }
 reading:
   textEn: |
     Climate change is widely considered to be one of the greatest challenges of our time. It is believed that global temperatures will rise by 2°C by 2100.

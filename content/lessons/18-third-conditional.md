@@ -13,7 +13,8 @@ warmup:
   - "Переведи: Если бы я больше занимался, я бы сдал экзамен."
   - "Исправь: If I would have known, I will have told you."
 videos:
-  - { title: "Third Conditional — сожаления и гипотезы в прошлом (BBC Learning English)", url: "https://www.youtube.com/watch?v=AvPPJm-G_2E" }
+  - { title: "mmmEnglish — Third Conditional Sentences + Examples", url: "https://www.youtube.com/watch?v=xwOCqtaZDrk" }
+  - { title: "The 3rd Conditional Easily Explained", url: "https://www.youtube.com/watch?v=O7dVZ5u-C20" }
 reading:
   textEn: |
     If I had started learning English ten years ago, I would have been fluent by now. But I didn't — and that's okay. Every journey begins somewhere.

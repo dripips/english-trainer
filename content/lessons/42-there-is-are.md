@@ -13,7 +13,8 @@ warmup:
   - "Переведи: В комнате есть стол."
   - "Переведи: В городе есть два парка."
 videos:
-  - { title: "There is / There are — English Grammar for Beginners | Learn English with EnglishClass101", url: "https://www.youtube.com/watch?v=eQqRptDgFCw" }
+  - { title: "There is / There are — Grammar with Exercise (for kids)", url: "https://www.youtube.com/watch?v=eUPOGjAEwqg" }
+  - { title: "Mark Kulek — There Is & There Are speaking practice", url: "https://www.youtube.com/watch?v=4-AhXNAywx8" }
 reading:
   textEn: |
     This is my room. There is a bed near the window and there is a small table next to it. There are two chairs and there are a lot of books on the shelf. There is a lamp on the table, but there isn't a TV. Is there a computer? Yes, there is. Are there any pictures on the wall? No, there aren't.

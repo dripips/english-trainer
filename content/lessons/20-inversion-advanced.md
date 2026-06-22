@@ -13,7 +13,8 @@ warmup:
   - "Переставь: Rarely I have seen such beautiful writing."
   - "Переведи: Не только музыка, но и искусство помогают снять стресс."
 videos:
-  - { title: "Inversion in English — продвинутые структуры (English with Lucy)", url: "https://www.youtube.com/watch?v=9X0CnN94CVU" }
+  - { title: "BBC — Inversion (English Class)", url: "https://www.youtube.com/watch?v=W6Dw1IHUrwU" }
+  - { title: "Papa Teach Me — Grammar that makes you sound smart: Inversion", url: "https://www.youtube.com/watch?v=qZdXNQkh7dM" }
 reading:
   textEn: |
     Never before has technology changed our lives so dramatically. Not only does it allow us to communicate instantly, but it also gives us access to unlimited information.

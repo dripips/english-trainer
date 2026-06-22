@@ -13,7 +13,8 @@ warmup:
   - "Переведи: Я никогда не был в Лондоне."
   - "Исправь: Have you seen him yesterday?"
 videos:
-  - { title: "Present Perfect — когда использовать (English with Lucy)", url: "https://www.youtube.com/watch?v=lKfRlzBDhzA" }
+  - { title: "BBC — 'I've done' or 'I did'? (Present Perfect vs Past Simple)", url: "https://www.youtube.com/watch?v=VY5nh_-1phQ" }
+  - { title: "BBC — Present perfect: just, already, yet (6 Min Grammar)", url: "https://www.youtube.com/watch?v=8_nhtAwI0dA" }
 reading:
   textEn: |
     I have lived in Moscow all my life. I have never been to the UK, but I have already started learning English.

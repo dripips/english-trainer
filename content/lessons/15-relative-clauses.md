@@ -13,7 +13,8 @@ warmup:
   - "Соедини: I know the man. He works in your office."
   - "Исправь: The film which I watched it was amazing."
 videos:
-  - { title: "Relative Clauses — who, which, that, where (English with Lucy)", url: "https://www.youtube.com/watch?v=EcJd6HXjmwI" }
+  - { title: "Relative Clauses (Defining & Non-Defining) — Grammar Lesson", url: "https://www.youtube.com/watch?v=oUw9qHAbcys" }
+  - { title: "How to Use Relative Clauses (WHO, WHICH, THAT, WHOSE)", url: "https://www.youtube.com/watch?v=Ers3fJPU2JI" }
 reading:
   textEn: |
     The English language, which is spoken by over a billion people, is the most widely studied language in the world. The people who learn it best are usually those who are not afraid to make mistakes.

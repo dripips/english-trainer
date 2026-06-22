@@ -13,7 +13,8 @@ warmup:
   - "Переведи: Я работал вчера вечером."
   - "Исправь: She was cook dinner when I arrived."
 videos:
-  - { title: "Past Continuous — объяснение + примеры (English with Lucy)", url: "https://www.youtube.com/watch?v=Yl5KNsF3xmo" }
+  - { title: "Crown Academy — Past Continuous Tense", url: "https://www.youtube.com/watch?v=E82jmmVQ6kc" }
+  - { title: "Crown Academy — The Past Continuous", url: "https://www.youtube.com/watch?v=8e1TGQBdA7U" }
 reading:
   textEn: |
     Yesterday at 8 p.m. I was sitting at my desk and studying English. My wife was watching a film in the living room. The cat was sleeping on the sofa.

@@ -13,7 +13,8 @@ warmup:
   - "Переведи: У меня есть машина."
   - "Переведи: У неё есть две сестры."
 videos:
-  - { title: "Have got / Has got — English Grammar for Beginners | Learn English with EnglishClass101", url: "https://www.youtube.com/watch?v=Hb9Oj3J0r4M" }
+  - { title: "Super Simple Songs — Finger Family (family members)", url: "https://www.youtube.com/watch?v=k8jhAqw-V2o" }
+  - { title: "English Singsing — Body / Family / Feelings", url: "https://www.youtube.com/watch?v=hFIGwwE1uAM" }
 reading:
   textEn: |
     Hi! I'm Tom. I've got a big family. I've got two brothers and one sister. My sister has got a small dog and a cat. We've got a house near the park. My brothers have got a lot of books and games. My mum has got a new car, but my dad hasn't got a car. Have you got a big family too?

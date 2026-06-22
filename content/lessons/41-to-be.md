@@ -13,7 +13,8 @@ warmup:
   - "Переведи: Я студент."
   - "Переведи: Она дома."
 videos:
-  - { title: "BBC Learning English — The verb 'to be'", url: "https://www.youtube.com/watch?v=hQETC6w2Do0" }
+  - { title: "Am Is Are Song | To be | English for kids", url: "https://www.youtube.com/watch?v=CWn3FUNA8cw" }
+  - { title: "Rockin' English — 'I Am, You Are, He/She Is' Song", url: "https://www.youtube.com/watch?v=PZCcRzgrr8Y" }
 reading:
   textEn: |
     Hi! My name is Anna. I am a student. I am from Russia. My brother is a doctor. He is twenty-five. We are a small family. My parents are teachers. They are very kind. Our house is big and the rooms are bright. I am happy here.

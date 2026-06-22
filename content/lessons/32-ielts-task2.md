@@ -13,7 +13,8 @@ warmup:
   - "Как начать IELTS эссе? Что такое thesis statement?"
   - "Чем отличается 'Agree/Disagree' от 'Discuss both views'?"
 videos:
-  - { title: "IELTS Task 2 — структура эссе (IELTS Liz)", url: "https://www.youtube.com/watch?v=x8JbOG6HWbs" }
+  - { title: "E2 IELTS — Writing Task 2 Top Tips", url: "https://www.youtube.com/watch?v=JMZT6UA7df8" }
+  - { title: "E2 IELTS — Score 8+ in Writing Task 2", url: "https://www.youtube.com/watch?v=Zx-JcXsbUqQ" }
 reading:
   textEn: |
     Some people believe that social media has a negative impact on society. To what extent do you agree or disagree?

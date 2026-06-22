@@ -13,7 +13,7 @@ warmup:
   - "Исправь: If it will rain, I will stay home."
   - "Переведи: Если ты будешь практиковаться каждый день, твой английский улучшится."
 videos:
-  - { title: "First Conditional — если… то… (BBC Learning English)", url: "https://www.youtube.com/watch?v=R_G-4VkELhA" }
+  - { title: "Oxford Online English — First Conditional", url: "https://www.youtube.com/watch?v=2Q6_Xyil3SQ" }
 reading:
   textEn: |
     Learning a language takes time, but if you are consistent, you will make great progress. If you practise speaking every day, you will become more confident. If you watch English films regularly, your listening will improve.

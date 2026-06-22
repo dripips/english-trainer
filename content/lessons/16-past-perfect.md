@@ -13,7 +13,8 @@ warmup:
   - "Переведи: Когда я пришёл, фильм уже начался."
   - "Исправь: When she arrived, he already left."
 videos:
-  - { title: "Past Perfect — объяснение (English with Lucy)", url: "https://www.youtube.com/watch?v=ePE6KaTGanM" }
+  - { title: "Oxford Online English — Past Perfect Tense", url: "https://www.youtube.com/watch?v=iKi4Jy6r-0s" }
+  - { title: "Past Perfect Tense — English Grammar Lesson", url: "https://www.youtube.com/watch?v=KpljMGjFVuA" }
 reading:
   textEn: |
     When I started learning English, I had never studied a foreign language before. I had only seen English in films and on the internet.

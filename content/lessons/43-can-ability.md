@@ -13,7 +13,8 @@ warmup:
   - "Переведи: Я умею плавать."
   - "Исправь: He cans drive."
 videos:
-  - { title: "Can and Can't — Modal Verbs for Ability (English with easy examples)", url: "https://www.youtube.com/watch?v=2pT2Rq7p6Yg" }
+  - { title: "Super Simple Songs — Yes, I Can! (animal song)", url: "https://www.youtube.com/watch?v=_Ir0Mc6Qilo" }
+  - { title: "Super Simple Songs — Yes, I Can! + More", url: "https://www.youtube.com/watch?v=RedcuuQPmhY" }
 reading:
   textEn: |
     My friend Anna can do many things. She can swim and she can ride a bike. She can speak three languages: Russian, English and a little French. But she can't drive a car, so she takes the bus to work.

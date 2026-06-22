@@ -13,8 +13,8 @@ warmup:
   - "Послушай и повтори вслух 3 предложения о себе."
   - "Запиши на слух короткую фразу."
 videos:
-  - title: "Easy English listening for beginners"
-    url: "https://www.youtube.com/watch?v=8sNIFkUASEw"
+  - { title: "English Singsing — Greetings: Good morning, Goodbye", url: "https://www.youtube.com/watch?v=Fw0rdSHzWFY" }
+  - { title: "English Singsing — Daily routine", url: "https://www.youtube.com/watch?v=qD1pnquN_DM" }
 exercises:
   - id: a1
     type: listen

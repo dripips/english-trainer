@@ -13,7 +13,8 @@ warmup:
   - "Переведи: Я учу английский уже два года."
   - "Исправь: I have been study for three hours."
 videos:
-  - { title: "Present Perfect vs Present Perfect Continuous (BBC Learning English)", url: "https://www.youtube.com/watch?v=RDhgXYFLUKo" }
+  - { title: "BBC — Present perfect simple or continuous?", url: "https://www.youtube.com/watch?v=pvoqkQHb3lo" }
+  - { title: "BBC — Present perfect continuous (English Class)", url: "https://www.youtube.com/watch?v=Xp17S3kp9BE" }
 reading:
   textEn: |
     I have been learning English for two years now. It has been a long journey, but I have been making steady progress. This week I have been reading a graded reader — it has been taking me about 30 minutes a day.

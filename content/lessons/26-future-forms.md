@@ -13,7 +13,8 @@ warmup:
   - "Переведи: Я собираюсь учить английский каждый день."
   - "Когда используется will, а когда going to?"
 videos:
-  - { title: "Will vs Going To — разница (BBC Learning English)", url: "https://www.youtube.com/watch?v=dGpMRjFMfMg" }
+  - { title: "BBC — Future tenses: present continuous, going to, will", url: "https://www.youtube.com/watch?v=De_54szvmFM" }
+  - { title: "BBC — Present continuous and going to (6 Min Grammar)", url: "https://www.youtube.com/watch?v=-8660VeIj4U" }
 reading:
   textEn: |
     A: What are your plans for the weekend?

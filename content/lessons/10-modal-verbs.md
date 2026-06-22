@@ -13,7 +13,8 @@ warmup:
   - "Исправь: She can to swim very well."
   - "Переведи: Тебе следует больше спать."
 videos:
-  - { title: "Modal Verbs — can, could, should, must, have to (English with Lucy)", url: "https://www.youtube.com/watch?v=2L7V3n7F9rE" }
+  - { title: "BBC — 'can', 'could', 'be able to' (6 Min Grammar)", url: "https://www.youtube.com/watch?v=tbru3bW2kVE" }
+  - { title: "BBC — 'may', 'might' and 'could' (6 Min Grammar)", url: "https://www.youtube.com/watch?v=ZXN3wROCpfs" }
 reading:
   textEn: |
     To learn English well, you should practise every day. You must not give up when it gets difficult. You can use apps, watch films, and read books — all of these can help you improve.

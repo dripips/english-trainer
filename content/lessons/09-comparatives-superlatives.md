@@ -13,7 +13,8 @@ warmup:
   - "Исправь: This film is more better than the last one."
   - "Переведи: Это самый красивый город, который я когда-либо видел."
 videos:
-  - { title: "Comparatives and Superlatives — BBC Learning English", url: "https://www.youtube.com/watch?v=k1SoHJ7jkVo" }
+  - { title: "BBC — Comparatives and superlatives (6 Min Grammar)", url: "https://www.youtube.com/watch?v=FAhpT7BH7GE" }
+  - { title: "Comparative & Superlative Adjectives — Grammar Lesson", url: "https://www.youtube.com/watch?v=oGr7l3q7SMI" }
 reading:
   textEn: |
     Moscow is bigger than London, but London is more expensive. The summer in Moscow is hotter than in London, but London winters are milder.

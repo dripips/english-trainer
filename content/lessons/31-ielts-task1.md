@@ -13,7 +13,8 @@ warmup:
   - "Как описать тренд вверх? Назови 3 глагола."
   - "Переведи: Продажи резко выросли в 2020 году и достигли пика в 2021."
 videos:
-  - { title: "IELTS Task 1 — полный гайд (IELTS Liz)", url: "https://www.youtube.com/watch?v=8giNpqLALVY" }
+  - { title: "IELTS Advantage — Task 1 Line Graphs in 5 Steps", url: "https://www.youtube.com/watch?v=lnL0qvcVo1Q" }
+  - { title: "IELTS Liz — Line Graph complex sentences", url: "https://www.youtube.com/watch?v=JxgA-qqw2m8" }
 reading:
   textEn: |
     The graph below shows the number of tourists visiting three countries between 2000 and 2020.

@@ -13,7 +13,8 @@ warmup:
   - "Запиши на слух: телефон или цена."
   - "Назови дни недели вслух."
 videos:
-  - { title: "Numbers and time listening (BBC Learning English)", url: "https://www.youtube.com/watch?v=Iwz1mYDQE8M" }
+  - { title: "English Singsing — What time is it?", url: "https://www.youtube.com/watch?v=cs81UdOc9TU" }
+  - { title: "Scratch Garden — The Telling Time Song", url: "https://www.youtube.com/watch?v=w9QK_4vrnJ0" }
 exercises:
   - id: a1
     type: listen

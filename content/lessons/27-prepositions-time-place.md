@@ -13,7 +13,8 @@ warmup:
   - "Заполни: I was born ___ 1990 ___ March ___ the 15th."
   - "Переведи: Встреча в понедельник в 3 часа."
 videos:
-  - { title: "Prepositions of Time AT ON IN (BBC Learning English)", url: "https://www.youtube.com/watch?v=WBj3c1WnZ8o" }
+  - { title: "English with Lucy — IN / ON / AT prepositions of place & time", url: "https://www.youtube.com/watch?v=92XBCRYZ1S8" }
+  - { title: "mmmEnglish — Prepositions of time IN / ON / AT / BY", url: "https://www.youtube.com/watch?v=k8JRYf8vy2A" }
 reading:
   textEn: |
     My morning routine starts at 7 a.m. I usually have breakfast in the kitchen and read the news on my phone. On Mondays I go to the gym — it's on the corner of my street.

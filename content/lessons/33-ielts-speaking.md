@@ -13,7 +13,8 @@ warmup:
   - "Как ответить если не понял вопрос? Назови 2 фразы."
   - "Чем отличается Part 1 от Part 3 в IELTS Speaking?"
 videos:
-  - { title: "IELTS Speaking Band 7–9 Tips (IELTS Liz)", url: "https://www.youtube.com/watch?v=P4Gi0bLy8DY" }
+  - { title: "E2 IELTS — Speaking Super Methods", url: "https://www.youtube.com/watch?v=qXPSgMo0C1w" }
+  - { title: "E2 IELTS — Speaking Tips for Band 9", url: "https://www.youtube.com/watch?v=arrIPUa1V6A" }
 reading:
   textEn: |
     Examiner: Do you enjoy cooking?

@@ -13,7 +13,8 @@ warmup:
   - "Образуй существительное: educate → ?"
   - "Образуй прилагательное: care → ? (забота, внимательный)"
 videos:
-  - { title: "Word Formation for IELTS (IELTS Liz)", url: "https://www.youtube.com/watch?v=Q9jxPdPL-lc" }
+  - { title: "Papa Teach Me — All Prefixes and Suffixes", url: "https://www.youtube.com/watch?v=l6XCOoO0Mpk" }
+  - { title: "Cambridge — English word formation: suffixes", url: "https://www.youtube.com/watch?v=o8bChjxy3lA" }
 reading:
   textEn: |
     The development of language is closely connected to human intelligence. Throughout history, communication has been fundamental to the growth of civilisation. Without the ability to express ourselves clearly, cooperation between people would be impossible.

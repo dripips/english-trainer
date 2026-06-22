@@ -13,7 +13,7 @@ warmup:
   - "Переведи: Если бы у меня было больше денег, я бы купил машину."
   - "Исправь: If I would have time, I will call you."
 videos:
-  - { title: "Second Conditional — мечты и гипотезы (BBC Learning English)", url: "https://www.youtube.com/watch?v=IZxRJPFk_yY" }
+  - { title: "mmmEnglish — Second Conditional Sentences + Examples", url: "https://www.youtube.com/watch?v=71u-NoY4Ag8" }
 reading:
   textEn: |
     If I spoke perfect English, I would feel much more confident at work. I would be able to give presentations without any preparation. But for now, I am still learning.
