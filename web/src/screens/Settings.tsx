@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Check, Bell, BellOff, KeyRound, RefreshCw } from 'lucide-react';
 import { api } from '../api';
 import { Header } from '../components/Header';
@@ -27,10 +27,18 @@ export function Settings() {
     })();
   }, []);
 
-  async function saveNum(key: string, v: number, setter: (n: number) => void) {
+  const saveTimers = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
+  // Move the slider immediately, but debounce the network save so dragging
+  // doesn't fire a PUT on every step.
+  function saveNum(key: string, v: number, setter: (n: number) => void) {
     setter(v);
-    await api.setSettings({ [key]: v });
-    setSaved(true); setTimeout(() => setSaved(false), 1200);
+    clearTimeout(saveTimers.current[key]);
+    saveTimers.current[key] = setTimeout(async () => {
+      try {
+        await api.setSettings({ [key]: v });
+        setSaved(true); setTimeout(() => setSaved(false), 1200);
+      } catch { /* ignore */ }
+    }, 500);
   }
 
   async function toggleReminders() {

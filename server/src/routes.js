@@ -91,15 +91,19 @@ export async function registerRoutes(app) {
   });
 
   app.post('/api/lessons/:id/attempt', async (req) => {
-    const { exerciseId, correct, answer } = req.body || {};
+    const { exerciseId, correct, answer, override } = req.body || {};
+    if (!exerciseId) return { ok: false };
     db.prepare(
       `INSERT INTO lesson_attempts (user_id, lesson_id, exercise_id, correct, answer)
        VALUES (?, ?, ?, ?, ?)
        ON CONFLICT(user_id, lesson_id, exercise_id)
        DO UPDATE SET correct = excluded.correct, answer = excluded.answer, created_at = datetime('now')`
     ).run(req.user.uid, req.params.id, exerciseId, correct ? 1 : 0, answer ?? null);
-    bumpActivity(req.user.uid, 'exercises');
-    awardXP(req.user.uid, correct ? 10 : 2);
+    // "override" = user correcting an already-recorded attempt ("Я был прав"); don't re-award XP/activity.
+    if (!override) {
+      bumpActivity(req.user.uid, 'exercises');
+      awardXP(req.user.uid, correct ? 10 : 2);
+    }
     return { ok: true };
   });
 

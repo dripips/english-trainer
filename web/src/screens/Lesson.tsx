@@ -100,7 +100,7 @@ export function LessonScreen() {
       ) : (
         <ExercisePlayer
           exercises={lesson.exercises}
-          onAttempt={(exId, correct, answer) => { api.attempt(lesson.id, exId, correct, answer).catch(() => {}); }}
+          onAttempt={(exId, correct, answer, override) => { api.attempt(lesson.id, exId, correct, answer, override).catch(() => {}); }}
           doneExtra={glossButton}
         />
       )}

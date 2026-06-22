@@ -51,8 +51,8 @@ export const api = {
   // lessons
   lessons: () => get<LessonMeta[]>('/lessons'),
   lesson: (id: string) => get<Lesson>(`/lessons/${id}`),
-  attempt: (id: string, exerciseId: string, correct: boolean, answer?: string) =>
-    post(`/lessons/${id}/attempt`, { exerciseId, correct, answer }),
+  attempt: (id: string, exerciseId: string, correct: boolean, answer?: string, override?: boolean) =>
+    post(`/lessons/${id}/attempt`, { exerciseId, correct, answer, override }),
   addGlossToSrs: (id: string) => post<{ added: number; total: number }>(`/lessons/${id}/add-gloss-to-srs`),
 
   // grammar

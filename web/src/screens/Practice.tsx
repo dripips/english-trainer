@@ -40,9 +40,9 @@ export function Practice() {
         <ExercisePlayer
           exercises={session.map((i) => i.exercise)}
           labels={session.map((i) => `${i.level} · ${i.lessonTitle}`)}
-          onAttempt={(exId, correct, answer) => {
+          onAttempt={(exId, correct, answer, override) => {
             const item = session.find((i) => i.exercise.id === exId);
-            if (item) api.attempt(item.lessonId, exId, correct, answer).catch(() => {});
+            if (item) api.attempt(item.lessonId, exId, correct, answer, override).catch(() => {});
           }}
           onFinish={handleFinish}
         />

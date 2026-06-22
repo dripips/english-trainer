@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Flame, Brain, Layers, Library, Bug, Ruler, TrendingUp, Map, ChevronRight, type LucideIcon } from 'lucide-react';
+import { Flame, Sparkles, Layers, Library, Bug, Ruler, TrendingUp, Map, ChevronRight, type LucideIcon } from 'lucide-react';
 import { api } from '../api';
 import { useAuth } from '../auth';
 import { useApi } from '../lib/useApi';
@@ -75,13 +75,13 @@ export function Home() {
         </div>
       </div>
 
-      {/* warm-up CTA */}
-      <Link to="/warmup" className="card block overflow-hidden bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary2)] !border-transparent active:scale-[0.98]">
+      {/* daily session CTA */}
+      <Link to="/today" className="card block overflow-hidden bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary2)] !border-transparent active:scale-[0.98]">
         <div className="flex items-center gap-3 text-[#160f33]">
-          <div className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-white/25"><Brain size={24} /></div>
+          <div className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-white/25"><Sparkles size={24} /></div>
           <div className="min-w-0 flex-1">
-            <div className="display text-lg font-bold leading-tight">Разминка</div>
-            <div className="truncate text-sm opacity-80">повтори слабые места перед уроком</div>
+            <div className="display text-lg font-bold leading-tight">Заниматься сегодня</div>
+            <div className="truncate text-sm opacity-80">готовый план: разминка → слова → урок</div>
           </div>
           <ChevronRight className="shrink-0" />
         </div>

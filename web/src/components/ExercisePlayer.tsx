@@ -18,7 +18,7 @@ function shuffle<T>(arr: T[]): T[] {
 interface Props {
   exercises: Exercise[];
   labels?: string[];
-  onAttempt?: (exerciseId: string, correct: boolean, answer: string) => void;
+  onAttempt?: (exerciseId: string, correct: boolean, answer: string, override?: boolean) => void;
   onFinish?: (score: { correct: number; total: number }) => void;
   doneExtra?: ReactNode;
 }
@@ -30,8 +30,8 @@ export function ExercisePlayer({ exercises, labels, onAttempt, onFinish, doneExt
 
   const ex = exercises[i];
 
-  function handleResult(correct: boolean, answer: string) {
-    onAttempt?.(ex.id, correct, answer);
+  function handleResult(correct: boolean, answer: string, override = false) {
+    onAttempt?.(ex.id, correct, answer, override);
     setResults((r) => { const next = [...r]; next[i] = correct; return next; });
   }
 
@@ -82,16 +82,16 @@ export function ExercisePlayer({ exercises, labels, onAttempt, onFinish, doneExt
   );
 }
 
-function ExerciseCard({ ex, onResult, onNext }: { ex: Exercise; onResult: (c: boolean, a: string) => void; onNext: () => void }) {
+function ExerciseCard({ ex, onResult, onNext }: { ex: Exercise; onResult: (c: boolean, a: string, override?: boolean) => void; onNext: () => void }) {
   const [given, setGiven] = useState('');
   const [selected, setSelected] = useState<string | null>(null);
-  const [built, setBuilt] = useState<string[]>([]);
+  const [built, setBuilt] = useState<{ id: number; text: string }[]>([]);
   const [matchSel, setMatchSel] = useState<Record<string, string>>({});
   const [checked, setChecked] = useState(false);
   const [correct, setCorrect] = useState(false);
   const [logged, setLogged] = useState(false);
 
-  const shuffledTokens = useMemo(() => shuffle(ex.tokens || []), [ex.id]);
+  const shuffledTokens = useMemo(() => shuffle((ex.tokens || []).map((text, id) => ({ id, text }))), [ex.id]);
   const shuffledRights = useMemo(() => shuffle((ex.pairs || []).map((p) => p.right)), [ex.id]);
   const correctText = firstAnswer(ex.answer);
 
@@ -103,7 +103,7 @@ function ExerciseCard({ ex, onResult, onNext }: { ex: Exercise; onResult: (c: bo
       case 'choose':
         ans = selected || ''; ok = !!selected && answerMatches(selected, ex.answer!); break;
       case 'order':
-        ans = built.join(' '); ok = answerMatches(ans, ex.answer!); break;
+        ans = built.map((t) => t.text).join(' '); ok = answerMatches(ans, ex.answer!); break;
       case 'match':
         ans = JSON.stringify(matchSel);
         ok = (ex.pairs || []).every((p) => normalizeAnswer(matchSel[p.left] || '') === normalizeAnswer(p.right));
@@ -118,7 +118,8 @@ function ExerciseCard({ ex, onResult, onNext }: { ex: Exercise; onResult: (c: bo
   }
 
   function selfGrade(ok: boolean) { setCorrect(ok); onResult(ok, given); }
-  function selfGradeOverride() { setCorrect(true); onResult(true, given || selected || built.join(' ')); }
+  // Correcting an auto-graded "wrong" → record as correct WITHOUT re-awarding XP (override).
+  function selfGradeOverride() { setCorrect(true); onResult(true, given || selected || built.join(' '), true); }
 
   async function logError() {
     try {
@@ -192,16 +193,16 @@ function ExerciseCard({ ex, onResult, onNext }: { ex: Exercise; onResult: (c: bo
           <div>
             <div className="mb-3 min-h-[3rem] rounded-2xl border border-dashed border-[var(--color-border)] p-2">
               <div className="flex flex-wrap gap-2">
-                {built.map((t, idx) => (
-                  <button key={idx} disabled={checked} onClick={() => setBuilt(built.filter((_, k) => k !== idx))} className="chip !bg-[var(--color-primary)] !text-[#14102e]">{t}</button>
+                {built.map((t) => (
+                  <button key={t.id} disabled={checked} onClick={() => setBuilt(built.filter((b) => b.id !== t.id))} className="chip !bg-[var(--color-primary)] !text-[#14102e]">{t.text}</button>
                 ))}
                 {!built.length && <span className="p-1 text-sm text-[var(--color-muted)]">Нажимай слова по порядку…</span>}
               </div>
             </div>
             <div className="flex flex-wrap gap-2">
-              {shuffledTokens.map((t, idx) => (
-                <button key={idx} disabled={checked || (built.includes(t) && built.filter((x) => x === t).length >= shuffledTokens.filter((x) => x === t).length)}
-                  onClick={() => setBuilt([...built, t])} className="btn btn-soft !px-3 !py-2">{t}</button>
+              {shuffledTokens.map((t) => (
+                <button key={t.id} disabled={checked || built.some((b) => b.id === t.id)}
+                  onClick={() => setBuilt([...built, t])} className="btn btn-soft !px-3 !py-2">{t.text}</button>
               ))}
             </div>
           </div>
