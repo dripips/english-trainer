@@ -21,6 +21,8 @@ import { ProgressScreen } from './screens/Progress';
 import { Warmup } from './screens/Warmup';
 import { Me } from './screens/Me';
 import { Settings } from './screens/Settings';
+import { Library } from './screens/Library';
+const LibraryBook = lazy(() => import('./screens/LibraryBook').then((m) => ({ default: m.LibraryBook })));
 
 export function App() {
   const { user, loading } = useAuth();
@@ -46,6 +48,8 @@ export function App() {
         <Route path="/me" element={<Me />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/library" element={<Library />} />
+        <Route path="/library/:level/:file" element={<Suspense fallback={<Spinner label="Открываю книгу…" />}><LibraryBook /></Suspense>} />
         <Route path="/textbook" element={<Suspense fallback={<Spinner label="Открываю учебник…" />}><Textbook /></Suspense>} />
         <Route path="*" element={<Home />} />
       </Route>
