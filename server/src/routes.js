@@ -590,7 +590,7 @@ function listLibraryLevel(root, level) {
         size: st.size,
         updatedAt: st.mtime.toISOString(),
         url: `/api/library/books/${encodeURIComponent(level)}/${encodeURIComponent(file)}/file`,
-        coverUrl: meta.cover ? `/api/library/books/${encodeURIComponent(level)}/${encodeURIComponent(file)}/cover` : null,
+        coverUrl: hasCoverImage(dir, file) ? `/api/library/books/${encodeURIComponent(level)}/${encodeURIComponent(file)}/cover` : null,
         recommended: !!meta.recommended,
         tags: Array.isArray(meta.tags) ? meta.tags : [],
         pages: meta.pages || null,
@@ -615,6 +615,14 @@ function resolveLibraryBook(root, rawLevel, rawFile) {
   } catch {
     return null;
   }
+}
+
+function hasCoverImage(dir, file) {
+  const base = file.replace(/\.pdf$/i, '');
+  for (const ext of ['.jpg', '.jpeg', '.webp', '.png']) {
+    try { fs.statSync(path.join(dir, base + ext)); return true; } catch { /* try next */ }
+  }
+  return false;
 }
 
 function readBookMeta(dir, file) {
