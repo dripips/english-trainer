@@ -1,0 +1,897 @@
+{
+  "category": "everyday-core",
+  "title": "Каждый день — дни, месяцы, числа, цвета",
+  "level": "A1",
+  "pos": "mixed",
+  "topic": "everyday",
+  "words": [
+    {
+      "id": "ev-monday",
+      "word": "Monday",
+      "ru": "понедельник",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "days",
+      "tags": [
+        "everyday",
+        "days"
+      ]
+    },
+    {
+      "id": "ev-tuesday",
+      "word": "Tuesday",
+      "ru": "вторник",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "days",
+      "tags": [
+        "everyday",
+        "days"
+      ]
+    },
+    {
+      "id": "ev-wednesday",
+      "word": "Wednesday",
+      "ru": "среда",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "days",
+      "tags": [
+        "everyday",
+        "days"
+      ]
+    },
+    {
+      "id": "ev-thursday",
+      "word": "Thursday",
+      "ru": "четверг",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "days",
+      "tags": [
+        "everyday",
+        "days"
+      ]
+    },
+    {
+      "id": "ev-friday",
+      "word": "Friday",
+      "ru": "пятница",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "days",
+      "tags": [
+        "everyday",
+        "days"
+      ]
+    },
+    {
+      "id": "ev-saturday",
+      "word": "Saturday",
+      "ru": "суббота",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "days",
+      "tags": [
+        "everyday",
+        "days"
+      ]
+    },
+    {
+      "id": "ev-sunday",
+      "word": "Sunday",
+      "ru": "воскресенье",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "days",
+      "tags": [
+        "everyday",
+        "days"
+      ]
+    },
+    {
+      "id": "ev-january",
+      "word": "January",
+      "ru": "январь",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "months",
+      "tags": [
+        "everyday",
+        "months"
+      ]
+    },
+    {
+      "id": "ev-february",
+      "word": "February",
+      "ru": "февраль",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "months",
+      "tags": [
+        "everyday",
+        "months"
+      ]
+    },
+    {
+      "id": "ev-march",
+      "word": "March",
+      "ru": "март",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "months",
+      "tags": [
+        "everyday",
+        "months"
+      ]
+    },
+    {
+      "id": "ev-april",
+      "word": "April",
+      "ru": "апрель",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "months",
+      "tags": [
+        "everyday",
+        "months"
+      ]
+    },
+    {
+      "id": "ev-may",
+      "word": "May",
+      "ru": "май",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "months",
+      "tags": [
+        "everyday",
+        "months"
+      ]
+    },
+    {
+      "id": "ev-june",
+      "word": "June",
+      "ru": "июнь",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "months",
+      "tags": [
+        "everyday",
+        "months"
+      ]
+    },
+    {
+      "id": "ev-july",
+      "word": "July",
+      "ru": "июль",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "months",
+      "tags": [
+        "everyday",
+        "months"
+      ]
+    },
+    {
+      "id": "ev-august",
+      "word": "August",
+      "ru": "август",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "months",
+      "tags": [
+        "everyday",
+        "months"
+      ]
+    },
+    {
+      "id": "ev-september",
+      "word": "September",
+      "ru": "сентябрь",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "months",
+      "tags": [
+        "everyday",
+        "months"
+      ]
+    },
+    {
+      "id": "ev-october",
+      "word": "October",
+      "ru": "октябрь",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "months",
+      "tags": [
+        "everyday",
+        "months"
+      ]
+    },
+    {
+      "id": "ev-november",
+      "word": "November",
+      "ru": "ноябрь",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "months",
+      "tags": [
+        "everyday",
+        "months"
+      ]
+    },
+    {
+      "id": "ev-december",
+      "word": "December",
+      "ru": "декабрь",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "months",
+      "tags": [
+        "everyday",
+        "months"
+      ]
+    },
+    {
+      "id": "ev-one",
+      "word": "one",
+      "ru": "1 — один",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-two",
+      "word": "two",
+      "ru": "2 — два",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-three",
+      "word": "three",
+      "ru": "3 — три",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-four",
+      "word": "four",
+      "ru": "4 — четыре",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-five",
+      "word": "five",
+      "ru": "5 — пять",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-six",
+      "word": "six",
+      "ru": "6 — шесть",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-seven",
+      "word": "seven",
+      "ru": "7 — семь",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-eight",
+      "word": "eight",
+      "ru": "8 — восемь",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-nine",
+      "word": "nine",
+      "ru": "9 — девять",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-ten",
+      "word": "ten",
+      "ru": "10 — десять",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-eleven",
+      "word": "eleven",
+      "ru": "11 — одиннадцать",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-twelve",
+      "word": "twelve",
+      "ru": "12 — двенадцать",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-thirteen",
+      "word": "thirteen",
+      "ru": "13 — тринадцать",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-fourteen",
+      "word": "fourteen",
+      "ru": "14 — четырнадцать",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-fifteen",
+      "word": "fifteen",
+      "ru": "15 — пятнадцать",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-sixteen",
+      "word": "sixteen",
+      "ru": "16 — шестнадцать",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-seventeen",
+      "word": "seventeen",
+      "ru": "17 — семнадцать",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-eighteen",
+      "word": "eighteen",
+      "ru": "18 — восемнадцать",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-nineteen",
+      "word": "nineteen",
+      "ru": "19 — девятнадцать",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-twenty",
+      "word": "twenty",
+      "ru": "20 — двадцать",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-thirty",
+      "word": "thirty",
+      "ru": "30 — тридцать",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-forty",
+      "word": "forty",
+      "ru": "40 — сорок",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-fifty",
+      "word": "fifty",
+      "ru": "50 — пятьдесят",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-sixty",
+      "word": "sixty",
+      "ru": "60 — шестьдесят",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-seventy",
+      "word": "seventy",
+      "ru": "70 — семьдесят",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-eighty",
+      "word": "eighty",
+      "ru": "80 — восемьдесят",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-ninety",
+      "word": "ninety",
+      "ru": "90 — девяносто",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-hundred",
+      "word": "hundred",
+      "ru": "100 — сто",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-thousand",
+      "word": "thousand",
+      "ru": "1000 — тысяча",
+      "pos": "number",
+      "level": "A1",
+      "topic": "numbers",
+      "tags": [
+        "everyday",
+        "numbers"
+      ]
+    },
+    {
+      "id": "ev-first",
+      "word": "first",
+      "ru": "1-й — первый",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "ordinals",
+      "tags": [
+        "everyday",
+        "ordinals"
+      ]
+    },
+    {
+      "id": "ev-second",
+      "word": "second",
+      "ru": "2-й — второй",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "ordinals",
+      "tags": [
+        "everyday",
+        "ordinals"
+      ]
+    },
+    {
+      "id": "ev-third",
+      "word": "third",
+      "ru": "3-й — третий",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "ordinals",
+      "tags": [
+        "everyday",
+        "ordinals"
+      ]
+    },
+    {
+      "id": "ev-fourth",
+      "word": "fourth",
+      "ru": "4-й — четвёртый",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "ordinals",
+      "tags": [
+        "everyday",
+        "ordinals"
+      ]
+    },
+    {
+      "id": "ev-fifth",
+      "word": "fifth",
+      "ru": "5-й — пятый",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "ordinals",
+      "tags": [
+        "everyday",
+        "ordinals"
+      ]
+    },
+    {
+      "id": "ev-sixth",
+      "word": "sixth",
+      "ru": "6-й — шестой",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "ordinals",
+      "tags": [
+        "everyday",
+        "ordinals"
+      ]
+    },
+    {
+      "id": "ev-seventh",
+      "word": "seventh",
+      "ru": "7-й — седьмой",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "ordinals",
+      "tags": [
+        "everyday",
+        "ordinals"
+      ]
+    },
+    {
+      "id": "ev-eighth",
+      "word": "eighth",
+      "ru": "8-й — восьмой",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "ordinals",
+      "tags": [
+        "everyday",
+        "ordinals"
+      ]
+    },
+    {
+      "id": "ev-ninth",
+      "word": "ninth",
+      "ru": "9-й — девятый",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "ordinals",
+      "tags": [
+        "everyday",
+        "ordinals"
+      ]
+    },
+    {
+      "id": "ev-tenth",
+      "word": "tenth",
+      "ru": "10-й — десятый",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "ordinals",
+      "tags": [
+        "everyday",
+        "ordinals"
+      ]
+    },
+    {
+      "id": "ev-red",
+      "word": "red",
+      "ru": "красный",
+      "pos": "adjective",
+      "level": "A1",
+      "topic": "colors",
+      "tags": [
+        "everyday",
+        "colors"
+      ]
+    },
+    {
+      "id": "ev-orange",
+      "word": "orange",
+      "ru": "оранжевый",
+      "pos": "adjective",
+      "level": "A1",
+      "topic": "colors",
+      "tags": [
+        "everyday",
+        "colors"
+      ]
+    },
+    {
+      "id": "ev-yellow",
+      "word": "yellow",
+      "ru": "жёлтый",
+      "pos": "adjective",
+      "level": "A1",
+      "topic": "colors",
+      "tags": [
+        "everyday",
+        "colors"
+      ]
+    },
+    {
+      "id": "ev-green",
+      "word": "green",
+      "ru": "зелёный",
+      "pos": "adjective",
+      "level": "A1",
+      "topic": "colors",
+      "tags": [
+        "everyday",
+        "colors"
+      ]
+    },
+    {
+      "id": "ev-blue",
+      "word": "blue",
+      "ru": "синий",
+      "pos": "adjective",
+      "level": "A1",
+      "topic": "colors",
+      "tags": [
+        "everyday",
+        "colors"
+      ]
+    },
+    {
+      "id": "ev-light-blue",
+      "word": "light blue",
+      "ru": "голубой",
+      "pos": "adjective",
+      "level": "A1",
+      "topic": "colors",
+      "tags": [
+        "everyday",
+        "colors"
+      ]
+    },
+    {
+      "id": "ev-purple",
+      "word": "purple",
+      "ru": "фиолетовый",
+      "pos": "adjective",
+      "level": "A1",
+      "topic": "colors",
+      "tags": [
+        "everyday",
+        "colors"
+      ]
+    },
+    {
+      "id": "ev-pink",
+      "word": "pink",
+      "ru": "розовый",
+      "pos": "adjective",
+      "level": "A1",
+      "topic": "colors",
+      "tags": [
+        "everyday",
+        "colors"
+      ]
+    },
+    {
+      "id": "ev-brown",
+      "word": "brown",
+      "ru": "коричневый",
+      "pos": "adjective",
+      "level": "A1",
+      "topic": "colors",
+      "tags": [
+        "everyday",
+        "colors"
+      ]
+    },
+    {
+      "id": "ev-grey",
+      "word": "grey",
+      "ru": "серый",
+      "pos": "adjective",
+      "level": "A1",
+      "topic": "colors",
+      "tags": [
+        "everyday",
+        "colors"
+      ]
+    },
+    {
+      "id": "ev-black",
+      "word": "black",
+      "ru": "чёрный",
+      "pos": "adjective",
+      "level": "A1",
+      "topic": "colors",
+      "tags": [
+        "everyday",
+        "colors"
+      ]
+    },
+    {
+      "id": "ev-white",
+      "word": "white",
+      "ru": "белый",
+      "pos": "adjective",
+      "level": "A1",
+      "topic": "colors",
+      "tags": [
+        "everyday",
+        "colors"
+      ]
+    },
+    {
+      "id": "ev-spring",
+      "word": "spring",
+      "ru": "весна",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "seasons",
+      "tags": [
+        "everyday",
+        "seasons"
+      ]
+    },
+    {
+      "id": "ev-summer",
+      "word": "summer",
+      "ru": "лето",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "seasons",
+      "tags": [
+        "everyday",
+        "seasons"
+      ]
+    },
+    {
+      "id": "ev-autumn",
+      "word": "autumn",
+      "ru": "осень",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "seasons",
+      "tags": [
+        "everyday",
+        "seasons"
+      ]
+    },
+    {
+      "id": "ev-winter",
+      "word": "winter",
+      "ru": "зима",
+      "pos": "noun",
+      "level": "A1",
+      "topic": "seasons",
+      "tags": [
+        "everyday",
+        "seasons"
+      ]
+    }
+  ]
+}
