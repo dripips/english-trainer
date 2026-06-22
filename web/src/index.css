@@ -185,8 +185,9 @@ html.is-standalone .pt-safe { padding-top: calc(max(env(safe-area-inset-top, 0px
   @apply my-3 rounded-xl border-l-4 px-3 py-2;
   border-color: var(--color-amber); background: rgba(255, 200, 87, 0.08); color: #ffe6ad;
 }
-.prose-rich table { @apply my-3 block w-full max-w-full overflow-x-auto border-collapse rounded-xl text-sm; }
-.prose-rich th, .prose-rich td { @apply border px-2.5 py-1.5 text-left; border-color: var(--color-border); }
+.prose-rich .table-wrap { @apply my-3 max-w-full overflow-x-auto rounded-xl; -webkit-overflow-scrolling: touch; }
+.prose-rich table { @apply w-auto min-w-full border-collapse text-sm; }
+.prose-rich th, .prose-rich td { @apply border px-2.5 py-1.5 text-left align-top; border-color: var(--color-border); }
 .prose-rich th { background: var(--color-surface2); color: #fff; }
 .prose-rich a { color: var(--color-sky); }
 .prose-rich hr { @apply my-4 border-0 border-t; border-color: var(--color-border); }

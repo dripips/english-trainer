@@ -21,11 +21,11 @@ const LABELS: Lbl[] = [
   { word: 'hair', bx: 170, by: 24, ly: 30, side: 'r' },
   { word: 'ear', bx: 197, by: 50, ly: 84, side: 'r' },
   { word: 'shoulder', bx: 203, by: 92, ly: 138, side: 'r' },
-  { word: 'arm', bx: 224, by: 150, ly: 192, side: 'r' },
-  { word: 'elbow', bx: 232, by: 202, ly: 246, side: 'r' },
-  { word: 'hand', bx: 236, by: 252, ly: 300, side: 'r' },
+  { word: 'arm', bx: 224, by: 145, ly: 192, side: 'r' },
+  { word: 'elbow', bx: 236, by: 198, ly: 246, side: 'r' },
+  { word: 'hand', bx: 236, by: 224, ly: 300, side: 'r' },
   { word: 'knee', bx: 188, by: 384, ly: 388, side: 'r' },
-  { word: 'foot', bx: 188, by: 508, ly: 504, side: 'r' },
+  { word: 'foot', bx: 196, by: 520, ly: 506, side: 'r' },
 ];
 const L_TEXT = 8, L_INNER = 70, R_TEXT = 332, R_INNER = 270;
 
@@ -106,6 +106,10 @@ export function Body() {
             <path d="M200 90 Q219 96 225 117 L241 206 Q243 221 232 221 Q221 221 219 208 L206 129 Q201 109 190 103 Z" />
             <path d="M150 250 Q150 332 145 416 L141 506 Q141 518 154 518 Q166 518 166 506 L169 382 Q170 332 170 296 Z" />
             <path d="M190 250 Q190 332 195 416 L199 506 Q199 518 186 518 Q174 518 174 506 L171 382 Q170 332 170 296 Z" />
+            <ellipse cx="104" cy="224" rx="9" ry="11" />
+            <ellipse cx="236" cy="224" rx="9" ry="11" />
+            <ellipse cx="150" cy="521" rx="15" ry="8" />
+            <ellipse cx="190" cy="521" rx="15" ry="8" />
           </g>
 
           {/* labels with leader lines */}
