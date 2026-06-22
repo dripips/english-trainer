@@ -4,7 +4,7 @@ import { BookText, CheckCircle2 } from 'lucide-react';
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
-import { Spinner, LevelBadge } from '../components/ui';
+import { ListSkeleton, LevelBadge } from '../components/ui';
 import type { LessonMeta } from '../types';
 
 const LEVELS = ['A1', 'A2', 'B1', 'B2'] as const;
@@ -48,7 +48,7 @@ export function Reading() {
     return g;
   }, [data]);
 
-  if (loading || !data) return <Spinner />;
+  if (loading || !data) return <div><Header back title="Чтение" subtitle="короткие тексты и сказки с переводом" /><ListSkeleton rows={4} image /></div>;
 
   const hasAny = Object.keys(byLevel).length > 0;
   const visibleLevels = filter === 'all' ? LEVELS.filter((lv) => byLevel[lv]?.length) : [filter];

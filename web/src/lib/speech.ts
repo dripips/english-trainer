@@ -95,50 +95,81 @@ export function prefetchTts(text: string) {
 }
 export const prefetchWord = prefetchTts; // back-compat
 
-// Play a blob URL, resolving when playback ENDS. onStart fires when audio actually begins.
-function playUrlTracked(url: string, onStart?: () => void): Promise<void> {
-  return new Promise((resolve) => {
-    const a = getAudio();
-    if (!a) { resolve(); return; }
-    const done = () => { a.onended = null; a.onerror = null; a.onplaying = null; resolve(); };
-    a.onplaying = () => onStart?.();
-    a.onended = done;
-    a.onerror = done;
-    try { a.pause(); a.src = url; a.currentTime = 0; void a.play().catch(done); }
-    catch { done(); }
-  });
-}
+export interface SpeakOpts { onStart?: () => void; onProgress?: (p: number) => void }
+export interface SpeakHandle { stop: () => void; done: Promise<void> }
 
-function systemSpeakTracked(text: string, lang: string, rate: number, onStart?: () => void): Promise<void> {
-  return new Promise((resolve) => {
-    if (typeof speechSynthesis === 'undefined') { resolve(); return; }
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = lang; u.rate = rate; u.pitch = 1;
-    const v = pickVoice(lang);
-    if (v) u.voice = v;
-    u.onstart = () => onStart?.();
-    u.onend = () => resolve();
-    u.onerror = () => resolve();
-    speechSynthesis.speak(u);
-    setTimeout(() => onStart?.(), 200); // some engines never fire onstart
-  });
-}
+let playSeq = 0; // identifies the current playback so superseded ones release their UI
 
-// Speak and resolve when playback finishes. onStart switches a UI from "loading" to "playing".
-export function speakTracked(text: string, lang = 'en-US', onStart?: () => void): Promise<void> {
-  const t = (text || '').trim();
-  if (!t) return Promise.resolve();
+// Stop whatever is currently speaking (audio or system voice).
+export function stopSpeaking() {
+  playSeq++;
   try { speechSynthesis?.cancel(); } catch { /* ignore */ }
-  if (!lang.startsWith('en') || t.length > MAX_TTS || ttsBroken) return systemSpeakTracked(t, lang, 0.95, onStart);
-  const cached = blobCache.get(t);
-  if (cached) return playUrlTracked(cached, onStart); // sync play preserves user-gesture activation
-  return fetchTts(t).then((url) => (url ? playUrlTracked(url, onStart) : systemSpeakTracked(t, lang, 0.95, onStart)));
+  try { audioEl?.pause(); } catch { /* ignore */ }
 }
 
-export function speak(text: string, lang = 'en-US') { void speakTracked(text, lang); }
-export function pronounce(text: string, lang = 'en-US') { void speakTracked(text, lang); }
-export function speakWord(word: string, lang = 'en-US') { void speakTracked(word, lang); } // back-compat
+function playUrlControlled(url: string, opts: SpeakOpts): SpeakHandle {
+  const a = getAudio();
+  const myId = ++playSeq;
+  let resolveDone: () => void;
+  const done = new Promise<void>((r) => { resolveDone = r; });
+  if (!a) { resolveDone!(); return { stop: () => {}, done }; }
+  const cleanup = () => { a.onended = null; a.onerror = null; a.onplaying = null; a.ontimeupdate = null; };
+  const finish = () => { if (playSeq === myId) { cleanup(); } resolveDone(); };
+  a.onplaying = () => { if (playSeq === myId) opts.onStart?.(); };
+  a.ontimeupdate = () => { if (playSeq === myId && a.duration > 0) opts.onProgress?.(Math.min(1, a.currentTime / a.duration)); };
+  a.onended = () => { if (playSeq === myId) opts.onProgress?.(1); finish(); };
+  a.onerror = finish;
+  try { a.pause(); a.src = url; a.currentTime = 0; void a.play().catch(finish); }
+  catch { finish(); }
+  return { stop: () => { if (playSeq === myId) { try { a.pause(); } catch { /* ignore */ } cleanup(); resolveDone(); } }, done };
+}
+
+function systemSpeakControlled(text: string, lang: string, rate: number, opts: SpeakOpts): SpeakHandle {
+  const myId = ++playSeq;
+  let resolveDone: () => void;
+  const done = new Promise<void>((r) => { resolveDone = r; });
+  if (typeof speechSynthesis === 'undefined') { resolveDone!(); return { stop: () => {}, done }; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = lang; u.rate = rate; u.pitch = 1;
+  const v = pickVoice(lang);
+  if (v) u.voice = v;
+  u.onstart = () => { if (playSeq === myId) opts.onStart?.(); };
+  u.onend = () => resolveDone();
+  u.onerror = () => resolveDone();
+  speechSynthesis.speak(u);
+  setTimeout(() => { if (playSeq === myId) opts.onStart?.(); }, 200);
+  return { stop: () => { try { speechSynthesis.cancel(); } catch { /* ignore */ } resolveDone(); }, done };
+}
+
+// Speak with playback control: returns { stop, done }. onStart → switch UI loading→playing,
+// onProgress(0..1) → drive a progress ring. Resolves when playback ends/stops.
+export function speakControlled(text: string, lang = 'en-US', opts: SpeakOpts = {}): SpeakHandle {
+  const t = (text || '').trim();
+  if (!t) return { stop: () => {}, done: Promise.resolve() };
+  stopSpeaking();
+  if (!lang.startsWith('en') || t.length > MAX_TTS || ttsBroken) return systemSpeakControlled(t, lang, 0.95, opts);
+  const cached = blobCache.get(t);
+  if (cached) return playUrlControlled(cached, opts); // sync play preserves user-gesture activation
+  // Not cached: fetch then play. Wrap so the handle can cancel even mid-fetch.
+  let cancelled = false;
+  let inner: SpeakHandle | null = null;
+  const done = (async () => {
+    const url = await fetchTts(t);
+    if (cancelled) return;
+    inner = url ? playUrlControlled(url, opts) : systemSpeakControlled(t, lang, 0.95, opts);
+    await inner.done;
+  })();
+  return { stop: () => { cancelled = true; inner?.stop(); stopSpeaking(); }, done };
+}
+
+// Back-compat fire-and-forget helpers (also resolve a tracking promise via speakControlled).
+export function speakTracked(text: string, lang = 'en-US', onStart?: () => void): Promise<void> {
+  return speakControlled(text, lang, { onStart }).done;
+}
+export function speak(text: string, lang = 'en-US') { void speakControlled(text, lang); }
+export function pronounce(text: string, lang = 'en-US') { void speakControlled(text, lang); }
+export function speakWord(word: string, lang = 'en-US') { void speakControlled(word, lang); } // back-compat
 
 // ---- Speech recognition ----
 type SR = typeof window & { SpeechRecognition?: any; webkitSpeechRecognition?: any };

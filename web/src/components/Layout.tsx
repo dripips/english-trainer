@@ -62,8 +62,8 @@ export function Layout() {
   return (
     <div className="app-shell mx-auto flex max-w-md flex-col overflow-hidden">
       <main ref={scrollRef} className="app-main pt-safe no-scrollbar flex-1 overflow-y-auto overflow-x-hidden overscroll-contain px-4 pb-6">
-        <div ref={contentRef}>
-          <Outlet key={loc.pathname} />
+        <div ref={contentRef} key={loc.pathname} className="animate-fadein">
+          <Outlet />
         </div>
       </main>
 
