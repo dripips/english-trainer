@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Flame, Brain, Layers, BookOpen, Library, Bug, Ruler, TrendingUp, ChevronRight, type LucideIcon } from 'lucide-react';
+import { Flame, Brain, Layers, Library, Bug, Ruler, TrendingUp, Map, ChevronRight, type LucideIcon } from 'lucide-react';
 import { api } from '../api';
 import { useAuth } from '../auth';
 import { useApi } from '../lib/useApi';
@@ -101,11 +101,14 @@ export function Home() {
         )}
       </Link>
 
-      {/* lessons progress */}
-      <Link to="/lessons" className="card block overflow-hidden active:scale-[0.98]">
+      {/* study plan progress */}
+      <Link to="/plan" className="card block overflow-hidden active:scale-[0.98]">
         <div className="mb-2 flex items-center gap-3">
-          <IconBadge icon={BookOpen} color="var(--color-amber)" size="sm" />
-          <div className="flex-1 font-bold">Уроки</div>
+          <IconBadge icon={Map} color="var(--color-amber)" size="sm" />
+          <div className="min-w-0 flex-1">
+            <div className="font-bold">План обучения</div>
+            <div className="truncate text-xs text-[var(--color-muted)]">путь A1 → IELTS 6.5 · статистика</div>
+          </div>
           <span className="text-sm text-[var(--color-muted)]">{data.lessonsDone}/{data.lessonsTotal}</span>
         </div>
         <ProgressBar value={data.lessonsDone} max={data.lessonsTotal} color="var(--color-amber)" />
@@ -114,7 +117,7 @@ export function Home() {
       <div className="grid grid-cols-2 gap-3">
         <StatTile to="/vocab" icon={Library} value={data.srs.total} label="слов в колоде" color="var(--color-mint)" />
         <StatTile to="/errors" icon={Bug} value={data.openErrors} label="ошибок в журнале" color="var(--color-danger)" />
-        <NavTile to="/grammar" icon={Ruler} label="Грамматика" sub="справочник правил" color="var(--color-sky)" />
+        <NavTile to="/grammar" icon={Ruler} label="Правила" sub="времена и грамматика" color="var(--color-sky)" />
         <NavTile to="/progress" icon={TrendingUp} label="Прогресс" sub="владение темами" color="var(--color-primary)" />
       </div>
     </div>

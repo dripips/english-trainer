@@ -149,3 +149,29 @@ export interface WritingFeedback {
   tip: string;
   provider: string;
 }
+
+export interface PlanLesson {
+  id: string;
+  title: string;
+  level: string;
+  exerciseCount: number;
+  attempted: number;
+  done: boolean;
+}
+
+export interface PlanPhase {
+  phase: number;
+  lessons: PlanLesson[];
+  done: number;
+  total: number;
+}
+
+export interface StudyPlan {
+  phases: PlanPhase[];
+  totalDone: number;
+  totalLessons: number;
+  studyDaysThisWeek: number;
+  lessonsThisWeek: number;
+  srsTotal: number;
+  firstDay: string | null;
+}

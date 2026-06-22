@@ -1,7 +1,7 @@
 import type {
   User, Lesson, LessonMeta, GrammarMeta, GrammarCard, Word, VocabCategory,
   QueueItem, Rating, ErrorEntry, ProgressEntry, Dashboard, LibraryLevel, GamificationData,
-  WritingFeedback,
+  WritingFeedback, StudyPlan,
 } from './types';
 
 async function req<T>(path: string, opts: RequestInit = {}): Promise<T> {
@@ -137,6 +137,9 @@ export const api = {
 
   // gamification
   gamification: () => get<GamificationData>('/gamification'),
+
+  // study plan
+  plan: () => get<StudyPlan>('/plan'),
 
   // AI writing feedback
   checkWriting: (body: { text: string; task?: string; mode?: 'free' | 'task1' | 'task2' | 'speaking' }) =>

@@ -1,5 +1,5 @@
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import { NavLink, Outlet, useLocation, useNavigationType } from 'react-router-dom';
+import { useEffect, useLayoutEffect, useRef } from 'react';
 import { Home, BookOpen, Layers, Zap, User, type LucideIcon } from 'lucide-react';
 import { LookupLayer } from './LookupLayer';
 
@@ -11,17 +11,60 @@ const TABS: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = [
   { to: '/me', label: 'Я', icon: User },
 ];
 
+// Remembered scroll position per history entry (survives remounts within the session).
+const scrollPositions = new Map<string, number>();
+
 export function Layout() {
   const loc = useLocation();
+  const navType = useNavigationType(); // 'POP' (back/forward) | 'PUSH' | 'REPLACE'
   const scrollRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
-  // reset scroll to top on route change
-  useEffect(() => { scrollRef.current?.scrollTo({ top: 0 }); }, [loc.pathname]);
+  // Continuously remember the scroll position for the current history entry.
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => { scrollPositions.set(loc.key, el.scrollTop); };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, [loc.key]);
+
+  // On navigation: restore position when going back/forward, reset to top on new pages.
+  useLayoutEffect(() => {
+    const el = scrollRef.current;
+    const content = contentRef.current;
+    if (!el) return;
+
+    if (navType !== 'POP') {
+      el.scrollTo({ top: 0 });
+      return;
+    }
+
+    const saved = scrollPositions.get(loc.key) ?? 0;
+    el.scrollTo({ top: saved });
+    if (saved === 0 || !content) return;
+
+    // Content often loads async (data fetch); re-apply the saved position as the
+    // page grows, until it fits or a short window elapses.
+    let active = true;
+    const reapply = () => {
+      if (!active) return;
+      if (el.scrollTop !== saved && el.scrollHeight - el.clientHeight >= saved) {
+        el.scrollTo({ top: saved });
+      }
+    };
+    const ro = new ResizeObserver(reapply);
+    ro.observe(content);
+    const stop = setTimeout(() => { active = false; ro.disconnect(); }, 1500);
+    return () => { active = false; clearTimeout(stop); ro.disconnect(); };
+  }, [loc.key, navType]);
 
   return (
     <div className="app-shell mx-auto flex max-w-md flex-col overflow-hidden">
       <main ref={scrollRef} className="app-main pt-safe no-scrollbar flex-1 overflow-y-auto overflow-x-hidden overscroll-contain px-4 pb-6">
-        <Outlet key={loc.pathname} />
+        <div ref={contentRef}>
+          <Outlet key={loc.pathname} />
+        </div>
       </main>
 
       <LookupLayer />

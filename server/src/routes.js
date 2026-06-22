@@ -510,6 +510,50 @@ export async function registerRoutes(app) {
     };
   });
 
+  // ---------------- Study plan & pacing ----------------
+  app.get('/api/plan', async (req) => {
+    const uid = req.user.uid;
+    const store = getStore();
+    const rows = db.prepare(
+      'SELECT lesson_id, COUNT(DISTINCT exercise_id) attempted FROM lesson_attempts WHERE user_id=? GROUP BY lesson_id'
+    ).all(uid);
+    const attemptedMap = new Map(rows.map((r) => [r.lesson_id, r.attempted]));
+
+    const phases = new Map();
+    for (const l of store.lessons) {
+      const total = l.exercises.length;
+      const att = attemptedMap.get(l.id) || 0;
+      const done = total > 0 && att >= total;
+      const p = l.phase ?? 0;
+      if (!phases.has(p)) phases.set(p, { phase: p, lessons: [], done: 0, total: 0 });
+      const bucket = phases.get(p);
+      bucket.lessons.push({ id: l.id, title: l.title, level: l.level, exerciseCount: total, attempted: att, done });
+      bucket.total++;
+      if (done) bucket.done++;
+    }
+
+    const since = new Date(Date.now() - 7 * 86400000).toISOString().slice(0, 10);
+    const studyDaysThisWeek = db.prepare('SELECT COUNT(*) c FROM activity WHERE user_id=? AND day>=?').get(uid, since).c;
+    const lessonsThisWeek = db.prepare(
+      'SELECT COUNT(DISTINCT lesson_id) c FROM lesson_attempts WHERE user_id=? AND date(created_at)>=?'
+    ).get(uid, since).c;
+    const srsTotal = db.prepare('SELECT COUNT(*) c FROM srs_cards WHERE user_id=?').get(uid).c;
+    const firstDay = db.prepare('SELECT MIN(day) d FROM activity WHERE user_id=?').get(uid)?.d || null;
+
+    const phaseList = [...phases.values()].sort((a, b) => a.phase - b.phase);
+    const totalDone = phaseList.reduce((s, p) => s + p.done, 0);
+
+    return {
+      phases: phaseList,
+      totalDone,
+      totalLessons: store.lessons.length,
+      studyDaysThisWeek,
+      lessonsThisWeek,
+      srsTotal,
+      firstDay,
+    };
+  });
+
   // ---------------- Gamification ----------------
   app.get('/api/gamification', async (req) => {
     const uid = req.user.uid;
