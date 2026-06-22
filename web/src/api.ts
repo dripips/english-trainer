@@ -124,4 +124,12 @@ export const api = {
 
   // library
   libraryBooks: () => get<{ levels: LibraryLevel[] }>('/library/books'),
+
+  // practice
+  practiceQueue: (count = 20, level?: string) => {
+    const q = new URLSearchParams({ count: String(count) });
+    if (level) q.set('level', level);
+    return get<{ items: import('./types').PracticeItem[] }>(`/practice/queue?${q}`);
+  },
+  practiceStats: () => get<import('./types').PracticeStats>('/practice/stats'),
 };

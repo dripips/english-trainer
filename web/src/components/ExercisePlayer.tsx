@@ -17,11 +17,12 @@ function shuffle<T>(arr: T[]): T[] {
 
 interface Props {
   exercises: Exercise[];
+  labels?: string[];
   onAttempt?: (exerciseId: string, correct: boolean, answer: string) => void;
   onFinish?: (score: { correct: number; total: number }) => void;
 }
 
-export function ExercisePlayer({ exercises, onAttempt, onFinish }: Props) {
+export function ExercisePlayer({ exercises, labels, onAttempt, onFinish }: Props) {
   const [i, setI] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
   const [done, setDone] = useState(false);
@@ -69,6 +70,11 @@ export function ExercisePlayer({ exercises, onAttempt, onFinish }: Props) {
         </div>
         <span className="shrink-0 text-xs font-semibold text-[var(--color-muted)]">{i + 1}/{exercises.length}</span>
       </div>
+      {labels?.[i] && (
+        <div className="mb-2 flex items-center gap-1.5">
+          <span className="rounded-full bg-[var(--color-surface2)] px-2.5 py-0.5 text-[11px] font-semibold text-[var(--color-muted)]">{labels[i]}</span>
+        </div>
+      )}
       <ExerciseCard key={ex.id} ex={ex} onResult={handleResult} onNext={next} />
     </div>
   );

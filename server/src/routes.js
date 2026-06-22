@@ -98,6 +98,62 @@ export async function registerRoutes(app) {
     return { ok: true };
   });
 
+  // ---------------- Practice ----------------
+  app.get('/api/practice/queue', async (req) => {
+    const uid = req.user.uid;
+    const count = Math.min(Number(req.query.count) || 20, 50);
+    const level = req.query.level ? String(req.query.level).toUpperCase() : null;
+
+    const lessons = getStore().lessons;
+    const allItems = [];
+    for (const lesson of lessons) {
+      if (level && lesson.level !== level) continue;
+      for (const ex of lesson.exercises || []) {
+        allItems.push({ lessonId: lesson.id, lessonTitle: lesson.title, level: lesson.level, exercise: ex });
+      }
+    }
+    if (!allItems.length) return { items: [] };
+
+    // Per-exercise stats for this user
+    const rows = db.prepare(
+      'SELECT lesson_id, exercise_id, COUNT(*) total, SUM(correct) correct FROM lesson_attempts WHERE user_id = ? GROUP BY lesson_id, exercise_id'
+    ).all(uid);
+    const statsMap = new Map(rows.map((r) => [`${r.lesson_id}/${r.exercise_id}`, r]));
+
+    // Weight: never tried=3, always wrong=2.5, 50% correct=1.5, always correct=0.5
+    const weighted = allItems.map((item) => {
+      const key = `${item.lessonId}/${item.exercise.id}`;
+      const s = statsMap.get(key);
+      const weight = s ? 0.5 + 2 * (1 - s.correct / s.total) : 3;
+      return { ...item, weight };
+    });
+
+    // Weighted random sample without replacement
+    const items = weightedSample(weighted, Math.min(count, weighted.length));
+    return { items: items.map(({ weight, ...rest }) => rest) };
+  });
+
+  app.get('/api/practice/stats', async (req) => {
+    const uid = req.user.uid;
+    const all = db.prepare(
+      'SELECT lesson_id, COUNT(*) total, SUM(correct) correct FROM lesson_attempts WHERE user_id = ? GROUP BY lesson_id'
+    ).all(uid);
+    const today = db.prepare(
+      "SELECT COUNT(*) c, SUM(correct) ok FROM lesson_attempts WHERE user_id = ? AND date(created_at) = date('now')"
+    ).get(uid);
+    const totalEx = all.reduce((s, r) => s + r.total, 0);
+    const totalOk = all.reduce((s, r) => s + r.correct, 0);
+    const weak = all
+      .filter((r) => r.total >= 3)
+      .sort((a, b) => (a.correct / a.total) - (b.correct / b.total))
+      .slice(0, 3)
+      .map((r) => {
+        const lesson = getStore().lessonById.get(r.lesson_id);
+        return { lessonId: r.lesson_id, title: lesson?.title || r.lesson_id, correctRate: Math.round(100 * r.correct / r.total) };
+      });
+    return { total: totalEx, correct: totalOk, todayCount: today?.c || 0, todayCorrect: today?.ok || 0, weakSpots: weak };
+  });
+
   // Server-side answer check (also done client-side; this is the source of truth)
   app.post('/api/check', async (req) => {
     const { accepted, given } = req.body || {};
@@ -615,6 +671,23 @@ function resolveLibraryBook(root, rawLevel, rawFile) {
   } catch {
     return null;
   }
+}
+
+function weightedSample(items, n) {
+  const result = [];
+  const pool = items.map((item) => ({ ...item }));
+  for (let i = 0; i < n && pool.length > 0; i++) {
+    const total = pool.reduce((s, x) => s + x.weight, 0);
+    let r = Math.random() * total;
+    let idx = 0;
+    for (let j = 0; j < pool.length; j++) {
+      r -= pool[j].weight;
+      if (r <= 0) { idx = j; break; }
+    }
+    result.push(pool[idx]);
+    pool.splice(idx, 1);
+  }
+  return result;
 }
 
 function hasCoverImage(dir, file) {

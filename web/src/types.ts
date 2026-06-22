@@ -85,6 +85,21 @@ export interface Dashboard {
   activeDays: string[];
 }
 
+export interface PracticeItem {
+  lessonId: string;
+  lessonTitle: string;
+  level: string;
+  exercise: Exercise;
+}
+
+export interface PracticeStats {
+  total: number;
+  correct: number;
+  todayCount: number;
+  todayCorrect: number;
+  weakSpots: { lessonId: string; title: string; correctRate: number }[];
+}
+
 export interface LibraryBook {
   level: 'A1' | 'A2' | 'B1' | 'B2';
   file: string;

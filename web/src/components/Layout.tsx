@@ -1,13 +1,13 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-import { Home, BookOpen, Layers, BookMarked, User, type LucideIcon } from 'lucide-react';
+import { Home, BookOpen, Layers, Zap, User, type LucideIcon } from 'lucide-react';
 import { LookupLayer } from './LookupLayer';
 
 const TABS: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = [
   { to: '/', label: 'Дом', icon: Home, end: true },
   { to: '/lessons', label: 'Уроки', icon: BookOpen },
+  { to: '/practice', label: 'Практика', icon: Zap },
   { to: '/review', label: 'Слова', icon: Layers },
-  { to: '/library', label: 'Книги', icon: BookMarked },
   { to: '/me', label: 'Я', icon: User },
 ];
 
