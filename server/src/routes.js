@@ -99,6 +99,29 @@ export async function registerRoutes(app) {
     return { ok: true };
   });
 
+  app.post('/api/lessons/:id/add-gloss-to-srs', async (req, reply) => {
+    const uid = req.user.uid;
+    const lesson = getStore().lessonById.get(req.params.id);
+    if (!lesson) return reply.code(404).send({ error: 'not found' });
+    const gloss = lesson.reading?.gloss || [];
+    if (!gloss.length) return { added: 0, total: 0 };
+    let added = 0;
+    for (const g of gloss) {
+      const wordId = `gloss:${req.params.id}:${slugify(g.en)}`;
+      db.prepare(
+        `INSERT OR IGNORE INTO custom_words (id, user_id, word, ru, topic) VALUES (?, ?, ?, ?, ?)`
+      ).run(wordId, uid, g.en, g.ru || null, req.params.id);
+      const exists = db.prepare('SELECT id FROM srs_cards WHERE user_id=? AND word_id=?').get(uid, wordId);
+      if (!exists) {
+        db.prepare(
+          `INSERT INTO srs_cards (user_id, word_id, source, state, due) VALUES (?, ?, 'custom', 'new', datetime('now'))`
+        ).run(uid, wordId);
+        added++;
+      }
+    }
+    return { added, total: gloss.length };
+  });
+
   // ---------------- Practice ----------------
   app.get('/api/practice/queue', async (req) => {
     const uid = req.user.uid;

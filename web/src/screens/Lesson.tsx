@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { BookOpen, PencilLine, Flame, Ruler, ArrowRight, Youtube, Play, BookText, Languages } from 'lucide-react';
+import { BookOpen, PencilLine, Flame, Ruler, ArrowRight, Youtube, Play, BookText, Languages, BookPlus, Check } from 'lucide-react';
 import type { Lesson } from '../types';
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
@@ -13,8 +13,39 @@ export function LessonScreen() {
   const { id } = useParams();
   const { data: lesson, loading } = useApi(() => api.lesson(id!), [id]);
   const [tab, setTab] = useState<'theory' | 'practice'>('theory');
+  const [glossAdded, setGlossAdded] = useState(false);
+  const [glossLoading, setGlossLoading] = useState(false);
 
   if (loading || !lesson) return <Spinner />;
+
+  const glossCount = lesson.reading?.gloss?.length ?? 0;
+
+  async function handleAddGloss() {
+    setGlossLoading(true);
+    try {
+      await api.addGlossToSrs(lesson!.id);
+      setGlossAdded(true);
+    } finally {
+      setGlossLoading(false);
+    }
+  }
+
+  const glossButton = glossCount > 0 ? (
+    glossAdded ? (
+      <div className="mt-2 flex w-full items-center justify-center gap-2 text-sm text-[var(--color-mint)]">
+        <Check size={16} /> {glossCount} слов добавлено в карточки
+      </div>
+    ) : (
+      <button
+        className="btn btn-soft mt-2 w-full"
+        onClick={handleAddGloss}
+        disabled={glossLoading}
+      >
+        <BookPlus size={18} />
+        {glossLoading ? 'Добавляем…' : `Добавить ${glossCount} слов в карточки`}
+      </button>
+    )
+  ) : null;
 
   return (
     <div>
@@ -67,6 +98,7 @@ export function LessonScreen() {
         <ExercisePlayer
           exercises={lesson.exercises}
           onAttempt={(exId, correct, answer) => { api.attempt(lesson.id, exId, correct, answer).catch(() => {}); }}
+          doneExtra={glossButton}
         />
       )}
     </div>

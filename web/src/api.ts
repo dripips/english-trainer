@@ -49,6 +49,7 @@ export const api = {
   lesson: (id: string) => get<Lesson>(`/lessons/${id}`),
   attempt: (id: string, exerciseId: string, correct: boolean, answer?: string) =>
     post(`/lessons/${id}/attempt`, { exerciseId, correct, answer }),
+  addGlossToSrs: (id: string) => post<{ added: number; total: number }>(`/lessons/${id}/add-gloss-to-srs`),
 
   // grammar
   grammar: () => get<GrammarMeta[]>('/grammar'),

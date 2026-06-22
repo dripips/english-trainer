@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
 import { Trophy, PartyPopper, Dumbbell, Sprout, RotateCcw, Lightbulb, Volume2, CheckCircle2, XCircle, Info, Check, Plus, Smile, Meh } from 'lucide-react';
 import type { Exercise } from '../types';
 import { answerMatches, firstAnswer, normalizeAnswer } from '../lib/check';
@@ -20,9 +20,10 @@ interface Props {
   labels?: string[];
   onAttempt?: (exerciseId: string, correct: boolean, answer: string) => void;
   onFinish?: (score: { correct: number; total: number }) => void;
+  doneExtra?: ReactNode;
 }
 
-export function ExercisePlayer({ exercises, labels, onAttempt, onFinish }: Props) {
+export function ExercisePlayer({ exercises, labels, onAttempt, onFinish, doneExtra }: Props) {
   const [i, setI] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
   const [done, setDone] = useState(false);
@@ -58,6 +59,7 @@ export function ExercisePlayer({ exercises, labels, onAttempt, onFinish }: Props
         <button className="btn btn-soft mt-4 w-full" onClick={() => { setI(0); setResults([]); setDone(false); }}>
           <RotateCcw size={18} /> Ещё раз
         </button>
+        {doneExtra}
       </div>
     );
   }
