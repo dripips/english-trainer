@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { BookOpen, PencilLine, Flame, Ruler, ArrowRight, Youtube, Play, BookText, Languages, BookPlus, Check, Volume2 } from 'lucide-react';
 import type { Lesson } from '../types';
@@ -8,7 +8,7 @@ import { Header } from '../components/Header';
 import { Spinner, LevelBadge } from '../components/ui';
 import { Markdown } from '../components/Markdown';
 import { ExercisePlayer } from '../components/ExercisePlayer';
-import { speak } from '../lib/speech';
+import { speak, prefetchTts } from '../lib/speech';
 
 export function LessonScreen() {
   const { id } = useParams();
@@ -110,6 +110,7 @@ export function LessonScreen() {
 
 function ReadingCard({ reading }: { reading: NonNullable<Lesson['reading']> }) {
   const [showRu, setShowRu] = useState(false);
+  useEffect(() => { prefetchTts(reading.textEn); }, [reading.textEn]);
   return (
     <div className="card">
       <div className="mb-2 flex items-center gap-1.5">

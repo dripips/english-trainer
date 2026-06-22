@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import { db, bumpActivity, awardXP } from './db.js';
 import { getStore, lessonMeta } from './content.js';
 import { schedule, topicNextReview } from './srs.js';
@@ -383,6 +384,47 @@ export async function registerRoutes(app) {
     const word = req.query?.word;
     if (!word) return reply.code(400).send({ error: 'no word' });
     return await define(word);
+  });
+
+  // High-quality text-to-speech via ElevenLabs, cached to disk so each unique
+  // phrase is generated (and billed) only once. Returns audio/mpeg.
+  const TTS_DIR = path.resolve(process.cwd(), 'data/tts-cache');
+  app.post('/api/tts', async (req, reply) => {
+    const apiKey = process.env.ELEVENLABS_API_KEY;
+    if (!apiKey) return reply.code(503).send({ error: 'tts not configured' });
+    const text = String(req.body?.text || '').trim();
+    if (!text) return reply.code(400).send({ error: 'no text' });
+    if (text.length > 2500) return reply.code(400).send({ error: 'too long' });
+    const voice = String(req.body?.voice || process.env.ELEVENLABS_VOICE || '21m00Tcm4TlvDq8ikWAM');
+    const model = process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2';
+    const hash = crypto.createHash('sha1').update(`${model}|${voice}|${text}`).digest('hex');
+    const file = path.join(TTS_DIR, `${hash}.mp3`);
+    reply.header('Cache-Control', 'private, max-age=31536000, immutable');
+    try {
+      if (fs.existsSync(file) && fs.statSync(file).size > 0) {
+        reply.header('Content-Type', 'audio/mpeg');
+        return reply.send(fs.createReadStream(file));
+      }
+    } catch { /* regenerate */ }
+    try {
+      const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}`, {
+        method: 'POST',
+        headers: { 'xi-api-key': apiKey, 'Content-Type': 'application/json', Accept: 'audio/mpeg' },
+        body: JSON.stringify({
+          text,
+          model_id: model,
+          voice_settings: { stability: 0.5, similarity_boost: 0.75, style: 0, use_speaker_boost: true },
+        }),
+        signal: AbortSignal.timeout(30000),
+      });
+      if (!res.ok) return reply.code(502).send({ error: 'tts upstream failed' });
+      const buf = Buffer.from(await res.arrayBuffer());
+      try { fs.mkdirSync(TTS_DIR, { recursive: true }); fs.writeFileSync(file, buf); } catch { /* serve anyway */ }
+      reply.header('Content-Type', 'audio/mpeg');
+      return reply.send(buf);
+    } catch {
+      return reply.code(502).send({ error: 'tts error' });
+    }
   });
 
   // AI writing feedback — automates the "handwrite → screenshot → tutor grades" loop.

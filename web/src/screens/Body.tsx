@@ -3,6 +3,7 @@ import { Plus, Check } from 'lucide-react';
 import { api } from '../api';
 import { Header } from '../components/Header';
 import { Spinner, SpeakButton } from '../components/ui';
+import { speak } from '../lib/speech';
 import type { Word } from '../types';
 
 // All coordinates are in the SVG viewBox (0 0 340 540) so labels, leader lines and
@@ -35,15 +36,6 @@ const GROUPS: { tag: string; title: string }[] = [
   { tag: 'lower', title: 'Низ и ноги' },
   { tag: 'inside', title: 'Скелет и внутри' },
 ];
-
-function speak(text: string) {
-  try {
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'en-US';
-    window.speechSynthesis?.cancel();
-    window.speechSynthesis?.speak(u);
-  } catch { /* TTS unavailable */ }
-}
 
 export function Body() {
   const [words, setWords] = useState<Word[] | null>(null);

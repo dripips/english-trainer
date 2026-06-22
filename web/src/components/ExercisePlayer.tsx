@@ -1,8 +1,8 @@
-import { useMemo, useState, type ReactNode } from 'react';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { Trophy, PartyPopper, Dumbbell, Sprout, RotateCcw, Lightbulb, Volume2, CheckCircle2, XCircle, Info, Check, Plus, Smile, Meh } from 'lucide-react';
 import type { Exercise } from '../types';
 import { answerMatches, firstAnswer, normalizeAnswer } from '../lib/check';
-import { speak } from '../lib/speech';
+import { speak, prefetchTts } from '../lib/speech';
 import { api } from '../api';
 import { SpeakButton } from './ui';
 
@@ -90,6 +90,9 @@ function ExerciseCard({ ex, onResult, onNext }: { ex: Exercise; onResult: (c: bo
   const [checked, setChecked] = useState(false);
   const [correct, setCorrect] = useState(false);
   const [logged, setLogged] = useState(false);
+
+  // Warm TTS for listen exercises so the audio plays instantly when the user taps.
+  useEffect(() => { if (ex.type === 'listen' && ex.audioText) prefetchTts(ex.audioText); }, [ex.id]);
 
   const shuffledTokens = useMemo(() => shuffle((ex.tokens || []).map((text, id) => ({ id, text }))), [ex.id]);
   const shuffledRights = useMemo(() => shuffle((ex.pairs || []).map((p) => p.right)), [ex.id]);

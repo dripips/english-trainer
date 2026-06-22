@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Ruler, Library, Bug, TrendingUp, BookMarked, BookOpen, BookText, Zap, PenLine, Mic, AlertTriangle, CalendarDays, PersonStanding, Map as MapIcon, Shield, Settings as SettingsIcon, LogOut, ChevronRight, Heart, type LucideIcon } from 'lucide-react';
+import { Ruler, Library, Bug, TrendingUp, BookMarked, BookOpen, BookText, Headphones, Zap, PenLine, Mic, AlertTriangle, CalendarDays, PersonStanding, Map as MapIcon, Shield, Settings as SettingsIcon, LogOut, ChevronRight, Heart, type LucideIcon } from 'lucide-react';
 import { api } from '../api';
 import { useAuth } from '../auth';
 import { useApi } from '../lib/useApi';
@@ -9,7 +9,8 @@ import { IconBadge, ProgressBar } from '../components/ui';
 const LINKS: { to: string; icon: LucideIcon; label: string; hint: string; color: string }[] = [
   { to: '/plan', icon: MapIcon, label: 'План обучения', hint: 'путь A1 → IELTS и статистика', color: 'var(--color-primary)' },
   { to: '/practice', icon: Zap, label: 'Практика', hint: 'адаптивные упражнения', color: 'var(--color-primary)' },
-  { to: '/reading', icon: BookText, label: 'Чтение', hint: 'короткие тексты с переводом и вопросами', color: 'var(--color-sky)' },
+  { to: '/reading', icon: BookText, label: 'Чтение', hint: 'короткие тексты и сказки с переводом', color: 'var(--color-sky)' },
+  { to: '/listening', icon: Headphones, label: 'Аудирование', hint: 'слушай и записывай фразы', color: 'var(--color-sky)' },
   { to: '/library', icon: BookOpen, label: 'Библиотека', hint: 'читать книги на английском', color: 'var(--color-mint)' },
   { to: '/writing', icon: PenLine, label: 'Письмо + AI-проверка', hint: 'напиши текст — AI исправит ошибки', color: 'var(--color-sky)' },
   { to: '/speaking', icon: Mic, label: 'IELTS Speaking', hint: 'ответь голосом — AI разберёт', color: 'var(--color-mint)' },
