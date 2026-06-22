@@ -26,6 +26,8 @@ export function LessonScreen() {
     try {
       await api.addGlossToSrs(lesson!.id);
       setGlossAdded(true);
+    } catch {
+      alert('Не удалось добавить слова. Попробуй ещё раз.');
     } finally {
       setGlossLoading(false);
     }

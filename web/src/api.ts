@@ -5,9 +5,12 @@ import type {
 } from './types';
 
 async function req<T>(path: string, opts: RequestInit = {}): Promise<T> {
+  // Only declare a JSON content-type when we actually send a body — Fastify rejects
+  // an empty body with `Content-Type: application/json` (400 "Body cannot be empty").
+  const hasBody = opts.body != null;
   const res = await fetch(`/api${path}`, {
     credentials: 'include',
-    headers: { 'Content-Type': 'application/json', ...(opts.headers || {}) },
+    headers: { ...(hasBody ? { 'Content-Type': 'application/json' } : {}), ...(opts.headers || {}) },
     ...opts,
   });
   if (res.status === 401) {
