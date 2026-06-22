@@ -3,7 +3,7 @@ id: future
 order: 4
 title: "Future — will / going to (будущее время)"
 level: A1
-phase: 1
+phase: 0
 summary: "Два способа говорить о будущем: will для решений и прогнозов, going to для заранее намеченных планов."
 tags: [future, tenses, will, going-to]
 grammarRefs: [future-will, future-going-to]

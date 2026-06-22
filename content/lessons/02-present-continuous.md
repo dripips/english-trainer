@@ -3,7 +3,7 @@ id: present-continuous
 order: 2
 title: "Present Continuous + разница Simple / Continuous"
 level: A1
-phase: 1
+phase: 0
 murphy: "Units 3–4, 8 (am/is/are + -ing), 23–24 (continuous vs simple)"
 summary: "Действие прямо сейчас (am/is/are + -ing) и как отличать его от Present Simple."
 tags: [present-continuous, present-simple, tenses]
