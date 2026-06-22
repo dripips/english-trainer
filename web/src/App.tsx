@@ -29,6 +29,7 @@ import { Exceptions } from './screens/Exceptions';
 import { Everyday } from './screens/Everyday';
 import { Plan } from './screens/Plan';
 import { Body } from './screens/Body';
+import { Reading } from './screens/Reading';
 const LibraryBook = lazy(() => import('./screens/LibraryBook').then((m) => ({ default: m.LibraryBook })));
 
 export function App() {
@@ -62,6 +63,7 @@ export function App() {
         <Route path="/everyday" element={<Everyday />} />
         <Route path="/plan" element={<Plan />} />
         <Route path="/body" element={<Body />} />
+        <Route path="/reading" element={<Reading />} />
         <Route path="/library" element={<Library />} />
         <Route path="/library/:level/:file" element={<Suspense fallback={<Spinner label="Открываю книгу…" />}><LibraryBook /></Suspense>} />
         <Route path="/textbook" element={<Suspense fallback={<Spinner label="Открываю учебник…" />}><Textbook /></Suspense>} />

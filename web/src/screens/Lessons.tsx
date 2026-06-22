@@ -44,7 +44,7 @@ export function Lessons() {
 
   const byLevel = useMemo(() => {
     const g: Record<string, (LessonMeta & { attempted?: number })[]> = {};
-    (data || []).forEach((l) => { (g[l.level] ||= []).push(l as any); });
+    (data || []).filter((l) => l.kind !== 'reading').forEach((l) => { (g[l.level] ||= []).push(l as any); });
     // server already sorts by order; keep stable
     return g;
   }, [data]);
@@ -59,7 +59,8 @@ export function Lessons() {
 
       <div className="no-scrollbar -mx-4 mb-4 flex gap-2 overflow-x-auto px-4">
         {(['all', ...LEVELS] as const).map((lv) => {
-          const count = lv === 'all' ? data.length : (byLevel[lv]?.length || 0);
+          const allCount = Object.values(byLevel).reduce((s, a) => s + a.length, 0);
+          const count = lv === 'all' ? allCount : (byLevel[lv]?.length || 0);
           if (lv !== 'all' && !count) return null;
           const active = filter === lv;
           return (

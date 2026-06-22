@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { BookOpen, PencilLine, Flame, Ruler, ArrowRight, Youtube, Play, BookText, Languages, BookPlus, Check } from 'lucide-react';
+import { BookOpen, PencilLine, Flame, Ruler, ArrowRight, Youtube, Play, BookText, Languages, BookPlus, Check, Volume2 } from 'lucide-react';
 import type { Lesson } from '../types';
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
@@ -8,6 +8,7 @@ import { Header } from '../components/Header';
 import { Spinner, LevelBadge } from '../components/ui';
 import { Markdown } from '../components/Markdown';
 import { ExercisePlayer } from '../components/ExercisePlayer';
+import { speak } from '../lib/speech';
 
 export function LessonScreen() {
   const { id } = useParams();
@@ -109,8 +110,11 @@ function ReadingCard({ reading }: { reading: NonNullable<Lesson['reading']> }) {
   const [showRu, setShowRu] = useState(false);
   return (
     <div className="card">
-      <div className="display mb-2 flex items-center gap-1.5 font-bold"><BookText size={18} className="text-[var(--color-sky)]" /> Читай</div>
-      <p className="whitespace-pre-line leading-relaxed">{reading.textEn}</p>
+      <div className="mb-2 flex items-center gap-1.5">
+        <div className="display flex items-center gap-1.5 font-bold"><BookText size={18} className="text-[var(--color-sky)]" /> Читай</div>
+        <button onClick={() => speak(reading.textEn)} aria-label="Прослушать текст" className="ml-auto grid h-8 w-8 place-items-center rounded-full bg-[var(--color-surface2)] text-[var(--color-sky)] active:scale-90"><Volume2 size={16} /></button>
+      </div>
+      <p data-lookup className="whitespace-pre-line leading-relaxed">{reading.textEn}</p>
       <button onClick={() => setShowRu((v) => !v)} className="btn btn-soft mt-3 gap-2"><Languages size={16} /> {showRu ? 'Скрыть перевод' : 'Показать перевод'}</button>
       {showRu && <p className="mt-2 whitespace-pre-line leading-relaxed text-[var(--color-muted)]">{reading.textRu}</p>}
       {reading.gloss && reading.gloss.length > 0 && (

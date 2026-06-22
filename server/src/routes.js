@@ -498,7 +498,10 @@ export async function registerRoutes(app) {
               SUM(CASE WHEN state='new' THEN 1 ELSE 0 END) new FROM srs_cards WHERE user_id=?`
     ).get(now, uid);
     const openErrors = db.prepare("SELECT COUNT(*) c FROM error_log WHERE user_id=? AND status='open'").get(uid).c;
-    const lessonsDone = db.prepare('SELECT COUNT(DISTINCT lesson_id) c FROM lesson_attempts WHERE user_id=?').get(uid).c;
+    const lessons = getStore().lessons.filter((l) => l.kind !== 'reading');
+    const lessonIds = new Set(lessons.map((l) => l.id));
+    const attemptedIds = db.prepare('SELECT DISTINCT lesson_id FROM lesson_attempts WHERE user_id=?').all(uid).map((r) => r.lesson_id);
+    const lessonsDone = attemptedIds.filter((id) => lessonIds.has(id)).length;
     const days = db.prepare('SELECT day FROM activity WHERE user_id=? ORDER BY day DESC LIMIT 60').all(uid).map((r) => r.day);
     const { xp } = db.prepare('SELECT xp FROM users WHERE id=?').get(uid) || { xp: 0 };
     const { level, levelXp, nextLevelXp } = xpLevel(xp);
@@ -509,7 +512,7 @@ export async function registerRoutes(app) {
       srs: { total: srs.total || 0, due: srs.due || 0, new: srs.new || 0 },
       openErrors,
       lessonsDone,
-      lessonsTotal: getStore().lessons.length,
+      lessonsTotal: lessons.length,
       activeDays: days.slice(0, 14),
     };
   });
@@ -525,6 +528,7 @@ export async function registerRoutes(app) {
 
     const phases = new Map();
     for (const l of store.lessons) {
+      if (l.kind === 'reading') continue; // reading texts are a separate track
       const total = l.exercises.length;
       const att = attemptedMap.get(l.id) || 0;
       const done = total > 0 && att >= total;

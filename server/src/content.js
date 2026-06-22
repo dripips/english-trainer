@@ -62,6 +62,7 @@ function loadLessons(warnings) {
       lessons.push({
         id: data.id,
         order: data.order ?? 999,
+        kind: data.kind || 'lesson',
         title: data.title,
         level: data.level || 'A1',
         phase: data.phase ?? 0,
@@ -198,7 +199,7 @@ export function getStore() {
 // Lightweight lesson meta (no theory/exercises) for list views
 export function lessonMeta(l) {
   return {
-    id: l.id, order: l.order, title: l.title, level: l.level, phase: l.phase,
+    id: l.id, order: l.order, kind: l.kind || 'lesson', title: l.title, level: l.level, phase: l.phase,
     murphy: l.murphy, summary: l.summary, tags: l.tags,
     exerciseCount: l.exercises.length,
   };

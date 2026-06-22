@@ -1,0 +1,83 @@
+import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { BookText, CheckCircle2 } from 'lucide-react';
+import { api } from '../api';
+import { useApi } from '../lib/useApi';
+import { Header } from '../components/Header';
+import { Spinner, LevelBadge } from '../components/ui';
+import type { LessonMeta } from '../types';
+
+const LEVELS = ['A1', 'A2', 'B1', 'B2'] as const;
+
+export function Reading() {
+  const { data, loading } = useApi(() => api.lessons(), []);
+  const [filter, setFilter] = useState<string>('A1');
+
+  const byLevel = useMemo(() => {
+    const g: Record<string, (LessonMeta & { attempted?: number })[]> = {};
+    (data || []).filter((l) => l.kind === 'reading').forEach((l) => { (g[l.level] ||= []).push(l as any); });
+    return g;
+  }, [data]);
+
+  if (loading || !data) return <Spinner />;
+
+  const hasAny = Object.keys(byLevel).length > 0;
+  const visibleLevels = filter === 'all' ? LEVELS.filter((lv) => byLevel[lv]?.length) : [filter];
+
+  return (
+    <div>
+      <Header back title="Чтение" subtitle="короткие тексты с переводом и вопросами" />
+
+      {!hasAny ? (
+        <p className="py-10 text-center text-[var(--color-muted)]">Тексты скоро появятся.</p>
+      ) : (
+        <>
+          <div className="no-scrollbar -mx-4 mb-4 flex gap-2 overflow-x-auto px-4">
+            {(['all', ...LEVELS] as const).map((lv) => {
+              const allCount = Object.values(byLevel).reduce((s, a) => s + a.length, 0);
+              const count = lv === 'all' ? allCount : (byLevel[lv]?.length || 0);
+              if (lv !== 'all' && !count) return null;
+              const active = filter === lv;
+              return (
+                <button key={lv} onClick={() => setFilter(lv)}
+                  className={`shrink-0 rounded-full px-3.5 py-1.5 text-sm font-semibold transition
+                    ${active ? 'bg-[var(--color-primary)] text-[#160f33]' : 'bg-[var(--color-surface2)] text-[var(--color-muted)]'}`}>
+                  {lv === 'all' ? `Все · ${count}` : `${lv} · ${count}`}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="space-y-6">
+            {visibleLevels.map((lv) => (
+              (byLevel[lv]?.length ? (
+                <div key={lv}>
+                  <div className="mb-2.5 flex items-center gap-2 px-0.5">
+                    <LevelBadge level={lv} />
+                    <span className="ml-auto text-xs text-[var(--color-muted)]">{byLevel[lv].length} текстов</span>
+                  </div>
+                  <div className="space-y-3">
+                    {byLevel[lv].map((l) => {
+                      const done = l.exerciseCount > 0 && (l.attempted || 0) >= l.exerciseCount;
+                      return (
+                        <Link key={l.id} to={`/lessons/${l.id}`} className="card flex items-start gap-3 overflow-hidden active:scale-[0.98]">
+                          <BookText size={20} className="mt-0.5 shrink-0 text-[var(--color-sky)]" />
+                          <div className="min-w-0 flex-1">
+                            <h3 className="display text-base font-bold leading-snug">{l.title}</h3>
+                            <p className="mt-1 line-clamp-2 text-sm text-[var(--color-muted)]">{l.summary}</p>
+                            {l.exerciseCount > 0 && <p className="mt-1 text-xs text-[var(--color-muted)]">{l.exerciseCount} вопросов на понимание</p>}
+                          </div>
+                          {done && <CheckCircle2 className="shrink-0 text-[var(--color-success)]" size={20} />}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              ) : null)
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}

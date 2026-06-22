@@ -26,7 +26,7 @@ export interface Exercise {
 }
 
 export interface LessonMeta {
-  id: string; order: number; title: string; level: string; phase: number;
+  id: string; order: number; kind?: string; title: string; level: string; phase: number;
   murphy: string | null; summary: string; tags: string[];
   exerciseCount: number; attempted?: number; correct?: number;
 }
