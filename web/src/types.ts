@@ -80,9 +80,19 @@ export interface ProgressEntry {
 export interface Dashboard {
   user: User;
   streak: number;
+  xp: number; level: number; levelXp: number; nextLevelXp: number | null;
   srs: { total: number; due: number; new: number };
   openErrors: number; lessonsDone: number; lessonsTotal: number;
   activeDays: string[];
+}
+
+export interface Badge {
+  id: string; emoji: string; name: string; desc: string; earned: boolean;
+}
+
+export interface GamificationData {
+  xp: number; level: number; levelXp: number; nextLevelXp: number | null;
+  streak: number; longestStreak: number; badges: Badge[];
 }
 
 export interface PracticeItem {

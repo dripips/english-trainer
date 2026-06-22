@@ -1,6 +1,6 @@
 import type {
   User, Lesson, LessonMeta, GrammarMeta, GrammarCard, Word, VocabCategory,
-  QueueItem, Rating, ErrorEntry, ProgressEntry, Dashboard, LibraryLevel,
+  QueueItem, Rating, ErrorEntry, ProgressEntry, Dashboard, LibraryLevel, GamificationData,
 } from './types';
 
 async function req<T>(path: string, opts: RequestInit = {}): Promise<T> {
@@ -132,4 +132,7 @@ export const api = {
     return get<{ items: import('./types').PracticeItem[] }>(`/practice/queue?${q}`);
   },
   practiceStats: () => get<import('./types').PracticeStats>('/practice/stats'),
+
+  // gamification
+  gamification: () => get<GamificationData>('/gamification'),
 };

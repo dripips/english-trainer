@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { db, bumpActivity } from './db.js';
+import { db, bumpActivity, awardXP } from './db.js';
 import { getStore, lessonMeta } from './content.js';
 import { schedule, topicNextReview } from './srs.js';
 import {
@@ -95,6 +95,7 @@ export async function registerRoutes(app) {
        DO UPDATE SET correct = excluded.correct, answer = excluded.answer, created_at = datetime('now')`
     ).run(req.user.uid, req.params.id, exerciseId, correct ? 1 : 0, answer ?? null);
     bumpActivity(req.user.uid, 'exercises');
+    awardXP(req.user.uid, correct ? 10 : 2);
     return { ok: true };
   });
 
@@ -247,6 +248,7 @@ export async function registerRoutes(app) {
       `UPDATE srs_cards SET ease=?, interval=?, reps=?, lapses=?, state=?, due=?, last_review=datetime('now') WHERE id=?`
     ).run(next.ease, next.interval, next.reps, next.lapses, next.state, next.due, card.id);
     bumpActivity(req.user.uid, 'reviews');
+    awardXP(req.user.uid, rating === 'again' ? 1 : 5);
     return { ok: true, due: next.due, state: next.state };
   });
 
@@ -452,15 +454,35 @@ export async function registerRoutes(app) {
     const openErrors = db.prepare("SELECT COUNT(*) c FROM error_log WHERE user_id=? AND status='open'").get(uid).c;
     const lessonsDone = db.prepare('SELECT COUNT(DISTINCT lesson_id) c FROM lesson_attempts WHERE user_id=?').get(uid).c;
     const days = db.prepare('SELECT day FROM activity WHERE user_id=? ORDER BY day DESC LIMIT 60').all(uid).map((r) => r.day);
+    const { xp } = db.prepare('SELECT xp FROM users WHERE id=?').get(uid) || { xp: 0 };
+    const { level, levelXp, nextLevelXp } = xpLevel(xp);
     return {
       user: req.user,
       streak: computeStreak(days),
+      xp, level, levelXp, nextLevelXp,
       srs: { total: srs.total || 0, due: srs.due || 0, new: srs.new || 0 },
       openErrors,
       lessonsDone,
       lessonsTotal: getStore().lessons.length,
       activeDays: days.slice(0, 14),
     };
+  });
+
+  // ---------------- Gamification ----------------
+  app.get('/api/gamification', async (req) => {
+    const uid = req.user.uid;
+    const { xp } = db.prepare('SELECT xp FROM users WHERE id=?').get(uid) || { xp: 0 };
+    const { level, levelXp, nextLevelXp } = xpLevel(xp);
+    const days = db.prepare('SELECT day FROM activity WHERE user_id=? ORDER BY day DESC').all(uid).map((r) => r.day);
+    const streak = computeStreak(days);
+    const longestStreak = computeLongestStreak(days);
+    db.prepare('UPDATE users SET longest_streak = MAX(COALESCE(longest_streak,0), ?) WHERE id=?').run(longestStreak, uid);
+    const ex = db.prepare('SELECT COUNT(*) total, SUM(correct) correct FROM lesson_attempts WHERE user_id=?').get(uid);
+    const lessonsDone = db.prepare('SELECT COUNT(DISTINCT lesson_id) c FROM lesson_attempts WHERE user_id=?').get(uid).c;
+    const srsTotal = db.prepare('SELECT COUNT(*) c FROM srs_cards WHERE user_id=?').get(uid).c;
+    const stats = { xp, level, streak, longestStreak, totalExercises: ex?.total || 0, totalCorrect: ex?.correct || 0, lessonsDone, srsTotal };
+    const badges = BADGES_DEF.map(({ req: check, ...b }) => ({ ...b, earned: check(stats) }));
+    return { xp, level, levelXp, nextLevelXp, streak, longestStreak, badges };
   });
 
   // ---------------- Settings ----------------
@@ -753,6 +775,41 @@ function getSetting(uid, key, def) {
   const r = db.prepare('SELECT value FROM settings WHERE user_id = ? AND key = ?').get(uid, key);
   return r ? r.value : def;
 }
+
+const XP_THRESHOLDS = [0, 200, 500, 1000, 1800, 2800, 4200, 6000, 8500, 12000];
+function xpLevel(xp) {
+  let level = 1;
+  for (let i = 1; i < XP_THRESHOLDS.length; i++) {
+    if (xp >= XP_THRESHOLDS[i]) level = i + 1;
+  }
+  level = Math.min(level, XP_THRESHOLDS.length);
+  return { level, levelXp: XP_THRESHOLDS[level - 1], nextLevelXp: XP_THRESHOLDS[level] ?? null };
+}
+
+function computeLongestStreak(daysDesc) {
+  if (!daysDesc.length) return 0;
+  const sorted = [...daysDesc].sort();
+  let max = 1, run = 1;
+  for (let i = 1; i < sorted.length; i++) {
+    const diff = Math.round((new Date(sorted[i]) - new Date(sorted[i - 1])) / 86400000);
+    if (diff === 1) { run++; if (run > max) max = run; }
+    else if (diff > 1) run = 1;
+  }
+  return max;
+}
+
+const BADGES_DEF = [
+  { id: 'first_step',   emoji: '🚀', name: 'Первый шаг',       desc: 'сделал первое упражнение',      req: (s) => s.totalExercises >= 1 },
+  { id: 'scholar',      emoji: '📚', name: '5 уроков',          desc: '5 уроков пройдено',             req: (s) => s.lessonsDone >= 5 },
+  { id: 'master',       emoji: '🎓', name: 'Мастер',            desc: '15 уроков пройдено',            req: (s) => s.lessonsDone >= 15 },
+  { id: 'week_fire',    emoji: '🔥', name: '7 дней',            desc: '7 дней занятий подряд',         req: (s) => s.longestStreak >= 7 },
+  { id: 'month_fire',   emoji: '🏆', name: 'Месяц',             desc: '30 дней занятий подряд',        req: (s) => s.longestStreak >= 30 },
+  { id: 'century',      emoji: '💯', name: 'Сотня',             desc: '100 правильных ответов',        req: (s) => s.totalCorrect >= 100 },
+  { id: 'thousand',     emoji: '⚡', name: 'Тысяча',            desc: '1000 правильных ответов',       req: (s) => s.totalCorrect >= 1000 },
+  { id: 'level5',       emoji: '⭐', name: 'Уровень 5',         desc: 'достиг 5-го уровня',            req: (s) => s.level >= 5 },
+  { id: 'word_hoarder', emoji: '🗂️', name: 'Коллекционер',     desc: '50 слов в карточках',           req: (s) => s.srsTotal >= 50 },
+  { id: 'polyglot',     emoji: '🌍', name: 'Полиглот',          desc: '300 слов в карточках',          req: (s) => s.srsTotal >= 300 },
+];
 
 function computeStreak(daysDesc) {
   if (!daysDesc.length) return 0;

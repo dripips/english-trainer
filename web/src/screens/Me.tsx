@@ -4,7 +4,7 @@ import { api } from '../api';
 import { useAuth } from '../auth';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
-import { IconBadge } from '../components/ui';
+import { IconBadge, ProgressBar } from '../components/ui';
 
 const LINKS: { to: string; icon: LucideIcon; label: string; hint: string; color: string }[] = [
   { to: '/practice', icon: Zap, label: 'Практика', hint: 'адаптивные упражнения', color: 'var(--color-primary)' },
@@ -20,17 +20,42 @@ const LINKS: { to: string; icon: LucideIcon; label: string; hint: string; color:
 export function Me() {
   const { user, logout } = useAuth();
   const { data: stats } = useApi(() => api.srsStats(), []);
+  const { data: gamif } = useApi(() => api.gamification(), []);
 
   return (
     <div>
       <Header title="Профиль" />
       <div className="card mb-4 flex items-center gap-3">
         <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-[var(--color-primary)] text-2xl font-bold text-[#160f33]">{user?.name?.[0]}</div>
-        <div className="min-w-0">
+        <div className="min-w-0 flex-1">
           <div className="display truncate text-lg font-bold">{user?.name}</div>
           <div className="truncate text-sm text-[var(--color-muted)]">@{user?.username}</div>
         </div>
+        {gamif && (
+          <div className="shrink-0 text-right">
+            <div className="display text-2xl font-bold leading-none" style={{ color: 'var(--color-primary)' }}>{gamif.level}</div>
+            <div className="text-[10px] text-[var(--color-muted)]">уровень</div>
+          </div>
+        )}
       </div>
+
+      {gamif && (
+        <div className="card mb-4 space-y-2">
+          <div className="flex items-center justify-between text-sm">
+            <span className="font-semibold">Уровень {gamif.level}</span>
+            <span className="text-[var(--color-muted)]">{gamif.xp}{gamif.nextLevelXp ? ` / ${gamif.nextLevelXp}` : ''} XP</span>
+          </div>
+          <ProgressBar
+            value={gamif.xp - gamif.levelXp}
+            max={(gamif.nextLevelXp ?? gamif.xp + 1) - gamif.levelXp}
+            color="var(--color-primary)"
+          />
+          <div className="flex gap-4 pt-1 text-xs text-[var(--color-muted)]">
+            <span>🔥 {gamif.streak} дн. подряд</span>
+            <span>🏆 рекорд {gamif.longestStreak} дн.</span>
+          </div>
+        </div>
+      )}
 
       {stats && (
         <div className="mb-4 grid grid-cols-4 gap-2">
@@ -40,6 +65,24 @@ export function Me() {
               <div className="text-[10px] text-[var(--color-muted)]">{l}</div>
             </div>
           ))}
+        </div>
+      )}
+
+      {gamif && (
+        <div className="mb-4">
+          <h2 className="mb-2 px-0.5 text-sm font-semibold text-[var(--color-muted)]">Достижения</h2>
+          <div className="grid grid-cols-5 gap-2">
+            {gamif.badges.map((b) => (
+              <div
+                key={b.id}
+                title={`${b.name}: ${b.desc}`}
+                className={`card !p-2 text-center transition-opacity ${b.earned ? '' : 'opacity-25'}`}
+              >
+                <div className="text-2xl leading-none">{b.emoji}</div>
+                <div className="mt-1 text-[9px] leading-tight text-[var(--color-muted)]">{b.name}</div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
 

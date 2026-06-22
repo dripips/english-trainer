@@ -46,19 +46,32 @@ export function Home() {
         <h1 className="display truncate text-2xl font-bold">{user?.name}</h1>
       </header>
 
-      {/* streak */}
-      <div className="card flex items-center justify-between gap-3 !py-3">
-        <div className="flex min-w-0 items-center gap-3">
-          <IconBadge icon={Flame} color="var(--color-amber)" />
-          <div className="min-w-0">
-            <div className="display text-xl font-bold leading-none">{data.streak} {plural(data.streak, 'день', 'дня', 'дней')}</div>
-            <div className="mt-0.5 text-xs text-[var(--color-muted)]">подряд в учёбе</div>
+      {/* streak + xp */}
+      <div className="card !py-3">
+        <div className="mb-2.5 flex items-center justify-between gap-3">
+          <div className="flex min-w-0 items-center gap-3">
+            <IconBadge icon={Flame} color="var(--color-amber)" />
+            <div className="min-w-0">
+              <div className="display text-xl font-bold leading-none">{data.streak} {plural(data.streak, 'день', 'дня', 'дней')}</div>
+              <div className="mt-0.5 text-xs text-[var(--color-muted)]">подряд в учёбе</div>
+            </div>
+          </div>
+          <div className="flex shrink-0 gap-1">
+            {data.activeDays.slice(0, 7).reverse().map((d) => (
+              <span key={d} className="h-2.5 w-2.5 rounded-full bg-[var(--color-amber)]" title={d} />
+            ))}
           </div>
         </div>
-        <div className="flex shrink-0 gap-1">
-          {data.activeDays.slice(0, 7).reverse().map((d) => (
-            <span key={d} className="h-2.5 w-2.5 rounded-full bg-[var(--color-mint)]" title={d} />
-          ))}
+        <div className="flex items-center gap-2 text-xs text-[var(--color-muted)]">
+          <span className="font-bold" style={{ color: 'var(--color-primary)' }}>Ур. {data.level}</span>
+          <div className="flex-1">
+            <ProgressBar
+              value={data.xp - data.levelXp}
+              max={(data.nextLevelXp ?? data.xp + 1) - data.levelXp}
+              color="var(--color-primary)"
+            />
+          </div>
+          <span>{data.xp} XP</span>
         </div>
       </div>
 

@@ -136,6 +136,12 @@ const userCols = db.prepare('PRAGMA table_info(users)').all().map((c) => c.name)
 if (!userCols.includes('role')) {
   db.exec("ALTER TABLE users ADD COLUMN role TEXT NOT NULL DEFAULT 'user'");
 }
+if (!userCols.includes('xp')) {
+  db.exec('ALTER TABLE users ADD COLUMN xp INTEGER NOT NULL DEFAULT 0');
+}
+if (!userCols.includes('longest_streak')) {
+  db.exec('ALTER TABLE users ADD COLUMN longest_streak INTEGER NOT NULL DEFAULT 0');
+}
 
 // ---------- Seed users ----------
 export function seedUsers() {
@@ -178,6 +184,10 @@ export function seedUsers() {
   if (!hasAdmin) {
     db.prepare("UPDATE users SET role='admin' WHERE id=(SELECT MIN(id) FROM users)").run();
   }
+}
+
+export function awardXP(userId, amount) {
+  db.prepare('UPDATE users SET xp = xp + ? WHERE id = ?').run(amount, userId);
 }
 
 export function bumpActivity(userId, field) {
