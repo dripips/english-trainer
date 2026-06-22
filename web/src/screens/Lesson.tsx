@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { BookOpen, PencilLine, Flame, Ruler, ArrowRight, Youtube, Play, BookText, Languages, BookPlus, Check, Volume2 } from 'lucide-react';
+import { BookOpen, PencilLine, Flame, Ruler, ArrowRight, Youtube, Play, BookText, Languages, BookPlus, Check } from 'lucide-react';
 import type { Lesson } from '../types';
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
-import { Spinner, LevelBadge } from '../components/ui';
+import { Spinner, LevelBadge, SpeakButton } from '../components/ui';
 import { Markdown } from '../components/Markdown';
 import { ExercisePlayer } from '../components/ExercisePlayer';
-import { speak, prefetchTts } from '../lib/speech';
+import { prefetchTts } from '../lib/speech';
 
 export function LessonScreen() {
   const { id } = useParams();
@@ -86,7 +86,7 @@ export function LessonScreen() {
             </div>
           )}
           <div className="card overflow-hidden"><Markdown>{lesson.theory}</Markdown></div>
-          {lesson.reading && <ReadingCard reading={lesson.reading} />}
+          {lesson.reading && <ReadingCard reading={lesson.reading} cover={lesson.kind === 'reading' ? `/reading/${lesson.id}.jpg` : undefined} />}
 
           {lesson.grammarRefs?.length > 0 && (
             <div className="flex flex-wrap gap-2">
@@ -108,14 +108,20 @@ export function LessonScreen() {
   );
 }
 
-function ReadingCard({ reading }: { reading: NonNullable<Lesson['reading']> }) {
+function ReadingCard({ reading, cover }: { reading: NonNullable<Lesson['reading']>; cover?: string }) {
   const [showRu, setShowRu] = useState(false);
+  const [coverOk, setCoverOk] = useState(true);
   useEffect(() => { prefetchTts(reading.textEn); }, [reading.textEn]);
   return (
-    <div className="card">
+    <div className="card !p-0 overflow-hidden">
+      {cover && coverOk && (
+        <img src={cover} alt="" loading="lazy" onError={() => setCoverOk(false)}
+          className="aspect-[16/9] w-full object-cover" />
+      )}
+      <div className="p-4">
       <div className="mb-2 flex items-center gap-1.5">
         <div className="display flex items-center gap-1.5 font-bold"><BookText size={18} className="text-[var(--color-sky)]" /> Читай</div>
-        <button onClick={() => speak(reading.textEn)} aria-label="Прослушать текст" className="ml-auto grid h-8 w-8 place-items-center rounded-full bg-[var(--color-surface2)] text-[var(--color-sky)] active:scale-90"><Volume2 size={16} /></button>
+        <SpeakButton text={reading.textEn} size={16} className="ml-auto !h-8 !w-8" />
       </div>
       <p data-lookup className="whitespace-pre-line leading-relaxed">{reading.textEn}</p>
       <button onClick={() => setShowRu((v) => !v)} className="btn btn-soft mt-3 gap-2"><Languages size={16} /> {showRu ? 'Скрыть перевод' : 'Показать перевод'}</button>
@@ -130,6 +136,7 @@ function ReadingCard({ reading }: { reading: NonNullable<Lesson['reading']> }) {
           </ul>
         </div>
       )}
+      </div>
     </div>
   );
 }

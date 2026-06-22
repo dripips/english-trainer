@@ -9,6 +9,35 @@ import type { LessonMeta } from '../types';
 
 const LEVELS = ['A1', 'A2', 'B1', 'B2'] as const;
 
+function StoryCard({ l }: { l: LessonMeta & { attempted?: number } }) {
+  const [coverOk, setCoverOk] = useState(true);
+  const done = l.exerciseCount > 0 && (l.attempted || 0) >= l.exerciseCount;
+  return (
+    <Link to={`/lessons/${l.id}`} className="card block overflow-hidden !p-0 active:scale-[0.98]">
+      {coverOk && (
+        <div className="relative">
+          <img src={`/reading/${l.id}.jpg`} alt="" loading="lazy" onError={() => setCoverOk(false)}
+            className="aspect-[16/9] w-full object-cover" />
+          {done && (
+            <span className="absolute right-2 top-2 grid h-7 w-7 place-items-center rounded-full bg-[var(--color-surface)]/90">
+              <CheckCircle2 size={18} className="text-[var(--color-success)]" />
+            </span>
+          )}
+        </div>
+      )}
+      <div className="flex items-start gap-3 p-3.5">
+        {!coverOk && <BookText size={20} className="mt-0.5 shrink-0 text-[var(--color-sky)]" />}
+        <div className="min-w-0 flex-1">
+          <h3 className="display text-base font-bold leading-snug">{l.title}</h3>
+          <p className="mt-1 line-clamp-2 text-sm text-[var(--color-muted)]">{l.summary}</p>
+          {l.exerciseCount > 0 && <p className="mt-1 text-xs text-[var(--color-muted)]">{l.exerciseCount} вопросов на понимание</p>}
+        </div>
+        {!coverOk && done && <CheckCircle2 className="shrink-0 text-[var(--color-success)]" size={20} />}
+      </div>
+    </Link>
+  );
+}
+
 export function Reading() {
   const { data, loading } = useApi(() => api.lessons(), []);
   const [filter, setFilter] = useState<string>('A1');
@@ -57,20 +86,7 @@ export function Reading() {
                     <span className="ml-auto text-xs text-[var(--color-muted)]">{byLevel[lv].length} текстов</span>
                   </div>
                   <div className="space-y-3">
-                    {byLevel[lv].map((l) => {
-                      const done = l.exerciseCount > 0 && (l.attempted || 0) >= l.exerciseCount;
-                      return (
-                        <Link key={l.id} to={`/lessons/${l.id}`} className="card flex items-start gap-3 overflow-hidden active:scale-[0.98]">
-                          <BookText size={20} className="mt-0.5 shrink-0 text-[var(--color-sky)]" />
-                          <div className="min-w-0 flex-1">
-                            <h3 className="display text-base font-bold leading-snug">{l.title}</h3>
-                            <p className="mt-1 line-clamp-2 text-sm text-[var(--color-muted)]">{l.summary}</p>
-                            {l.exerciseCount > 0 && <p className="mt-1 text-xs text-[var(--color-muted)]">{l.exerciseCount} вопросов на понимание</p>}
-                          </div>
-                          {done && <CheckCircle2 className="shrink-0 text-[var(--color-success)]" size={20} />}
-                        </Link>
-                      );
-                    })}
+                    {byLevel[lv].map((l) => <StoryCard key={l.id} l={l} />)}
                   </div>
                 </div>
               ) : null)

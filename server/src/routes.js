@@ -397,7 +397,9 @@ export async function registerRoutes(app) {
     if (text.length > 2500) return reply.code(400).send({ error: 'too long' });
     const voice = String(req.body?.voice || process.env.ELEVENLABS_VOICE || '21m00Tcm4TlvDq8ikWAM');
     const model = process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2';
-    const hash = crypto.createHash('sha1').update(`${model}|${voice}|${text}`).digest('hex');
+    // Slower, measured pace for learners (0.7–1.2; <1 = slower). Tunable via env.
+    const speed = Math.max(0.7, Math.min(1.2, Number(process.env.ELEVENLABS_SPEED) || 0.85));
+    const hash = crypto.createHash('sha1').update(`${model}|${voice}|${speed}|${text}`).digest('hex');
     const file = path.join(TTS_DIR, `${hash}.mp3`);
     reply.header('Cache-Control', 'private, max-age=31536000, immutable');
     try {
@@ -413,7 +415,7 @@ export async function registerRoutes(app) {
         body: JSON.stringify({
           text,
           model_id: model,
-          voice_settings: { stability: 0.5, similarity_boost: 0.75, style: 0, use_speaker_boost: true },
+          voice_settings: { stability: 0.5, similarity_boost: 0.75, style: 0, use_speaker_boost: true, speed },
         }),
         signal: AbortSignal.timeout(30000),
       });

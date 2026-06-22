@@ -1,7 +1,7 @@
-import type { ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
 import type { LucideIcon } from 'lucide-react';
-import { Volume2 } from 'lucide-react';
-import { pronounce, ttsSupported } from '../lib/speech';
+import { Volume2, Loader2, Pause } from 'lucide-react';
+import { speakTracked, ttsSupported } from '../lib/speech';
 
 export function Spinner({ label }: { label?: string }) {
   return (
@@ -46,15 +46,24 @@ export function LevelBadge({ level }: { level: string }) {
   );
 }
 
-export function SpeakButton({ text, lang = 'en-US', className = '' }: { text: string; lang?: string; className?: string }) {
+export function SpeakButton({ text, lang = 'en-US', className = '', size = 18 }: { text: string; lang?: string; className?: string; size?: number }) {
+  const [state, setState] = useState<'idle' | 'loading' | 'playing'>('idle');
   if (!ttsSupported) return null;
+  const onClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (state !== 'idle') return;
+    setState('loading');
+    speakTracked(text, lang, () => setState('playing')).finally(() => setState('idle'));
+  };
   return (
     <button
-      onClick={(e) => { e.stopPropagation(); pronounce(text, lang); }}
-      className={`grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--color-surface2)] text-[var(--color-sky)] active:scale-90 ${className}`}
+      onClick={onClick}
+      className={`grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--color-surface2)] text-[var(--color-sky)] transition active:scale-90 ${state === 'playing' ? '!bg-[color-mix(in_srgb,var(--color-sky)_22%,var(--color-surface2))]' : ''} ${className}`}
       aria-label="Произнести"
     >
-      <Volume2 size={18} />
+      {state === 'loading' ? <Loader2 size={size} className="animate-spin" />
+        : state === 'playing' ? <Pause size={size} />
+        : <Volume2 size={size} />}
     </button>
   );
 }

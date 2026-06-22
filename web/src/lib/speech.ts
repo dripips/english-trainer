@@ -95,28 +95,50 @@ export function prefetchTts(text: string) {
 }
 export const prefetchWord = prefetchTts; // back-compat
 
-function playUrl(url: string): boolean {
-  const a = getAudio();
-  if (!a) return false;
-  try { a.pause(); a.src = url; a.currentTime = 0; void a.play().catch(() => {}); return true; } catch { return false; }
-}
-
-export function speak(text: string, lang = 'en-US', rate = 0.95) {
-  const t = (text || '').trim();
-  if (!t) return;
-  try { speechSynthesis?.cancel(); } catch { /* ignore */ }
-  // Russian (or oversized, or TTS unavailable) → system voice; English → ElevenLabs with fallback.
-  if (!lang.startsWith('en') || t.length > MAX_TTS || ttsBroken) { systemSpeak(t, lang, rate); return; }
-  const cached = blobCache.get(t);
-  if (cached) { playUrl(cached); return; } // sync play preserves user-gesture activation
-  fetchTts(t).then((url) => {
-    if (url) { if (!playUrl(url)) systemSpeak(t, lang, rate); }
-    else systemSpeak(t, lang, rate);
+// Play a blob URL, resolving when playback ENDS. onStart fires when audio actually begins.
+function playUrlTracked(url: string, onStart?: () => void): Promise<void> {
+  return new Promise((resolve) => {
+    const a = getAudio();
+    if (!a) { resolve(); return; }
+    const done = () => { a.onended = null; a.onerror = null; a.onplaying = null; resolve(); };
+    a.onplaying = () => onStart?.();
+    a.onended = done;
+    a.onerror = done;
+    try { a.pause(); a.src = url; a.currentTime = 0; void a.play().catch(done); }
+    catch { done(); }
   });
 }
 
-export function pronounce(text: string, lang = 'en-US') { speak(text, lang); }
-export function speakWord(word: string, lang = 'en-US') { speak(word, lang); } // back-compat
+function systemSpeakTracked(text: string, lang: string, rate: number, onStart?: () => void): Promise<void> {
+  return new Promise((resolve) => {
+    if (typeof speechSynthesis === 'undefined') { resolve(); return; }
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = lang; u.rate = rate; u.pitch = 1;
+    const v = pickVoice(lang);
+    if (v) u.voice = v;
+    u.onstart = () => onStart?.();
+    u.onend = () => resolve();
+    u.onerror = () => resolve();
+    speechSynthesis.speak(u);
+    setTimeout(() => onStart?.(), 200); // some engines never fire onstart
+  });
+}
+
+// Speak and resolve when playback finishes. onStart switches a UI from "loading" to "playing".
+export function speakTracked(text: string, lang = 'en-US', onStart?: () => void): Promise<void> {
+  const t = (text || '').trim();
+  if (!t) return Promise.resolve();
+  try { speechSynthesis?.cancel(); } catch { /* ignore */ }
+  if (!lang.startsWith('en') || t.length > MAX_TTS || ttsBroken) return systemSpeakTracked(t, lang, 0.95, onStart);
+  const cached = blobCache.get(t);
+  if (cached) return playUrlTracked(cached, onStart); // sync play preserves user-gesture activation
+  return fetchTts(t).then((url) => (url ? playUrlTracked(url, onStart) : systemSpeakTracked(t, lang, 0.95, onStart)));
+}
+
+export function speak(text: string, lang = 'en-US') { void speakTracked(text, lang); }
+export function pronounce(text: string, lang = 'en-US') { void speakTracked(text, lang); }
+export function speakWord(word: string, lang = 'en-US') { void speakTracked(word, lang); } // back-compat
 
 // ---- Speech recognition ----
 type SR = typeof window & { SpeechRecognition?: any; webkitSpeechRecognition?: any };

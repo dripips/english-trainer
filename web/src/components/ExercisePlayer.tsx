@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react';
-import { Trophy, PartyPopper, Dumbbell, Sprout, RotateCcw, Lightbulb, Volume2, CheckCircle2, XCircle, Info, Check, Plus, Smile, Meh } from 'lucide-react';
+import { Trophy, PartyPopper, Dumbbell, Sprout, RotateCcw, Lightbulb, CheckCircle2, XCircle, Info, Check, Plus, Smile, Meh } from 'lucide-react';
 import type { Exercise } from '../types';
 import { answerMatches, firstAnswer, normalizeAnswer } from '../lib/check';
 import { speak, prefetchTts } from '../lib/speech';
@@ -149,7 +149,7 @@ function ExerciseCard({ ex, onResult, onNext }: { ex: Exercise; onResult: (c: bo
     <div className="animate-slideup card overflow-hidden">
       {ex.type === 'listen' ? (
         <div className="flex flex-col items-center gap-3 py-2">
-          <button onClick={() => speak(ex.audioText || '')} aria-label="Прослушать" className="grid h-20 w-20 place-items-center rounded-full bg-[var(--color-surface2)] text-[var(--color-sky)] active:scale-90"><Volume2 size={34} /></button>
+          <SpeakButton text={ex.audioText || ''} size={34} className="!h-20 !w-20" />
           <p className="text-sm text-[var(--color-muted)]">Послушай и запиши предложение</p>
         </div>
       ) : ex.prompt ? (
