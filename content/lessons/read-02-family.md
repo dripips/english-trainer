@@ -10,56 +10,74 @@ summary: "Простой текст A1 о семье. Читай, слушай, 
 tags: [reading, a1, family]
 reading:
   textEn: |
-    Anna is twelve years old. She lives in a small town with her family.
-    She has a mother, a father, one brother, and one sister.
-    Her mother is a teacher. Her father is a doctor.
-    Her brother is ten years old. His name is Max.
-    Her sister is six years old. Her name is Kate.
-    Anna and Max go to school every day. Kate stays at home.
-    The family has a dog and two cats. The dog is big and brown.
-    The cats are small and white. Anna loves her cats.
-    On Sunday they walk in the park. They are a happy family.
+    Anna is twelve years old. She lives in a small town near a big river with
+    her family. She loves her family very much. In her house there are five
+    people: her mother, her father, her brother, and her sister.
+
+    Her mother's name is Maria. She is a teacher, and she works at a school in
+    the town. She is kind and she helps Anna with her homework. Her father's name
+    is Peter. He is a doctor, and he works at the hospital. He helps sick people
+    every day. Sometimes he comes home late.
+
+    Anna has one brother and one sister. Her brother is ten years old. His name
+    is Max. He likes football and computer games. Her sister is six years old.
+    Her name is Kate. She is small and she likes to draw and sing.
+
+    Anna and Max go to school every morning. They walk together. Kate is too
+    young for school, so she stays at home with her grandmother.
+
+    The family has many animals. They have one big brown dog. His name is Rex.
+    He is friendly and he likes to run in the garden. They also have two small
+    white cats. The cats sleep all day on the sofa. Anna loves her cats very much,
+    and she gives them milk every evening.
+
+    On Saturday, the family cleans the house and goes shopping. On Sunday, they
+    walk in the park together. They feed the birds and eat ice cream. In the
+    evening, they have a big dinner and talk about the week. Anna is happy. She
+    has a kind and happy family, and she loves her home.
   textRu: |
-    Анне двенадцать лет. Она живёт в маленьком городе со своей семьёй.
-    У неё есть мама, папа, один брат и одна сестра.
-    Её мама — учительница. Её папа — врач.
-    Её брату десять лет. Его зовут Макс.
-    Её сестре шесть лет. Её зовут Кейт.
-    Анна и Макс ходят в школу каждый день. Кейт остаётся дома.
-    У семьи есть собака и две кошки. Собака большая и коричневая.
-    Кошки маленькие и белые. Анна любит своих кошек.
-    В воскресенье они гуляют в парке. Они счастливая семья.
+    Анне двенадцать лет. Она живёт в маленьком городе у большой реки со своей
+    семьёй. Она очень любит свою семью. В её доме пять человек: мама, папа, брат
+    и сестра.
+
+    Её маму зовут Мария. Она учительница и работает в школе в городе. Она добрая
+    и помогает Анне с домашними заданиями. Её папу зовут Питер. Он врач и работает
+    в больнице. Он каждый день помогает больным людям. Иногда он приходит домой
+    поздно.
+
+    У Анны есть один брат и одна сестра. Её брату десять лет. Его зовут Макс. Он
+    любит футбол и компьютерные игры. Её сестре шесть лет. Её зовут Кейт. Она
+    маленькая и любит рисовать и петь.
+
+    Анна и Макс ходят в школу каждое утро. Они идут вместе. Кейт ещё слишком
+    маленькая для школы, поэтому она остаётся дома с бабушкой.
+
+    У семьи есть много животных. У них есть одна большая коричневая собака. Его
+    зовут Рекс. Он дружелюбный и любит бегать в саду. У них также есть две
+    маленькие белые кошки. Кошки спят весь день на диване. Анна очень любит своих
+    кошек и каждый вечер даёт им молоко.
+
+    В субботу семья убирает дом и ходит за покупками. В воскресенье они вместе
+    гуляют в парке. Они кормят птиц и едят мороженое. Вечером у них большой ужин,
+    и они говорят о прошедшей неделе. Анна счастлива. У неё добрая и счастливая
+    семья, и она любит свой дом.
   gloss:
-    - en: "family"
-      ru: "семья"
-      note: "Существительное; here a group of people."
-    - en: "lives"
-      ru: "живёт"
-      note: "От live; 3-е лицо ед. ч. с -s."
-    - en: "has"
-      ru: "имеет, у неё есть"
-      note: "От have; форма 3-го лица ед. ч."
-    - en: "mother"
-      ru: "мама, мать"
-      note: "Родитель женского пола."
-    - en: "father"
-      ru: "папа, отец"
-      note: "Родитель мужского пола."
-    - en: "brother"
-      ru: "брат"
-      note: "Мальчик в семье."
-    - en: "sister"
-      ru: "сестра"
-      note: "Девочка в семье."
-    - en: "teacher"
-      ru: "учитель, учительница"
-      note: "Профессия; работает в школе."
-    - en: "doctor"
-      ru: "врач, доктор"
-      note: "Профессия; лечит людей."
-    - en: "happy"
-      ru: "счастливый"
-      note: "Прилагательное; противоположность sad."
+    - { en: "family", ru: "семья", note: "группа близких людей" }
+    - { en: "lives", ru: "живёт", note: "от live; 3-е лицо ед. ч. с -s" }
+    - { en: "town", ru: "город", note: "небольшой город" }
+    - { en: "mother", ru: "мама, мать", note: "родитель женского пола" }
+    - { en: "father", ru: "папа, отец", note: "родитель мужского пола" }
+    - { en: "teacher", ru: "учитель", note: "работает в школе" }
+    - { en: "doctor", ru: "врач", note: "лечит больных людей" }
+    - { en: "hospital", ru: "больница", note: "место, где работают врачи" }
+    - { en: "brother", ru: "брат", note: "мальчик в семье" }
+    - { en: "sister", ru: "сестра", note: "девочка в семье" }
+    - { en: "grandmother", ru: "бабушка", note: "мама твоей мамы или папы" }
+    - { en: "dog", ru: "собака", note: "домашнее животное" }
+    - { en: "cats", ru: "кошки", note: "мн. ч. от cat" }
+    - { en: "garden", ru: "сад", note: "зелёное место у дома" }
+    - { en: "feed", ru: "кормить", note: "давать еду; feed the birds" }
+    - { en: "happy", ru: "счастливый", note: "противоположность sad" }
 exercises:
   - id: q1
     type: choose
@@ -72,31 +90,31 @@ exercises:
     prompt: "What is Anna's mother's job?"
     options: ["A doctor", "A teacher", "A student"]
     answer: "A teacher"
-    rule: "Her mother is a teacher."
+    rule: "Her mother's name is Maria. She is a teacher."
   - id: q3
     type: choose
-    prompt: "What is Anna's father's job?"
-    options: ["A doctor", "A teacher", "A driver"]
-    answer: "A doctor"
-    rule: "Her father is a doctor."
+    prompt: "Where does Anna's father work?"
+    options: ["At the hospital", "At a school", "In a shop"]
+    answer: "At the hospital"
+    rule: "He is a doctor, and he works at the hospital."
   - id: q4
     type: choose
     prompt: "How many cats does the family have?"
     options: ["One cat", "Two cats", "Three cats"]
     answer: "Two cats"
-    rule: "The family has a dog and two cats."
+    rule: "They also have two small white cats."
   - id: q5
     type: choose
-    prompt: "Who is Anna's brother?"
-    options: ["Max", "Kate", "Anna"]
-    answer: "Max"
-    rule: "Her brother is ten years old. His name is Max."
+    prompt: "Why does Kate stay at home?"
+    options: ["She is too young for school", "She is sick", "She does not like school"]
+    answer: "She is too young for school"
+    rule: "Kate is too young for school, so she stays at home with her grandmother."
   - id: q6
     type: choose
-    prompt: "What do they do on Sunday?"
-    options: ["They go to school", "They walk in the park", "They stay at home"]
+    prompt: "What does the family do on Sunday?"
+    options: ["They go to school", "They walk in the park", "They clean the house"]
     answer: "They walk in the park"
-    rule: "On Sunday they walk in the park."
+    rule: "On Sunday, they walk in the park together."
 ---
 
 Прочитай текст об Анне и её семье, послушай аудио и ответь на вопросы ниже.

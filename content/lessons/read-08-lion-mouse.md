@@ -10,32 +10,56 @@ summary: "Басня Эзопа: маленькая мышь помогает б
 tags: [reading, story, fable, a1]
 reading:
   textEn: |
-    One hot day, a big lion was asleep under a tree. A little mouse ran on his
-    paw and woke him up.
-    The lion was angry. He caught the mouse with his paw.
-    "Please, do not eat me!" said the little mouse. "One day I can help you."
-    The lion laughed. "You? Help me? You are so small!" But he was kind, so he
-    let the mouse go.
-    Some days later, two men caught the lion in a big net. He could not move.
-    He was afraid, and he roared and roared.
-    The little mouse heard him. She ran to the lion fast. She saw the net and
-    started to bite the ropes. Soon the lion was free.
-    "Thank you, little friend," said the lion. "A small friend can help a big
-    lion." Now they were good friends.
+    It was a hot day. A big lion was asleep under a tree. He was tired, and
+    he liked the cool grass. A little mouse ran near him. She did not see the
+    lion. She ran on his big paw, and she woke him up.
+
+    The lion was angry. He opened his eyes and caught the little mouse with
+    his paw. "Now I can eat you," he said.
+
+    "Please, please do not eat me!" said the mouse. "I am small, but one day
+    I can help you. Let me go." The lion laughed. "You? Help me? You are so
+    small, and I am big and strong!" But the lion was kind, so he let the
+    mouse go. The little mouse ran away fast and said, "Thank you!"
+
+    Some days later, two men came to the forest. They wanted to catch the
+    lion. They put a big net under a tree, and the lion walked into it. Now
+    the lion could not move. He was afraid. He roared and roared, but no one
+    came.
+
+    The little mouse heard the lion. "That is my friend!" she said, and she
+    ran to him fast. She saw the net and the ropes. She began to bite the
+    ropes with her small teeth. She bit and bit. Soon the net was open, and
+    the lion was free.
+
+    "Thank you, little friend," said the lion. "I was wrong. A small friend
+    can help a big lion." Now they were good friends for all their lives.
   textRu: |
-    Один жаркий день большой лев спал под деревом. Маленькая мышь пробежала
-    по его лапе и разбудила его.
-    Лев был злой. Он поймал мышь своей лапой.
-    «Пожалуйста, не ешь меня!» — сказала маленькая мышь. «Однажды я смогу
-    помочь тебе».
-    Лев засмеялся. «Ты? Помочь мне? Ты такая маленькая!» Но он был добрый,
-    поэтому отпустил мышь.
-    Через несколько дней двое мужчин поймали льва в большую сеть. Он не мог
-    двигаться. Ему было страшно, и он рычал и рычал.
-    Маленькая мышь услышала его. Она быстро прибежала ко льву. Она увидела сеть
-    и начала грызть верёвки. Скоро лев был свободен.
-    «Спасибо, маленький друг», — сказал лев. «Маленький друг может помочь
-    большому льву». Теперь они были хорошими друзьями.
+    Был жаркий день. Большой лев спал под деревом. Он устал, и ему нравилась
+    прохладная трава. Маленькая мышь пробежала рядом с ним. Она не видела
+    льва. Она пробежала по его большой лапе и разбудила его.
+
+    Лев был злой. Он открыл глаза и поймал маленькую мышь своей лапой.
+    «Теперь я могу съесть тебя», — сказал он.
+
+    «Пожалуйста, пожалуйста, не ешь меня! — сказала мышь. — Я маленькая, но
+    однажды я смогу помочь тебе. Отпусти меня». Лев засмеялся. «Ты? Помочь
+    мне? Ты такая маленькая, а я большой и сильный!» Но лев был добрый,
+    поэтому он отпустил мышь. Маленькая мышь быстро убежала и сказала:
+    «Спасибо!»
+
+    Через несколько дней в лес пришли двое мужчин. Они хотели поймать льва.
+    Они положили большую сеть под дерево, и лев вошёл в неё. Теперь лев не
+    мог двигаться. Ему было страшно. Он рычал и рычал, но никто не приходил.
+
+    Маленькая мышь услышала льва. «Это мой друг!» — сказала она и быстро
+    прибежала к нему. Она увидела сеть и верёвки. Она начала грызть верёвки
+    своими маленькими зубами. Она грызла и грызла. Скоро сеть открылась, и
+    лев был свободен.
+
+    «Спасибо, маленький друг, — сказал лев. — Я был неправ. Маленький друг
+    может помочь большому льву». Теперь они были хорошими друзьями на всю
+    жизнь.
   gloss:
     - en: "lion"
       ru: "лев"
@@ -58,15 +82,33 @@ reading:
     - en: "net"
       ru: "сеть"
       note: "Существительное; вещь из верёвок, чтобы ловить животных."
+    - en: "rope"
+      ru: "верёвка"
+      note: "Существительное; длинная толстая нить. Мн. ч.: ropes."
     - en: "bite"
       ru: "кусать, грызть"
       note: "Глагол; кусать зубами. Past: bit."
+    - en: "teeth"
+      ru: "зубы"
+      note: "Существительное мн. ч.; ед. ч.: tooth."
+    - en: "roar"
+      ru: "рычать"
+      note: "Глагол; издавать громкий звук, как лев. Past: roared."
+    - en: "afraid"
+      ru: "испуганный, боится"
+      note: "Прилагательное; be afraid = бояться."
     - en: "free"
       ru: "свободный"
       note: "Прилагательное; не пойман, может идти."
+    - en: "kind"
+      ru: "добрый"
+      note: "Прилагательное; хороший, помогает другим."
     - en: "friend"
       ru: "друг"
       note: "Существительное; человек или зверь, который тебе помогает."
+    - en: "wrong"
+      ru: "неправый, неправильный"
+      note: "Прилагательное; противоположность right."
 exercises:
   - id: q1
     type: choose
@@ -79,7 +121,7 @@ exercises:
     prompt: "Why was the lion angry at the mouse?"
     options: ["The mouse woke him up", "The mouse ate his food", "The mouse was loud"]
     answer: "The mouse woke him up"
-    rule: "Мышь пробежала по лапе и разбудила льва."
+    rule: "Мышь пробежала по лапе и разбудила льва: she woke him up."
   - id: q3
     type: choose
     prompt: "What did the lion do with the little mouse?"
@@ -91,13 +133,13 @@ exercises:
     prompt: "How did the men catch the lion?"
     options: ["In a big net", "With a rope on his paw", "In a small box"]
     answer: "In a big net"
-    rule: "Two men caught him in a big net."
+    rule: "Two men put a big net under a tree and the lion walked into it."
   - id: q5
     type: choose
     prompt: "How did the mouse help the lion?"
     options: ["She bit the ropes", "She called other lions", "She brought water"]
     answer: "She bit the ropes"
-    rule: "Мышь грызла верёвки: she started to bite the ropes."
+    rule: "Мышь грызла верёвки: she began to bite the ropes."
   - id: q6
     type: choose
     prompt: "What is the moral of the story?"

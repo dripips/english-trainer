@@ -10,6 +10,7 @@ import {
 import { pushEnabled, publicKey, sendToUser } from './push.js';
 
 const SECRET = process.env.AUTH_SECRET || 'dev-insecure-secret-change-me';
+const ttsInflight = new Map(); // hash -> in-progress generation, so identical concurrent TTS bills once
 const COOKIE = 'et_token';
 const isProd = process.env.NODE_ENV === 'production';
 // Effectively forever: log in once and stay in. Survives deploys because
@@ -402,26 +403,37 @@ export async function registerRoutes(app) {
     const hash = crypto.createHash('sha1').update(`${model}|${voice}|${speed}|${text}`).digest('hex');
     const file = path.join(TTS_DIR, `${hash}.mp3`);
     reply.header('Cache-Control', 'private, max-age=31536000, immutable');
+    // 1) Already on disk → serve, never re-bill.
     try {
       if (fs.existsSync(file) && fs.statSync(file).size > 0) {
         reply.header('Content-Type', 'audio/mpeg');
         return reply.send(fs.createReadStream(file));
       }
     } catch { /* regenerate */ }
+    // 2) Coalesce concurrent identical requests so the same text is generated (billed) only once.
+    let genP = ttsInflight.get(hash);
+    if (!genP) {
+      genP = (async () => {
+        const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}`, {
+          method: 'POST',
+          headers: { 'xi-api-key': apiKey, 'Content-Type': 'application/json', Accept: 'audio/mpeg' },
+          body: JSON.stringify({
+            text,
+            model_id: model,
+            voice_settings: { stability: 0.5, similarity_boost: 0.75, style: 0, use_speaker_boost: true, speed },
+          }),
+          signal: AbortSignal.timeout(30000),
+        });
+        if (!res.ok) throw new Error('tts upstream failed');
+        const buf = Buffer.from(await res.arrayBuffer());
+        try { fs.mkdirSync(TTS_DIR, { recursive: true }); fs.writeFileSync(file, buf); } catch { /* serve anyway */ }
+        return buf;
+      })();
+      ttsInflight.set(hash, genP);
+      genP.finally(() => ttsInflight.delete(hash));
+    }
     try {
-      const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}`, {
-        method: 'POST',
-        headers: { 'xi-api-key': apiKey, 'Content-Type': 'application/json', Accept: 'audio/mpeg' },
-        body: JSON.stringify({
-          text,
-          model_id: model,
-          voice_settings: { stability: 0.5, similarity_boost: 0.75, style: 0, use_speaker_boost: true, speed },
-        }),
-        signal: AbortSignal.timeout(30000),
-      });
-      if (!res.ok) return reply.code(502).send({ error: 'tts upstream failed' });
-      const buf = Buffer.from(await res.arrayBuffer());
-      try { fs.mkdirSync(TTS_DIR, { recursive: true }); fs.writeFileSync(file, buf); } catch { /* serve anyway */ }
+      const buf = await genP;
       reply.header('Content-Type', 'audio/mpeg');
       return reply.send(buf);
     } catch {
