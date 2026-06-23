@@ -626,11 +626,12 @@ export async function registerRoutes(app) {
 
     const phaseList = [...phases.values()].sort((a, b) => a.phase - b.phase);
     const totalDone = phaseList.reduce((s, p) => s + p.done, 0);
+    const totalLessons = phaseList.reduce((s, p) => s + p.total, 0); // excludes reading texts
 
     return {
       phases: phaseList,
       totalDone,
-      totalLessons: store.lessons.length,
+      totalLessons,
       studyDaysThisWeek,
       lessonsThisWeek,
       srsTotal,
@@ -697,15 +698,18 @@ export async function registerRoutes(app) {
              (SELECT COUNT(*) FROM activity a WHERE a.user_id=u.id) AS activeDays
       FROM users u ORDER BY u.id`).all();
     // Fully-completed lessons require comparing attempted-distinct to each lesson's exercise count.
+    // Reading texts (kind: reading) are a separate track — exclude them from the lesson count.
     const store = getStore();
-    const exCount = new Map(store.lessons.map((l) => [l.id, l.exercises.length]));
+    const coreLessons = store.lessons.filter((l) => l.kind !== 'reading');
+    const exCount = new Map(coreLessons.map((l) => [l.id, l.exercises.length]));
+    const lessonsTotal = coreLessons.length;
     return rows.map((u) => {
       const done = db.prepare(
         'SELECT lesson_id, COUNT(DISTINCT exercise_id) a FROM lesson_attempts WHERE user_id=? GROUP BY lesson_id'
       ).all(u.id).filter((r) => exCount.get(r.lesson_id) && r.a >= exCount.get(r.lesson_id)).length;
       const { level } = xpLevel(u.xp);
       const days = db.prepare('SELECT day FROM activity WHERE user_id=? ORDER BY day DESC').all(u.id).map((r) => r.day);
-      return { ...u, lessonsDone: done, lessonsTotal: store.lessons.length, level, streak: computeStreak(days) };
+      return { ...u, lessonsDone: done, lessonsTotal, level, streak: computeStreak(days) };
     });
   });
 
