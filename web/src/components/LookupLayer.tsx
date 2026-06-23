@@ -29,14 +29,35 @@ function lookupAtPoint(x: number, y: number): { word: string; sentence: string }
   const word = text.slice(ws, we).replace(/^['’-]+|['’-]+$/g, '').trim();
   if (!word || !/[\p{L}]/u.test(word) || word.length > 40) return null;
 
-  // context = text of the nearest block element — handles bold/italic words that
-  // sit in their own text node (e.g. **leaves**), so we still get the full sentence.
+  // Build a SHORT context: just the one sentence around the tapped word (a whole
+  // reading text often sits in a single <p>, so we must not use the full block).
   const startEl: Element | null = node.nodeType === 3 ? node.parentElement : (node as Element);
   const block = startEl?.closest('li, p, td, th, blockquote, h1, h2, h3, h4');
-  let sentence = ((block?.textContent) || text).replace(/\s+/g, ' ').trim();
-  if (sentence.length > 240) {
-    const idx = sentence.toLowerCase().indexOf(word.toLowerCase());
-    if (idx >= 0) sentence = sentence.slice(Math.max(0, idx - 110), idx + 110).trim();
+  let blockText = text;
+  let globalStart = ws;
+  if (block) {
+    const walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT);
+    let acc = ''; let found = -1; let n: Node | null;
+    while ((n = walker.nextNode())) {
+      if (n === node) found = acc.length + ws;
+      acc += n.textContent || '';
+    }
+    blockText = acc;
+    globalStart = found >= 0 ? found : Math.max(0, acc.toLowerCase().indexOf(word.toLowerCase()));
+  }
+  // expand to sentence boundaries (. ! ? or newline) around the word
+  let s = 0; let e = blockText.length;
+  for (let i = globalStart; i > 0; i--) { if (/[.!?\n]/.test(blockText[i - 1])) { s = i; break; } }
+  for (let i = globalStart; i < blockText.length; i++) { if (/[.!?\n]/.test(blockText[i])) { e = i + 1; break; } }
+  let sentence = blockText.slice(s, e).replace(/\s+/g, ' ').trim();
+  // if the sentence is still long, keep only ~±4 words around the tapped word
+  const parts = sentence.split(' ');
+  if (parts.length > 12) {
+    const norm = (w: string) => w.toLowerCase().replace(/[^\p{L}]/gu, '');
+    let wi = parts.findIndex((w) => norm(w) === word.toLowerCase());
+    if (wi < 0) wi = parts.findIndex((w) => norm(w).includes(word.toLowerCase()));
+    const c = wi >= 0 ? wi : Math.floor(parts.length / 2);
+    sentence = (c > 4 ? '…' : '') + parts.slice(Math.max(0, c - 4), c + 5).join(' ') + (c + 5 < parts.length ? '…' : '');
   }
   return { word, sentence };
 }
