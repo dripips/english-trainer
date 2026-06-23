@@ -16,7 +16,7 @@ function StoryCard({ l }: { l: LessonMeta & { attempted?: number } }) {
     <Link to={`/lessons/${l.id}`} className="card block overflow-hidden !p-0 active:scale-[0.98]">
       {coverOk && (
         <div className="relative">
-          <img src={`/reading/${l.id}.jpg`} alt="" loading="lazy" onError={() => setCoverOk(false)}
+          <img src={`/reading/${l.id}.webp`} alt="" loading="lazy" onError={() => setCoverOk(false)}
             className="aspect-[16/9] w-full object-cover" />
           {done && (
             <span className="absolute right-2 top-2 grid h-7 w-7 place-items-center rounded-full bg-[var(--color-surface)]/90">

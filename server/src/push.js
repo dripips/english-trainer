@@ -74,6 +74,12 @@ function runReminders() {
     // skip if already studied today
     const active = db.prepare('SELECT 1 FROM activity WHERE user_id = ? AND day = ? AND (reviews > 0 OR exercises > 0)').get(user_id, utcToday);
     if (active) continue;
-    sendToUser(user_id, { title: 'English Trainer', body: 'Пора позаниматься английским — 10 минут сегодня 🇬🇧', url: '/' });
+    // Escalate the wording by how long they've been away (re-engagement).
+    const last = db.prepare('SELECT MAX(day) d FROM activity WHERE user_id = ? AND (reviews > 0 OR exercises > 0)').get(user_id)?.d;
+    const daysAway = last ? Math.round((Date.parse(utcToday) - Date.parse(last)) / 86400000) : 99;
+    let body = 'Пора позаниматься английским — 10 минут сегодня 🇬🇧';
+    if (daysAway >= 7) body = `Скучаем по тебе! Тебя не было ${daysAway} дн. — вернись на 5 минут, прогресс ждёт 👋`;
+    else if (daysAway >= 3) body = `Тебя не было ${daysAway} дн. Не теряй темп — 5 минут английского сегодня 🔥`;
+    sendToUser(user_id, { title: 'English Trainer', body, url: '/today' });
   }
 }

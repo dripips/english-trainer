@@ -12,3 +12,4 @@ caddy_config/
 # Private / copyrighted material — never commit (user's own textbook copy, etc.)
 private/
 *.pdf
+web/public/books/**/*.png

@@ -4,7 +4,7 @@ import { api } from '../api';
 import { useAuth } from '../auth';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
-import { IconBadge, ProgressBar } from '../components/ui';
+import { IconBadge, ProgressBar, Skeleton } from '../components/ui';
 
 const LINKS: { to: string; icon: LucideIcon; label: string; hint: string; color: string }[] = [
   { to: '/plan', icon: MapIcon, label: 'План обучения', hint: 'путь A1 → IELTS и статистика', color: 'var(--color-primary)' },
@@ -49,7 +49,7 @@ export function Me() {
         )}
       </div>
 
-      {gamif && (
+      {gamif ? (
         <div className="card mb-4 space-y-2">
           <div className="flex items-center justify-between text-sm">
             <span className="font-semibold">Уровень {gamif.level}</span>
@@ -65,22 +65,35 @@ export function Me() {
             <span>🏆 рекорд {gamif.longestStreak} дн.</span>
           </div>
         </div>
-      )}
-
-      {stats && (
-        <div className="mb-4 grid grid-cols-4 gap-2">
-          {([['всего', stats.total, 'var(--color-mint)'], ['новые', stats.new, 'var(--color-sky)'], ['учу', stats.learning, 'var(--color-amber)'], ['повтор', stats.review, 'var(--color-pink)']] as [string, number, string][]).map(([l, n, c]) => (
-            <div key={l} className="card !p-2.5 text-center">
-              <div className="display text-lg font-bold" style={{ color: c }}>{n}</div>
-              <div className="text-[10px] text-[var(--color-muted)]">{l}</div>
-            </div>
-          ))}
+      ) : (
+        <div className="card mb-4 space-y-2.5">
+          <div className="flex justify-between"><Skeleton className="h-4 w-24" /><Skeleton className="h-4 w-16" /></div>
+          <Skeleton className="h-2.5 w-full !rounded-full" />
+          <Skeleton className="h-3 w-40" />
         </div>
       )}
 
-      {gamif && (
-        <div className="mb-4">
-          <h2 className="mb-2.5 px-0.5 text-sm font-semibold text-[var(--color-muted)]">Достижения</h2>
+      <div className="mb-4 grid grid-cols-4 gap-2">
+        {([['всего', stats?.total, 'var(--color-mint)'], ['новые', stats?.new, 'var(--color-sky)'], ['учу', stats?.learning, 'var(--color-amber)'], ['повтор', stats?.review, 'var(--color-pink)']] as [string, number | undefined, string][]).map(([l, n, c]) => (
+          <div key={l} className="card !p-2.5 text-center">
+            {n === undefined ? <Skeleton className="mx-auto h-6 w-8" /> : <div className="display text-lg font-bold" style={{ color: c }}>{n}</div>}
+            <div className="mt-1 text-[10px] text-[var(--color-muted)]">{l}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mb-4">
+        <h2 className="mb-2.5 px-0.5 text-sm font-semibold text-[var(--color-muted)]">Достижения</h2>
+        {!gamif ? (
+          <div className="grid grid-cols-5 gap-x-2 gap-y-3">
+            {Array.from({ length: 10 }).map((_, i) => (
+              <div key={i} className="flex flex-col items-center gap-1.5">
+                <Skeleton className="!rounded-2xl" style={{ width: 52, height: 52 }} />
+                <Skeleton className="h-2 w-10" />
+              </div>
+            ))}
+          </div>
+        ) : (
           <div className="grid grid-cols-5 gap-x-2 gap-y-3">
             {gamif.badges.map((b) => (
               <div key={b.id} title={`${b.name} — ${b.desc}`} className="flex flex-col items-center gap-1.5">
@@ -100,8 +113,8 @@ export function Me() {
               </div>
             ))}
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       <div className="space-y-2.5">
         {LINKS.map((l) => (

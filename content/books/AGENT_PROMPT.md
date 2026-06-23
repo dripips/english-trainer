@@ -92,13 +92,13 @@ print("done", flush=True)
 известным сюжетом (Белоснежка и т.п.) даёт «no image part» (контент-фильтр) — перефразируй
 нейтрально (без имён персонажей: «a kind girl», «little gnomes»).
 
-## Шаг 3. Конвертируй PNG → JPG (компактно)
+## Шаг 3. Конвертируй PNG → WEBP (компактно, быстрая загрузка)
 ```bash
 cd /Users/vadimbobkov/eng/english-trainer/web/public/books/<id>
-for f in *.png; do sips -Z 1100 -s format jpeg -s formatOptions 84 "$f" --out "${f%.png}.jpg" >/dev/null; done
-rm -f *.png
+for f in *.png; do cwebp -q 80 "$f" -o "${f%.png}.webp" >/dev/null 2>&1 && rm "$f"; done
 ```
-Обложка книги на полке берётся автоматически из `1.jpg`.
+(`cwebp` есть в /opt/homebrew/bin; sips на этой машине webp НЕ умеет.) Обложка книги на полке —
+автоматически из `1.webp`. Все картинки в приложении — webp.
 
 ## Шаг 4. Проверь и задеплой
 ```bash

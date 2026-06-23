@@ -86,7 +86,7 @@ export function LessonScreen() {
             </div>
           )}
           <div className="card overflow-hidden"><Markdown>{lesson.theory}</Markdown></div>
-          {lesson.reading && <ReadingCard reading={lesson.reading} cover={lesson.kind === 'reading' ? `/reading/${lesson.id}.jpg` : undefined} />}
+          {lesson.reading && <ReadingCard reading={lesson.reading} cover={lesson.kind === 'reading' ? `/reading/${lesson.id}.webp` : undefined} />}
 
           {lesson.grammarRefs?.length > 0 && (
             <div className="flex flex-wrap gap-2">

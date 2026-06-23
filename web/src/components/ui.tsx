@@ -1,10 +1,10 @@
-import { useRef, useState, type ReactNode } from 'react';
+import { useRef, useState, type ReactNode, type CSSProperties } from 'react';
 import type { LucideIcon } from 'lucide-react';
 import { Volume2, Loader2, Pause } from 'lucide-react';
 import { speakControlled, ttsSupported, type SpeakHandle } from '../lib/speech';
 
-export function Skeleton({ className = '' }: { className?: string }) {
-  return <div className={`skeleton ${className}`} />;
+export function Skeleton({ className = '', style }: { className?: string; style?: CSSProperties }) {
+  return <div className={`skeleton ${className}`} style={style} />;
 }
 
 // Content-shaped placeholder for list screens while data loads.
