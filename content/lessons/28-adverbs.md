@@ -78,47 +78,92 @@ exercises:
     type: fill
     prompt: "He is ___ (usual) late for meetings."
     answer: "usually"
+    hint: "прилагательное usual → наречие с -ly"
     rule: "usually — наречие частоты после is/are/was/were."
   - id: b8
     type: fill
     prompt: "She finished the exam ___ (quick)."
     answer: "quickly"
+    hint: "как? → наречие на -ly"
     rule: "quick (adj) → quickly (adv): добавляем -ly."
   - id: b9
     type: fill
     prompt: "I have ___ ever been to Asia. Only once in my life."
     answer: "hardly"
+    hint: "почти никогда = ___ ever"
     rule: "hardly ever = почти никогда."
   - id: b10
     type: fill
     prompt: "The soup is ___ hot — wait a minute before eating."
     answer: "too"
+    hint: "слишком горячо, есть нельзя → не very"
     rule: "too = слишком (проблема): too hot = слишком горячо (нельзя есть)."
   - id: c11
     type: translate
     prompt: "Она обычно работает очень усердно."
     answer: ["She usually works very hard.", "She usually works really hard."]
+    hint: "usually перед глаголом; hard здесь без -ly"
     rule: "usually перед глаголом; very/really перед наречием hard."
   - id: c12
     type: translate
     prompt: "Я почти никогда не ем фастфуд."
     answer: ["I hardly ever eat fast food.", "I almost never eat fast food."]
+    hint: "почти никогда = hardly ever (без don't)"
     rule: "hardly ever = almost never."
   - id: c13
     type: translate
     prompt: "Говори медленнее, пожалуйста — я не понимаю."
     answer: ["Please speak more slowly.", "Speak more slowly, please."]
+    hint: "сравнительная форма наречия slowly → more ___"
     rule: "slowly — наречие, компаратив: more slowly."
   - id: d14
     type: fix
     prompt: "He doesn't never arrive on time."
     answer: "He never arrives on time."
+    hint: "never уже отрицательное — двойное отрицание не нужно"
     rule: "❌ doesn't never = двойное отрицание. never уже отрицательное → не нужен don't."
   - id: d15
     type: fix
     prompt: "She sings beautiful."
     answer: "She sings beautifully."
+    hint: "как поёт? → после глагола нужно наречие"
     rule: "После глагола нужно наречие: beautiful (adj) → beautifully (adv)."
+  - id: e16
+    type: fill
+    prompt: "They ___ (always) help their neighbours. (поставь наречие перед глаголом)"
+    answer: "always"
+    hint: "наречие частоты стоит перед обычным глаголом — просто впиши его"
+    rule: "always с обычным глаголом стоит ПЕРЕД глаголом: They always help."
+  - id: e17
+    type: choose
+    prompt: "He ran ___ to catch the bus."
+    options: ["fast", "fastly", "faster"]
+    answer: "fast"
+    rule: "fast — наречие совпадает с прилагательным (нет формы fastly)."
+  - id: e18
+    type: translate
+    prompt: "Он говорит по-английски хорошо."
+    answer: ["He speaks English well.", "He speaks English very well."]
+    hint: "наречие от good — особая форма (не goodly)"
+    rule: "good (adj) → well (adv): особая форма."
+  - id: e19
+    type: fix
+    prompt: "This coffee isn't enough hot."
+    answer: "This coffee isn't hot enough."
+    hint: "enough стоит ПОСЛЕ прилагательного"
+    rule: "enough ставится ПОСЛЕ прилагательного: hot enough (не enough hot)."
+  - id: e20
+    type: fill
+    prompt: "I ___ (rare) eat sweets — maybe once a month."
+    answer: "rarely"
+    hint: "редко: rare → наречие на -ly"
+    rule: "rare (adj) → rarely (adv); наречие частоты ~10%."
+  - id: e21
+    type: choose
+    prompt: "The film was ___ boring that I fell asleep."
+    options: ["so", "such", "too"]
+    answer: "so"
+    rule: "so + прилагательное (… that …): so boring that I fell asleep."
 ---
 
 ## Часть 1. Наречия частоты (Frequency Adverbs)

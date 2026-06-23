@@ -43,11 +43,13 @@ exercises:
     type: fill
     prompt: "She ___ (finish) her homework."
     answer: ["has finished", "'s finished"]
+    hint: "she → has, а finish → V3"
     rule: "She → has + V3."
   - id: a3
     type: fill
     prompt: "They ___ (not / arrive) yet."
     answer: ["haven't arrived", "have not arrived"]
+    hint: "отрицание: haven't + V3"
     rule: "Отрицание: haven't/hasn't + V3."
   - id: a4
     type: fill
@@ -59,11 +61,13 @@ exercises:
     type: fill
     prompt: "He ___ (just / call) me."
     answer: ["has just called", "'s just called"]
+    hint: "just ставь между has и V3"
     rule: "just = только что, стоит между has и V3."
   - id: a6
     type: fill
     prompt: "I ___ (live) here for ten years."
     answer: ["have lived", "'ve lived"]
+    hint: "for + период → действие длится до сих пор"
     rule: "for + период → Present Perfect (действие длится до сих пор)."
   - id: b7
     type: choose
@@ -99,37 +103,80 @@ exercises:
     type: translate
     prompt: "Я только что пообедал."
     answer: ["I have just had lunch.", "I've just had lunch."]
+    hint: "just между have и V3 от have lunch"
     rule: "just = только что → Present Perfect."
   - id: c13
     type: translate
     prompt: "Ты когда-нибудь ездил в Лондон?"
     answer: ["Have you ever been to London?"]
+    hint: "опыт → Have you ever been to…?"
     rule: "ever = когда-нибудь, опыт → Present Perfect."
   - id: c14
     type: translate
     prompt: "Мы живём здесь с 2015 года."
     answer: ["We have lived here since 2015.", "We've lived here since 2015."]
+    hint: "с какого-то момента → since"
     rule: "since + год → Present Perfect (живём до сих пор)."
   - id: c15
     type: translate
     prompt: "Она уже позвонила тебе?"
     answer: ["Has she called you yet?", "Has she already called you?"]
+    hint: "вопрос с has + she + V3, в конце yet"
     rule: "yet в конце вопроса = уже (ожидаем что произойдёт)."
   - id: d16
     type: fix
     prompt: "I have seen him yesterday."
     answer: "I saw him yesterday."
+    hint: "yesterday не дружит с Present Perfect"
     rule: "yesterday = конкретное время → Past Simple, не Present Perfect."
   - id: d17
     type: fix
     prompt: "Have you ever went to Italy?"
     answer: "Have you ever been to Italy?"
+    hint: "для мест: have been to, а не went"
     rule: "go → been (для мест): have been to Italy."
   - id: d18
     type: fix
     prompt: "She has never ate meat."
     answer: "She has never eaten meat."
+    hint: "ate — это Past Simple, нужна форма V3"
     rule: "eat → eaten (irregular V3)."
+  - id: a19
+    type: fill
+    prompt: "We ___ (not / see) each other since last summer."
+    answer: ["haven't seen", "have not seen"]
+    hint: "since → Present Perfect, отрицание haven't + V3"
+    rule: "since + момент → Present Perfect; see → seen."
+  - id: a20
+    type: fill
+    prompt: "___ she ___ (write) the letter yet?"
+    answer: ["Has", "written"]
+    hint: "вопрос: Has + she + V3, write → written"
+    rule: "Вопрос: Has + подлежащее + V3? write → written."
+  - id: b21
+    type: choose
+    prompt: "We ___ to Spain in 2019."
+    options: ["have been", "went", "have gone"]
+    answer: "went"
+    rule: "in 2019 = конкретная дата → Past Simple."
+  - id: b22
+    type: choose
+    prompt: "He has worked here ___ five years."
+    options: ["since", "for", "ago"]
+    answer: "for"
+    rule: "for + длительность периода: for five years."
+  - id: c23
+    type: translate
+    prompt: "Я ещё не закончил работу."
+    answer: ["I haven't finished the work yet.", "I have not finished the work yet."]
+    hint: "ещё не → haven't + V3 … yet"
+    rule: "not … yet = ещё не → Present Perfect."
+  - id: d24
+    type: fix
+    prompt: "She has did her homework."
+    answer: "She has done her homework."
+    hint: "did — Past Simple, после has нужна V3"
+    rule: "do → done (V3): has done, не has did."
 ---
 
 ## Часть 1. Что такое Present Perfect

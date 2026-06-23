@@ -40,6 +40,7 @@ exercises:
     type: fill
     prompt: "He is ___ engineer."
     answer: "an"
+    hint: "перед гласным звуком: a или an?"
     rule: "an перед гласным звуком: engineer, actor, artist, officer."
   - id: a3
     type: fill
@@ -51,16 +52,19 @@ exercises:
     type: fill
     prompt: "Can you open ___ window, please?"
     answer: "the"
+    hint: "оба знают, какое окно → определённый артикль"
     rule: "Оба знают, о каком окне речь (одно в комнате) → the."
   - id: a5
     type: fill
     prompt: "___ sun rises in the east."
     answer: "The"
+    hint: "солнце одно в мире; с большой буквы в начале"
     rule: "Единственный объект в мире → the: the sun, the moon, the sky."
   - id: a6
     type: fill
     prompt: "I have ___ dog and ___ cat. ___ dog is black."
     answer: ["a", "a", "The"]
+    hint: "сначала называем впервые, потом — уже известное"
     rule: "Первый раз a, потом the — уже назвали собаку."
   - id: b7
     type: choose
@@ -102,32 +106,74 @@ exercises:
     type: translate
     prompt: "Я работаю врачом в больнице."
     answer: ["I work as a doctor in a hospital.", "I am a doctor. I work in a hospital."]
+    hint: "профессия и одна из больниц → a/an"
     rule: "Профессия → a/an."
   - id: c14
     type: translate
     prompt: "Он купил машину. Машина красная."
     answer: ["He bought a car. The car is red."]
+    hint: "впервые — a, во второй раз — the"
     rule: "Первое упоминание a, потом the."
   - id: c15
     type: translate
     prompt: "Москва — столица России."
     answer: ["Moscow is the capital of Russia."]
+    hint: "город без артикля; столица одна → the"
     rule: "Столица — единственная → the capital."
   - id: d16
     type: fix
     prompt: "She is doctor."
     answer: "She is a doctor."
+    hint: "перед профессией нужен артикль"
     rule: "Профессия требует артикль: a / an."
   - id: d17
     type: fix
     prompt: "I speak the English."
     answer: "I speak English."
+    hint: "перед языком артикль не нужен"
     rule: "Языки — без артикля."
   - id: d18
     type: fix
     prompt: "The life is beautiful."
     answer: "Life is beautiful."
+    hint: "абстрактное понятие в общем смысле — без артикля"
     rule: "Абстрактные понятия в общем смысле — без артикля."
+  - id: e19
+    type: fill
+    prompt: "I bought ___ umbrella because it was raining."
+    answer: "an"
+    hint: "umbrella начинается с гласного звука"
+    rule: "an перед гласным звуком: an umbrella, an apple."
+  - id: e20
+    type: choose
+    prompt: "We went to ___ Netherlands last summer."
+    options: ["a", "the", "—"]
+    answer: "the"
+    rule: "Страны-исключения с the: the Netherlands, the USA, the UK."
+  - id: e21
+    type: fill
+    prompt: "She plays ___ guitar in a band."
+    answer: "the"
+    hint: "музыкальные инструменты → ?"
+    rule: "Музыкальные инструменты → the: play the guitar, the piano."
+  - id: e22
+    type: translate
+    prompt: "Луна сегодня очень яркая."
+    answer: ["The moon is very bright today.", "The moon is very bright tonight."]
+    hint: "луна одна в мире → the"
+    rule: "Единственный объект в мире → the: the moon, the sun."
+  - id: e23
+    type: choose
+    prompt: "He is ___ honest man."
+    options: ["a", "an", "the"]
+    answer: "an"
+    rule: "honest начинается со звука [o] (h немое) → an honest man."
+  - id: e24
+    type: fix
+    prompt: "I had the breakfast at seven."
+    answer: "I had breakfast at seven."
+    hint: "приёмы пищи — без артикля"
+    rule: "have breakfast / lunch / dinner — без артикля."
 ---
 
 ## Часть 1. Зачем нужны артикли

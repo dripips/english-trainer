@@ -40,6 +40,7 @@ exercises:
     type: fill
     prompt: "She ___ (not) drive a car."
     answer: ["can't", "cannot"]
+    hint: "can + not"
     rule: "Отрицание: can't (= cannot)."
   - id: a3
     type: fill
@@ -51,16 +52,19 @@ exercises:
     type: fill
     prompt: "___ you help me?"
     answer: "Can"
+    hint: "вопрос начинается с can"
     rule: "Вопрос начинается с Can."
   - id: a5
     type: fill
     prompt: "We ___ speak English."
     answer: "can"
+    hint: "одна форма для всех лиц"
     rule: "can одинаков для I, you, we, they."
   - id: a6
     type: fill
     prompt: "My dog ___ (not) fly."
     answer: ["can't", "cannot"]
+    hint: "can + not"
     rule: "can't для любого лица, форма не меняется."
   - id: b7
     type: choose
@@ -96,37 +100,80 @@ exercises:
     type: translate
     prompt: "Я умею плавать."
     answer: ["I can swim.", "I can swim"]
+    hint: "can + глагол без to"
     rule: "can + глагол без to. НЕ «I can to swim»."
   - id: c13
     type: translate
     prompt: "Она не умеет водить машину."
     answer: ["She can't drive a car.", "She cannot drive a car.", "She can't drive."]
+    hint: "can't + drive"
     rule: "can't для she — форма не меняется."
   - id: c14
     type: translate
     prompt: "Ты можешь мне помочь?"
     answer: ["Can you help me?", "Can you help me"]
+    hint: "Can + you + глагол"
     rule: "Вопрос: Can + you + глагол."
   - id: c15
     type: translate
     prompt: "Можно мне открыть окно?"
     answer: ["Can I open the window?", "Can I open the window"]
+    hint: "Can I…? — просьба о разрешении"
     rule: "Can I…? = просьба о разрешении («можно мне…»)."
   - id: d16
     type: fix
     prompt: "He cans drive."
     answer: "He can drive."
+    hint: "нет формы «cans»"
     rule: "Нет «cans»! can одинаков для he/she/it."
   - id: d17
     type: fix
     prompt: "I can to swim."
     answer: "I can swim."
+    hint: "после can нет to"
     rule: "После can НЕ ставим to."
   - id: d18
     type: fix
     prompt: "She doesn't can cook."
     answer: ["She can't cook.", "She cannot cook."]
+    hint: "отрицание — can't, без does"
     rule: "Отрицание — can't, без do/does."
+  - id: e19
+    type: fill
+    prompt: "They ___ speak French."
+    answer: "can"
+    hint: "одна форма для всех лиц"
+    rule: "can одинаков для they."
+  - id: e20
+    type: choose
+    prompt: "My sister can ___ the piano."
+    options: ["play", "plays"]
+    answer: "play"
+    rule: "После can глагол без -s: play, не plays."
+  - id: e21
+    type: translate
+    prompt: "Он умеет кататься на велосипеде."
+    answer: ["He can ride a bike.", "He can ride a bicycle.", "He can ride a bike"]
+    hint: "can + ride; форма can не меняется"
+    rule: "can для he — форма не меняется, глагол без to."
+  - id: e22
+    type: fix
+    prompt: "Can you to help me?"
+    answer: "Can you help me?"
+    hint: "после can нет to"
+    rule: "После can НЕ ставим to."
+  - id: e23
+    type: choose
+    prompt: "«Can he cook?» — «No, he ___.»"
+    options: ["can't", "doesn't"]
+    answer: "can't"
+    rule: "Короткий ответ с can: No, he can't."
+  - id: e24
+    type: translate
+    prompt: "Я не умею танцевать."
+    answer: ["I can't dance.", "I cannot dance.", "I can't dance"]
+    hint: "can't + dance"
+    rule: "Отрицание — can't, глагол без to."
 ---
 
 ## Часть 1. can — что это и зачем

@@ -43,26 +43,31 @@ exercises:
     type: fill
     prompt: "She doesn't like coffee, ___ ___?"
     answer: "does she"
+    hint: "отрицание → положительный тег: doesn't → does"
     rule: "Отрицательное предложение → положительный тег. doesn't → does she."
   - id: a3
     type: fill
     prompt: "They can swim, ___ ___?"
     answer: "can't they"
+    hint: "can → can't + они"
     rule: "can → can't they."
   - id: a4
     type: fill
     prompt: "You haven't seen this film, ___ ___?"
     answer: "have you"
+    hint: "haven't → have (отрицание → положительный тег)"
     rule: "haven't → have you (отрицание → положительный тег)."
   - id: a5
     type: fill
     prompt: "He was late yesterday, ___ ___?"
     answer: "wasn't he"
+    hint: "was → wasn't + he"
     rule: "was → wasn't he."
   - id: a6
     type: fill
     prompt: "You'll help me, ___ ___?"
     answer: "won't you"
+    hint: "will → won't + you"
     rule: "will → won't you."
   - id: b7
     type: choose
@@ -92,22 +97,62 @@ exercises:
     type: translate
     prompt: "Ты уже ел, не так ли?"
     answer: ["You've already eaten, haven't you?", "You have already eaten, haven't you?"]
+    hint: "Present Perfect → тег haven't you?"
     rule: "Present Perfect → haven't you?"
   - id: c12
     type: translate
     prompt: "Это не займёт много времени, правда?"
     answer: ["It won't take long, will it?"]
+    hint: "won't в предложении → тег will it"
     rule: "won't → will it (отрицание → положительный тег)."
   - id: d13
     type: fix
     prompt: "She works here, isn't she?"
     answer: "She works here, doesn't she?"
+    hint: "works — Present Simple → does/doesn't"
     rule: "works (Present Simple) → does/doesn't, не is/isn't."
   - id: d14
     type: fix
     prompt: "You can't drive, can't you?"
     answer: "You can't drive, can you?"
+    hint: "отрицание в предложении → положительный тег"
     rule: "Отрицательное → положительный тег: can't → can you?"
+  - id: a15
+    type: fill
+    prompt: "We should leave now, ___ ___?"
+    answer: "shouldn't we"
+    hint: "should → shouldn't + we"
+    rule: "Утверждение с should → отрицательный тег shouldn't we."
+  - id: a16
+    type: fill
+    prompt: "They didn't call you, ___ ___?"
+    answer: "did they"
+    hint: "didn't → did (отрицание → положительный тег)"
+    rule: "didn't → did they (отрицание → положительный тег)."
+  - id: b17
+    type: choose
+    prompt: "There is a problem, ___?"
+    options: ["isn't there", "isn't it", "aren't there"]
+    answer: "isn't there"
+    rule: "There is … → isn't there? (there повторяется в теге)."
+  - id: c18
+    type: translate
+    prompt: "Ты любишь чай, не так ли?"
+    answer: ["You like tea, don't you?"]
+    hint: "Present Simple без вспомогательного → don't you"
+    rule: "Present Simple (like) → don't you?"
+  - id: c19
+    type: translate
+    prompt: "Она не придёт, правда?"
+    answer: ["She won't come, will she?", "She isn't coming, is she?"]
+    hint: "отрицание в предложении → положительный тег"
+    rule: "Отрицательное предложение → положительный тег."
+  - id: d20
+    type: fix
+    prompt: "He left early, doesn't he?"
+    answer: "He left early, didn't he?"
+    hint: "left — это Past Simple → did/didn't"
+    rule: "left (Past Simple) → didn't he, не doesn't."
 ---
 
 ## Часть 1. Правило

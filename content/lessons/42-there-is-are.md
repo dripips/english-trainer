@@ -44,6 +44,7 @@ exercises:
     type: fill
     prompt: "There is a sofa and there ___ two armchairs."
     answer: "are"
+    hint: "два кресла → множественное число"
     rule: "Два кресла — множественное число → there are."
   - id: a4
     type: fill
@@ -55,6 +56,7 @@ exercises:
     type: fill
     prompt: "There is a park and there ___ a small lake in the centre."
     answer: "is"
+    hint: "одно озеро → единственное число"
     rule: "Одно озеро — единственное число → there is."
   - id: a6
     type: fill
@@ -96,37 +98,80 @@ exercises:
     type: translate
     prompt: "В комнате есть стол."
     answer: ["There is a table in the room.", "There's a table in the room."]
+    hint: "один стол → there is a..."
     rule: "Один стол → there is a + предмет."
   - id: c13
     type: translate
     prompt: "В городе есть два парка."
     answer: ["There are two parks in the city.", "There are two parks in the town."]
+    hint: "два парка → there are..."
     rule: "Два парка → there are + множественное число."
   - id: c14
     type: translate
     prompt: "В холодильнике нет молока."
     answer: ["There isn't any milk in the fridge.", "There is no milk in the fridge.", "There isn't milk in the fridge."]
+    hint: "milk → there isn't any..."
     rule: "Отрицание: there isn't any + неисчисляемое."
   - id: c15
     type: translate
     prompt: "Есть ли рядом банк?"
     answer: ["Is there a bank near here?", "Is there a bank nearby?", "Is there a bank near?"]
+    hint: "вопрос: Is there a...?"
     rule: "Вопрос для единственного числа: Is there a + предмет?"
   - id: d16
     type: fix
     prompt: "There are a book on the table."
     answer: "There is a book on the table."
+    hint: "одна книга → не are"
     rule: "Одна книга → there is, а не there are."
   - id: d17
     type: fix
     prompt: "There is many people here."
     answer: "There are many people here."
+    hint: "many people → не is"
     rule: "many people — множественное число → there are."
   - id: d18
     type: fix
     prompt: "Is there any shops near here?"
     answer: "Are there any shops near here?"
+    hint: "shops — много → не Is"
     rule: "shops — множественное число → Are there...?"
+  - id: e19
+    type: fill
+    prompt: "There ___ four students in the classroom."
+    answer: "are"
+    hint: "четыре студента → множественное число"
+    rule: "Множественное число (four students) → there are."
+  - id: e20
+    type: choose
+    prompt: "___ a museum in the town?"
+    options: ["Is there", "Are there"]
+    answer: "Is there"
+    rule: "Один музей → Is there...?"
+  - id: e21
+    type: translate
+    prompt: "На столе есть несколько яблок."
+    answer: ["There are some apples on the table.", "There are a few apples on the table."]
+    hint: "несколько → some; яблок много → are"
+    rule: "Утверждение, много предметов → there are some."
+  - id: e22
+    type: fix
+    prompt: "There aren't a window in the room."
+    answer: "There isn't a window in the room."
+    hint: "одно окно → не aren't"
+    rule: "Одно окно — единственное число → there isn't."
+  - id: e23
+    type: choose
+    prompt: "There ___ any bread on the plate."
+    options: ["isn't", "aren't"]
+    answer: "isn't"
+    rule: "bread — неисчисляемое → there isn't."
+  - id: e24
+    type: translate
+    prompt: "В этой комнате нет стульев."
+    answer: ["There aren't any chairs in this room.", "There are no chairs in this room."]
+    hint: "стульев нет → there aren't any..."
+    rule: "Отрицание, множественное число → there aren't any."
 ---
 
 ## Часть 1. Зачем нужны there is / there are

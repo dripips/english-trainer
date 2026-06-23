@@ -38,26 +38,31 @@ exercises:
     type: fill
     prompt: "She ___ my sister."
     answer: "is"
+    hint: "she → ?"
     rule: "he/she/it → is."
   - id: a3
     type: fill
     prompt: "We ___ from Russia."
     answer: "are"
+    hint: "we → ?"
     rule: "we/you/they → are."
   - id: a4
     type: fill
     prompt: "He ___ not at home. (отрицание)"
     answer: ["is not", "isn't"]
+    hint: "he + not"
     rule: "Отрицание: после is ставим not. isn't = is not."
   - id: a5
     type: fill
     prompt: "They ___ not tired. (отрицание)"
     answer: ["are not", "aren't"]
+    hint: "they + not"
     rule: "Отрицание: are + not. aren't = are not."
   - id: a6
     type: fill
     prompt: "___ you ready? (вопрос)"
     answer: "Are"
+    hint: "глагол to be для you"
     rule: "Вопрос: глагол to be идёт перед местоимением. you → Are."
   - id: b7
     type: choose
@@ -93,37 +98,80 @@ exercises:
     type: translate
     prompt: "Я учитель."
     answer: ["I am a teacher.", "I'm a teacher."]
+    hint: "I am + a + профессия"
     rule: "I → am; перед профессией нужен артикль a."
   - id: c13
     type: translate
     prompt: "Они дома."
     answer: ["They are at home.", "They're at home."]
+    hint: "they → are; «дома» = at home"
     rule: "they → are; «дома» = at home."
   - id: c14
     type: translate
     prompt: "Он не занят."
     answer: ["He is not busy.", "He isn't busy.", "He's not busy."]
+    hint: "he + not + busy"
     rule: "Отрицание: he is not / isn't."
   - id: c15
     type: translate
     prompt: "Ты готов?"
     answer: ["Are you ready?"]
+    hint: "глагол to be в начале"
     rule: "Вопрос: Are you…? Глагол to be в начале."
   - id: d16
     type: fix
     prompt: "I is a student."
     answer: "I am a student."
+    hint: "какая форма у I?"
     rule: "С I всегда am, не is."
   - id: d17
     type: fix
     prompt: "She are my friend."
     answer: "She is my friend."
+    hint: "she → не are"
     rule: "she → is, не are."
   - id: d18
     type: fix
     prompt: "They is happy."
     answer: "They are happy."
+    hint: "they → не is"
     rule: "they → are, не is."
+  - id: e19
+    type: fill
+    prompt: "My parents ___ doctors."
+    answer: "are"
+    hint: "родителей много → ?"
+    rule: "Множественное число (parents) → are."
+  - id: e20
+    type: choose
+    prompt: "The weather ___ cold today."
+    options: ["am", "is", "are"]
+    answer: "is"
+    rule: "weather — единственное число → is."
+  - id: e21
+    type: translate
+    prompt: "Мы из Москвы."
+    answer: ["We are from Moscow.", "We're from Moscow."]
+    hint: "we → are; «из» = from"
+    rule: "we → are; «из» = from."
+  - id: e22
+    type: fix
+    prompt: "Am you tired?"
+    answer: "Are you tired?"
+    hint: "какая форма у you?"
+    rule: "you → are, поэтому вопрос Are you…?"
+  - id: e23
+    type: choose
+    prompt: "— Are they at school? — Yes, they ___."
+    options: ["is", "am", "are"]
+    answer: "are"
+    rule: "Короткий ответ для they: Yes, they are."
+  - id: e24
+    type: translate
+    prompt: "Это не моя книга."
+    answer: ["It is not my book.", "It isn't my book.", "It's not my book."]
+    hint: "it + not; «это» = it"
+    rule: "it → is; отрицание it is not / isn't."
 ---
 
 ## Часть 1. Глагол to be — КОГДА его использовать

@@ -120,37 +120,80 @@ exercises:
     type: translate
     prompt: "Где ты живёшь?"
     answer: ["Where do you live?"]
+    hint: "Where + do + you + глагол"
     rule: "Where + do + you + глагол: Where do you live?"
   - id: c13
     type: translate
     prompt: "Сколько тебе лет?"
     answer: ["How old are you?"]
+    hint: "возраст → How old ... ?"
     rule: "Возраст спрашиваем устойчивым вопросом: How old are you?"
   - id: c14
     type: translate
     prompt: "Когда ты приходишь домой?"
     answer: ["When do you come home?", "When do you get home?"]
+    hint: "When + do + you + глагол"
     rule: "When + do + you + глагол: When do you come home?"
   - id: c15
     type: translate
     prompt: "Сколько у тебя книг?"
     answer: ["How many books do you have?", "How many books have you got?"]
+    hint: "книги можно посчитать → How many"
     rule: "books — исчисляемое → How many books...?"
   - id: d16
     type: fix
     prompt: "Where you live?"
     answer: "Where do you live?"
+    hint: "не хватает помощника do"
     rule: "С обычным глаголом нужен do: Where do you live?"
   - id: d17
     type: fix
     prompt: "How much books do you have?"
     answer: "How many books do you have?"
+    hint: "книги можно посчитать → many"
     rule: "books — исчисляемое → How many, а не How much."
   - id: d18
     type: fix
     prompt: "What is your name? — I live in London."
     answer: "Where do you live? — I live in London."
+    hint: "ответ о месте → нужен вопрос о месте"
     rule: "Ответ о месте → вопрос Where, а не What."
+  - id: e19
+    type: fill
+    prompt: "___ does she want? — A new car."
+    answer: "What"
+    hint: "спрашиваем о вещи"
+    rule: "What — что. Спрашиваем о вещи: What does she want?"
+  - id: e20
+    type: choose
+    prompt: "___ water do you drink?"
+    options: ["How much", "How many"]
+    answer: "How much"
+    rule: "water — неисчисляемое → How much."
+  - id: e21
+    type: translate
+    prompt: "Почему ты здесь?"
+    answer: ["Why are you here?"]
+    hint: "Why + are + you ... ?"
+    rule: "Why + to be (are): Why are you here?"
+  - id: e22
+    type: fix
+    prompt: "Who do that man is?"
+    answer: "Who is that man?"
+    hint: "с to be помощник do не нужен"
+    rule: "С глаголом to be помощник do не нужен: Who is that man?"
+  - id: e23
+    type: choose
+    prompt: "What ___ your name?"
+    options: ["is", "do"]
+    answer: "is"
+    rule: "С to be (is) помощник do не нужен: What is your name?"
+  - id: e24
+    type: translate
+    prompt: "Кто это?"
+    answer: ["Who is this?", "Who is it?"]
+    hint: "Who + is ... ?"
+    rule: "Who — кто. Who is this? (с to be)."
 ---
 
 ## Часть 1. Что такое вопросительные слова

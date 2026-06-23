@@ -80,21 +80,25 @@ exercises:
     type: fill
     prompt: "inforMAtion, educATION, communicATION — что общего? Суффикс ___"
     answer: ["-tion", "-TION"]
+    hint: "посмотри на конец каждого слова"
     rule: "-TION всегда ставит ударение на предыдущий слог."
   - id: b8
     type: fill
     prompt: "draMAtic, econOMic, realiSTIC — что общего? Суффикс ___"
     answer: ["-ic", "-IC"]
+    hint: "одинаковое окончание у всех трёх слов"
     rule: "-IC: ударение на слог ПЕРЕД -ic."
   - id: b9
     type: fill
     prompt: "There's a PROtest outside. / They will proTEST against the decision. PROtest = ___, proTEST = ___"
     answer: ["noun / verb", "существительное / глагол"]
+    hint: "ударение на первый слог vs на второй — какая часть речи?"
     rule: "Существительное = ударение на первый слог. Глагол = ударение на второй."
   - id: b10
     type: fill
     prompt: "Назови ударный слог: uni-VER-si-ty. Суффикс ___"
     answer: ["-ity", "-ITY"]
+    hint: "посмотри на конец слова university"
     rule: "univerSITY — ударение перед -ity."
   - id: c11
     type: translate
@@ -118,12 +122,50 @@ exercises:
     type: fix
     prompt: "Произноси правильно: 'I want to reCORD a REcord.' (укажи значение каждого)"
     answer: "reCORD (verb — записывать) / REcord (noun — запись/рекорд)"
+    hint: "глагол → ударение на 2-й слог; существительное → на 1-й"
     rule: "reCORD = глагол (записывать). REcord = существительное (рекорд/запись)."
   - id: d15
     type: fix
     prompt: "Где ошибка в ударении: 'ecoNOmics' or 'ECOnomics'?"
     answer: "ecoNOMics — ударение на NOM (перед -ics)"
+    hint: "вспомни цепочку economy → economic → economics"
     rule: "econOMy → econOMic → econOMics: ударение держится на NOM."
+  - id: e16
+    type: choose
+    prompt: "Which suffix is in 'poLITical', 'biologIcal'? Где ударение по правилу?"
+    options: ["-ical → на слог перед -ical", "-ical → на сам -ical", "-ical → на первый слог"]
+    answer: "-ical → на слог перед -ical"
+    rule: "-ICAL: ударение на слог ПЕРЕД суффиксом. poLITical, ecoNOMical, bioLOGical."
+  - id: e17
+    type: fill
+    prompt: "amBItious, couRAgeous, outRAGeous — что общего? Суффикс ___"
+    answer: ["-ous", "-eous / -ious", "-ious"]
+    hint: "посмотри на конец слов — общая концовка"
+    rule: "-IOUS / -EOUS: ударение на слог ПЕРЕД суффиксом. amBItious, couRAGEous."
+  - id: e18
+    type: translate
+    prompt: "В слове «comfortable» ударение на каком слоге?"
+    answer: ["On the first syllable: COMfortable", "First syllable: COMfortable"]
+    hint: "COM-fort-a-ble (не comFORTable)"
+    rule: "COMfortable — ударение на первый слог (частая ошибка: comFORTable)."
+  - id: e19
+    type: fix
+    prompt: "Где ошибка: 'phoTOgraph' or 'PHOtograph' (само слово photograph)?"
+    answer: "PHOtograph — ударение на первый слог (phoTOgraphy — на второй)"
+    hint: "photograph (фото) vs photography (фотография) — ударение разное"
+    rule: "PHOtograph (1-й слог) → phoTOgraphy (2-й слог) → photoGRAPHic (перед -ic)."
+  - id: e20
+    type: fill
+    prompt: "INcrease (noun) / inCREASE (verb). Глагол «увеличивать» — ударение на ___ слог."
+    answer: ["second", "2-й", "второй", "the second"]
+    hint: "глаголы из пары noun/verb берут ударение на второй слог"
+    rule: "INcrease (noun, 1-й слог) / inCREASE (verb, 2-й слог) — как REcord/reCORD."
+  - id: e21
+    type: choose
+    prompt: "Where is the stress in 'opportunity' (suffix -ity)?"
+    options: ["opporTUNity", "OPPortunity", "opportuNIty"]
+    answer: "opporTUNity"
+    rule: "-ITY: ударение на слог ПЕРЕД -ity. opporTUNity, possiBILity, abILity."
 ---
 
 ## Правила ударения

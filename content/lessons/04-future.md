@@ -42,26 +42,31 @@ exercises:
     type: fill
     prompt: "A: The phone is ringing! B: I ___ (answer) it. (решил прямо сейчас)"
     answer: ["will answer", "'ll answer"]
+    hint: "решение в эту секунду → will."
     rule: "Решение прямо сейчас → will."
   - id: a3
     type: fill
     prompt: "I ___ (study) tonight. (планировал заранее)"
     answer: ["am going to study", "'m going to study"]
+    hint: "план был заранее → am going to + глагол."
     rule: "Заранее намеченный план → am/is/are going to + голый глагол."
   - id: a4
     type: fill
     prompt: "We ___ (travel) to London next month. (план есть)"
     answer: "are going to travel"
+    hint: "we → are going to + глагол."
     rule: "we → are going to + глагол."
   - id: a5
     type: fill
     prompt: "She ___ (not / come) tomorrow. (отрицание)"
     answer: ["won't come", "will not come"]
+    hint: "отрицание will = won't + голый глагол."
     rule: "Отрицание will → won't (= will not) + голый глагол."
   - id: a6
     type: fill
     prompt: "___ you ___ (help) me? (вопрос с will)"
     answer: "Will you help"
+    hint: "вопрос начинается с Will, глагол без to и без -s."
     rule: "Вопрос: Will + подлежащее + голый глагол?"
   - id: b7
     type: choose
@@ -91,32 +96,39 @@ exercises:
     type: translate
     prompt: "Я помогу тебе. (решил сейчас)"
     answer: ["I will help you.", "I'll help you."]
+    hint: "спонтанное решение → will + голый глагол."
   - id: c12
     type: translate
     prompt: "Мы собираемся поехать в отпуск летом."
     answer: ["We are going to go on holiday in summer.", "We're going to go on holiday in summer.", "We are going to travel in summer.", "We're going to travel in summer."]
+    hint: "«собираемся» → are going to; сезон с in."
   - id: c13
     type: translate
     prompt: "Он не придёт завтра."
     answer: ["He won't come tomorrow.", "He will not come tomorrow."]
+    hint: "отрицание будущего → won't + голый глагол."
   - id: c14
     type: translate
     prompt: "Ты позвонишь мне вечером?"
     answer: ["Will you call me tonight?", "Will you call me in the evening?"]
+    hint: "вопрос начинается с Will you + глагол."
   - id: d15
     type: fix
     prompt: "I will to help you."
     answer: "I will help you."
+    hint: "после will частица to лишняя."
     rule: "После will — голый глагол БЕЗ to: will help (не will to help)."
   - id: d16
     type: fix
     prompt: "She is going study English tomorrow."
     answer: "She is going to study English tomorrow."
+    hint: "между going и глаголом не хватает to."
     rule: "going + TO + глагол — TO обязательно."
   - id: d17
     type: fix
     prompt: "Will she comes to the party?"
     answer: "Will she come to the party?"
+    hint: "после Will глагол без окончания -s."
     rule: "После Will глагол без -s: Will she come (не comes)."
   - id: o18
     type: order
@@ -130,6 +142,42 @@ exercises:
     type: freeform
     prompt: "Напиши 4 предложения: 3 своих плана на завтра (going to) и 1 прогноз о погоде или жизни (will)."
     sample: "Tomorrow I am going to work. In the evening I am going to study English. I am going to cook pasta for dinner. I think it will be a warm day."
+  - id: e21
+    type: fill
+    prompt: "He ___ (start) a new job next week. (план уже есть)"
+    answer: ["is going to start", "'s going to start"]
+    hint: "he + заранее намеченный план → is going to + глагол."
+    rule: "he → is going to + голый глагол (намеченный план)."
+  - id: e22
+    type: fill
+    prompt: "Don't worry, I ___ (call) you later. (обещание сейчас)"
+    answer: ["will call", "'ll call"]
+    hint: "обещание прямо сейчас → will + голый глагол."
+    rule: "Обещание / решение в моменте → will."
+  - id: e23
+    type: choose
+    prompt: "I think the team ___ win the game."
+    options: ["will", "is going to"]
+    answer: "will"
+    rule: "I think… (мнение/прогноз) → will."
+  - id: e24
+    type: choose
+    prompt: "She has a plan: she ___ open a café."
+    options: ["will", "is going to"]
+    answer: "is going to"
+    rule: "Готовый план → going to."
+  - id: e25
+    type: translate
+    prompt: "Они собираются купить дом."
+    answer: ["They are going to buy a house.", "They're going to buy a house."]
+    hint: "«собираются» → are going to + глагол."
+    rule: "they → are going to + голый глагол."
+  - id: e26
+    type: fix
+    prompt: "I will going to travel tomorrow."
+    answer: ["I am going to travel tomorrow.", "I'm going to travel tomorrow.", "I will travel tomorrow."]
+    hint: "нельзя смешивать will и going to в одном будущем — оставь что-то одно."
+    rule: "will и going to не используются вместе: выбери одно."
 ---
 
 ## Часть 1. Два способа говорить о будущем

@@ -47,21 +47,25 @@ exercises:
     type: fill
     prompt: "She was born ___ 1995 ___ June ___ the 3rd."
     answer: "in / in / on"
+    hint: "год → in, месяц → in, дата → on"
     rule: "in + год; in + месяц; on + конкретная дата."
   - id: a3
     type: fill
     prompt: "I'll see you ___ the weekend."
     answer: "at"
+    hint: "устойчивое выражение про выходные (UK)"
     rule: "at the weekend (UK) / on the weekend (US)."
   - id: a4
     type: fill
     prompt: "There's a good café ___ the end of this street."
     answer: "at"
+    hint: "точка «в конце» → один из вариантов at/on/in"
     rule: "at the end of = в конце (точка)."
   - id: a5
     type: fill
     prompt: "He works ___ a bank ___ the city centre."
     answer: "at / in"
+    hint: "место работы → точка; район города → внутри"
     rule: "at + место работы (точка); in + район/город."
   - id: a6
     type: choose
@@ -97,27 +101,68 @@ exercises:
     type: translate
     prompt: "Я родился в июле 1992 года."
     answer: ["I was born in July 1992.", "I was born in July, 1992."]
+    hint: "и месяц, и год берут один и тот же предлог"
     rule: "in + месяц; in + год (оба используют in)."
   - id: c12
     type: translate
     prompt: "Увидимся в пятницу вечером в 7."
     answer: ["See you on Friday evening at 7.", "See you on Friday at 7 in the evening."]
+    hint: "день недели → on, точное время → at"
     rule: "on + Friday; at + 7 (время)."
   - id: c13
     type: translate
     prompt: "Книга лежит на столе в гостиной."
     answer: ["The book is on the table in the living room.", "The book is on the table in the lounge."]
+    hint: "поверхность стола → on, внутри комнаты → in"
     rule: "on + поверхность; in + комната."
   - id: d14
     type: fix
     prompt: "I usually go to bed in midnight."
     answer: "I usually go to bed at midnight."
+    hint: "полночь — это точка времени"
     rule: "at midnight / at noon / at night — не in."
   - id: d15
     type: fix
     prompt: "She arrived on Monday on the morning."
     answer: "She arrived on Monday morning."
+    hint: "день + часть дня = одно on, лишний предлог не нужен"
     rule: "on Monday morning (одно on для дня+части дня). Не 'in the morning' если есть день."
+  - id: e16
+    type: fill
+    prompt: "We have an exam ___ Friday ___ the afternoon."
+    answer: "on / in"
+    hint: "день недели → on, часть дня → in"
+    rule: "on + день недели; in the afternoon — часть дня."
+  - id: e17
+    type: choose
+    prompt: "There's a beautiful picture ___ the wall."
+    options: ["in", "on", "at"]
+    answer: "on"
+    rule: "on the wall = на вертикальной поверхности (как и on the table)."
+  - id: e18
+    type: translate
+    prompt: "Я встречу тебя на вокзале в 6 часов."
+    answer: ["I'll meet you at the station at 6.", "I will meet you at the station at six."]
+    hint: "вокзал как точка встречи → at, точное время → at"
+    rule: "at + место встречи (станция); at + конкретное время."
+  - id: e19
+    type: fix
+    prompt: "I read about it on the newspaper."
+    answer: "I read about it in the newspaper."
+    hint: "внутри текста газеты, а не на её поверхности"
+    rule: "in the newspaper / in a book — внутри (текст), не on."
+  - id: e20
+    type: fill
+    prompt: "They go skiing ___ winter, usually ___ January."
+    answer: "in / in"
+    hint: "сезон → in, месяц → in"
+    rule: "in + сезон; in + месяц."
+  - id: e21
+    type: choose
+    prompt: "We were ___ the bus when it started raining."
+    options: ["in", "on", "at"]
+    answer: "on"
+    rule: "on the bus/train/plane — большой транспорт (но: in a car/taxi)."
 ---
 
 ## Часть 1. Предлоги времени

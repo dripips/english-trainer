@@ -44,6 +44,7 @@ exercises:
     type: fill
     prompt: "We ___ got a big house."
     answer: "have"
+    hint: "we → have got"
     rule: "we → have got."
   - id: a4
     type: fill
@@ -55,6 +56,7 @@ exercises:
     type: fill
     prompt: "They ___ got a lot of friends."
     answer: "have"
+    hint: "they → have got"
     rule: "they → have got."
   - id: a6
     type: fill
@@ -96,37 +98,80 @@ exercises:
     type: translate
     prompt: "У меня есть машина."
     answer: ["I've got a car.", "I have got a car.", "I have a car."]
+    hint: "I → have got / I've got"
     rule: "I → I've got / I have got. «have» тоже верно."
   - id: c13
     type: translate
     prompt: "У неё есть две сестры."
     answer: ["She's got two sisters.", "She has got two sisters.", "She has two sisters."]
+    hint: "she → has got / She's got"
     rule: "she → She's got / She has got."
   - id: c14
     type: translate
     prompt: "У них нет собаки."
     answer: ["They haven't got a dog.", "They have not got a dog.", "They don't have a dog."]
+    hint: "they + отрицание → haven't got"
     rule: "Отрицание: they → haven't got."
   - id: c15
     type: translate
     prompt: "У тебя есть брат?"
     answer: ["Have you got a brother?", "Do you have a brother?"]
+    hint: "вопрос → Have вперёд"
     rule: "Вопрос: Have you got...? выносим Have вперёд."
   - id: d16
     type: fix
     prompt: "She have got a cat."
     answer: "She has got a cat."
+    hint: "she → has, а не have"
     rule: "she → has got, а не have got."
   - id: d17
     type: fix
     prompt: "I has got a sister."
     answer: "I have got a sister."
+    hint: "I → have, а не has"
     rule: "I → have got, а не has got."
   - id: d18
     type: fix
     prompt: "Has you got a phone?"
     answer: "Have you got a phone?"
+    hint: "you → Have вперёд, а не Has"
     rule: "you → Have you got...?, а не Has."
+  - id: e19
+    type: fill
+    prompt: "My parents ___ got a new flat."
+    answer: "have"
+    hint: "parents = they → have got"
+    rule: "Несколько людей (they) → have got."
+  - id: e20
+    type: choose
+    prompt: "___ she got a bike?"
+    options: ["Have", "Has"]
+    answer: "Has"
+    rule: "Вопрос с she → Has she got...?"
+  - id: e21
+    type: fill
+    prompt: "He ___ got a sister. (отрицание)"
+    answer: ["hasn't", "has not"]
+    hint: "he + отрицание → hasn't got"
+    rule: "Отрицание для he → hasn't got (has not)."
+  - id: e22
+    type: translate
+    prompt: "У нас есть кошка."
+    answer: ["We've got a cat.", "We have got a cat.", "We have a cat."]
+    hint: "we → have got / We've got"
+    rule: "we → We've got / We have got."
+  - id: e23
+    type: fix
+    prompt: "We has got a dog."
+    answer: "We have got a dog."
+    hint: "we → have, а не has"
+    rule: "we → have got, а не has got."
+  - id: e24
+    type: choose
+    prompt: "My friend ___ a big dog."
+    options: ["have got", "has got"]
+    answer: "has got"
+    rule: "Один человек (my friend = he/she) → has got."
 ---
 
 ## Часть 1. Зачем нужны have got / has got

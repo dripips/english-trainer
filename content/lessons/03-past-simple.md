@@ -45,14 +45,17 @@ exercises:
     type: fill
     prompt: "She (watch) ___ TV last night."
     answer: "watched"
+    hint: "правильный глагол → +ed"
   - id: a3
     type: fill
     prompt: "They (play) ___ football on Sunday."
     answer: "played"
+    hint: "правильный глагол → +ed"
   - id: a4
     type: fill
     prompt: "We (study) ___ English yesterday."
     answer: "studied"
+    hint: "согласная + y → -ied"
     rule: "согласная + y → -ied: study → studied."
   - id: b5
     type: fill
@@ -64,36 +67,43 @@ exercises:
     type: fill
     prompt: "I (have) ___ breakfast at 8."
     answer: "had"
+    hint: "неправильный глагол (have → ...)"
     rule: "have → had."
   - id: b7
     type: fill
     prompt: "She (see) ___ a good film."
     answer: "saw"
+    hint: "неправильный глагол (see → ...)"
     rule: "see → saw."
   - id: b8
     type: fill
     prompt: "We (buy) ___ a new phone."
     answer: "bought"
+    hint: "неправильный глагол (buy → ...)"
     rule: "buy → bought."
   - id: c9
     type: fill
     prompt: "I (not / watch) ___ TV yesterday."
     answer: ["didn't watch", "did not watch"]
+    hint: "didn't + глагол без -ed"
     rule: "Отрицание: didn't + глагол БЕЗ окончания (didn't watch, не watched)."
   - id: c10
     type: fill
     prompt: "He (not / go) ___ to work."
     answer: ["didn't go", "did not go"]
+    hint: "didn't + начальная форма (не went)"
     rule: "После didn't глагол в начальной форме: didn't go (не went)."
   - id: d11
     type: fill
     prompt: "(you / see) ___ Tom yesterday?"
     answer: "Did you see"
+    hint: "Did + подлежащее + глагол"
     rule: "Вопрос: Did + подлежащее + глагол без изменений."
   - id: d12
     type: fill
     prompt: "(she / call) ___ you?"
     answer: "Did she call"
+    hint: "Did + she + начальная форма"
   - id: e13
     type: choose
     prompt: "I ___ at home yesterday."
@@ -125,23 +135,28 @@ exercises:
     type: translate
     prompt: "Я вчера работал."
     answer: ["I worked yesterday."]
+    hint: "work → worked, yesterday"
   - id: g19
     type: translate
     prompt: "Он не пошёл в школу. (школа = school)"
     answer: ["He didn't go to school.", "He did not go to school."]
+    hint: "отрицание → didn't + go"
   - id: g20
     type: translate
     prompt: "Ты видел его вчера?"
     answer: ["Did you see him yesterday?"]
+    hint: "вопрос → Did you see ... ?"
   - id: h21
     type: fix
     prompt: "I goed home."
     answer: "I went home."
+    hint: "go — неправильный, не +ed"
     rule: "go — неправильный: went, не «goed»."
   - id: h22
     type: fix
     prompt: "Did you went there?"
     answer: "Did you go there?"
+    hint: "после Did — начальная форма"
     rule: "После Did глагол в начальной форме: go, не went."
   - id: o23
     type: order
@@ -151,6 +166,42 @@ exercises:
     type: listen
     audioText: "We went to the cinema last night."
     answer: "We went to the cinema last night."
+  - id: m25
+    type: fill
+    prompt: "She (stop) ___ the car."
+    answer: "stopped"
+    hint: "короткий согл-гл-согл → удваиваем"
+    rule: "stop → stopped (удваиваем последнюю согласную)."
+  - id: m26
+    type: fill
+    prompt: "I (take) ___ the bus to work."
+    answer: "took"
+    hint: "неправильный глагол (take → ...)"
+    rule: "take → took (неправильный)."
+  - id: m27
+    type: choose
+    prompt: "We ___ at the party last night."
+    options: ["was", "were"]
+    answer: "were"
+    rule: "we → were."
+  - id: m28
+    type: fix
+    prompt: "She didn't went home."
+    answer: "She didn't go home."
+    hint: "после didn't — начальная форма"
+    rule: "После didn't глагол в начальной форме: go, не went."
+  - id: m29
+    type: translate
+    prompt: "Мы купили новую машину."
+    answer: ["We bought a new car."]
+    hint: "buy → bought"
+    rule: "buy → bought (неправильный)."
+  - id: m30
+    type: choose
+    prompt: "Did she ___ the email?"
+    options: ["write", "wrote"]
+    answer: "write"
+    rule: "После Did — начальная форма (write), не wrote."
 ---
 
 ## Часть 1. Когда использовать

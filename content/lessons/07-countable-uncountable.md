@@ -78,47 +78,92 @@ exercises:
     type: fill
     prompt: "There is ___ sugar on the table. (утверждение)"
     answer: "some"
+    hint: "в утверждении — some или any?"
     rule: "some — в утверждениях и предложениях: There's some sugar."
   - id: b9
     type: fill
     prompt: "Would you like ___ tea?"
     answer: "some"
+    hint: "это предложение (offer) → особый случай"
     rule: "some в предложениях (offers): Would you like some tea?"
   - id: b10
     type: fill
     prompt: "I don't have ___ money."
     answer: "any"
+    hint: "в отрицании — some или any?"
     rule: "any в отрицаниях: I don't have any money."
   - id: c11
     type: translate
     prompt: "У меня есть несколько идей."
     answer: ["I have a few ideas.", "I've got a few ideas."]
+    hint: "idea — исчисляемое → a few"
     rule: "idea — исчисляемое → a few ideas."
   - id: c12
     type: translate
     prompt: "Нам нужно немного масла."
     answer: ["We need a little butter.", "We need some butter."]
+    hint: "butter — неисчисляемое → a little / some"
     rule: "butter — неисчисляемое → a little / some."
   - id: c13
     type: translate
     prompt: "В холодильнике много еды."
     answer: ["There is a lot of food in the fridge.", "There's a lot of food in the fridge."]
+    hint: "food — неисчисляемое → a lot of"
     rule: "food — неисчисляемое → a lot of food."
   - id: d14
     type: fix
     prompt: "I need an advice from you."
     answer: "I need some advice from you."
+    hint: "advice не считается → без a/an"
     rule: "advice — неисчисляемое: no a/an, use some."
   - id: d15
     type: fix
     prompt: "How many money do you have?"
     answer: "How much money do you have?"
+    hint: "money — неисчисляемое → much или many?"
     rule: "money — неисчисляемое → How much (не How many)."
   - id: d16
     type: fix
     prompt: "She has a few patience."
     answer: "She has a little patience."
+    hint: "patience — неисчисляемое → a few или a little?"
     rule: "patience — неисчисляемое → a little (не a few)."
+  - id: e17
+    type: choose
+    prompt: "There isn't ___ bread left."
+    options: ["some", "any", "many"]
+    answer: "any"
+    rule: "any в отрицаниях: There isn't any bread."
+  - id: e18
+    type: fill
+    prompt: "We don't have ___ time, hurry up!"
+    answer: "much"
+    hint: "time — неисчисляемое → much или many?"
+    rule: "time — неисчисляемое → much (в отрицании: not much time)."
+  - id: e19
+    type: choose
+    prompt: "The news ___ very good today."
+    options: ["is", "are", "were"]
+    answer: "is"
+    rule: "news — неисчисляемое, глагол в единственном числе: The news is good."
+  - id: e20
+    type: translate
+    prompt: "Можно мне стакан воды?"
+    answer: ["Can I have a glass of water?", "Could I have a glass of water?"]
+    hint: "вода неисчисляемая → нужен контейнер a glass of"
+    rule: "Порция неисчисляемого: a glass of water."
+  - id: e21
+    type: fix
+    prompt: "I bought a new furnitures yesterday."
+    answer: "I bought some new furniture yesterday."
+    hint: "furniture не считается → без a и без -s"
+    rule: "furniture — неисчисляемое: без a/an, без -s; используй some."
+  - id: e22
+    type: fill
+    prompt: "How ___ chairs are there in the room?"
+    answer: "many"
+    hint: "chairs можно посчитать → much или many?"
+    rule: "chairs — исчисляемое → How many chairs?"
 ---
 
 ## Часть 1. Два типа существительных

@@ -76,47 +76,92 @@ exercises:
     type: fill
     prompt: "I'm reading ___ interesting book. ___ book is about history."
     answer: ["an / The", "a / The"]
+    hint: "первое упоминание + гласный звук; потом — уже известная книга"
     rule: "an interesting (гласный звук). Второй раз — the book."
   - id: b8
     type: fill
     prompt: "She plays ___ piano beautifully. (инструмент)"
     answer: "the"
+    hint: "музыкальные инструменты идут с одним и тем же артиклем"
     rule: "Музыкальные инструменты: play the piano / the guitar / the violin."
   - id: b9
     type: fill
     prompt: "___ English is spoken in many countries. (язык вообще)"
     answer: "—"
+    hint: "название языка в общем смысле"
     rule: "Языки без артикля: English, French, Russian — но: the English language."
   - id: b10
     type: fill
     prompt: "We visited ___ Louvre in Paris. It was ___ amazing museum."
     answer: ["the / an", "the / a"]
+    hint: "конкретный известный музей; потом — первое упоминание + гласный звук"
     rule: "the Louvre — конкретный, единственный. an amazing — гласный звук."
   - id: c11
     type: translate
     prompt: "Он учитель. Он работает в школе в центре города."
     answer: ["He is a teacher. He works at a school in the city centre.", "He's a teacher. He works in a school in the city centre."]
+    hint: "профессия и школа — первое упоминание; центр города — известный"
     rule: "a teacher — профессия. a school (первое упоминание). the city centre — известный."
   - id: c12
     type: translate
     prompt: "Луна очень яркая сегодня ночью."
     answer: ["The moon is very bright tonight.", "The moon looks very bright tonight."]
+    hint: "она единственная → определённый артикль"
     rule: "the moon — единственная."
   - id: c13
     type: translate
     prompt: "Мне нравится музыка, особенно классическая музыка."
     answer: ["I like music, especially classical music.", "I love music, especially classical music."]
+    hint: "вещь в общем смысле → без артикля"
     rule: "∅ music — в общем смысле. ∅ classical music — тоже общий смысл."
   - id: d14
     type: fix
     prompt: "She is playing a piano in a living room."
     answer: "She is playing the piano in the living room."
+    hint: "инструмент и единственная комната в доме"
     rule: "play the piano (инструмент). the living room — единственная в доме."
   - id: d15
     type: fix
     prompt: "The life is short, so enjoy the every moment."
     answer: "Life is short, so enjoy every moment."
+    hint: "абстрактное понятие без артикля; после every артикль не нужен"
     rule: "∅ life — абстрактное понятие. every moment — no article after 'every'."
+  - id: e16
+    type: fill
+    prompt: "I bought ___ umbrella because ___ weather was terrible."
+    answer: ["an / the", "an/the"]
+    hint: "первое упоминание + гласный звук; погода — известная/единственная"
+    rule: "an umbrella (гласный звук). the weather — единственная в контексте."
+  - id: e17
+    type: choose
+    prompt: "He went to ___ bed early because he was tired."
+    options: ["a", "the", "—"]
+    answer: "—"
+    rule: "go to bed / go to school / go to work — устойчивые фразы без артикля."
+  - id: e18
+    type: translate
+    prompt: "Я видел кошку на улице. Кошка была чёрной."
+    answer: ["I saw a cat in the street. The cat was black.", "I saw a cat on the street. The cat was black."]
+    hint: "первое упоминание = a; второе (уже знаем) = the"
+    rule: "a cat (первое упоминание) → the cat (второе, уже известна)."
+  - id: e19
+    type: fix
+    prompt: "She is best student in the class."
+    answer: "She is the best student in the class."
+    hint: "превосходная степень требует артикля"
+    rule: "Превосходная степень (best, biggest…) всегда с the: the best student."
+  - id: e20
+    type: fill
+    prompt: "___ Alps are higher than ___ Mount Kazbek."
+    answer: ["the / —", "the/—"]
+    hint: "горные хребты идут с the, отдельные горы — без артикля"
+    rule: "the Alps (горный хребет) с the; Mount Kazbek (отдельная гора) без артикля."
+  - id: e21
+    type: choose
+    prompt: "We had ___ dinner at ___ nice restaurant last night."
+    options: ["— / a", "the / a", "a / the"]
+    answer: "— / a"
+    rule: "have breakfast/lunch/dinner — без артикля. a nice restaurant — первое упоминание."
 ---
 
 ## Три правила

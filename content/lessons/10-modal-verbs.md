@@ -43,26 +43,31 @@ exercises:
     type: fill
     prompt: "You ___ smoke in the office. It's forbidden."
     answer: ["must not", "mustn't", "can't"]
+    hint: "forbidden = запрет"
     rule: "must not / can't = запрет."
   - id: a3
     type: fill
     prompt: "You look tired. You ___ go to bed early tonight."
     answer: "should"
+    hint: "это совет, рекомендация"
     rule: "should = совет, рекомендация."
   - id: a4
     type: fill
     prompt: "I ___ finish this report by 5 p.m. — it's compulsory."
     answer: ["have to", "must"]
+    hint: "compulsory = обязательно"
     rule: "must/have to = обязанность."
   - id: a5
     type: fill
     prompt: "When I was young, I ___ speak three languages."
     answer: "could"
+    hint: "способность в прошлом → прошедшее от can"
     rule: "could = прошедшее от can: был способен в прошлом."
   - id: a6
     type: fill
     prompt: "___ I open the window? It's hot in here."
     answer: ["Could", "Can", "May"]
+    hint: "вежливая просьба о разрешении"
     rule: "Could/Can/May I…? — вежливая просьба о разрешении."
   - id: b7
     type: choose
@@ -98,37 +103,80 @@ exercises:
     type: translate
     prompt: "Тебе не следует есть столько сахара."
     answer: ["You shouldn't eat so much sugar.", "You should not eat so much sugar."]
+    hint: "не следует → shouldn't + инфинитив без to"
     rule: "shouldn't = не следует (совет не делать)."
   - id: c13
     type: translate
     prompt: "Мне нужно идти — у меня встреча в 3."
     answer: ["I have to go — I have a meeting at 3.", "I must go — I have a meeting at 3."]
+    hint: "нужно/необходимость → have to или must"
     rule: "have to / must = необходимость."
   - id: c14
     type: translate
     prompt: "Ты умеешь играть на гитаре?"
     answer: ["Can you play the guitar?", "Are you able to play the guitar?"]
+    hint: "умеешь → Can you…?, инструмент с the"
     rule: "can = умеет (способность), the guitar — музыкальный инструмент."
   - id: c15
     type: translate
     prompt: "В детстве я мог бегать очень быстро."
     answer: ["When I was a child, I could run very fast.", "As a child, I could run very fast."]
+    hint: "мог в прошлом → could + инфинитив без to"
     rule: "could = прошедшее от can."
   - id: d16
     type: fix
     prompt: "She can to drive a car."
     answer: "She can drive a car."
+    hint: "после модального — без to"
     rule: "После модальных глаголов — инфинитив БЕЗ to."
   - id: d17
     type: fix
     prompt: "You must to wear a seatbelt."
     answer: "You must wear a seatbelt."
+    hint: "must без to"
     rule: "must + инфинитив без to."
   - id: d18
     type: fix
     prompt: "He should to see a doctor."
     answer: "He should see a doctor."
+    hint: "should без to"
     rule: "should + инфинитив без to."
+  - id: a19
+    type: fill
+    prompt: "It's raining. You ___ take an umbrella."
+    answer: "should"
+    hint: "дружеский совет"
+    rule: "should = совет, рекомендация."
+  - id: a20
+    type: fill
+    prompt: "You ___ pay now — you can pay later."
+    answer: ["don't have to", "do not have to"]
+    hint: "необязательно сейчас, но можно"
+    rule: "don't have to = необязательно (нет обязанности)."
+  - id: b21
+    type: choose
+    prompt: "___ you help me carry this bag, please?"
+    options: ["Could", "Must", "Should"]
+    answer: "Could"
+    rule: "Could you…? — вежливая просьба."
+  - id: c22
+    type: translate
+    prompt: "Здесь нельзя парковаться."
+    answer: ["You can't park here.", "You mustn't park here.", "You cannot park here."]
+    hint: "нельзя/запрет → can't или mustn't + инфинитив без to"
+    rule: "can't / mustn't = запрет (нельзя)."
+  - id: c23
+    type: translate
+    prompt: "Возможно, завтра пойдёт дождь."
+    answer: ["It may rain tomorrow.", "It might rain tomorrow."]
+    hint: "возможно/вероятность → may или might"
+    rule: "may / might = возможность, вероятность."
+  - id: d24
+    type: fix
+    prompt: "Can you to help me?"
+    answer: "Can you help me?"
+    hint: "после can — без to"
+    rule: "После can — инфинитив без to: Can you help?"
 ---
 
 ## Часть 1. Что такое модальные глаголы

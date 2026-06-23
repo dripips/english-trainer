@@ -39,26 +39,31 @@ exercises:
     type: fill
     prompt: "They (play) ___ football when it started to rain."
     answer: "were playing"
+    hint: "they — множественное, какая форма be?"
     rule: "They → were + playing."
   - id: a3
     type: fill
     prompt: "I (not / sleep) ___ at midnight — I was working."
     answer: ["wasn't sleeping", "was not sleeping"]
+    hint: "отрицание: was + not + -ing"
     rule: "Отрицание: was not / wasn't + V-ing."
   - id: a4
     type: fill
     prompt: "(you / listen) ___ to music when I called?"
     answer: "Were you listening"
+    hint: "вопрос начинается с формы be"
     rule: "Вопрос: Were + you + V-ing?"
   - id: a5
     type: fill
     prompt: "He (drive) ___ to work at 8 a.m."
     answer: "was driving"
+    hint: "глагол на -e теряет -e перед -ing"
     rule: "drive → driving (убираем -e)."
   - id: a6
     type: fill
     prompt: "We (have) ___ dinner when the lights went out."
     answer: "were having"
+    hint: "we → were; have → hav-ing"
     rule: "have → having. We → were."
   - id: b7
     type: choose
@@ -88,32 +93,74 @@ exercises:
     type: translate
     prompt: "В 9 утра я разговаривал по телефону."
     answer: ["At 9 a.m. I was talking on the phone.", "I was talking on the phone at 9 a.m."]
+    hint: "конкретный момент в прошлом → процесс"
     rule: "Past Continuous: was/were + V-ing."
   - id: c12
     type: translate
     prompt: "Что ты делал вчера в полдень?"
     answer: ["What were you doing yesterday at noon?", "What were you doing at noon yesterday?"]
+    hint: "вопрос: What + were + you + ...?"
     rule: "Вопрос: What + were + you + doing?"
   - id: c13
     type: translate
     prompt: "Пока она готовила, дети играли во дворе."
     answer: ["While she was cooking, the children were playing in the yard.", "The children were playing in the yard while she was cooking."]
+    hint: "while + два процесса одновременно"
     rule: "while + два Past Continuous для параллельных действий."
   - id: d14
     type: fix
     prompt: "She were reading when I arrived."
     answer: "She was reading when I arrived."
+    hint: "she — это was или were?"
     rule: "she → was (не were)."
   - id: d15
     type: fix
     prompt: "They was watching a film."
     answer: "They were watching a film."
+    hint: "they — это was или were?"
     rule: "they → were (не was)."
   - id: d16
     type: fix
     prompt: "I was study when you called."
     answer: "I was studying when you called."
+    hint: "после was нужна форма -ing"
     rule: "Past Continuous: was + V-ing, не базовый глагол."
+  - id: e17
+    type: fill
+    prompt: "The children (swim) ___ in the lake all afternoon."
+    answer: "were swimming"
+    hint: "swim — короткий глагол CVC, удвой согласную"
+    rule: "swim → swimming (удвоение m). They/children → were."
+  - id: e18
+    type: choose
+    prompt: "What ___ you doing when the teacher came in?"
+    options: ["was", "were", "did"]
+    answer: "were"
+    rule: "Вопрос с you → were + you + V-ing."
+  - id: e19
+    type: fill
+    prompt: "She (lie) ___ on the beach when it started to rain."
+    answer: "was lying"
+    hint: "глагол на -ie: ie → y + ing"
+    rule: "lie → lying. She → was."
+  - id: e20
+    type: translate
+    prompt: "Они не смотрели телевизор в тот момент."
+    answer: ["They weren't watching TV at that moment.", "They were not watching TV at that moment."]
+    hint: "they + отрицание were not / weren't + -ing"
+    rule: "Отрицание: were not / weren't + V-ing. They → were."
+  - id: e21
+    type: choose
+    prompt: "While I was cooking, the phone ___."
+    options: ["was ringing", "rang", "rings"]
+    answer: "rang"
+    rule: "Короткое прерывающее событие → Past Simple (rang)."
+  - id: e22
+    type: fix
+    prompt: "We was driving home when we saw the accident."
+    answer: "We were driving home when we saw the accident."
+    hint: "we — это was или were?"
+    rule: "we → were (не was)."
 ---
 
 ## Часть 1. Когда использовать Past Continuous

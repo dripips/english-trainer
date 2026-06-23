@@ -33,49 +33,59 @@ exercises:
     type: fill
     prompt: "I (read) ___ a book now."
     answer: ["am reading", "'m reading"]
+    hint: "для I — am + глагол с -ing."
     rule: "I → am + -ing."
   - id: a2
     type: fill
     prompt: "She (cook) ___ dinner at the moment."
     answer: ["is cooking", "'s cooking"]
+    hint: "для she — is + глагол с -ing."
     rule: "she → is + -ing."
   - id: a3
     type: fill
     prompt: "They (play) ___ football now."
     answer: ["are playing", "'re playing"]
+    hint: "для they — are + глагол с -ing."
     rule: "they → are + -ing."
   - id: a4
     type: fill
     prompt: "He (write) ___ an email."
     answer: ["is writing", "'s writing"]
+    hint: "he → is + -ing, и у write пропадает -e."
     rule: "write → writing (убираем -e)."
   - id: a5
     type: fill
     prompt: "We (run) ___ in the park."
     answer: ["are running", "'re running"]
+    hint: "we → are + -ing, и согласную в run надо удвоить."
     rule: "run → running (удваиваем согласную)."
   - id: b6
     type: fill
     prompt: "Напиши -ing форму: make →"
     answer: "making"
+    hint: "глагол на -e теряет эту -e перед -ing."
     rule: "глагол на -e: убираем -e."
   - id: b7
     type: fill
     prompt: "Напиши -ing форму: sit →"
     answer: "sitting"
+    hint: "согласная-гласная-согласная → последнюю букву удваиваем."
     rule: "согласная-гласная-согласная → удваиваем."
   - id: b8
     type: fill
     prompt: "Напиши -ing форму: study →"
     answer: "studying"
+    hint: "здесь ничего убирать или удваивать не нужно, просто +ing."
   - id: b9
     type: fill
     prompt: "Напиши -ing форму: go →"
     answer: "going"
+    hint: "просто добавь -ing, без изменений."
   - id: b10
     type: fill
     prompt: "Напиши -ing форму: swim →"
     answer: "swimming"
+    hint: "согласная-гласная-согласная → удваиваем m."
     rule: "swim → swimming (удваиваем m)."
   - id: c11
     type: choose
@@ -111,27 +121,68 @@ exercises:
     type: translate
     prompt: "Я читаю книгу сейчас."
     answer: ["I am reading a book now.", "I'm reading a book now."]
+    hint: "сейчас → am + reading."
   - id: d17
     type: translate
     prompt: "Он смотрит телевизор сейчас. (смотреть ТВ = watch TV)"
     answer: ["He is watching TV now.", "He's watching TV now."]
+    hint: "he → is + watching."
   - id: d18
     type: translate
     prompt: "Они играют в футбол каждое воскресенье. (внимание на «каждое»!)"
     answer: ["They play football every Sunday."]
+    hint: "«каждое» — это регулярно, поэтому время не Continuous."
     rule: "Ловушка: «каждое» = регулярно = Present Simple (play), не Continuous!"
   - id: d19
     type: translate
     prompt: "Что ты делаешь? (прямо сейчас)"
     answer: ["What are you doing?"]
+    hint: "вопрос: What + are + you + глагол с -ing."
   - id: d20
     type: translate
     prompt: "Она сегодня не работает."
     answer: ["She isn't working today.", "She is not working today."]
+    hint: "отрицание Continuous для she: is not + working."
   - id: e1
     type: freeform
     prompt: "Опиши 3 предложениями, что происходит в комнате прямо сейчас (My wife is …, I am …, The TV is …)."
     sample: "My wife is cooking dinner. I am writing sentences. The TV is working."
+  - id: e21
+    type: fill
+    prompt: "Look! It (rain) ___ outside."
+    answer: ["is raining", "'s raining"]
+    hint: "Look! → сейчас; для it — is + -ing."
+    rule: "Look! → Continuous: it is + -ing (о погоде)."
+  - id: e22
+    type: fill
+    prompt: "Listen! The kids (make) ___ a lot of noise."
+    answer: ["are making", "'re making"]
+    hint: "the kids = they → are; у make пропадает -e."
+    rule: "they → are + -ing; make → making."
+  - id: e23
+    type: choose
+    prompt: "Right now I ___ to music."
+    options: ["listen", "am listening"]
+    answer: "am listening"
+    rule: "right now → Continuous."
+  - id: e24
+    type: choose
+    prompt: "My dad ___ coffee every morning."
+    options: ["drinks", "is drinking"]
+    answer: "drinks"
+    rule: "every morning → привычка → Simple."
+  - id: e25
+    type: translate
+    prompt: "Мы сейчас не смотрим телевизор."
+    answer: ["We aren't watching TV now.", "We are not watching TV now."]
+    hint: "we → are not + watching; не забудь now."
+    rule: "Отрицание Continuous: are not + -ing."
+  - id: e26
+    type: fix
+    prompt: "She is cook dinner now."
+    answer: ["She is cooking dinner now.", "She's cooking dinner now."]
+    hint: "после is глагол должен быть с -ing."
+    rule: "После is глагол стоит в форме -ing: is cooking."
 ---
 
 ## Часть 1. Что такое Present Continuous

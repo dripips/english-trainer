@@ -81,47 +81,92 @@ exercises:
     type: fill
     prompt: "I ___ (meet) the director tomorrow at 10. It's in my diary."
     answer: ["am meeting", "'m meeting"]
+    hint: "встреча уже в ежедневнике → Present Continuous"
     rule: "Запланированная встреча с конкретным временем → Present Continuous."
   - id: b8
     type: fill
     prompt: "She ___ (not / come) to the party — she's already told us."
     answer: ["isn't going to come", "is not going to come"]
+    hint: "решение принято заранее → форма going to"
     rule: "Заранее принятое решение → going to (отрицание)."
   - id: b9
     type: fill
     prompt: "A: I'm cold. B: I ___ (close) the window."
     answer: ["'ll close", "will close"]
+    hint: "решаешь прямо сейчас, в ответ → will"
     rule: "Спонтанное решение в ответ на ситуацию → will."
   - id: b10
     type: fill
     prompt: "The forecast says it ___ (be) sunny tomorrow."
     answer: ["will be", "'ll be"]
+    hint: "прогноз/предсказание → will"
     rule: "Прогноз (на основе данных) → will."
   - id: c11
     type: translate
     prompt: "Я собираюсь поступить в университет в следующем году."
     answer: ["I'm going to apply to university next year.", "I am going to apply to university next year."]
+    hint: "это намерение, решённое заранее → going to"
     rule: "Заранее принятое решение → going to."
   - id: c12
     type: translate
     prompt: "Мы летим в Лондон в пятницу — билеты уже куплены."
     answer: ["We're flying to London on Friday — the tickets are already booked.", "We are flying to London on Friday."]
+    hint: "билеты куплены → фиксированная договорённость, Present Continuous"
     rule: "Фиксированная договорённость → Present Continuous."
   - id: c13
     type: translate
     prompt: "Осторожно! Ты сейчас упадёшь!"
     answer: ["Careful! You're going to fall!", "Watch out! You're going to fall!"]
+    hint: "видно прямо сейчас → going to"
     rule: "Очевидное ближайшее будущее → going to."
   - id: d14
     type: fix
     prompt: "I will meet my friend tonight — it's already arranged."
     answer: "I'm meeting my friend tonight — it's already arranged."
+    hint: "уже договорились → не will"
     rule: "Конкретная договорённость → Present Continuous (не will)."
   - id: d15
     type: fix
     prompt: "Look, it's going to rain — take an umbrella. Oh thanks, I'll take one."
     answer: "Look, it's going to rain — take an umbrella. Oh thanks, I'll take one."
+    hint: "проверь обе формы — возможно, ошибки нет"
     rule: "Верно: going to (очевидно) + will (спонтанное решение). Ошибок нет."
+  - id: e16
+    type: fill
+    prompt: "Hold on, I ___ (carry) that bag for you — it looks heavy."
+    answer: ["'ll carry", "will carry"]
+    hint: "предлагаешь помощь прямо сейчас → will"
+    rule: "Предложение помощи в момент речи → will."
+  - id: e17
+    type: choose
+    prompt: "My sister ___ a baby in October — she found out last week."
+    options: ["will have", "is having", "has"]
+    answer: "is having"
+    rule: "Запланированное/известное событие в будущем → Present Continuous."
+  - id: e18
+    type: translate
+    prompt: "Думаю, наша команда выиграет матч."
+    answer: ["I think our team will win the match.", "I think our team will win the game."]
+    hint: "это твоё мнение/предсказание → will"
+    rule: "Предсказание-мнение → will."
+  - id: e19
+    type: fix
+    prompt: "Be careful! That glass will fall off the table!"
+    answer: "Be careful! That glass is going to fall off the table!"
+    hint: "видишь признаки прямо сейчас → не will"
+    rule: "Очевидное ближайшее будущее (есть признаки) → going to, не will."
+  - id: e20
+    type: fill
+    prompt: "We ___ (start) a new project next month — the team already agreed."
+    answer: ["are going to start", "'re going to start"]
+    hint: "решение принято заранее, без точной договорённости по времени → going to"
+    rule: "Заранее принятое намерение → going to."
+  - id: e21
+    type: choose
+    prompt: "A: We've run out of milk. B: OK, I ___ buy some on my way home."
+    options: ["am buying", "am going to", "'ll"]
+    answer: "'ll"
+    rule: "Спонтанное решение в ответ на новую информацию → will."
 ---
 
 ## Три формы будущего

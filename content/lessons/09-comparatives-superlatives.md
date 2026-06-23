@@ -43,26 +43,31 @@ exercises:
     type: fill
     prompt: "English is ___ (easy) than German."
     answer: "easier"
+    hint: "согласная + y → -ier"
     rule: "согласная + y → -ier: easy → easier, happy → happier."
   - id: a3
     type: fill
     prompt: "This book is ___ (interesting) than the film."
     answer: "more interesting"
+    hint: "длинное слово → more + прилагательное"
     rule: "Длинные прилагательные (3+ слога): more + adjective."
   - id: a4
     type: fill
     prompt: "She is the ___ (tall) student in the class."
     answer: "tallest"
+    hint: "превосходная короткого слова: -est"
     rule: "Превосходная степень: the + adjective + -est."
   - id: a5
     type: fill
     prompt: "This is the ___ (expensive) restaurant in the city."
     answer: "most expensive"
+    hint: "длинное слово → the most + прилагательное"
     rule: "Длинные прилагательные: the most + adjective."
   - id: a6
     type: fill
     prompt: "He runs ___ (fast) than me."
     answer: "faster"
+    hint: "fast → fast + er"
     rule: "fast → faster (односложное)."
   - id: b7
     type: choose
@@ -98,32 +103,74 @@ exercises:
     type: translate
     prompt: "Этот отель дешевле, чем тот."
     answer: ["This hotel is cheaper than that one.", "This hotel is cheaper than that."]
+    hint: "cheap → cheaper, потом than"
     rule: "cheap → cheaper + than."
   - id: c13
     type: translate
     prompt: "Это был самый скучный фильм в моей жизни."
     answer: ["It was the most boring film of my life.", "It was the most boring film I have ever seen."]
+    hint: "boring — длинное → the most boring"
     rule: "Превосходная: the most + boring."
   - id: c14
     type: translate
     prompt: "Моя сестра умнее меня."
     answer: ["My sister is cleverer than me.", "My sister is smarter than me.", "My sister is more clever than me."]
+    hint: "clever → cleverer или more clever"
     rule: "clever → cleverer или more clever (оба варианта допустимы)."
   - id: d15
     type: fix
     prompt: "This is more better than yesterday."
     answer: "This is better than yesterday."
+    hint: "better уже сравнительная — more лишнее"
     rule: "❌ more better — двойная сравнительная. Только better."
   - id: d16
     type: fix
     prompt: "She is the most tallest girl in the school."
     answer: "She is the tallest girl in the school."
+    hint: "tallest уже превосходная — the most лишнее"
     rule: "❌ the most tallest — двойная превосходная. Только the tallest."
   - id: d17
     type: fix
     prompt: "He is more old than his wife."
     answer: "He is older than his wife."
+    hint: "old короткое → older, не more old"
     rule: "old — односложное → older (не more old)."
+  - id: a18
+    type: fill
+    prompt: "Health is ___ (important) than money."
+    answer: "more important"
+    hint: "important — длинное → more + прилагательное"
+    rule: "Длинные прилагательные: more + adjective."
+  - id: a19
+    type: fill
+    prompt: "This is the ___ (good) coffee in town."
+    answer: "best"
+    hint: "good → better → the best (исключение)"
+    rule: "good → the best (превосходная, исключение)."
+  - id: b20
+    type: choose
+    prompt: "My new phone is ___ than the old one."
+    options: ["more cheap", "cheaper", "cheapest"]
+    answer: "cheaper"
+    rule: "cheap → cheaper (короткое слово, не more cheap)."
+  - id: c21
+    type: translate
+    prompt: "Это самая длинная река в мире."
+    answer: ["This is the longest river in the world.", "It is the longest river in the world."]
+    hint: "long → the longest, после превосходной — in"
+    rule: "long → the longest; the longest … in the world."
+  - id: c22
+    type: translate
+    prompt: "Сегодня холоднее, чем вчера."
+    answer: ["Today is colder than yesterday.", "It is colder today than yesterday."]
+    hint: "cold → colder, затем than"
+    rule: "cold → colder + than."
+  - id: d23
+    type: fix
+    prompt: "This is the worse film of the year."
+    answer: "This is the worst film of the year."
+    hint: "нужна превосходная: bad → worse → the worst"
+    rule: "bad → worse → the worst; превосходная = the worst."
 ---
 
 ## Часть 1. Сравнительная степень (Comparative)
