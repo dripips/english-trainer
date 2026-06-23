@@ -1,0 +1,70 @@
+{
+  "id": "book-mia-star",
+  "title": "Mia and the Little Star",
+  "level": "A1",
+  "summary": "Девочка Миа находит в саду маленькую упавшую звезду и помогает ей вернуться обратно на небо.",
+  "character": "Mia is a small girl with curly brown hair, a little gap-tooth smile, and soft pink pyjamas with white stars; the little star is a small round glowing yellow star with two dot eyes and a happy smile.",
+  "style": "dreamy soft watercolor children's picture-book illustration, cozy night colours, gentle starlight, rounded friendly shapes",
+  "pages": [
+    {
+      "en": "It is night. Mia is in bed. She cannot sleep.",
+      "ru": "Ночь. Миа в кровати. Она не может уснуть.",
+      "scene": "Mia, a small girl with curly brown hair and pink pyjamas with white stars, lies awake in her cozy bed by a window with a big moon and many stars outside."
+    },
+    {
+      "en": "Mia looks out the window. Something falls from the sky!",
+      "ru": "Миа смотрит в окно. Что-то падает с неба!",
+      "scene": "Mia in pink star pyjamas presses her face to the window and sees a small glowing yellow star falling down toward the dark garden under a big moon."
+    },
+    {
+      "en": "Mia runs to the garden. She sees a little star in the grass.",
+      "ru": "Миа бежит в сад. Она видит маленькую звёздочку в траве.",
+      "scene": "Mia, a small girl with curly brown hair and pink star pyjamas, kneels in the night garden and finds a small glowing yellow star with a happy face sitting in the grass."
+    },
+    {
+      "en": "The little star is sad. \"I cannot fly,\" it says.",
+      "ru": "Звёздочка грустит. «Я не могу летать», — говорит она.",
+      "scene": "Mia in pink pyjamas gently holds the small glowing yellow star, which looks sad with a little frown, in the dim moonlit garden full of flowers."
+    },
+    {
+      "en": "Mia gives the star water and a warm hug.",
+      "ru": "Миа даёт звёздочке воды и тёплые объятия.",
+      "scene": "Mia, a small girl with curly brown hair and pink star pyjamas, hugs the small glowing yellow star and holds a tiny cup of water, both smiling under the big moon."
+    },
+    {
+      "en": "\"Up, up, little star!\" They try a swing. Whee!",
+      "ru": "«Вверх, вверх, звёздочка!» Они пробуют качели. Ура!",
+      "scene": "Mia in pink pyjamas swings high on a garden swing holding the happy glowing yellow star, reaching up toward the starry night sky and big moon."
+    },
+    {
+      "en": "They try a big kite. The wind is too soft.",
+      "ru": "Они пробуют большой воздушный змей. Ветер слишком слабый.",
+      "scene": "Mia, a small girl with curly brown hair and pink star pyjamas, holds a kite string with the little glowing yellow star riding the kite, only a little above the night garden."
+    },
+    {
+      "en": "They climb a tall tree. \"Up, up, little star!\" But the sky is far.",
+      "ru": "Они залезают на высокое дерево. «Вверх, вверх, звёздочка!» Но небо далеко.",
+      "scene": "Mia in pink star pyjamas climbs high in a tall tree at night, lifting the happy glowing yellow star up toward the far stars and big moon."
+    },
+    {
+      "en": "Mia's friends come. They build a tall, tall tower.",
+      "ru": "Друзья Мии приходят. Они строят высокую-высокую башню.",
+      "scene": "Mia in pink pyjamas and two small friends stack a tall tower of boxes in the moonlit garden, with the glowing yellow star sitting happily on top."
+    },
+    {
+      "en": "The wind blows soft and kind. \"Up, up, little star!\"",
+      "ru": "Дует мягкий и добрый ветер. «Вверх, вверх, звёздочка!»",
+      "scene": "Mia, a small girl with curly brown hair and pink star pyjamas, stands on the tall tower and lifts the glowing yellow star as a gentle wind carries it upward under the big moon."
+    },
+    {
+      "en": "The little star floats up to the sky. It twinkles, \"Goodnight!\"",
+      "ru": "Звёздочка взлетает на небо. Она мерцает: «Спокойной ночи!»",
+      "scene": "Mia in pink pyjamas waves from the garden as the small glowing yellow star floats high into the starry night sky and twinkles brightly beside the big moon."
+    },
+    {
+      "en": "Mia goes to bed. She smiles and sleeps. Goodnight, little star.",
+      "ru": "Миа идёт спать. Она улыбается и засыпает. Спокойной ночи, звёздочка.",
+      "scene": "Mia, a small girl with curly brown hair and pink star pyjamas, sleeps happily in her cozy bed while the little glowing yellow star twinkles in the window sky with the big moon."
+    }
+  ]
+}
