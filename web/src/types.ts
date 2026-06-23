@@ -178,3 +178,11 @@ export interface StudyPlan {
   srsTotal: number;
   firstDay: string | null;
 }
+
+export interface BookMeta {
+  id: string; title: string; level: string; summary: string; pages: number; cover: string;
+}
+export interface BookPage { n: number; en: string; ru: string; image: string; }
+export interface Book {
+  id: string; title: string; level: string; summary: string; pages: BookPage[];
+}

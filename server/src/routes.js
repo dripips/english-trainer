@@ -205,6 +205,21 @@ export async function registerRoutes(app) {
     return g;
   });
 
+  // ---------------- Picture books ----------------
+  app.get('/api/books', async () => getStore().books.map((b) => ({
+    id: b.id, title: b.title, level: b.level, summary: b.summary, pages: b.pages.length,
+    cover: `/books/${b.id}/1.jpg`,
+  })));
+
+  app.get('/api/books/:id', async (req, reply) => {
+    const b = getStore().bookById.get(req.params.id);
+    if (!b) return reply.code(404).send({ error: 'not found' });
+    return {
+      id: b.id, title: b.title, level: b.level, summary: b.summary,
+      pages: b.pages.map((p) => ({ n: p.n, en: p.en, ru: p.ru, image: `/books/${b.id}/${p.n}.jpg` })),
+    };
+  });
+
   // ---------------- Vocab ----------------
   app.get('/api/vocab/categories', async () => getStore().vocabCategories);
 

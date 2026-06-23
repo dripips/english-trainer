@@ -1,0 +1,50 @@
+{
+  "id": "book-pip-duck",
+  "title": "Pip Learns to Swim",
+  "level": "A1",
+  "summary": "Маленький утёнок Пип боится воды, но с помощью мамы учится плавать.",
+  "character": "Pip is a tiny fluffy yellow duckling with a small orange beak and one little blue ribbon on his head.",
+  "style": "soft warm watercolor children's picture-book illustration, rounded friendly shapes, gentle colours",
+  "pages": [
+    {
+      "en": "This is Pip. Pip is a little yellow duck.",
+      "ru": "Это Пип. Пип — маленький жёлтый утёнок.",
+      "scene": "A tiny fluffy yellow duckling with a small orange beak and a little blue ribbon on his head stands on the grass by a sunny pond with green reeds."
+    },
+    {
+      "en": "Pip looks at the water. The water is big. Pip is afraid.",
+      "ru": "Пип смотрит на воду. Вода большая. Пипу страшно.",
+      "scene": "The tiny yellow duckling with a blue ribbon on his head stands at the edge of the pond, looking at the big water with wide scared eyes, reeds and a sunny sky behind him."
+    },
+    {
+      "en": "Mum is here. \"Come, Pip,\" says Mum. \"The water is good.\"",
+      "ru": "Мама здесь. «Иди сюда, Пип», — говорит мама. «Вода хорошая».",
+      "scene": "A gentle mother duck swims in the pond and smiles at the tiny yellow duckling with a blue ribbon on his head, who stands on the grassy bank by the sunny reeds."
+    },
+    {
+      "en": "Pip puts one foot in the water. \"Oh! It is cold,\" says Pip.",
+      "ru": "Пип ставит одну лапку в воду. «Ой! Холодно», — говорит Пип.",
+      "scene": "The tiny yellow duckling with a blue ribbon on his head dips one little orange foot into the edge of the sunny pond, with reeds around him."
+    },
+    {
+      "en": "Pip tries to swim. But Pip goes down. \"Help!\" says Pip.",
+      "ru": "Пип пытается плыть. Но Пип идёт ко дну. «Помогите!» — говорит Пип.",
+      "scene": "The tiny yellow duckling with a blue ribbon on his head splashes in the pond water, looking worried, with little splashes around him and reeds in the sunny background."
+    },
+    {
+      "en": "\"Try again, Pip!\" says Mum. \"I am here. You can do it.\"",
+      "ru": "«Попробуй ещё раз, Пип!» — говорит мама. «Я рядом. У тебя получится».",
+      "scene": "The mother duck swims close to the tiny yellow duckling with a blue ribbon on his head, gently helping him stay on the sunny pond water near the reeds."
+    },
+    {
+      "en": "Pip moves his feet. One, two, one, two. Pip swims! Pip can swim!",
+      "ru": "Пип двигает лапками. Раз, два, раз, два. Пип плывёт! Пип умеет плавать!",
+      "scene": "The tiny yellow duckling with a blue ribbon on his head swims happily on the sunny pond, paddling his orange feet, with his proud mother duck beside him and reeds around."
+    },
+    {
+      "en": "Pip is happy. \"I love the water!\" says Pip. Mum is happy too.",
+      "ru": "Пип счастлив. «Я люблю воду!» — говорит Пип. Мама тоже счастлива.",
+      "scene": "The tiny yellow duckling with a blue ribbon on his head swims joyfully next to his smiling mother duck on the sunny pond, with green reeds and a warm bright sky."
+    }
+  ]
+}

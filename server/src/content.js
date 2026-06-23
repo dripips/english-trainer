@@ -169,11 +169,40 @@ function loadVocab(warnings) {
   return { categories, words, wordById };
 }
 
+function loadBooks(warnings) {
+  const books = [];
+  const dir = path.join(CONTENT_DIR, 'books');
+  if (!fs.existsSync(dir)) return books;
+  for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.json') && !x.startsWith('_'))) {
+    try {
+      const b = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+      if (!b.id || !b.title || !Array.isArray(b.pages)) {
+        warnings.push(`book ${f}: missing id/title/pages`);
+        continue;
+      }
+      books.push({
+        id: b.id,
+        title: b.title,
+        level: b.level || 'A1',
+        summary: b.summary || '',
+        character: b.character || '',
+        style: b.style || '',
+        pages: b.pages.map((p, i) => ({ n: i + 1, en: p.en || '', ru: p.ru || '', scene: p.scene || '' })),
+      });
+    } catch (e) {
+      warnings.push(`book ${f}: ${e.message}`);
+    }
+  }
+  books.sort((a, b) => (a.level + a.title).localeCompare(b.level + b.title));
+  return books;
+}
+
 export function loadContent() {
   const warnings = [];
   const lessons = loadLessons(warnings);
   const grammar = loadGrammar(warnings);
   const { categories, words, wordById } = loadVocab(warnings);
+  const books = loadBooks(warnings);
   store = {
     lessons,
     lessonById: new Map(lessons.map((l) => [l.id, l])),
@@ -182,11 +211,13 @@ export function loadContent() {
     vocabCategories: categories,
     words,
     wordById,
+    books,
+    bookById: new Map(books.map((b) => [b.id, b])),
     warnings,
   };
   console.log(
     `Content loaded: ${lessons.length} lessons, ${grammar.length} grammar cards, ` +
-      `${words.length} words in ${categories.length} categories.`
+      `${words.length} words in ${categories.length} categories, ${books.length} books.`
   );
   if (warnings.length) console.warn(`Content warnings (${warnings.length}):\n - ` + warnings.slice(0, 30).join('\n - '));
   return store;

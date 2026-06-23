@@ -1,0 +1,50 @@
+{
+  "id": "book-milo-moon",
+  "title": "Milo and the Moon",
+  "level": "A1",
+  "summary": "Маленький котёнок Майло хочет потрогать луну и узнаёт, что луна — это друг, который приходит каждую ночь.",
+  "character": "Milo is a small fluffy grey kitten with big green eyes, white paws, and a tiny red scarf around his neck.",
+  "style": "dreamy soft watercolor children's picture-book illustration, cozy night colours, gentle starlight",
+  "pages": [
+    {
+      "en": "It is night. Milo sees the moon. \"Hello, Moon!\" he says.",
+      "ru": "Ночь. Майло видит луну. «Привет, Луна!» — говорит он.",
+      "scene": "Milo the small grey kitten with a red scarf sits in a quiet garden at night, looking up at a big yellow moon and many stars."
+    },
+    {
+      "en": "The moon is big and yellow. Milo wants to touch it.",
+      "ru": "Луна большая и жёлтая. Майло хочет её потрогать.",
+      "scene": "Milo the grey kitten with white paws and a red scarf reaches one paw up toward the big yellow moon in a starry garden."
+    },
+    {
+      "en": "Milo climbs a tall tree. \"Hello, Moon!\" But the moon is far.",
+      "ru": "Майло залезает на высокое дерево. «Привет, Луна!» Но луна далеко.",
+      "scene": "Milo the grey kitten with a red scarf climbs high in a tall tree, stretching toward the big yellow moon and stars in the night sky."
+    },
+    {
+      "en": "Milo jumps from the roof. He cannot touch the moon.",
+      "ru": "Майло прыгает с крыши. Он не может дотронуться до луны.",
+      "scene": "Milo the small grey kitten with a red scarf leaps from a house rooftop under the big yellow moon and bright stars."
+    },
+    {
+      "en": "Milo builds a tower of boxes. Up, up, up!",
+      "ru": "Майло строит башню из коробок. Вверх, вверх, вверх!",
+      "scene": "Milo the grey kitten with white paws and a red scarf stands on a tall tower of boxes in the garden, reaching for the big yellow moon."
+    },
+    {
+      "en": "The moon is too high. Milo is sad.",
+      "ru": "Луна слишком высоко. Майло грустит.",
+      "scene": "Milo the small grey kitten with a red scarf sits on the ground in the garden, looking sad and tired under the big yellow moon and stars."
+    },
+    {
+      "en": "Mum says: \"The moon is your friend. She visits every night.\"",
+      "ru": "Мама говорит: «Луна — твой друг. Она приходит каждую ночь».",
+      "scene": "A big soft grey mother cat hugs Milo the grey kitten with a red scarf in the cozy garden, both looking up at the big yellow moon."
+    },
+    {
+      "en": "Milo waves. \"Goodnight, Moon!\" The moon smiles.",
+      "ru": "Майло машет лапкой. «Спокойной ночи, Луна!» Луна улыбается.",
+      "scene": "Milo the small grey kitten with a red scarf waves a white paw at the big smiling yellow moon, sleepy and happy under the gentle starlight."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "book-lucy-balloon",
+  "title": "Lucy's Red Balloon",
+  "level": "A2",
+  "summary": "Красный шарик Люси улетел через весь город, и добрые люди помогали ей, пока порыв ветра не вернул его обратно.",
+  "character": "Lucy is a young girl with curly brown hair and two pigtails, wearing a yellow dress, white socks, and red shoes, and she always holds a bright red balloon on a white string.",
+  "style": "bright cheerful watercolor children's picture-book illustration, sunny town setting, warm colours",
+  "pages": [
+    {
+      "en": "Lucy had a bright red balloon. She walked happily down the sunny street. The balloon danced above her head.",
+      "ru": "У Люси был ярко-красный шарик. Она радостно шла по солнечной улице. Шарик танцевал над её головой.",
+      "scene": "Lucy in her yellow dress walks down a sunny town street with little shops, holding her bright red balloon on a white string."
+    },
+    {
+      "en": "Suddenly the wind came. It pulled the string from her little hand. The red balloon flew up into the sky.",
+      "ru": "Вдруг подул ветер. Он вырвал верёвочку из её маленькой руки. Красный шарик улетел в небо.",
+      "scene": "A gust of wind pulls the white string from Lucy's hand as the bright red balloon rises into the sunny sky above the town shops."
+    },
+    {
+      "en": "The balloon floated over the bakery. The kind baker saw it and ran outside. He reached up high, but he could not catch it.",
+      "ru": "Шарик пролетел над пекарней. Добрый пекарь увидел его и выбежал на улицу. Он потянулся высоко вверх, но не смог его поймать.",
+      "scene": "The red balloon floats above a cosy bakery with bread in the window, while a friendly baker in a white apron reaches up from the sunny street; Lucy watches nearby."
+    },
+    {
+      "en": "Next the balloon flew over the post office. A postman stood on a tall ladder. He stretched out his arm, but the balloon was too high.",
+      "ru": "Потом шарик пролетел над почтой. Почтальон стоял на высокой лестнице. Он протянул руку, но шарик был слишком высоко.",
+      "scene": "The red balloon drifts over a post office with a red door, while a smiling postman on a tall ladder stretches his arm toward it in the sunny town."
+    },
+    {
+      "en": "The balloon passed a window cleaner. He worked high on a building. He waved his cloth, but the balloon went by.",
+      "ru": "Шарик пролетел мимо мойщика окон. Он работал высоко на здании. Он махнул тряпкой, но шарик пролетел мимо.",
+      "scene": "A friendly window cleaner on a hanging platform high on a sunny town building waves his cloth as the bright red balloon floats past the windows."
+    },
+    {
+      "en": "The red balloon went higher and higher. It floated over the rooftops. The whole sunny town looked small below.",
+      "ru": "Красный шарик поднимался всё выше и выше. Он плыл над крышами. Весь солнечный город казался маленьким внизу.",
+      "scene": "The bright red balloon floats high above the warm orange rooftops of the sunny town, with tiny streets and shops far below."
+    },
+    {
+      "en": "Lucy looked up at the sky. Her balloon was very far away. She felt sad and a big tear fell down.",
+      "ru": "Люси смотрела на небо. Её шарик был очень далеко. Ей стало грустно, и большая слеза скатилась по щеке.",
+      "scene": "Lucy in her yellow dress stands on the sunny street and looks up sadly, with a small tear on her cheek, as the red balloon is a tiny dot in the sky."
+    },
+    {
+      "en": "Then a gentle gust of wind came back. It blew the balloon softly down to Lucy. She caught the string and laughed with joy.",
+      "ru": "Потом вернулся лёгкий порыв ветра. Он мягко опустил шарик к Люси. Она поймала верёвочку и засмеялась от радости.",
+      "scene": "A gentle wind carries the bright red balloon back down into Lucy's hands as she smiles happily on the sunny town street, the baker and postman waving in the background."
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import { IconBadge, ProgressBar } from '../components/ui';
 const LINKS: { to: string; icon: LucideIcon; label: string; hint: string; color: string }[] = [
   { to: '/plan', icon: MapIcon, label: 'План обучения', hint: 'путь A1 → IELTS и статистика', color: 'var(--color-primary)' },
   { to: '/practice', icon: Zap, label: 'Практика', hint: 'адаптивные упражнения', color: 'var(--color-primary)' },
+  { to: '/books', icon: BookOpen, label: 'Книги с картинками', hint: 'листай истории как книжку', color: 'var(--color-pink)' },
   { to: '/reading', icon: BookText, label: 'Чтение', hint: 'короткие тексты и сказки с переводом', color: 'var(--color-sky)' },
   { to: '/listening', icon: Headphones, label: 'Аудирование', hint: 'слушай и записывай фразы', color: 'var(--color-sky)' },
   { to: '/library', icon: BookOpen, label: 'Библиотека', hint: 'читать книги на английском', color: 'var(--color-mint)' },

@@ -32,6 +32,8 @@ import { Body } from './screens/Body';
 import { Reading } from './screens/Reading';
 import { Today } from './screens/Today';
 import { Listening } from './screens/Listening';
+import { Books } from './screens/Books';
+import { BookReader } from './screens/BookReader';
 const LibraryBook = lazy(() => import('./screens/LibraryBook').then((m) => ({ default: m.LibraryBook })));
 
 export function App() {
@@ -68,6 +70,8 @@ export function App() {
         <Route path="/reading" element={<Reading />} />
         <Route path="/today" element={<Today />} />
         <Route path="/listening" element={<Listening />} />
+        <Route path="/books" element={<Books />} />
+        <Route path="/books/:id" element={<BookReader />} />
         <Route path="/library" element={<Library />} />
         <Route path="/library/:level/:file" element={<Suspense fallback={<Spinner label="Открываю книгу…" />}><LibraryBook /></Suspense>} />
         <Route path="/textbook" element={<Suspense fallback={<Spinner label="Открываю учебник…" />}><Textbook /></Suspense>} />

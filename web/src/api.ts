@@ -1,7 +1,7 @@
 import type {
   User, Lesson, LessonMeta, GrammarMeta, GrammarCard, Word, VocabCategory,
   QueueItem, Rating, ErrorEntry, ProgressEntry, Dashboard, LibraryLevel, GamificationData,
-  WritingFeedback, StudyPlan,
+  WritingFeedback, StudyPlan, BookMeta, Book,
 } from './types';
 
 async function req<T>(path: string, opts: RequestInit = {}): Promise<T> {
@@ -143,6 +143,10 @@ export const api = {
 
   // study plan
   plan: () => get<StudyPlan>('/plan'),
+
+  // picture books
+  books: () => get<BookMeta[]>('/books'),
+  book: (id: string) => get<Book>(`/books/${id}`),
 
   // AI writing feedback
   checkWriting: (body: { text: string; task?: string; mode?: 'free' | 'task1' | 'task2' | 'speaking' }) =>
