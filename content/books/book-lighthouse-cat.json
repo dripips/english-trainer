@@ -1,0 +1,60 @@
+{
+  "id": "book-lighthouse-cat",
+  "title": "The Lighthouse Cat",
+  "level": "A2",
+  "summary": "Кот, который живёт на маяке, одной туманной ночью помогает потерявшейся рыбацкой лодке вернуться домой.",
+  "character": "A small grey cat with white paws, bright green eyes, and a little blue-and-white striped sailor collar around its neck.",
+  "style": "atmospheric warm watercolor children's picture-book illustration, rounded shapes, sea-and-lighthouse colours, cosy light",
+  "pages": [
+    {
+      "en": "On a small rocky island lived a grey cat. His home was a tall white lighthouse by the sea. His name was Sailor.",
+      "ru": "На маленьком скалистом острове жил серый кот. Его домом был высокий белый маяк у моря. Его звали Сейлор.",
+      "scene": "A small grey cat with white paws, bright green eyes, and a little blue-and-white striped sailor collar sits on the rocks beside a tall white lighthouse by the sea, calm blue water and a bright sunny morning sky."
+    },
+    {
+      "en": "Every morning Sailor watched the fishing boats sail out. He ate his fish and cleaned his soft grey fur. The sun was warm and the sea was calm.",
+      "ru": "Каждое утро Сейлор смотрел, как рыбацкие лодки выходят в море. Он ел свою рыбу и чистил мягкую серую шёрстку. Солнце было тёплым, а море спокойным.",
+      "scene": "The small grey cat with white paws and the blue-and-white sailor collar sits on a sunny lighthouse windowsill, watching little fishing boats sail away on a calm blue sea, soft golden morning light."
+    },
+    {
+      "en": "At night Sailor had an important job. He helped the old keeper light the big lamp. The bright light kept the boats safe in the dark.",
+      "ru": "Ночью у Сейлора была важная работа. Он помогал старому смотрителю зажигать большую лампу. Яркий свет берёг лодки в темноте.",
+      "scene": "The grey cat with white paws and the sailor collar stands next to a kind old lighthouse keeper near the big glowing lamp at the top of the lighthouse, warm yellow light shining out over a dark blue evening sea."
+    },
+    {
+      "en": "One evening the sky turned grey and cold. A thick fog rolled in from the sea. Soon Sailor could not see the water below.",
+      "ru": "Однажды вечером небо стало серым и холодным. С моря пришёл густой туман. Скоро Сейлор уже не видел воду внизу.",
+      "scene": "The small grey cat with the blue-and-white sailor collar looks out from the lighthouse as thick grey fog rolls over the sea, the sky cold and dim, the lighthouse light glowing softly in the misty evening."
+    },
+    {
+      "en": "Out at sea, one fishing boat was still far from home. The fishermen could not see in the fog. They were cold, tired, and a little scared.",
+      "ru": "В море одна рыбацкая лодка всё ещё была далеко от дома. Рыбаки ничего не видели в тумане. Им было холодно, они устали и немного боялись.",
+      "scene": "A small wooden fishing boat with two worried fishermen is lost in thick grey fog far out on the dark sea, the faint light of the lighthouse glowing in the distance, the small grey cat watching from the tower."
+    },
+    {
+      "en": "Then something bad happened. A cold wind blew, and the big lamp went out! The lighthouse was dark, and the boat had no light to follow.",
+      "ru": "И тут случилась беда. Подул холодный ветер, и большая лампа погасла! Маяк стал тёмным, и у лодки не было света, за которым идти.",
+      "scene": "The grey cat with white paws and the sailor collar stares in shock as the big lighthouse lamp goes dark in the cold foggy night, only faint moonlight on the rocks, the lost boat tiny in the dark distance."
+    },
+    {
+      "en": "The old keeper was asleep and did not wake up. Sailor knew he had to help. He ran up the long stairs to the dark lamp.",
+      "ru": "Старый смотритель спал и не проснулся. Сейлор знал, что должен помочь. Он побежал вверх по длинной лестнице к тёмной лампе.",
+      "scene": "The small grey cat with the blue-and-white sailor collar runs bravely up the long spiral stairs inside the dark lighthouse, his green eyes shining, faint moonlight through the misty windows."
+    },
+    {
+      "en": "Sailor pushed the matches to the keeper and cried loudly. The keeper woke up and lit the big lamp again. The bright light shone out into the fog.",
+      "ru": "Сейлор подтолкнул спички к смотрителю и громко закричал. Смотритель проснулся и снова зажёг большую лампу. Яркий свет засиял в тумане.",
+      "scene": "The grey cat with white paws and the sailor collar stands beside the old keeper as the big lamp glows bright again, warm golden light bursting out through the foggy night sea, the cat's eyes happy."
+    },
+    {
+      "en": "The fishermen saw the light at last. They followed the bright lamp through the fog. Slowly the little boat sailed safely back to the harbour.",
+      "ru": "Рыбаки наконец увидели свет. Они пошли за яркой лампой сквозь туман. Медленно маленькая лодка благополучно вернулась в гавань.",
+      "scene": "The small wooden fishing boat sails toward the glowing lighthouse through thinning fog at night, the grey cat with the sailor collar watching proudly from the bright tower, warm light spilling over the dark water."
+    },
+    {
+      "en": "In the morning the fog was gone. The grateful fishermen brought fresh fish to the brave little cat. Sailor sat by the lighthouse, happy and warm in the sun.",
+      "ru": "Утром туман рассеялся. Благодарные рыбаки принесли свежую рыбу храброму маленькому коту. Сейлор сидел у маяка, счастливый и согретый солнцем.",
+      "scene": "The small grey cat with white paws, green eyes, and the blue-and-white sailor collar sits happily on the rocks by the white lighthouse as smiling fishermen give him fresh fish, bright sunny morning, calm blue sea."
+    }
+  ]
+}

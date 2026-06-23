@@ -3,7 +3,7 @@ import { Search, Plus, SearchX, Sparkles, ChevronRight } from 'lucide-react';
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
-import { Spinner, LevelBadge, EmptyState } from '../components/ui';
+import { Spinner, ListSkeleton, LevelBadge, EmptyState } from '../components/ui';
 import { WordCard } from '../components/WordCard';
 import type { Word } from '../types';
 
@@ -39,7 +39,7 @@ export function Vocab() {
     setTimeout(() => setAddedMsg(''), 2500);
   }
 
-  if (loading || !cats) return <Spinner />;
+  if (loading || !cats) return <div><Header back title="Словарь" subtitle="выбери набор и добавь слова в колоду" /><ListSkeleton rows={5} /></div>;
 
   if (cat || searching) {
     const title = searching ? `Поиск: «${search}»` : (cats.find((c) => c.category === cat)?.title || cat!);

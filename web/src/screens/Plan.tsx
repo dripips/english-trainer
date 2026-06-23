@@ -4,7 +4,7 @@ import { CheckCircle2, Circle, ChevronDown, ChevronUp, Flame, CalendarCheck, Lay
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
-import { Spinner, LevelBadge, ProgressBar } from '../components/ui';
+import { ListSkeleton, LevelBadge, ProgressBar } from '../components/ui';
 import type { PlanPhase } from '../types';
 
 const STUDY_DAY_GOAL = 5;   // study days per week
@@ -92,7 +92,7 @@ export function Plan() {
     return cur?.phase ?? data.phases[data.phases.length - 1]?.phase ?? 0;
   }, [data]);
 
-  if (loading || !data) return <Spinner />;
+  if (loading || !data) return <div><Header back title="План обучения" subtitle="путь A1 → IELTS 6.5" /><ListSkeleton rows={4} /></div>;
 
   const openPhase = open ?? currentPhase;
   const pct = data.totalLessons ? Math.round((data.totalDone / data.totalLessons) * 100) : 0;

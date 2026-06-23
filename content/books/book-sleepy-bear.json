@@ -1,0 +1,55 @@
+{
+  "id": "book-sleepy-bear",
+  "title": "The Sleepy Bear",
+  "level": "A1",
+  "summary": "Маленький сонный медвежонок ищет тёплое место для зимнего сна, и его лесные друзья помогают ему построить уютную берлогу.",
+  "character": "A small round brown bear cub with soft fluffy fur, big sleepy eyes, and a tiny red knitted hat on his head.",
+  "style": "soft warm watercolor children's picture-book illustration, rounded friendly shapes, cosy autumn-to-winter colours",
+  "pages": [
+    {
+      "en": "This is a little bear. His name is Bo. Bo is very, very sleepy.",
+      "ru": "Это маленький медвежонок. Его зовут Бо. Бо очень-очень хочет спать.",
+      "scene": "A small round brown bear cub with soft fluffy fur, big sleepy eyes, and a tiny red knitted hat yawns in a quiet autumn forest with falling orange and gold leaves, soft warm light."
+    },
+    {
+      "en": "It is autumn. The days are cold now. Bo wants a cosy place to sleep.",
+      "ru": "Сейчас осень. Дни стали холодными. Бо хочет уютное место для сна.",
+      "scene": "The small brown bear cub with the red hat walks slowly through the autumn forest, his breath like soft white clouds, red and yellow leaves on the cold ground all around him."
+    },
+    {
+      "en": "Bo finds a big cave. He looks inside. But the cave is dark and cold. Brrr!",
+      "ru": "Бо находит большую пещеру. Он заглядывает внутрь. Но пещера тёмная и холодная. Бр-р-р!",
+      "scene": "The little brown bear with the red hat peeks into a dark rocky cave at the edge of the autumn forest, shivering, with cold blue shadows inside and warm gold leaves outside."
+    },
+    {
+      "en": "Bo finds a tall tree. There is a hole in the tree. But many birds live here. It is too busy!",
+      "ru": "Бо находит высокое дерево. В дереве есть дупло. Но здесь живёт много птиц. Тут слишком шумно!",
+      "scene": "The small brown bear cub with the red hat looks up at a tall autumn tree with a round hole full of little birds flying in and out, busy and noisy, golden leaves drifting down."
+    },
+    {
+      "en": "Bo finds a small cabin. But a family of mice lives here. There is no room for a bear. Oh no!",
+      "ru": "Бо находит маленький домик. Но здесь живёт семья мышек. Для медведя нет места. Ой-ой!",
+      "scene": "The little brown bear with the red hat stands at the door of a tiny wooden cabin in the forest, peeking inside where a family of small mice is warm and cosy, snowflakes starting to fall outside."
+    },
+    {
+      "en": "Bo is sad and cold. The first snow falls. \"Where can I sleep?\" he says.",
+      "ru": "Бо грустный и замёрз. Падает первый снег. «Где же мне поспать?» — говорит он.",
+      "scene": "The small brown bear cub with the red hat sits alone under a snowy tree, looking sad, as the first soft white snowflakes fall over the quiet winter forest."
+    },
+    {
+      "en": "Bo's friends come to help. Fox, Rabbit, and Owl are here. \"We can help you, Bo!\" they say.",
+      "ru": "К Бо приходят друзья. Здесь Лис, Зайчик и Сова. «Мы поможем тебе, Бо!» — говорят они.",
+      "scene": "The little brown bear with the red hat smiles as a kind orange fox, a small white rabbit, and a brown owl come to him through the gentle snow in the cosy winter forest."
+    },
+    {
+      "en": "The friends build a cosy den. They bring warm leaves and soft grass. They work all day.",
+      "ru": "Друзья строят уютную берлогу. Они приносят тёплые листья и мягкую траву. Они работают весь день.",
+      "scene": "The small brown bear cub with the red hat helps his friends the fox, rabbit, and owl build a warm little den from branches, leaves, and soft grass under a snowy tree, happy and busy together."
+    },
+    {
+      "en": "Now the den is warm and soft. Bo says, \"Thank you, friends!\" Bo sleeps all winter. Good night, Bo!",
+      "ru": "Теперь берлога тёплая и мягкая. Бо говорит: «Спасибо, друзья!» Бо спит всю зиму. Спокойной ночи, Бо!",
+      "scene": "The little brown bear with the red hat sleeps happily inside a warm cosy den full of soft leaves, a gentle smile on his face, snow falling softly outside the winter forest and stars in the sky."
+    }
+  ]
+}

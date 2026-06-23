@@ -1,0 +1,55 @@
+{
+  "id": "book-ducky-rainbow",
+  "title": "Ducky and the Rainbow",
+  "level": "A1",
+  "summary": "Маленький утёнок Дакки ходит в гости к друзьям разных цветов, учит цвета и в конце видит красивую радугу.",
+  "character": "A tiny round yellow duckling with big happy eyes, an orange beak, and a small blue bow on its head.",
+  "style": "bright cheerful watercolor children's picture-book illustration, rounded shapes, vivid rainbow colours",
+  "pages": [
+    {
+      "en": "This is Ducky. Ducky is a little duck. Ducky is yellow.",
+      "ru": "Это Дакки. Дакки — маленький утёнок. Дакки жёлтый.",
+      "scene": "A tiny round yellow duckling with big happy eyes, an orange beak, and a small blue bow on its head stands smiling in a sunny yellow field of dandelions, everything glowing in warm yellow light."
+    },
+    {
+      "en": "Ducky sees a big apple. \"What colour is this?\" \"It is red!\"",
+      "ru": "Дакки видит большое яблоко. «Какого это цвета?» «Оно красное!»",
+      "scene": "The little yellow duckling with the blue bow looks up at a big shiny red apple on a red blanket under a red apple tree, the whole page filled with bright red."
+    },
+    {
+      "en": "Ducky meets Fox. Fox is orange. \"What colour is Fox?\" \"Orange!\"",
+      "ru": "Дакки встречает Лису. Лиса оранжевая. «Какого цвета Лиса?» «Оранжевая!»",
+      "scene": "The little yellow duckling with the blue bow stands next to a friendly orange fox among orange pumpkins and orange leaves, the scene dominated by warm orange tones."
+    },
+    {
+      "en": "Ducky sees the sun. The sun is yellow. \"What colour is the sun?\" \"Yellow!\"",
+      "ru": "Дакки видит солнце. Солнце жёлтое. «Какого цвета солнце?» «Жёлтое!»",
+      "scene": "The little yellow duckling with the blue bow waves at a big smiling yellow sun in a bright yellow sky over a field of yellow flowers, everything warm and golden yellow."
+    },
+    {
+      "en": "Ducky meets Frog. Frog is green. \"What colour is Frog?\" \"Green!\"",
+      "ru": "Дакки встречает Лягушку. Лягушка зелёная. «Какого цвета Лягушка?» «Зелёная!»",
+      "scene": "The little yellow duckling with the blue bow sits with a happy green frog on a green lily pad in green grass and green reeds, the whole page full of fresh green."
+    },
+    {
+      "en": "Ducky looks at the sky. The sky is blue. \"What colour is the sky?\" \"Blue!\"",
+      "ru": "Дакки смотрит на небо. Небо синее. «Какого цвета небо?» «Синее!»",
+      "scene": "The little yellow duckling with the blue bow floats on a calm blue lake under a big blue sky with soft blue clouds, the scene dominated by cool bright blue."
+    },
+    {
+      "en": "Ducky meets Owl. Owl has purple flowers. \"What colour is this?\" \"Purple!\"",
+      "ru": "Дакки встречает Сову. У Совы фиолетовые цветы. «Какого это цвета?» «Фиолетовое!»",
+      "scene": "The little yellow duckling with the blue bow stands with a gentle owl holding a bunch of purple flowers in a purple lavender field at soft dusk, everything glowing in rich purple."
+    },
+    {
+      "en": "Rain comes down. Then the rain stops. The sun is back!",
+      "ru": "Идёт дождь. Потом дождь заканчивается. Солнце снова светит!",
+      "scene": "The little yellow duckling with the blue bow looks up with a happy smile as the last raindrops fall and the yellow sun shines through grey clouds, light sparkling on wet grass."
+    },
+    {
+      "en": "\"Look! A rainbow!\" Red, orange, yellow, green, blue, purple. Ducky loves all the colours!",
+      "ru": "«Смотри! Радуга!» Красный, оранжевый, жёлтый, зелёный, синий, фиолетовый. Дакки любит все цвета!",
+      "scene": "The little yellow duckling with the blue bow stands in a green meadow looking up in joy at a huge full rainbow with red, orange, yellow, green, blue, and purple bands arching across a bright sky."
+    }
+  ]
+}

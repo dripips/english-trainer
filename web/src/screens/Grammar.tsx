@@ -4,7 +4,7 @@ import { Search, Clock } from 'lucide-react';
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
-import { Spinner, LevelBadge } from '../components/ui';
+import { ListSkeleton, LevelBadge } from '../components/ui';
 import type { GrammarMeta } from '../types';
 
 // Group grammar cards into themed sections for a proper reference.
@@ -42,7 +42,7 @@ export function Grammar() {
     return m;
   }, [data]);
 
-  if (loading || !data) return <Spinner />;
+  if (loading || !data) return <div><Header back title="Правила" subtitle="справочник грамматики" /><ListSkeleton rows={6} /></div>;
 
   const query = q.trim().toLowerCase();
   const allTenses = byId.get('all-tenses');

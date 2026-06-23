@@ -4,7 +4,7 @@ import { Headphones, CheckCircle2 } from 'lucide-react';
 import { api } from '../api';
 import { useApi } from '../lib/useApi';
 import { Header } from '../components/Header';
-import { Spinner, LevelBadge } from '../components/ui';
+import { ListSkeleton, LevelBadge } from '../components/ui';
 import type { LessonMeta } from '../types';
 
 const LEVELS = ['A1', 'A2', 'B1', 'B2'] as const;
@@ -19,7 +19,7 @@ export function Listening() {
     return g;
   }, [data]);
 
-  if (loading || !data) return <Spinner />;
+  if (loading || !data) return <div><Header back title="Аудирование" subtitle="слушай и записывай — тренировка на слух" /><ListSkeleton rows={5} /></div>;
 
   const levels = LEVELS.filter((lv) => byLevel[lv]?.length);
 

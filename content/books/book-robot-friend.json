@@ -1,0 +1,60 @@
+{
+  "id": "book-robot-friend",
+  "title": "The Robot Who Wanted a Friend",
+  "level": "A2",
+  "summary": "Маленький дружелюбный робот ходит по городу, помогает людям и в конце находит настоящего друга.",
+  "character": "A small round friendly silver robot with big happy eyes, short arms and legs, and a little blinking blue light on the top of its head.",
+  "style": "cheerful warm watercolor children's picture-book illustration, rounded friendly shapes, bright town colours",
+  "pages": [
+    {
+      "en": "In a small sunny town lived a little robot. His name was Bolt. He was kind, but he had no friends.",
+      "ru": "В маленьком солнечном городке жил маленький робот. Его звали Болт. Он был добрый, но у него не было друзей.",
+      "scene": "A small round friendly silver robot with big happy eyes and a blinking blue light on its head stands alone on a sunny town street, with bright houses, green trees, and a blue sky around him."
+    },
+    {
+      "en": "Bolt walked along the street every day. He wanted a friend very much. But he did not know how to find one.",
+      "ru": "Болт каждый день гулял по улице. Он очень хотел друга. Но он не знал, как его найти.",
+      "scene": "The little silver robot with the blinking blue light walks slowly down a bright town street, looking around with big hopeful eyes, colourful shops and warm sunlight all around."
+    },
+    {
+      "en": "Bolt saw a tall baker outside his shop. \"Will you be my friend?\" asked Bolt. \"Sorry, I am very busy today,\" said the baker.",
+      "ru": "Болт увидел высокого пекаря у его магазина. «Ты будешь моим другом?» — спросил Болт. «Извини, я сегодня очень занят», — сказал пекарь.",
+      "scene": "The small round silver robot with the blue light looks up at a friendly tall baker in a white apron outside a cheerful bakery, fresh bread in the window, sunny street colours."
+    },
+    {
+      "en": "Then Bolt asked an old woman with heavy bags. \"Will you be my friend?\" \"I am sorry, little robot. I must hurry home,\" she said.",
+      "ru": "Потом Болт спросил пожилую женщину с тяжёлыми сумками. «Ты будешь моим другом?» «Извини, маленький робот. Мне нужно скорее домой», — сказала она.",
+      "scene": "The little silver robot with the blinking blue light stands next to an old woman holding two heavy shopping bags on a bright town pavement, warm afternoon light and colourful buildings behind them."
+    },
+    {
+      "en": "Bolt felt sad and lonely. But then he had a good idea. \"Maybe I can help people,\" he thought.",
+      "ru": "Болту стало грустно и одиноко. Но потом ему пришла хорошая мысль. «Может быть, я могу помогать людям», — подумал он.",
+      "scene": "The small round silver robot with big eyes and a blue light stands on a sunny street with a thoughtful, hopeful face, a soft glow above his head, bright town houses and flowers around him."
+    },
+    {
+      "en": "Bolt ran to the old woman and carried her heavy bags. He walked with her all the way home. \"Thank you so much!\" she said with a big smile.",
+      "ru": "Болт побежал к пожилой женщине и понёс её тяжёлые сумки. Он дошёл с ней до самого дома. «Большое спасибо!» — сказала она с широкой улыбкой.",
+      "scene": "The little silver robot with the blinking blue light happily carries two big shopping bags beside the smiling old woman, walking past colourful sunny houses and green gardens."
+    },
+    {
+      "en": "Next, Bolt heard a child crying. The child's little dog was lost. Bolt looked everywhere and found the dog under a bench.",
+      "ru": "Потом Болт услышал, как плачет ребёнок. У ребёнка потерялась маленькая собачка. Болт искал везде и нашёл собачку под скамейкой.",
+      "scene": "The small round silver robot with the blue light gently holds a happy little brown dog he found under a park bench, a crying child nearby starting to smile, bright sunny park with green trees."
+    },
+    {
+      "en": "Then Bolt saw the baker with a broken bike. The wheel was bent and would not turn. Bolt fixed the bike with his clever little hands.",
+      "ru": "Потом Болт увидел пекаря со сломанным велосипедом. Колесо погнулось и не крутилось. Болт починил велосипед своими умелыми ручками.",
+      "scene": "The little silver robot with the blinking blue light fixes a bicycle wheel for the friendly baker on a sunny street, tools in his hands, bright shops and warm light around them."
+    },
+    {
+      "en": "Soon all the people in the town knew Bolt. They smiled and waved when he walked by. But Bolt still wished for one real friend.",
+      "ru": "Скоро все люди в городе знали Болта. Они улыбались и махали ему, когда он проходил мимо. Но Болт всё ещё мечтал об одном настоящем друге.",
+      "scene": "The small round silver robot with the blue light walks down a busy bright street while the baker, the old woman, and other people smile and wave, sunny town full of warm happy colours."
+    },
+    {
+      "en": "Then the child with the little dog ran to him. \"You helped me. Will you be my friend?\" she asked. Bolt's blue light blinked with joy, and they played together all day.",
+      "ru": "Тут к нему подбежала девочка с маленькой собачкой. «Ты помог мне. Ты будешь моим другом?» — спросила она. Голубой огонёк Болта замигал от радости, и они играли вместе весь день.",
+      "scene": "The little silver robot with the brightly blinking blue light plays happily with a smiling child and a little dog in a sunny town park, balloons and flowers around them, warm golden light and joyful faces."
+    }
+  ]
+}

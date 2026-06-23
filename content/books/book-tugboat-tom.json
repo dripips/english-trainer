@@ -1,0 +1,55 @@
+{
+  "id": "book-tugboat-tom",
+  "title": "Tom the Little Tugboat",
+  "level": "A1",
+  "summary": "Маленький храбрый буксир Том помогает большим лодкам в шумной гавани и во время маленького шторма.",
+  "character": "Tom is a small round red tugboat with a white stripe, a tall little funnel, two big friendly eyes, and a happy smile.",
+  "style": "cheerful watercolor children's picture-book illustration, rounded shapes, bright sea-and-harbour colours",
+  "pages": [
+    {
+      "en": "This is Tom. Tom is a little red tugboat. Toot toot!",
+      "ru": "Это Том. Том — маленький красный буксир. Ту-ту!",
+      "scene": "A small round red tugboat with a white stripe, a tall little funnel, two big friendly eyes, and a happy smile floats in a bright blue harbour with white clouds and seagulls."
+    },
+    {
+      "en": "Tom lives in a big busy harbour. He is very small. The other boats are very big.",
+      "ru": "Том живёт в большой шумной гавани. Он очень маленький. Другие лодки очень большие.",
+      "scene": "The small round red tugboat with a white stripe and a happy smile floats next to many huge tall ships in a busy harbour full of bright colours and blue water."
+    },
+    {
+      "en": "The big boats laugh. \"You are too small!\" they say. Tom is sad.",
+      "ru": "Большие лодки смеются. «Ты слишком маленький!» — говорят они. Тому грустно.",
+      "scene": "The little red tugboat with a white stripe looks sad with droopy eyes, while two big smiling ships laugh above him in the sunny harbour, blue water all around."
+    },
+    {
+      "en": "One day a big boat is stuck. It cannot move. \"Help! Help!\" it calls.",
+      "ru": "Однажды большая лодка застряла. Она не может двигаться. «Помогите! Помогите!» — кричит она.",
+      "scene": "A big worried ship is stuck near the harbour rocks, and the small round red tugboat with a white stripe and big eyes watches close by on the bright blue water."
+    },
+    {
+      "en": "\"I can help!\" says Tom. He pulls and pulls. Toot toot!",
+      "ru": "«Я могу помочь!» — говорит Том. Он тянет и тянет. Ту-ту!",
+      "scene": "The little red tugboat with a white stripe and a happy smile pulls a big ship with a strong rope, water splashing, in a sunny busy harbour."
+    },
+    {
+      "en": "Then the sky is dark. A small storm comes. The wind blows and the waves are big.",
+      "ru": "Потом небо становится тёмным. Приходит маленький шторм. Дует ветер, и волны большие.",
+      "scene": "The small round red tugboat with a white stripe bobs on big grey waves under a dark cloudy sky, wind and rain over the harbour, his eyes brave and wide."
+    },
+    {
+      "en": "The big boats are scared. \"Follow me!\" says Tom. Toot toot!",
+      "ru": "Большие лодки испугались. «Плывите за мной!» — говорит Том. Ту-ту!",
+      "scene": "The little red tugboat with a white stripe leads two big frightened ships through grey stormy waves, his light shining bright, dark clouds above the sea."
+    },
+    {
+      "en": "Tom helps everyone. The boats are safe in the harbour. The storm is gone.",
+      "ru": "Том помогает всем. Лодки в безопасности в гавани. Шторм закончился.",
+      "scene": "The small round red tugboat with a white stripe and a happy smile floats with big calm ships in a safe harbour as the sky turns bright blue again with a small rainbow."
+    },
+    {
+      "en": "Now all the boats are friends. \"Thank you, Tom!\" they cheer. Toot toot!",
+      "ru": "Теперь все лодки — друзья. «Спасибо, Том!» — радуются они. Ту-ту!",
+      "scene": "The little red tugboat with a white stripe and a big happy smile is in the middle of many cheering big ships in a sunny harbour, seagulls and bright flags everywhere."
+    }
+  ]
+}
