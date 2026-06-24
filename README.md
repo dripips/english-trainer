@@ -44,6 +44,10 @@ Grammar lessons · spaced-repetition vocabulary · graded reading · illustrated
 |---|---|---|---|---|
 | ![Home](docs/screenshots/home.png) | ![Grammar](docs/screenshots/grammar.png) | ![Exercise](docs/screenshots/exercise.png) | ![Vocabulary](docs/screenshots/vocab.png) | ![Review](docs/screenshots/review.png) |
 
+## 📚 Documentation
+
+[Features](docs/Features.md) · [Architecture](docs/Architecture.md) · [Content Authoring](docs/Content-Authoring.md) · [Deployment](docs/Deployment.md) · [Roadmap](docs/Roadmap.md) — also on the [Wiki](https://github.com/dripips/english-trainer/wiki).
+
 ## 🧱 Tech stack
 
 - **Frontend:** Vite + React 19 + TypeScript + Tailwind v4, PWA (`vite-plugin-pwa`, injectManifest).
