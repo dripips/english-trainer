@@ -4,103 +4,103 @@
 
 # English Trainer
 
-**A self-hosted, mobile-first PWA for learning English — from A1 to IELTS.**
+**Свой тренажёр английского — PWA для телефона, от A1 до IELTS.**
 
-Grammar lessons · spaced-repetition vocabulary · graded reading · illustrated picture books · listening · AI writing & speaking feedback · pronunciation · daily guided sessions. No subscriptions, no ads, your data on your own server.
+Уроки грамматики · слова с интервальным повторением · чтение с картинками · книги-картинки · аудирование · AI-разбор письма и речи · произношение · ежедневные занятия. Без подписок и рекламы, все данные — на вашем сервере.
 
-<sub>Built for two learners (and their cat). MIT-licensed — deploy your own.</sub>
+<sub>Сделано для двух учеников (и их кота). Лицензия MIT — разверни свой.</sub>
 
 </div>
 
 ---
 
-## ✨ Features
+## ✨ Возможности
 
-**Four skills, one app:**
+**Четыре навыка в одном приложении:**
 
-- 📖 **Grammar** — 45+ structured lessons (A1→B2) with theory, examples, videos, and auto-checked exercises (with hints). Plus a full reference: all 12 tenses cheat-sheet, irregulars, everyday words, body parts.
-- 📚 **Reading** — 50+ graded stories & fairy tales (A1–B1), each fully illustrated, with tap-to-translate, audio narration, glossary→deck, and comprehension questions. Plus flippable **picture books** (page-by-page reader).
-- 🎧 **Listening** — TTS dictation drills (A1–B1): hear a phrase, type what you heard.
-- ✍️ **Writing & 🗣️ Speaking** — answer prompts by text or **voice**, get **AI feedback** calibrated to your level (corrections explained in Russian, band estimate). IELTS Task 1/2 & Speaking Part 1/2/3.
-- 🔊 **Pronunciation** — minimal-pair training (ship/sheep) with an ear-training quiz.
+- 📖 **Грамматика** — 45+ структурированных уроков (A1→B2): теория, примеры, видео и упражнения с автопроверкой и подсказками. Плюс справочник: шпаргалка всех 12 времён, исключения, повседневные слова, части тела.
+- 📚 **Чтение** — 50+ адаптированных рассказов и сказок (A1–B1), каждый с иллюстрацией, переводом по тапу, озвучкой, словарём (→ в колоду) и вопросами на понимание. Плюс листаемые **книги-картинки** (постраничный ридер).
+- 🎧 **Аудирование** — диктанты на TTS (A1–B1): слушай фразу, печатай, что услышал.
+- ✍️ **Письмо и 🗣️ говорение** — отвечай текстом или **голосом** и получай **AI-разбор** под свой уровень (ошибки с объяснением по-русски, оценка band). IELTS Task 1/2 и Speaking Part 1/2/3.
+- 🔊 **Произношение** — минимальные пары (ship/sheep) и тренировка на слух.
 
-**The engine that keeps you going:**
+**Движок, который держит ритм:**
 
-- 🗓️ **Daily session** — one tap builds today's plan: warm-up → due words → next lesson → listening/reading.
-- 🧠 **SM-2 spaced repetition** for 3000+ words (49 themed sets) + words you save from any text.
-- 🗺️ **Study plan** A1→IELTS with pacing stats, 🔥 streaks, XP, levels and badges.
-- 🐛 **Error log**, ✅ progress tracker, 🔁 warm-ups, 🌐 context-aware translator.
-- 🔔 **Push reminders** (incl. a "you've been away" re-engagement nudge), 👤 admin panel with per-user stats.
+- 🗓️ **Дневная сессия** — одна кнопка собирает план на сегодня: разминка → слова к повтору → следующий урок → аудирование/чтение.
+- 🧠 **Интервальное повторение (SM-2)** для 3000+ слов (49 тематических наборов) + слова, сохранённые из любого текста.
+- 🗺️ **План A1→IELTS** со статистикой темпа, 🔥 стриками, XP, уровнями и бейджами.
+- 🐛 **Журнал ошибок**, ✅ трекер прогресса, 🔁 разминки, 🌐 контекстный переводчик.
+- 🔔 **Push-напоминания** (включая «давно не заходил»), 👤 админка со статистикой по каждому ученику.
 
-**Crafted details:**
+**Детали, которые замечают единицы:**
 
-- 🎙️ **ElevenLabs** TTS — a natural, measured voice, server-cached so each phrase is generated only once.
-- 🖼️ All artwork as **WebP**, lazy-loaded; skeleton loaders & smooth transitions (no layout jank).
-- 📴 Installable PWA, offline-friendly, eternal login that survives deploys.
+- 🎙️ **ElevenLabs** TTS — естественный размеренный голос, кэш на сервере: каждая фраза генерится один раз.
+- 🖼️ Все картинки в **WebP**, ленивая загрузка; скелетон-лоадеры и плавные переходы (без дёрганья).
+- 📴 Устанавливается как PWA, работает офлайн, вечный логин (переживает деплои).
 
-## 📱 Screenshots
+## 📱 Скриншоты
 
-| Home | Grammar | Exercise | Vocabulary | Review |
+| Главная | Грамматика | Упражнение | Словарь | Повторение |
 |---|---|---|---|---|
-| ![Home](docs/screenshots/home.png) | ![Grammar](docs/screenshots/grammar.png) | ![Exercise](docs/screenshots/exercise.png) | ![Vocabulary](docs/screenshots/vocab.png) | ![Review](docs/screenshots/review.png) |
+| ![Главная](docs/screenshots/home.png) | ![Грамматика](docs/screenshots/grammar.png) | ![Упражнение](docs/screenshots/exercise.png) | ![Словарь](docs/screenshots/vocab.png) | ![Повторение](docs/screenshots/review.png) |
 
-## 📚 Documentation
+## 📚 Документация
 
-[Features](docs/Features.md) · [Architecture](docs/Architecture.md) · [Content Authoring](docs/Content-Authoring.md) · [Deployment](docs/Deployment.md) · [Roadmap](docs/Roadmap.md) — also on the [Wiki](https://github.com/dripips/english-trainer/wiki).
+[Возможности](docs/Features.md) · [Архитектура](docs/Architecture.md) · [Как добавлять контент](docs/Content-Authoring.md) · [Развёртывание](docs/Deployment.md) · [Дорожная карта](docs/Roadmap.md) — также в [Wiki](https://github.com/dripips/english-trainer/wiki).
 
-## 🧱 Tech stack
+## 🧱 Технологии
 
-- **Frontend:** Vite + React 19 + TypeScript + Tailwind v4, PWA (`vite-plugin-pwa`, injectManifest).
-- **Backend:** Fastify 5 on Node 24 with the built-in `node:sqlite` (zero external DB).
-- **Content:** Markdown lessons (gray-matter front-matter) + JSON vocab/books — edit files, no code.
-- **AI (all optional):** any OpenAI-compatible chat API for translation & writing/speaking feedback; ElevenLabs for speech; Gemini ("Nano Banana") for generating story art.
+- **Фронтенд:** Vite + React 19 + TypeScript + Tailwind v4, PWA (`vite-plugin-pwa`, injectManifest).
+- **Бэкенд:** Fastify 5 на Node 24 со встроенным `node:sqlite` (без внешней БД).
+- **Контент:** Markdown-уроки (gray-matter) + JSON для словаря и книг — правишь файлы, без кода.
+- **AI (всё опционально):** любой OpenAI-совместимый chat API для перевода и разбора письма/речи; ElevenLabs для озвучки; Gemini («Nano Banana») для генерации иллюстраций.
 
-## 📁 Project structure
+## 📁 Структура проекта
 
 ```
-content/            # all learning content (no code needed to add more)
-  lessons/*.md      #   grammar lessons, reading texts (kind: reading), listening drills
-  books/*.json      #   illustrated picture books (+ AGENT_PROMPT.md to generate new ones)
-  grammar/*.md      #   grammar reference cards
-  vocab/*.json      #   themed vocabulary sets
-server/src/         # Fastify API, SQLite, SRS (SM-2), push scheduler, TTS proxy
-web/src/            # React PWA (screens, components, lib)
-  public/reading/   #   story cover art (webp)
-  public/books/     #   picture-book page art (webp)
+content/            # весь учебный контент (код не нужен)
+  lessons/*.md      #   уроки грамматики, тексты для чтения (kind: reading), диктанты
+  books/*.json      #   книги-картинки (+ AGENT_PROMPT.md для генерации новых)
+  grammar/*.md      #   карточки-справочник
+  vocab/*.json      #   тематические наборы слов
+server/src/         # Fastify API, SQLite, SRS (SM-2), планировщик push, прокси TTS
+web/src/            # React PWA (экраны, компоненты, lib)
+  public/reading/   #   обложки рассказов (webp)
+  public/books/     #   страницы книг (webp)
 ```
 
-## 🚀 Getting started
+## 🚀 Запуск
 
-**Prerequisites:** Node 24+ (for `node:sqlite`).
+**Требования:** Node 24+ (для `node:sqlite`).
 
 ```bash
 git clone https://github.com/dripips/english-trainer.git
 cd english-trainer
-npm install                      # installs web + server workspaces
-cp .env.example server/.env      # then fill it in (see below); chmod 600 server/.env
+npm install                      # ставит web + server воркспейсы
+cp .env.example server/.env      # заполни (см. ниже); chmod 600 server/.env
 
-npm run build:web                # build the PWA
-npm start                        # start the Fastify server (serves API + built PWA)
+npm run build:web                # сборка PWA
+npm start                        # старт Fastify (отдаёт API + собранную PWA)
 ```
 
-Dev mode: `npm run dev` (Vite dev server + API with proxy).
+Режим разработки: `npm run dev` (Vite dev-сервер + API с прокси).
 
-### Configuration
+### Конфигурация
 
-Everything is environment variables — see [`.env.example`](.env.example). The app runs with **only** `AUTH_SECRET`, `COOKIE_SECRET` and `SEED_USERS` set: translation falls back to a free API, and TTS to the browser voice. Add `LLM_TRANSLATE_*` for context-aware translation + AI feedback, `ELEVENLABS_*` for natural speech, and `VAPID_*` for push reminders.
+Всё через переменные окружения — см. [`.env.example`](.env.example). Приложение работает, если задать только `AUTH_SECRET`, `COOKIE_SECRET` и `SEED_USERS`: перевод откатится на бесплатный API, а озвучка — на голос браузера. Добавь `LLM_TRANSLATE_*` для контекстного перевода и AI-разбора, `ELEVENLABS_*` для естественной озвучки, `VAPID_*` для push-напоминаний.
 
-### Deployment
+### Развёртывание
 
-Any Node 24 host works. The reference setup is `git pull` → `npm run build:web` → `systemctl restart` behind a reverse proxy with HTTPS. The SQLite file and TTS cache live under `server/data/` — back it up; it survives deploys.
+Подойдёт любой хост с Node 24. Эталонная схема: `git pull` → `npm run build:web` → `systemctl restart` за обратным прокси с HTTPS. Файл SQLite и кэш TTS лежат в `server/data/` — бэкапь его, он переживает деплои. Подробнее — [Развёртывание](docs/Deployment.md).
 
-## ✏️ Adding content
+## ✏️ Как добавить контент
 
-No build step for content — drop a file in `content/` and restart the server:
+Для контента сборка не нужна — положи файл в `content/` и перезапусти сервер:
 
-- **Grammar lesson / reading text / listening drill:** a Markdown file in `content/lessons/` with YAML front-matter (`id`, `level`, `exercises`, optional `reading`, `kind: reading`). Copy any existing lesson as a template.
-- **Vocabulary set:** a JSON file in `content/vocab/`.
-- **Illustrated picture book:** a JSON file in `content/books/` + page art. A ready-made agent prompt writes the story *and generates the illustrations* end-to-end — see [`content/books/AGENT_PROMPT.md`](content/books/AGENT_PROMPT.md).
+- **Урок / текст для чтения / диктант:** Markdown-файл в `content/lessons/` с YAML-фронтматтером (`id`, `level`, `exercises`, опционально `reading`, `kind: reading`). Бери любой урок как шаблон.
+- **Набор слов:** JSON-файл в `content/vocab/`.
+- **Книга-картинка:** JSON в `content/books/` + картинки страниц. Готовый промпт для агента пишет историю *и сам генерирует иллюстрации* — см. [`content/books/AGENT_PROMPT.md`](content/books/AGENT_PROMPT.md).
 
-## 📜 License
+## 📜 Лицензия
 
 [MIT](LICENSE).
