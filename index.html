@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Trainer — свой тренажёр английского (PWA, A1→IELTS)</title>
+<meta name="description" content="Бесплатный self-hosted тренажёр английского: уроки грамматики, слова с интервальным повторением, чтение с картинками, аудирование, AI-разбор письма и речи, произношение. PWA для телефона, без подписок. Open-source (MIT).">
+<meta name="keywords" content="тренажёр английского, выучить английский, английский язык, изучение английского, интервальное повторение, IELTS, PWA, self-hosted, open source, learn English app, English learning, spaced repetition, ESL, anki english">
+<meta name="author" content="dripips">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dripips.github.io/english-trainer/">
+<link rel="icon" href="icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="English Trainer">
+<meta property="og:title" content="English Trainer — свой тренажёр английского (A1→IELTS)">
+<meta property="og:description" content="Self-hosted PWA: грамматика, слова с интервальным повторением, чтение с картинками, аудирование, AI-разбор письма и речи, произношение. Без подписок. Open-source.">
+<meta property="og:url" content="https://dripips.github.io/english-trainer/">
+<meta property="og:image" content="https://dripips.github.io/english-trainer/og.png">
+<meta property="og:locale" content="ru_RU">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="English Trainer — свой тренажёр английского (A1→IELTS)">
+<meta name="twitter:description" content="Self-hosted PWA для изучения английского: грамматика, SRS-словарь, чтение, аудирование, AI-разбор. Open-source, MIT.">
+<meta name="twitter:image" content="https://dripips.github.io/english-trainer/og.png">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "English Trainer",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web (PWA)",
+  "description": "Self-hosted, mobile-first PWA для изучения английского от A1 до IELTS: грамматика, интервальное повторение слов, чтение с картинками, аудирование, AI-разбор письма и речи, произношение.",
+  "url": "https://dripips.github.io/english-trainer/",
+  "codeRepository": "https://github.com/dripips/english-trainer",
+  "license": "https://opensource.org/licenses/MIT",
+  "inLanguage": ["ru", "en"],
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0c0a1f;--bg2:#15122e;--surface:#1b1740;--surface2:#241d52;--text:#ededf6;--muted:#a59fce;--primary:#a78bfa;--primary2:#7c5cff;--mint:#5eead4;--sky:#7dd3fc;--amber:#fcd34d;--pink:#f9a8d4}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:9999px;font-weight:700;font-size:15px;transition:transform .2s cubic-bezier(.32,.72,0,1),box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{color:#160f33;background:linear-gradient(135deg,var(--mint),var(--sky));box-shadow:0 8px 30px -8px rgba(94,234,212,.5)}
+.btn-ghost{color:var(--text);background:var(--surface2);border:1px solid rgba(255,255,255,.08)}
+/* hero */
+header{position:relative;text-align:center;padding:84px 0 64px;background:radial-gradient(1100px 460px at 50% -10%,rgba(124,92,255,.30),transparent 70%)}
+.logo{width:84px;height:84px;border-radius:22px;box-shadow:0 10px 40px -8px rgba(124,92,255,.6);margin-bottom:22px}
+h1{font-size:clamp(34px,6vw,60px);line-height:1.05;letter-spacing:-.02em;font-weight:800;background:linear-gradient(135deg,#fff 30%,var(--primary));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.tagline{font-size:clamp(17px,2.6vw,21px);color:var(--muted);max-width:680px;margin:18px auto 8px}
+.sub{color:var(--muted);font-size:14px;opacity:.8;margin-bottom:30px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.badge{font-size:12px;color:var(--muted);background:var(--surface);border:1px solid rgba(255,255,255,.07);padding:5px 12px;border-radius:9999px}
+/* sections */
+section{padding:56px 0}
+h2{font-size:clamp(24px,4vw,34px);font-weight:800;letter-spacing:-.01em;text-align:center;margin-bottom:8px}
+.lead{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 38px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:24px}
+.card .ico{font-size:26px;margin-bottom:10px}
+.card h3{font-size:17px;margin-bottom:6px}
+.card p{font-size:14px;color:var(--muted)}
+/* shots */
+.shots{display:flex;gap:16px;overflow-x:auto;padding:8px 4px 16px;scroll-snap-type:x mandatory}
+.shots img{height:440px;border-radius:22px;border:1px solid rgba(255,255,255,.08);scroll-snap-align:center;flex:0 0 auto;background:var(--surface)}
+.stats{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.stat{background:var(--surface);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:18px 24px;text-align:center;min-width:120px}
+.stat b{display:block;font-size:28px;font-weight:800;color:var(--primary)}
+.stat span{font-size:13px;color:var(--muted)}
+footer{padding:50px 0 70px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,.06)}
+@media(max-width:600px){.shots img{height:380px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="icon.png" class="logo" alt="English Trainer">
+    <h1>English Trainer</h1>
+    <p class="tagline">Свой тренажёр английского — PWA для телефона, от A1 до IELTS. Без подписок и рекламы, все данные на вашем сервере.</p>
+    <p class="sub">Open-source · MIT · self-hosted</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/dripips/english-trainer">★ GitHub</a>
+      <a class="btn btn-ghost" href="https://github.com/dripips/english-trainer/releases/tag/v1.0.0">Релиз 1.0</a>
+      <a class="btn btn-ghost" href="https://github.com/dripips/english-trainer/wiki">Документация</a>
+    </div>
+    <div class="badges">
+      <span class="badge">React 19 · Vite · PWA</span>
+      <span class="badge">Fastify · Node · SQLite</span>
+      <span class="badge">ElevenLabs TTS</span>
+      <span class="badge">AI-разбор</span>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <h2>Четыре навыка в одном приложении</h2>
+    <p class="lead">Полный учебный цикл: понятный ввод, практика и обратная связь — каждый день в одном потоке.</p>
+    <div class="grid">
+      <div class="card"><div class="ico">📖</div><h3>Грамматика</h3><p>45+ уроков A1→B2: теория, видео, упражнения с автопроверкой и подсказками. Справочник всех времён.</p></div>
+      <div class="card"><div class="ico">📚</div><h3>Чтение</h3><p>50+ иллюстрированных рассказов и сказок с переводом по тапу, озвучкой и вопросами. Листаемые книги-картинки.</p></div>
+      <div class="card"><div class="ico">🎧</div><h3>Аудирование</h3><p>Диктанты A1–B1 на естественной озвучке: слушай и записывай.</p></div>
+      <div class="card"><div class="ico">✍️🗣️</div><h3>Письмо и речь</h3><p>Отвечай текстом или голосом — AI разбирает ошибки под твой уровень и оценивает band. IELTS Task 1/2 и Speaking.</p></div>
+      <div class="card"><div class="ico">🔊</div><h3>Произношение</h3><p>Минимальные пары (ship/sheep) и тренировка на слух.</p></div>
+      <div class="card"><div class="ico">🗓️</div><h3>Дневная сессия</h3><p>Одна кнопка собирает план: разминка → слова → урок → аудирование. Стрики, XP, план A1→IELTS.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="screens" style="padding-top:8px">
+  <div class="wrap">
+    <h2>Как это выглядит</h2>
+    <p class="lead">Мобильный интерфейс, тёмная тема, устанавливается как приложение.</p>
+  </div>
+  <div class="wrap shots">
+    <img src="home.png" alt="Главная" loading="lazy">
+    <img src="grammar.png" alt="Грамматика" loading="lazy">
+    <img src="exercise.png" alt="Упражнение" loading="lazy">
+    <img src="vocab.png" alt="Словарь" loading="lazy">
+    <img src="review.png" alt="Повторение слов" loading="lazy">
+  </div>
+</section>
+
+<section id="stats" style="padding-top:8px">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>45+</b><span>уроков грамматики</span></div>
+      <div class="stat"><b>3000+</b><span>слов в SRS</span></div>
+      <div class="stat"><b>60+</b><span>рассказов и книг</span></div>
+      <div class="stat"><b>4</b><span>навыка + AI-разбор</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="self-host">
+  <div class="wrap" style="max-width:760px;text-align:center">
+    <h2>Разверни свой за минуты</h2>
+    <p class="lead">Node 24 + встроенный SQLite — без внешней БД. Весь учебный контент — обычные файлы Markdown/JSON: добавляй уроки, слова и книги без кода.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/dripips/english-trainer#-запуск">Инструкция по запуску</a>
+      <a class="btn btn-ghost" href="https://github.com/dripips/english-trainer/blob/main/docs/Deployment.md">Развёртывание</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    English Trainer · open-source тренажёр английского · <a href="https://github.com/dripips/english-trainer" style="color:var(--primary)">github.com/dripips/english-trainer</a> · MIT
+  </div>
+</footer>
+
+</body>
+</html>
