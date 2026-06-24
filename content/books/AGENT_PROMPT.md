@@ -107,7 +107,7 @@ PATH=/opt/node/bin:$PATH npm run build:web | tail -2          # включает
 git add -A && git commit -m "Add picture book: <title>"        # БЕЗ Co-Authored-By (репо публичный)
 git push
 # деплой на сервер:
-sshpass -p '<PASSWORD>' ssh root@144.31.221.201 "cd /opt/english-trainer && git pull && PATH=/opt/node/bin:\$PATH npm run build:web | tail -1 && systemctl restart english-trainer"
+ssh <SERVER> "cd /opt/english-trainer && git pull && PATH=/opt/node/bin:\$PATH npm run build:web | tail -1 && systemctl restart english-trainer"
 ```
 Сервер сам подхватит книгу (в логе появится «… N books»). В приложении: Профиль →
 «Книги с картинками». Никакого кода менять не нужно — только JSON + картинки.
