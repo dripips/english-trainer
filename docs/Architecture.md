@@ -1,34 +1,34 @@
-# Architecture
+# Архитектура
 
-## Stack
-- **Frontend:** Vite + React 19 + TypeScript + Tailwind v4. PWA via `vite-plugin-pwa` (injectManifest, custom service worker for push). Single bundle served by the API.
-- **Backend:** Fastify 5 on **Node 24**, using the built-in **`node:sqlite`** — no external database, no ORM.
-- **Auth:** signed JWT in an httpOnly cookie; 10-year sessions (survive deploys). Role read **live from the DB** on every request, so promotions/demotions apply without re-login.
+## Стек
+- **Фронтенд:** Vite + React 19 + TypeScript + Tailwind v4. PWA через `vite-plugin-pwa` (injectManifest, собственный service worker для push). Единый бандл отдаётся API.
+- **Бэкенд:** Fastify 5 на **Node 24**, со встроенным **`node:sqlite`** — без внешней БД и без ORM.
+- **Авторизация:** подписанный JWT в httpOnly-cookie; сессии на 10 лет (переживают деплои). Роль читается **из БД на каждый запрос**, поэтому повышение/понижение прав применяется без перелогина.
 
-## Content pipeline
-All learning material is **plain files** under `content/`, parsed at server startup (and hot-reloaded on change):
-- `lessons/*.md` — gray-matter front-matter (`id, order, level, phase, exercises, reading, …`) + Markdown theory. A lesson with `kind: reading` is a reading text (excluded from the grammar list, plan, and practice queue); a `listening` tag marks dictation drills.
-- `grammar/*.md` — reference cards.
-- `vocab/*.json` — themed word sets. Word `id` = slug, so the same word across sets de-duplicates on load.
-- `books/*.json` — picture books: `{ id, title, level, character, style, pages:[{en, ru, scene}] }`. Page art lives in `web/public/books/<id>/<n>.webp`.
+## Конвейер контента
+Весь учебный материал — **обычные файлы** в `content/`, разбираются при старте сервера (и подхватываются на лету при изменении):
+- `lessons/*.md` — фронтматтер gray-matter (`id, order, level, phase, exercises, reading, …`) + теория в Markdown. Урок с `kind: reading` — это текст для чтения (исключается из списка грамматики, плана и очереди практики); тег `listening` помечает диктанты.
+- `grammar/*.md` — карточки-справочник.
+- `vocab/*.json` — тематические наборы слов. `id` слова = slug, поэтому одно и то же слово в разных наборах дедуплицируется при загрузке.
+- `books/*.json` — книги-картинки: `{ id, title, level, character, style, pages:[{en, ru, scene}] }`. Картинки страниц лежат в `web/public/books/<id>/<n>.webp`.
 
-Adding content needs **no code and no frontend rebuild** — just drop a file and restart the server (image/code changes do need `npm run build:web`).
+Добавление контента **не требует кода и пересборки фронтенда** — просто положи файл и перезапусти сервер (изменения картинок/кода всё же требуют `npm run build:web`).
 
-## Data model (SQLite)
-- `users` (role, xp, longest_streak) · `settings` (per-user key/value)
-- `lesson_attempts` (per exercise, upserted) · `activity` (daily reviews/exercises → streaks)
-- `srs_cards` (SM-2: ease, interval, reps, due, state) · `custom_words` (saved from texts)
-- `error_log` · `progress` (topic mastery) · `push_subscriptions` · `translations_cache`
+## Модель данных (SQLite)
+- `users` (role, xp, longest_streak) · `settings` (key/value на пользователя)
+- `lesson_attempts` (по упражнению, upsert) · `activity` (повторы/упражнения за день → стрики)
+- `srs_cards` (SM-2: ease, interval, reps, due, state) · `custom_words` (сохранённые из текстов)
+- `error_log` · `progress` (освоение тем) · `push_subscriptions` · `translations_cache`
 
-## Spaced repetition
-Classic **SM-2** (`server/src/srs.js`): `again/hard/good/easy` ratings adjust ease & interval; new-cards-per-day cap is configurable per user.
+## Интервальное повторение
+Классический **SM-2** (`server/src/srs.js`): оценки `again/hard/good/easy` подстраивают ease и интервал; лимит новых карточек в день настраивается на пользователя.
 
-## AI & media (all optional, server-proxied)
-- **Translation & writing/speaking feedback:** any OpenAI-compatible chat API (`LLM_TRANSLATE_*`). Feedback is forced to structured JSON and calibrated to the learner's level.
-- **TTS:** `POST /api/tts` proxies **ElevenLabs**, caches mp3 to `server/data/tts-cache/` keyed by `model|voice|speed|text`; concurrent identical requests are coalesced. Client falls back to the browser `speechSynthesis` voice.
-- **Story art:** generated out-of-band with Gemini ("Nano Banana") — see [Content Authoring](Content-Authoring).
+## AI и медиа (всё опционально, через прокси сервера)
+- **Перевод и разбор письма/речи:** любой OpenAI-совместимый chat API (`LLM_TRANSLATE_*`). Ответ принудительно в структурированном JSON и калибруется под уровень ученика.
+- **TTS:** `POST /api/tts` проксирует **ElevenLabs**, кэширует mp3 в `server/data/tts-cache/` по ключу `model|voice|speed|text`; одновременные одинаковые запросы объединяются. На клиенте — откат на голос браузера `speechSynthesis`.
+- **Иллюстрации:** генерируются отдельно через Gemini («Nano Banana») — см. [Как добавлять контент](Content-Authoring.md).
 
-## Notable engineering
-- Back/forward navigation **restores scroll position** (custom in `Layout`), forward nav resets to top.
-- `useApi` auto-retries transient failures (e.g. a deploy restart) so the UI self-heals.
-- Empty-body POSTs never send a JSON content-type (Fastify would 400) — fixed in the fetch wrapper.
+## Инженерные мелочи
+- Навигация назад/вперёд **восстанавливает позицию скролла** (своя реализация в `Layout`), переход вперёд сбрасывает наверх.
+- `useApi` автоматически ретраит временные сбои (например, рестарт при деплое), поэтому интерфейс самовосстанавливается.
+- POST с пустым телом не отправляют JSON content-type (иначе Fastify вернёт 400) — пофикшено в обёртке fetch.

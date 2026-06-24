@@ -1,9 +1,9 @@
-# Documentation
+# Документация
 
-- **[Features](Features.md)** — everything the app does
-- **[Architecture](Architecture.md)** — stack, data model, content pipeline
-- **[Content Authoring](Content-Authoring.md)** — add lessons, vocab, reading & illustrated books (no code)
-- **[Deployment](Deployment.md)** — run your own instance
-- **[Roadmap](Roadmap.md)** — done & next
+- **[Возможности](Features.md)** — всё, что умеет приложение
+- **[Архитектура](Architecture.md)** — стек, модель данных, конвейер контента
+- **[Как добавлять контент](Content-Authoring.md)** — уроки, слова, чтение и книги-картинки (без кода)
+- **[Развёртывание](Deployment.md)** — запусти свой экземпляр
+- **[Дорожная карта](Roadmap.md)** — сделано и дальше
 
-> These pages also mirror the project [Wiki](https://github.com/dripips/english-trainer/wiki).
+> Эти страницы также зеркалят [Wiki](https://github.com/dripips/english-trainer/wiki) проекта.

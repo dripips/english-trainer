@@ -1,39 +1,39 @@
-# Features
+# Возможности
 
-## The four skills
+## Четыре навыка
 
-### 📖 Grammar
-- 45+ structured lessons A1→B2, each with theory (Markdown), warm-up prompts, curated YouTube videos, and **auto-checked exercises** (fill / choose / translate / fix / order / match / freeform), most with **hints**.
-- Wrong answer? One tap logs it to your **error journal** or you can override ("I was right").
-- **Reference section** ("Правила"): an all-12-tenses cheat-sheet plus grammar cards grouped by theme; **Exceptions** (irregular verbs, plurals, comparatives); **Everyday words** (days, months, numbers, colours); **Body parts** diagram.
+### 📖 Грамматика
+- 45+ структурированных уроков A1→B2, в каждом — теория (Markdown), вопросы для разминки, подобранные видео с YouTube и **упражнения с автопроверкой** (вставь / выбери / переведи / исправь / собери порядок / сопоставь / свободный ответ), у большинства есть **подсказки**.
+- Ошибся? Один тап заносит ошибку в **журнал ошибок**, либо можно отметить «я был прав» (override).
+- **Справочник** («Правила»): шпаргалка по всем 12 временам плюс карточки грамматики по темам; **Исключения** (неправильные глаголы, множественное число, степени сравнения); **Повседневные слова** (дни, месяцы, числа, цвета); схема **частей тела**.
 
-### 📚 Reading
-- 50+ graded stories & classic fairy tales (A1–B1), each a **full** retelling (not a stub), **illustrated** with original art.
-- **Tap any word** → context-aware translation + save to your SRS deck.
-- **Audio narration** of the whole text, **show-translation** toggle, **glossary** you can add to the deck, and **comprehension questions**.
-- **Picture books** — a dedicated page-by-page reader you swipe through, with per-page audio and tap-to-translate.
+### 📚 Чтение
+- 50+ адаптированных рассказов и классических сказок (A1–B1), каждый — **полная** версия (не заглушка), **с иллюстрацией** собственной отрисовки.
+- **Тапни любое слово** → перевод в контексте + сохранение в колоду SRS.
+- **Озвучка** всего текста, переключатель **показать перевод**, **словарь** с добавлением в колоду и **вопросы на понимание**.
+- **Книги-картинки** — отдельный постраничный ридер, который листаешь свайпом, с озвучкой каждой страницы и переводом по тапу.
 
-### 🎧 Listening
-- Dictation drills A1–B1: press play, hear a phrase (ElevenLabs), type what you heard. Answers are forgiving (punctuation/contractions).
+### 🎧 Аудирование
+- Диктанты A1–B1: жмёшь play, слышишь фразу (ElevenLabs), печатаешь, что услышал. Проверка снисходительная (пунктуация/сокращения не критичны).
 
-### ✍️ Writing & 🗣️ Speaking
-- Answer free prompts or IELTS tasks (Writing Task 1/2, Speaking Part 1/2/3) by **typing or speaking** (Web Speech API where supported).
-- **AI feedback** calibrated to the learner's level: 3–6 most-important fixes explained in Russian, a corrected version, strengths, and an approximate band — automating the "handwrite → screenshot → tutor grades" loop.
+### ✍️ Письмо и 🗣️ Говорение
+- Отвечаешь на свободные вопросы или задания IELTS (Writing Task 1/2, Speaking Part 1/2/3) — **текстом или голосом** (Web Speech API, где поддерживается).
+- **AI-разбор** под уровень ученика: 3–6 самых важных правок с объяснением по-русски, исправленный вариант, сильные стороны и примерный band — автоматизация цикла «написал от руки → сфоткал → репетитор проверил».
 
-### 🔊 Pronunciation
-- Minimal-pair training (ship/sheep, think/sink, light/right…) — browse & compare, then an ear-training quiz.
+### 🔊 Произношение
+- Тренировка минимальных пар (ship/sheep, think/sink, light/right…) — смотри и сравнивай, затем квиз на слух.
 
-## The engine
+## Движок
 
-- **🗓️ Daily session** — one tap composes warm-up → due words → next lesson → listening/reading from your live data.
-- **🧠 Spaced repetition (SM-2)** — 3000+ words across 49 themed sets, plus any word you save from a text or the translator.
-- **🗺️ Study plan** A1→IELTS — phase roadmap, % done, weekly pacing ("on track / behind"), 🔥 streak, words-in-deck.
-- **Gamification** — XP, 10 levels, streaks (current + record), 10 badges.
-- **Translator** — context-aware (LLM) with fallback to LibreTranslate / MyMemory.
-- **Push reminders** — daily nudge that escalates to a "you've been away N days" re-engagement message.
-- **Admin panel** — manage learners, reset passwords, and see per-user stats (lessons done, streak, accuracy, XP).
+- **🗓️ Дневная сессия** — один тап собирает разминку → слова к повтору → следующий урок → аудирование/чтение из твоих актуальных данных.
+- **🧠 Интервальное повторение (SM-2)** — 3000+ слов в 49 тематических наборах плюс любое слово, сохранённое из текста или переводчика.
+- **🗺️ План A1→IELTS** — дорожная карта по фазам, % выполнения, недельный темп («идёшь по плану / отстаёшь»), 🔥 стрик, слов в колоде.
+- **Геймификация** — XP, 10 уровней, стрики (текущий + рекорд), 10 бейджей.
+- **Переводчик** — контекстный (LLM) с откатом на LibreTranslate / MyMemory.
+- **Push-напоминания** — ежедневный пинок, который эскалирует до сообщения «тебя не было N дней» для возврата.
+- **Админка** — управление учениками, сброс паролей и статистика по каждому (уроков пройдено, стрик, точность, XP).
 
-## Crafted details
-- **ElevenLabs TTS** — natural, measured pace; server-side disk cache so each unique phrase is generated (and billed) only once; concurrent requests coalesced.
-- **WebP** artwork, lazy-loaded; **skeleton** loaders and page fade-ins (no layout jank); tap-to-pause audio with a radial progress ring.
-- Installable **PWA**, offline-friendly, **eternal login** that survives deploys.
+## Детали, сделанные с заботой
+- **ElevenLabs TTS** — естественный размеренный темп; дисковый кэш на сервере, чтобы каждая уникальная фраза генерилась (и тарифицировалась) только один раз; одновременные запросы объединяются.
+- Иллюстрации в **WebP** с ленивой загрузкой; **скелетон**-лоадеры и плавное появление страниц (без дёрганья вёрстки); тап-пауза в озвучке с радиальным индикатором прогресса.
+- Устанавливается как **PWA**, работает офлайн, **вечный логин**, переживающий деплои.

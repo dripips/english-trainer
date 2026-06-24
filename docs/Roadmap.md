@@ -1,23 +1,23 @@
-# Roadmap
+# Дорожная карта
 
-## ✅ Done (v1.0)
-- Grammar: 45+ lessons A1→B2 with hints; reference (all-tenses, exceptions, everyday words, body parts)
-- Vocabulary: 3000+ words / 49 sets + SM-2 spaced repetition + save-from-text
-- Reading: 50+ illustrated full-length stories & fairy tales with audio, tap-to-translate, questions
-- Picture books: 11 page-by-page illustrated readers
-- Listening: A1–B1 dictation drills
-- Writing & Speaking: AI feedback (text + voice)
-- Pronunciation: minimal pairs + ear-training quiz
-- Engine: daily session, study plan + pacing, gamification, error log, progress, warm-ups, translator
-- Platform: ElevenLabs TTS (cached), WebP art, PWA, push reminders + re-engagement, admin stats
-- Tooling: agent prompt to generate new illustrated books end-to-end
+## ✅ Сделано (v1.0)
+- Грамматика: 45+ уроков A1→B2 с подсказками; справочник (все времена, исключения, повседневные слова, части тела)
+- Словарь: 3000+ слов / 49 наборов + интервальное повторение SM-2 + сохранение из текста
+- Чтение: 50+ иллюстрированных полных рассказов и сказок с озвучкой, переводом по тапу, вопросами
+- Книги-картинки: 11 постраничных иллюстрированных ридеров
+- Аудирование: диктанты A1–B1
+- Письмо и говорение: AI-разбор (текст + голос)
+- Произношение: минимальные пары + квиз на слух
+- Движок: дневная сессия, план обучения + темп, геймификация, журнал ошибок, прогресс, разминки, переводчик
+- Платформа: ElevenLabs TTS (с кэшем), WebP-иллюстрации, PWA, push-напоминания + возврат, статистика в админке
+- Инструменты: промпт для агента, генерирующий новые иллюстрированные книги end-to-end
 
-## 💡 Ideas / next
-- More content as learners level up (B1/B2 reading & listening, more books)
-- Richer pacing controls (configurable weekly goals) in the study plan
-- Voice input for Speaking on iOS Safari (currently limited by the browser; falls back to typing)
-- Fill the PDF graded-reader library
-- Optional spaced-repetition of grammar rules (not just words)
+## 💡 Идеи / дальше
+- Больше контента по мере роста уровня (чтение и аудирование B1/B2, ещё книги)
+- Более гибкие настройки темпа (настраиваемые недельные цели) в плане обучения
+- Голосовой ввод для Speaking в iOS Safari (сейчас ограничен браузером; откатывается на печать)
+- Наполнить библиотеку адаптированных книг (PDF)
+- Опциональное интервальное повторение правил грамматики (не только слов)
 
-## Guiding principle
-The app already holds many months of material. For these learners the highest-value "feature" now is **consistency** — opening the daily session every day. New content is added on demand, not for its own sake.
+## Главный принцип
+В приложении уже лежит материал на много месяцев. Для этих учеников самая ценная «фича» сейчас — **постоянство**, то есть открывать дневную сессию каждый день. Новый контент добавляется по мере необходимости, а не ради него самого.

@@ -1,42 +1,42 @@
-# Deployment
+# Развёртывание
 
-Any host with **Node 24+** works (Node 24 is required for the built-in `node:sqlite`).
+Подойдёт любой хост с **Node 24+** (Node 24 нужен для встроенного `node:sqlite`).
 
-## Local / first run
+## Локально / первый запуск
 ```bash
 git clone https://github.com/dripips/english-trainer.git
 cd english-trainer
 npm install
-cp .env.example server/.env      # fill in, then: chmod 600 server/.env
-npm run build:web                # build the PWA
-npm start                        # Fastify serves the API + the built PWA
+cp .env.example server/.env      # заполни, затем: chmod 600 server/.env
+npm run build:web                # сборка PWA
+npm start                        # Fastify отдаёт API + собранную PWA
 ```
 
-## Configuration
-All via environment variables in `server/.env` — see [`.env.example`](https://github.com/dripips/english-trainer/blob/main/.env.example).
+## Конфигурация
+Всё через переменные окружения в `server/.env` — см. [`.env.example`](https://github.com/dripips/english-trainer/blob/main/.env.example).
 
-Minimum to boot: `AUTH_SECRET`, `COOKIE_SECRET`, `SEED_USERS`. Everything else is optional and degrades gracefully:
+Минимум для старта: `AUTH_SECRET`, `COOKIE_SECRET`, `SEED_USERS`. Остальное опционально и деградирует мягко:
 
-| Variable(s) | Enables | Fallback if unset |
+| Переменная(ые) | Включает | Откат, если не задано |
 |---|---|---|
-| `LLM_TRANSLATE_URL/KEY/MODEL` | context-aware translation + AI writing/speaking feedback | LibreTranslate / free MyMemory; feedback disabled |
-| `ELEVENLABS_API_KEY` (+ `MODEL/VOICE/SPEED`) | natural TTS narration | browser `speechSynthesis` voice |
-| `VAPID_PUBLIC/PRIVATE/SUBJECT` | push reminders | reminders disabled |
-| `TEXTBOOK_PDF`, `LIBRARY_DIR` | private PDF reader / graded-reader library | sections hidden |
-| `ADMIN_USERNAMES` | auto-promote admins on boot | seed roles only |
+| `LLM_TRANSLATE_URL/KEY/MODEL` | контекстный перевод + AI-разбор письма/речи | LibreTranslate / бесплатный MyMemory; разбор отключён |
+| `ELEVENLABS_API_KEY` (+ `MODEL/VOICE/SPEED`) | естественная озвучка TTS | голос браузера `speechSynthesis` |
+| `VAPID_PUBLIC/PRIVATE/SUBJECT` | push-напоминания | напоминания отключены |
+| `TEXTBOOK_PDF`, `LIBRARY_DIR` | приватный PDF-ридер / библиотека адаптированных книг | разделы скрыты |
+| `ADMIN_USERNAMES` | авто-повышение в админы при старте | роли только из seed |
 
-**Secrets** live only in `server/.env` (`chmod 600`) — never commit them.
+**Секреты** живут только в `server/.env` (`chmod 600`) — никогда не коммить их.
 
-## Reference production setup
-`git pull` → `PATH=/opt/node/bin:$PATH npm run build:web` → `systemctl restart english-trainer`, behind a reverse proxy that terminates HTTPS and forwards to `127.0.0.1:$PORT`.
+## Эталонный прод
+`git pull` → `PATH=/opt/node/bin:$PATH npm run build:web` → `systemctl restart english-trainer`, за обратным прокси, который терминирует HTTPS и проксирует на `127.0.0.1:$PORT`.
 
-- A systemd unit runs `node server/src/index.js` with the env file.
-- **Content-only** changes (new lesson/vocab `.md`/`.json`): just `git pull && systemctl restart` — no rebuild.
-- **Code/image** changes: rebuild the PWA (`npm run build:web`) before restart.
+- systemd-юнит запускает `node server/src/index.js` с env-файлом.
+- Изменения **только контента** (новый урок/слова `.md`/`.json`): просто `git pull && systemctl restart` — без пересборки.
+- Изменения **кода/картинок**: пересобери PWA (`npm run build:web`) перед рестартом.
 
-## Data & backups
-Everything stateful is under **`server/data/`**:
-- `app.db` — SQLite (users, progress, SRS, settings…)
-- `tts-cache/` — generated speech (safe to delete; regenerates on demand)
+## Данные и бэкапы
+Всё состояние — под **`server/data/`**:
+- `app.db` — SQLite (пользователи, прогресс, SRS, настройки…)
+- `tts-cache/` — сгенерированная озвучка (можно удалять; пересоздаётся по запросу)
 
-Back up `app.db`. It survives deploys; keep `AUTH_SECRET` stable so existing logins keep working.
+Бэкапь `app.db`. Он переживает деплои; держи `AUTH_SECRET` неизменным, чтобы существующие логины продолжали работать.
